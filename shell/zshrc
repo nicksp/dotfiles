@@ -56,9 +56,15 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 # Put any proprietary or private functions/values in ~/.private, and this will source them
-if [ -f $HOME/.private ]; then
-  source $HOME/.private
-fi
+[ -f $HOME/.private ] && source $HOME/.private
+
+# Automatically list directory contents on `cd`.
+# auto-ls () {
+#   emulate -L zsh;
+#   # explicit sexy ls'ing as aliases arent honored in here.
+#   hash gls >/dev/null 2>&1 && CLICOLOR_FORCE=1 gls -aFh --color --group-directories-first || ls
+# }
+# chpwd_functions=( auto-ls $chpwd_functions )
 
 source $ZSH/oh-my-zsh.sh
 

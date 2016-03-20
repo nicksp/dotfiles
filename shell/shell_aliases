@@ -54,25 +54,27 @@ alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.c
 # Time to upgrade `ls`
 #
 
+# Use coreutils `ls` if possible
+hash gls >/dev/null 2>&1 || alias gls="ls"
+
 # Always use color output for `ls`
 # Detect which `ls` flavor is in use
-if ls --color > /dev/null 2>&1; then # GNU `ls`
+if gls --color > /dev/null 2>&1; then # GNU `ls`
   colorflag="--color"
 else # OS X `ls`
   colorflag="-G"
 fi
 
-# Use coreutils `ls` if possible…
-hash gls >/dev/null 2>&1 || alias gls="ls"
+export CLICOLOR_FORCE=1
 
 # List all files colorized in long format
-alias l="gls -l ${colorflag}"
+alias l="ls -lF ${colorflag}"
 
 # ls options: A = include hidden (but not . or ..), F = put `/` after folders, h = byte unit suffixes
-alias ls='gls -AFh ${colorflag} --group-directories-first'
+alias ls='ls -AFh ${colorflag} --group-directories-first'
 
 # List all files colorized in long format, including dot files
-alias la="gls -la ${colorflag}"
+alias la="ls -la ${colorflag}"
 
 # List only directories
 alias lsd='gls -l | grep "^d"'
@@ -123,7 +125,7 @@ alias gc='git checkout'
 alias gra='git remote add'
 alias grr='git remote rm'
 alias gbt=git_list_branches
-alias gpu='git pull'
+alias gpu='git pull origin HEAD --prune'
 alias gcl='git clone'
 alias gta='git tag -a -m'
 alias gf='git reflog'
@@ -133,7 +135,6 @@ alias undopush="git push -f origin HEAD^:master"
 
 # `cd` to Git repo root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
-#alias gr='git rev-parse 2>/dev/null && cd "./$(git rev-parse --show-cdup)"'
 
 # Gist
 alias gist-paste="gist --private --copy --paste --filename"  # gist-paste filename.ext -- create private Gist from the clipboard contents

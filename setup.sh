@@ -1,15 +1,14 @@
 #!/bin/bash
 
-# this symlinks all the dotfiles (and .atom/) to ~/
-# it also symlinks ~/bin for easy updating
+# This symlinks all the dotfiles (and .atom/) to ~/
+# It also symlinks ~/bin for easy updating
 
-# this is safe to run multiple times and will prompt you about anything unclear
+# This is safe to run multiple times and will prompt you about anything unclear
 
 
 #
-# utils !!!
+# Utils
 #
-
 
 answer_is_yes() {
   [[ "$REPLY" =~ ^[Yy]$ ]] \
@@ -131,18 +130,18 @@ dir_backup=~/dotfiles_old             # old dotfiles backup directory
 export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# create dotfiles_old in homedir
+# Create dotfiles_old in homedir
 echo -n "Creating $dir_backup for backup of any existing dotfiles in ~..."
 mkdir -p $dir_backup
 echo "done"
 
-# change to the dotfiles directory
+# Change to the dotfiles directory
 echo -n "Changing to the $dir directory..."
 cd $dir
 echo "done"
 
 #
-# actual symlink stuff
+# Actual symlink stuff
 #
 
 
@@ -176,11 +175,11 @@ declare -a FILES_TO_SYMLINK=(
 
 # FILES_TO_SYMLINK="$FILES_TO_SYMLINK .vim bin" # add in vim and the binaries
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
+# Move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 
 for i in ${FILES_TO_SYMLINK[@]}; do
   echo "Moving any existing dotfiles from ~ to $dir_backup"
-  mv ~/.$i ~/dotfiles_old/
+  mv ~/.${i##*/} ~/dotfiles_old/
 done
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
