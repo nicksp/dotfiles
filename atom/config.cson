@@ -1,0 +1,56 @@
+"*":
+  autoprefixer: {}
+  core:
+    themes: [
+      "one-dark-ui"
+      "cobalt2-syntax"
+    ]
+  editor:
+    fontFamily: "Menlo"
+    fontSize: 15
+    invisibles:
+      cr: " "
+      eol: " "
+      tab: "⇨"
+    preferredLineLength: 120
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+  emmet: {}
+  "exception-reporting":
+    userId: "0f4e16a3-5040-01ba-b000-a0793a69fb44"
+  "highlight-line":
+    enableBackgroundColor: false
+  jshint:
+    supportLintingJsx: true
+  "markdown-preview":
+    useGitHubStyle: true
+  minimap:
+    plugins:
+      selection: true
+      selectionDecorationsZIndex: 0
+  "minimap-selection":
+    highlightCursorsLines: true
+  "one-dark-ui": {}
+  "one-light-ui": {}
+  pigments: {}
+  react: {}
+  "tree-view":
+    hideVcsIgnoredFiles: false
+  welcome:
+    showOnStartup: false
+".angular.html.text":
+  editor:
+    preferredLineLength: 120
+".git-commit.text":
+  editor:
+    preferredLineLength: 120
+".git-config.source":
+  editor:
+    preferredLineLength: 120
+".git-rebase.text":
+  editor:
+    preferredLineLength: 120
+".js.jsx.react.source":
+  editor:
+    showInvisibles: true

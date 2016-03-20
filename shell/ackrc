@@ -1,0 +1,40 @@
+# only search with case sensitivity if there is mixed case
+--smart-case
+
+# follow symlinks
+--follow
+
+# color settings
+--color-filename=white
+--color-lineno=cyan
+--color-match=magenta underline
+
+# search other filetypes
+--type-add
+ruby=haml,rabl,builder
+
+--type-add
+css=.styl,.scss
+
+--type-add
+js=json,tmpl,jst,coffee,ts
+
+--type-add
+css=sass,scss
+
+--type-set=md=.markdown,.md
+
+# ignore some dirs
+--ignore-dir=build
+--ignore-dir=vendor/bundle
+--ignore-dir=.idea
+--ignore-dir=tmp
+--ignore-dir=log
+--ignore-dir=.tmp
+--ignore-dir=coverage
+--ignore-dir=dist
+
+# ignore some files
+--ignore-file=is:tags
+--ignore-file=is:.tags
+--ignore-file=is:.example_statuses
