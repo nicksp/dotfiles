@@ -143,6 +143,7 @@
         excludesfile = ~/.gitignore
         autocrlf = input
         mergeoptions = --no-edit
+        ignorecase = false
 
 [pager]
         # Insanely beautiful diffs ==> npm install -g diff-so-fancy
