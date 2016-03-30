@@ -17,12 +17,12 @@ apps=(
     atom
     webstorm
     firefox
-    firefox-nightly
+    firefoxnightly
     google-chrome
     google-chrome-canary
     glimmerblocker
     hammerspoon
-    #kaleidoscope
+    kaleidoscope
     macdown
     opera
     screenflow
