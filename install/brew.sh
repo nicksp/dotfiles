@@ -66,6 +66,7 @@ apps=(
     autojump
     imagemagick --with-webp
     python
+    source-highlight
     the_silver_searcher
     tree
     ffmpeg --with-libvpx
