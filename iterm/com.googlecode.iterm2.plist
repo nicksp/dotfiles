@@ -6524,7 +6524,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>1</integer>
+			<integer>0</integer>
 			<key>Working Directory</key>
 			<string>/Users/nicksp/Documents/Projects</string>
 		</dict>
@@ -6532,7 +6532,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>479497009.48278099</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>479949266.17584002</real>
+	<real>480798821.808631</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -6595,7 +6595,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-03-17T23:13:55Z</date>
+	<date>2016-03-29T23:02:15Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
