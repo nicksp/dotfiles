@@ -34,6 +34,8 @@ npm config set save-exact = true
 packages=(
     diff-so-fancy
     gulp
+    grunt-cli
+    bower
     http-server
     servedir
     nodemon
