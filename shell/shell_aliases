@@ -136,6 +136,7 @@ alias gf='git reflog' # allows you to see every step you have made with git allo
 alias gap='git add -p' # step through each change, or hunk
 alias gsl='git shortlog -sn' # quickly get a list of contributors and see how many commits each person has
 alias gws='git diff --shortstat "@{0 day ago}"' # how many lines of code you have written today
+alias gwts='git ls-files | xargs wc -l' # count number of lines of code in a git project
 alias ggmp='git checkout -' # jump back to to your last branch
 alias gst='git stash' # stash git changes and put them into your list
 alias gdtp='git stash pop' # bring back your changes, but it removes them from your stash
