@@ -5724,7 +5724,7 @@
 	<key>HideActivityIndicator</key>
 	<false/>
 	<key>HideMenuBarInFullscreen</key>
-	<true/>
+	<false/>
 	<key>HideScrollbar</key>
 	<false/>
 	<key>HideTab</key>
@@ -5761,8 +5761,6 @@
 	<string>1</string>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 0</string>
-	<key>NSNavLastRootDirectory</key>
-	<string>~/dotfiles/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 459}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -5796,11 +5794,11 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>357 327 228 325 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>113 184 545 170 0 0 1440 877 </string>
+	<string>408 184 545 94 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>69 221 924 485 0 0 1440 900 </string>
+	<string>458 289 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 900 0 0 1440 877 </string>
+	<string>4 49 1432 826 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -5974,7 +5972,7 @@
 			<key>Blend</key>
 			<real>0.30000001192092896</real>
 			<key>Blink Allowed</key>
-			<false/>
+			<true/>
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
@@ -6524,7 +6522,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Working Directory</key>
 			<string>/Users/nicksp/Documents/Projects</string>
 		</dict>
@@ -6532,7 +6530,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>479497009.48278099</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>480798821.808631</real>
+	<real>481839465.66615897</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -6595,7 +6593,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-03-29T23:02:15Z</date>
+	<date>2016-04-08T20:17:41Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
