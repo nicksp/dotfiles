@@ -30,10 +30,10 @@
         l = log --pretty=custom                       # Show custom log
         ll = log --stat --abbrev-commit
         lc = shortlog --summary --numbered            # List contributors
-        rlc = reset --hard HEAD~1                     # Remove last commit
-        ulc = reset --soft HEAD~1                     # Undo last commit
+        rlc = reset --hard HEAD~1                     # Remove last commit (from HEAD, Index and Working Dir)
+        undo = reset --soft HEAD~1                    # Undo last commit (affects HEAD only)
 
-        unstage = reset HEAD
+        unstage = reset HEAD --                       # Mixed reset (affects HEAD and Index)
         publish = "!git push --set-upstream origin $(git branch-name)"
 
         branch-name = rev-parse --abbrev-ref HEAD
@@ -206,3 +206,6 @@
         clean = git lfs clean %f
         smudge = git lfs smudge %f
         required = true
+[user]
+	name = Nick Plekhanov
+	email = nickatgit@yandex.com

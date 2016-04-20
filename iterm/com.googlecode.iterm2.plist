@@ -5716,7 +5716,7 @@
 	<key>FocusFollowsMouse</key>
 	<false/>
 	<key>FsTabDelay</key>
-	<real>1</real>
+	<real>0.41258138418197632</real>
 	<key>HiddenAFRStrokeThickness</key>
 	<real>0.0</real>
 	<key>HiddenAdvancedFontRendering</key>
@@ -5798,7 +5798,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>458 289 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 49 1432 826 0 0 1440 877 </string>
+	<string>0 0 1440 878 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -6530,7 +6530,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>479497009.48278099</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>481839465.66615897</real>
+	<real>482102576.85914099</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -6593,7 +6593,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-08T20:17:41Z</date>
+	<date>2016-04-11T21:22:38Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
