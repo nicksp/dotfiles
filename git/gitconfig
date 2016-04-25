@@ -1,23 +1,79 @@
 # A good list of alises http://haacked.com/archive/2014/07/28/github-flow-aliases/
 [alias]
+        # Staging
         a = add
+        aa = add --all
+
+        # Branch
         br = branch
+        branch-name = rev-parse --abbrev-ref HEAD
+        branch-diff = diff master...HEAD
+        branch-files = "!git diff master...HEAD --name-status | sed '/^D/d ; s/^.\\s\\+//'"
+
+        # Commit
         c = commit
         ca = commit -a
         cm = commit -m
         cal = !git add -A && git commit              # Commit all changes
         cam = commit -am
         cne = commit --no-edit
+        amend = commit --amend
+        amend-all = !git add --all && git commit --amend --reuse-message=HEAD
+
+        # Clone
+        cl = clone
+        sclone = clone --depth=1
+
+        # Checkout
         co = checkout
+        cb = checkout -b
+
+        # Cherry-pick
         cp = cherry-pick
+
+        # Diff
         d = diff --color-words
         dc = diff --cached
-        p = push
-        s = status
-        ss = status -s
-        sclone = clone --depth=1
-        up = pull
+        df = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
+        # Merge
+        m = merge
+
+        # Pull
+        up = pull
+        plom = pull origin master
+        plum = pull upstream master
+        preb = !git fetch upstream && git rebase upstream/master
+
+        # Push
+        p = push
+        pom = push origin master
+        poh = push origin head
+
+        # Stash
+        st = stash
+        stp = stash pop
+
+        # Status/Logging
+        s = status
+        ss = status -sb
+        hist = log --graph --pretty=custom           # Show custom graph
+        l = log --pretty=custom                      # Show custom log
+        ll = log --stat --abbrev-commit
+        lc = shortlog --summary --numbered           # List contributors
+
+        # Reset
+        unstage = reset HEAD --                      # Mixed reset (affects HEAD and Index)
+        undo = reset --soft HEAD~1                   # Undo last commit (affects HEAD only)
+        reset = reset --hard HEAD~1                  # Remove last commit (from HEAD, Index and Working Dir)
+
+        # Remote
+        r = remote -v
+
+        # Submodules
+        subpl = submodule update --init --recursive
+
+        # Git flow
         new = !git pull origin develop && git flow feature start
         done = !git pull origin develop && git flow feature finish "$(git symbolic-ref --short HEAD | sed -n 's/^feature\\///p')"
         go = !git checkout $1 && pull
@@ -26,19 +82,8 @@
         mmm = !git fetch origin master && git rebase origin/master
         ddd = !git fetch origin develop && git rebase origin/develop
 
-        g = log --graph --pretty=custom               # Show custom graph
-        l = log --pretty=custom                       # Show custom log
-        ll = log --stat --abbrev-commit
-        lc = shortlog --summary --numbered            # List contributors
-        rlc = reset --hard HEAD~1                     # Remove last commit (from HEAD, Index and Working Dir)
-        undo = reset --soft HEAD~1                    # Undo last commit (affects HEAD only)
-
-        unstage = reset HEAD --                       # Mixed reset (affects HEAD and Index)
+        # Misc
         publish = "!git push --set-upstream origin $(git branch-name)"
-
-        branch-name = rev-parse --abbrev-ref HEAD
-        branch-diff = diff master...HEAD
-        branch-files = "!git diff master...HEAD --name-status | sed '/^D/d ; s/^.\\s\\+//'"
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -206,6 +251,3 @@
         clean = git lfs clean %f
         smudge = git lfs smudge %f
         required = true
-[user]
-	name = Nick Plekhanov
-	email = nickatgit@yandex.com
