@@ -55,9 +55,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
-# Put any proprietary or private functions/values in ~/.private, and this will source them
-[ -f $HOME/.private ] && source $HOME/.private
-
 # Automatically list directory contents on `cd`.
 # auto-ls () {
 #   emulate -L zsh;
@@ -68,8 +65,7 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-
-# Load extra (private) settings
+# Source local extra (private) settings specific to machine if it exists
 [ -f ~/.zsh.local ] && source ~/.zsh.local
 
 # npm tab completion
