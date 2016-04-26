@@ -46,7 +46,7 @@ plugins=(fabric brew node npm history git-flow vagrant zsh-syntax-highlighting)
 # User configuration
 
 # Load the shell dotfiles
-for file in $HOME/.{shell_exports,shell_aliases,shell_functions}; do
+for file in $HOME/.{shell_exports,shell_aliases,shell_functions,shell_config}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -68,8 +68,6 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-# Disable sharing history between terminals enabled by Oh My Zsh
-unsetopt share_history
 
 # Load extra (private) settings
 [ -f ~/.zsh.local ] && source ~/.zsh.local

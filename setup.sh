@@ -155,6 +155,7 @@ echo "done"
 declare -a FILES_TO_SYMLINK=(
 
   'shell/shell_aliases'
+  'shell/shell_config'
   'shell/shell_exports'
   'shell/shell_functions'
   'shell/bash_profile'
