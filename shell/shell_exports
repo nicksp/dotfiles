@@ -1,3 +1,6 @@
+# Defaults
+export SHELL=/bin/zsh
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nano'
