@@ -11,7 +11,7 @@ function f() {
 }
 
 # List all files, long format, colorized, permissions in octal
-function la(){
+function la() {
    ls -l  "$@" | awk '
     {
       k=0;
@@ -24,7 +24,7 @@ function la(){
 }
 
 # cd into whatever is the forefront Finder window.
-cdf() {  # short for cdfinder
+cdf () {  # short for cdfinder
   cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 }
 
@@ -72,8 +72,8 @@ function whois() {
   /usr/bin/whois -h whois.internic.net $domain | sed '/NOTICE:/q'
 }
 
-function localip(){
-  function _localip(){ echo "📶  "$(ipconfig getifaddr "$1"); }
+function localip() {
+  function _localip() { echo "📶  "$(ipconfig getifaddr "$1"); }
   export -f _localip
   local purple="\x1B\[35m" reset="\x1B\[m"
   networksetup -listallhardwareports | \
@@ -121,7 +121,7 @@ function extract() {
 }
 
 # who is using the laptop's iSight camera?
-camerausedby() {
+camerausedby () {
   echo "Checking to see who is using the iSight camera… 📷"
   usedby=$(lsof | grep -w "AppleCamera\|USBVDC\|iSight" | awk '{printf $2"\n"}' | xargs ps)
   echo -e "Recent camera uses:\n$usedby"
@@ -129,15 +129,15 @@ camerausedby() {
 
 
 # animated gifs from any video
-# from alex sexton   gist.github.com/SlexAxton/4989674
-gifify() {
+# from Alex Sexton gist.github.com/SlexAxton/4989674
+gifify () {
   if [[ -n "$1" ]]; then
   if [[ $2 == '--good' ]]; then
-    ffmpeg -i $1 -r 10 -vcodec png out-static-%05d.png
-    time convert -verbose +dither -layers Optimize -resize 900x900\> out-static*.png  GIF:- | gifsicle --colors 128 --delay=5 --loop --optimize=3 --multifile - > $1.gif
+    ffmpeg -i "$1" -r 10 -vcodec png out-static-%05d.png
+    time convert -verbose +dither -layers Optimize -resize 900x900\> out-static*.png  GIF:- | gifsicle --colors 128 --delay=5 --loop --optimize=3 --multifile - > "$1.gif"
     rm out-static*.png
   else
-    ffmpeg -i $1 -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $1.gif
+    ffmpeg -i "$1" -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > "$1.gif"
   fi
   else
   echo "proper usage: gifify <input_movie.mov>. You DO need to include extension."
@@ -146,21 +146,12 @@ gifify() {
 
 # turn that video into webm.
 # brew reinstall ffmpeg --with-libvpx
-webmify(){
-  ffmpeg -i $1 -vcodec libvpx -acodec libvorbis -isync -copyts -aq 80 -threads 3 -qmax 30 -y $2 $1.webm
+webmify () {
+  ffmpeg -i "$1" -vcodec libvpx -acodec libvorbis -isync -copyts -aq 80 -threads 3 -qmax 30 -y "$2" "$1.webm"
 }
-
 
 # visual studio code. a la `subl`
-code () {
-  if [[ $# = 0 ]]
-  then
-    open -a "Visual Studio Code"
-  else
-    [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
-    open -a "Visual Studio Code" --args "$F"
-  fi
-}
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCodeInsiders" --args $*; }
 
 # `shellswitch [bash |zsh]`
 #   Must be in /etc/shells
