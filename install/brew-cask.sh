@@ -7,12 +7,16 @@ brew tap caskroom/versions
 
 # Install packages
 apps=(
+    1password
     gyazo
     dropbox
     google-drive
     spectacle
     flux
     dash
+    imagealpha
+    imageoptim
+    evernote
     iterm2
     atom
     webstorm
@@ -20,16 +24,19 @@ apps=(
     firefoxnightly
     google-chrome
     google-chrome-canary
+    malwarebytes-anti-malware
     glimmerblocker
     hammerspoon
     kaleidoscope
     macdown
     opera
     screenflow
-    #sourcetree
     spotify
+    skype
+    slack
+    tower
     transmit
-    vlc
+    elmedia-player
     utorrent
 )
 
