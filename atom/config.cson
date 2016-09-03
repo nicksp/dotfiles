@@ -1,6 +1,9 @@
 "*":
   autoprefixer: {}
   core:
+    disabledPackages: [
+      "react"
+    ]
     themes: [
       "one-dark-ui"
       "cobalt2-syntax"
@@ -16,6 +19,7 @@
     showInvisibles: true
     softWrap: true
     softWrapAtPreferredLineLength: true
+    tabType: "soft"
   emmet: {}
   "exception-reporting":
     userId: "0f4e16a3-5040-01ba-b000-a0793a69fb44"
@@ -29,6 +33,10 @@
     useGitHubStyle: true
   minimap:
     plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
       selection: true
       selectionDecorationsZIndex: 0
   "minimap-selection":
@@ -37,11 +45,19 @@
   "one-light-ui": {}
   pigments: {}
   react: {}
-  "tree-view":
-    hideVcsIgnoredFiles: false
+  "tree-view": {}
   welcome:
     showOnStartup: false
 ".angular.html.text":
+  editor:
+    preferredLineLength: 120
+".cake.source":
+  editor:
+    preferredLineLength: 120
+".cs.source":
+  editor:
+    preferredLineLength: 120
+".csx.source":
   editor:
     preferredLineLength: 120
 ".git-commit.text":
@@ -56,3 +72,18 @@
 ".js.jsx.react.source":
   editor:
     showInvisibles: true
+".js.regexp.replacement.source":
+  editor:
+    preferredLineLength: 120
+".js.regexp.source":
+  editor:
+    preferredLineLength: 120
+".js.source":
+  editor:
+    preferredLineLength: 120
+".json.source":
+  editor:
+    preferredLineLength: 120
+".nant-build.source":
+  editor:
+    preferredLineLength: 120
