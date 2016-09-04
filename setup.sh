@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://github.com/kaicataldo/dotfiles/blob/master/bin/install.sh
+
 # This symlinks all the dotfiles (and .atom/) to ~/
 # It also symlinks ~/bin for easy updating
 
@@ -121,6 +123,20 @@ print_success() {
   printf "\e[0;32m  [✔] $1\e[0m\n"
 }
 
+# Warn user this script will overwrite current dotfiles
+while true; do
+  read -p "Warning: this will overwrite your current dotfiles. Continue? [y/n] " yn
+  case $yn in
+    [Yy]* ) break;;
+    [Nn]* ) exit;;
+    * ) echo "Please answer yes or no.";;
+  esac
+done
+
+# Get the dotfiles directory's absolute path
+SCRIPT_DIR="$(cd "$(dirname "$0")"; pwd -P)"
+DOTFILES_DIR="$(dirname "$SCRIPT_DIR")"
+
 
 dir=~/dotfiles                        # dotfiles directory
 dir_backup=~/dotfiles_old             # old dotfiles backup directory
@@ -183,6 +199,7 @@ for i in ${FILES_TO_SYMLINK[@]}; do
   mv ~/.${i##*/} ~/dotfiles_old/
 done
 
+
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 main() {
@@ -214,9 +231,29 @@ main() {
 
   done
 
-  # Copy batcharge
+  unset FILES_TO_SYMLINK
+
+  # Copy binaries
   ln -fs $HOME/dotfiles/bin $HOME
-  chmod +rwx $HOME/bin/batcharge.py
+
+  declare -a BINARIES=(
+    'batcharge.py'
+    'crlf'
+    'dups'
+    'git-delete-merged-branches'
+    'nyan'
+    'passive'
+    'proofread'
+    'ssh-key'
+    'weasel'
+  )
+
+  for i in ${BINARIES[@]}; do
+    echo "Changing access permissions for binary script :: ${i##*/}"
+    chmod +rwx $HOME/bin/${i##*/}
+  done
+
+  unset BINARIES
 
   # Symlink online-check.sh
   ln -fs $HOME/dotfiles/lib/online-check.sh $HOME/online-check.sh
