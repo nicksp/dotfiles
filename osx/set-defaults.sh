@@ -232,7 +232,7 @@ defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-ty
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
            "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
            "Terminal" "Twitter" "iCal"; do
-           kill all "${app}" > /dev/null 2>&1
+           killall "${app}" > /dev/null 2>&1
 done
 
 # Wait a bit before moving on...
