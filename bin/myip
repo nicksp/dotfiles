@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Show my IP address
+
+curl http://ipecho.net/plain; echo

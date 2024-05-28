@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Display supported terminal colors with color codes
+
+# Represent the 16 base colors in the 256-color palette
+for row in {0..15}; do
+  # Represent the 16 shades of each base color
+  for col in {0..15}; do
+    color=$((row * 16 + col))
+    color_code=$(printf "%03d" $color)
+
+    echo -en "\033[48;5;${color}m\033[1m $color_code \033[0m\033[38;5;${color}m\033[0m"
+  done
+  echo
+done

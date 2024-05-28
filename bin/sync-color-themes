@@ -1,0 +1,178 @@
+#!/bin/bash
+
+# Download and install Squirrelsong themes
+#
+# This script syncs color themes for:
+# [x] WezTerm
+# [x] Bat
+# [x] Bear
+# [x] Vivaldi
+# [x] Chrome DevTools
+# [x] CotEditor
+# [x] Marta
+# [ ] Bartender
+# [ ] Slack
+# [ ] Telegram
+
+warning() {
+  tput setaf 1
+  echo "/!\\ $1 /!\\"
+  tput sgr0
+}
+
+header() {
+  echo -e "$(tput sgr 0 1)$(tput setaf 6)$1$(tput sgr0)"
+}
+
+bold=$(tput bold)
+highlight=$(tput setaf 3; tput bold)
+reset=$(tput sgr0)
+
+# Ask for the administrator password upfront
+warning "Activate sudo"
+sudo echo "Sudo activated!"
+echo
+
+# WezTerm: https://github.com/sapegin/squirrelsong/tree/master/dark/WezTerm
+# Not required since it'll be symlinked.
+# header "Updating WezTerm theme..."
+
+# cp -f "$DOTFILES/tilde/.config/wezterm/colors/squirrelsong-dark.toml" "$HOME/.config/wezterm/colors/squirrelsong-dark.toml"
+
+# echo "🖌 A new color theme has been installed and ready to use"
+
+# Bat: https://github.com/sharkdp/bat?tab=readme-ov-file#adding-new-themes
+echo ""
+header "Updating Bat theme..."
+# Create a folder with the new syntax highlighting themes
+mkdir -p "$(bat --config-dir)/themes"
+# Download a theme in '.tmTheme' format
+sudo curl -o "$(bat --config-dir)/themes/Squirrelsong Dark.tmTheme" "https://raw.githubusercontent.com/sapegin/squirrelsong/master/dark/Sublime%20Text/Squirrelsong%20Dark/Squirrelsong%20Dark.tmTheme"
+# Update the binary cache
+bat cache --build
+
+echo "💅 A new color theme has been installed and ready to use"
+
+# Bear: https://github.com/sapegin/squirrelsong/tree/master/light/Bear
+echo ""
+header "Updating Bear theme..."
+sudo command rm -f "/Applications/Bear.app/Contents/Frameworks/BearCore.framework/Resources/Red Graphite.theme"
+sudo curl -o "/Applications/Bear.app/Contents/Frameworks/BearCore.framework/Resources/Red Graphite.theme" "https://raw.githubusercontent.com/sapegin/squirrelsong/master/light/Bear/Squirrelsong%20Light.theme"
+
+echo "🐠 Choose Red Graphite theme in Bear settings"
+
+# Vivaldi: https://github.com/sapegin/squirrelsong/tree/master/light/Vivaldi
+echo ""
+header "Downloading a light theme for Vivaldi..."
+target_dir="$HOME/Documents/MYDATA/Color Themes/squirrelsong-master/light/Vivaldi"
+mkdir -p "$target_dir"
+
+archive_url="https://github.com/sapegin/squirrelsong/blob/master/light/Vivaldi/Squirrelsong%20Light.zip"
+archive_name="Squirrelsong Light.zip"
+curl -L "$archive_url" -o "$target_dir/$archive_name"
+
+# Check if the download was successful
+if [ $? -eq 0 ]; then
+  echo "File downloaded successfully to: $target_dir/$archive_name"
+else
+  echo "Error: Failed to download the file."
+  exit 1
+fi
+
+echo ""
+echo "Follow these steps to install the theme:"
+echo ""
+echo "− Open ${bold}Settings${reset}, then ${bold}Themes${reset}."
+echo "− Press ${bold}Open Theme...${reset} button."
+echo "− Select ${highlight}$archive_name${reset}."
+echo "− Select ${bold}Squirrelsong Light${reset} in ${bold}Theme${reset} list."
+
+# Chrome DevTools in Vivaldi: https://github.com/sapegin/squirrelsong/tree/master/light/Chrome%20DevTools
+echo ""
+header "Downloading a light theme for Chrome DevTools..."
+target_dir="$HOME/Documents/MYDATA/Color Themes"
+mkdir -p "$target_dir"
+
+# Download the themes archive
+themes_archive_url="https://github.com/sapegin/squirrelsong/archive/refs/heads/master.zip"
+themes_archive="$target_dir/squirrelsong.zip"
+curl -L "$themes_archive_url" -o "$themes_archive"
+
+# Check if the download was successful
+if [ $? -eq 0 ]; then
+  unzip -qo "$themes_archive" "squirrelsong-master/light/Chrome DevTools/extension/*" -d "$target_dir"
+  rm -f "$themes_archive"
+else
+  echo "Error: Failed to download the extension archive."
+  exit 1
+fi
+
+extension_dir="$target_dir/squirrelsong-master/light/Chrome DevTools/extension"
+
+if [ -d "$extension_dir" ]; then
+  echo "Extension extracted successfully to: $extension_dir"
+else
+  echo "Error: Failed to extract the extension."
+  exit 1
+fi
+
+echo ""
+echo "Follow these steps to install the extension:"
+echo ""
+echo "− Go to chrome://extensions in your browser."
+echo "− Turn on ${bold}Developer mode${reset}."
+echo "− Press ${bold}Load unpacked${reset} button."
+echo "− Select the ${highlight}light/Chrome DevTools/extension${reset} folder of this repository."
+echo "− Open DevTools settings."
+echo "− Make sure that the ${bold}Light${reset} theme is selected in the ${bold}Preferences${reset} → ${bold}Appearance${reset} section."
+echo "− Make sure that the ${bold}Allow extensions to load custom stylesheets${reset} checkbox is selected in the ${bold}Experiments${reset} section."
+
+# CotEditor: https://github.com/sapegin/squirrelsong/tree/master/light/CotEditor
+echo ""
+header "Downloading CotEditor theme..."
+target_dir="$HOME/Documents/MYDATA/Color Themes/squirrelsong-master/light/CotEditor"
+mkdir -p "$target_dir"
+
+file_url="https://raw.githubusercontent.com/sapegin/squirrelsong/master/light/CotEditor/Squirrelsong%20Light.cottheme"
+file_name="Squirrelsong Light.cottheme"
+curl -L "$file_url" -o "$target_dir/$file_name"
+
+# Check if the download was successful
+if [ $? -eq 0 ]; then
+  echo "File downloaded successfully to: $target_dir/$file_name"
+else
+  echo "Error: Failed to download the file."
+  exit 1
+fi
+
+echo ""
+echo "Follow these steps to install the theme:"
+echo ""
+echo "− Open ${bold}Settings${reset}, then ${bold}Appearance${reset}."
+echo "− Import ${highlight}Squirrelsong Light.cottheme${reset}"
+echo "− Select ${bold}Squirrelsong Light${reset} in ${bold}Theme${reset} list."
+echo ""
+
+# Marta file manager: https://github.com/sapegin/squirrelsong/tree/master/light/Marta
+header "Updating a light theme for Marta file manager..."
+# app theme
+sudo command rm -f "$HOME/Library/Application Support/org.yanex.marta/Themes/Squirrelsong Light.theme"
+sudo curl -o "$HOME/Library/Application Support/org.yanex.marta/Themes/Squirrelsong Light.theme" "https://raw.githubusercontent.com/sapegin/squirrelsong/master/light/Marta/Squirrelsong%20Light.theme"
+
+# terminal theme
+sudo command rm -f "/Applications/Marta.app/Contents/Resources/Themes/SquirrelsongLight.ettyTheme"
+sudo curl -o "/Applications/Marta.app/Contents/Resources/Themes/SquirrelsongLight.ettyTheme" "https://raw.githubusercontent.com/sapegin/squirrelsong/master/light/Marta/SquirrelsongLight.ettyTheme"
+
+echo "🍲 Point to new themes in Marta preferences and restart the app for the changes to take effect."
+
+# Bartender: https://github.com/sapegin/squirrelsong/tree/master/light/Bartender
+echo ""
+header "Follow these steps to install the theme for Bartender: https://github.com/sapegin/squirrelsong/tree/master/light/Bartender"
+
+# Slack: https://github.com/sapegin/squirrelsong/tree/master/light/Slack
+echo ""
+header "Follow these steps to configure the theme for Slack: https://github.com/sapegin/squirrelsong/tree/master/light/Slack"
+
+# Telegram: https://github.com/sapegin/squirrelsong/tree/master/light/Telegram
+echo ""
+header "Follow these steps to add the theme to Telegram: https://github.com/sapegin/squirrelsong/tree/master/light/Telegram"

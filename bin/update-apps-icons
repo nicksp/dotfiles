@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Update applications to use alternative icons
+
+set -euo pipefail
+
+. "$DOTFILES/setup/icons.sh"

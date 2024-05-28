@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+set -u
+
+"/Applications/Optimage.app/Contents/MacOS/Optimage" $(realpath "$@")

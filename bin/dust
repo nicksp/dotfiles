@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# List current dir files & dirs sizes
+du -sh * | sort -hr

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Set macOS defaults
+
+exec $DOTFILES/setup/macos.sh

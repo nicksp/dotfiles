@@ -1,0 +1,22 @@
+# Ignore case, unless the pattern includes capital letters
+--smart-case
+
+# Include hidden files (good for .eslinrc kind of files)
+--hidden
+
+# Don't let ripgrep vomit really long lines to my terminal, and show a preview.
+--max-columns=150
+--max-columns-preview
+
+# Ignore npm/Yarn lock files, etc.
+--glob=!package-lock.json
+--glob=!yarn.lock
+--glob=!.git
+
+# Color theme
+--colors=line:fg:white
+--colors=path:fg:blue
+--colors=path:style:bold
+--colors=match:fg:black
+--colors=match:bg:yellow
+--colors=match:style:nobold

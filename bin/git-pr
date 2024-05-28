@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# A convenient way to interact with GitHub pull requests using the `gh` CLI tool.
+#  * If no argument is provided, it lists all open pull requests.
+#  * If a number is provided, it checks out the corresponding pull request.
+# * If any other argument is provided, pass down to the `gh pr` command.
+
+if [ -z "$1" ]; then
+  gh pr list
+elif [[ "$1" =~ ^[0-9]+$ ]]; then
+  gh pr checkout "$1"
+else
+  gh pr "$@"
+fi

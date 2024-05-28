@@ -1,0 +1,1141 @@
+{
+  /*
+  |--------------------------------------------------------------------------
+  | Must-have Settings
+  |--------------------------------------------------------------------------
+  */
+
+  // Trim stuff on save
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+
+  "files.insertFinalNewline": true,
+
+  // Panels positioning
+  "workbench.sideBar.location": "right",
+  "workbench.panel.defaultLocation": "bottom",
+
+  // Autocompletes
+  // https://stackoverflow.com/questions/49956963/markdown-not-using-emmet
+  // https://css-tricks.com/can-vs-code-emmet/
+  "emmet.excludeLanguages":["typescript"],
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact",
+    "jsx-sublime-babel-tags": "javascriptreact",
+    "markdown": "html",
+    "typescript": "html"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showExpandedAbbreviation": "never",
+
+  // Code startup & new file creation
+  "files.defaultLanguage": "markdown",
+  "workbench.startupEditor": "newUntitledFile",
+  "window.newWindowDimensions": "maximized",
+
+  // Privacy
+  "telemetry.telemetryLevel": "off",
+  "sonarlint.disableTelemetry": true,
+  "gitlens.telemetry.enabled": true,
+  "cody.telemetry.level":"off",
+  "redhat.telemetry.enabled": false,
+  "workbench.enableExperiments": false,
+  // Don't use online search in the settings editor
+  "workbench.settings.enableNaturalLanguageSearch": false,
+
+  // Sensible multi-cursor trigger
+  "editor.multiCursorModifier": "ctrlCmd",
+
+  // Essential editor setup
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "editor.rulers": [80],
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 2,
+  "editor.detectIndentation": false,
+  "editor.cursorBlinking": "solid",
+  "window.zoomLevel": 0.35,
+
+  /*
+  |--------------------------------------------------------------------------
+  | DX Improvements
+  |--------------------------------------------------------------------------
+  */
+
+  "editor.scrollBeyondLastLine": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "editor.tabCompletion": "on",
+
+  // Peek-less Go to navigation
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+
+  // Improved tab title rendering
+  "workbench.editor.customLabels.patterns": {
+    "**/routes/**/+page.svelte": "${dirname(1)}/${dirname}",
+    "**/routes/**/+page.server.ts": "/${dirname} [server]",
+    "**/app/**/page.tsx": "${dirname}.${extname}",
+    "**/app/**/layout.tsx": "${dirname}/layout.${extname}",
+    // Quick open files by their folder name if the file name is index.*
+    "**/index.*": "${dirname}/${filename}.${extname}"
+  },
+
+  // Sticky scroll
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 3,
+
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.unfoldOnClickAfterEndOfLine": true,
+
+  // Top window bar
+  // We have a lot of space in the window title, so why not use it to show where we are
+  // This comes in handy when the Explorer is closed and we're switching over
+  // between multiple projects.
+  "window.titleBarStyle": "custom",
+  "window.title": "${activeEditorMedium}${separator}${rootName} ${dirty}",
+
+  "window.openFilesInNewWindow": "off",
+
+  // Explorer improvements
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
+  "explorer.fileNesting.enabled": false,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
+  },
+  // Improve Explorer tree readability
+  "workbench.tree.indent": 20,
+
+  "workbench.commandPalette.preserveInput": false,
+
+  /*
+  * Terminal look
+  *
+  * VS Code automatically uses your default shell, but I'm setting it
+  * explicitly. Most of the look is already taken care of, but here are some
+  * settings that aren’t.
+  */
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "zsh",
+      "args": ["-l"]
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorStyleInactive": "none",
+  "terminal.integrated.cursorWidth": 2,
+  "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  "terminal.integrated.stickyScroll.enabled": true,
+  "terminal.integrated.tabs.enableAnimation": false,
+  "terminal.integrated.tabStopWidth": 2,
+  // Use normal colors for bold text
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  // Without this, the customized colors will be washed out
+  "terminal.integrated.minimumContrastRatio": 1,
+  "terminal.integrated.copyOnSelection": true,
+  // Make VS Code consume the keybinding instead of sending the key presses for the command you want to bind a keyboard shortcut to to the shell
+  "terminal.integrated.commandsToSkipShell": ["workbench.action.closePanel"],
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.hideOnStartup": "always",
+  "terminal.integrated.tabs.showActions": "never",
+
+  /*
+  |--------------------------------------------------------------------------
+  | Zen & Overall Cleanup
+  |--------------------------------------------------------------------------
+  */
+
+  // Better Zen mode
+  "zenMode.fullScreen": false,
+  "zenMode.centerLayout": true,
+  "zenMode.showTabs": "none",
+
+  // Hide all the panels and junk in code editor and file explorer
+  "breadcrumbs.enabled": false,
+  "breadcrumbs.filePath": "off",
+  "comments.maxHeight": false,
+  "comments.openView": "never",
+  "comments.visible": false,
+  "workbench.editor.tabActionCloseVisibility": false,
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.showTabs": "none",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.decorations.badges": false,
+  "workbench.tips.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.reduceMotion": "on",
+  "explorer.decorations.badges": false,
+  "explorer.openEditors.visible": 1,
+  "editor.find.addExtraSpaceOnTop": false,
+  "editor.colorDecorators": false,
+  "editor.glyphMargin": false,
+  "editor.showFoldingControls": "never", // ?
+  "editor.renderLineHighlight": "none",
+  "editor.inlayHints.padding": true,
+  "editor.lineNumbers": "off",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.overviewRulerBorder": false,
+  "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.renderWhitespace": "boundary",
+  "outline.problems.badges": false,
+  "problems.autoReveal": false,
+  "problems.decorations.enabled": false,
+  "search.decorations.badges": false,
+  "testing.openTesting": "openOnTestFailure",
+  "window.commandCenter": false,
+
+  /*
+  |--------------------------------------------------------------------------
+  | Git and Source Control Management
+  |--------------------------------------------------------------------------
+  */
+
+  // Show me whitespace in diffs, just in case some slips through, and shows up in the GitHub PR
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.experimental.showMoves": true,
+
+  "git.closeDiffOnOperation": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+
+  "scm.diffDecorations": "gutter",
+  "scm.diffDecorationsGutterPattern": { "modified": false },
+  "scm.diffDecorationsIgnoreTrimWhitespace": "true",
+  "scm.inputFontFamily": "editor",
+  "scm.inputFontSize": 16,
+  "scm.inputMaxLineCount": 20,
+  "scm.inputMinLineCount": 4,
+
+  /*
+  |--------------------------------------------------------------------------
+  | The Look & Typography
+  |--------------------------------------------------------------------------
+  */
+
+  /*
+   * Theme
+   *
+   * Other preferences are:
+   *  - Nord (https://marketplace.visualstudio.com/items?itemName=arcticicestudio.nord-visual-studio-code)
+   *  - Night Owl (https://marketplace.visualstudio.com/items?itemName=sdras.night-owl)
+   *  - An Old Hope Italic (https://marketplace.visualstudio.com/items?itemName=dustinsanders.an-old-hope-theme-vscode)
+   *  - LaserWave Italic (https://marketplace.visualstudio.com/items?itemName=jaredkent.laserwave)
+   *  - Midnight City (https://marketplace.visualstudio.com/items?itemName=dillonchanis.midnight-city)
+   *  - Shades of Purple (https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple)
+   *  - Winter Is Coming (Dark Blue) (https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple)
+   *  - New Moon Syntax Theme (https://marketplace.visualstudio.com/items?itemName=taniarascia.new-moon-vscode)
+   *  - 1984 - Fancy (https://marketplace.visualstudio.com/items?itemName=juanmnl.vscode-theme-1984)
+   *  - Dracula Official - Soft (https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
+   *  - Electronic Moonlight Theme (https://marketplace.visualstudio.com/items?itemName=isaaccodes.electronic-moonlight-theme)
+   *  - Bearded Theme (https://marketplace.visualstudio.com/items?itemName=BeardedBear.beardedtheme)
+   *  - Level Up Theme Official (https://marketplace.visualstudio.com/items?itemName=leveluptutorials.theme-levelup)
+   *  - Night Wolf (https://marketplace.visualstudio.com/items?itemName=MaoSantaella.night-wolf)
+   *  - Tokyo Night (https://marketplace.visualstudio.com/items?itemName=Avetis.tokyo-night)
+   *
+   * Icon sets:
+   *  - eq-material-theme-icons-ocean (https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme-icons)
+   *  - vscode-icons
+   *  - helium-icon-theme (https://marketplace.visualstudio.com/items?itemName=helgardrichard.helium-icon-theme)
+   *  - ayu (https://marketplace.visualstudio.com/items?itemName=teabyii.ayu)
+   *  - bearded-icons (https://marketplace.visualstudio.com/items?itemName=BeardedBear.beardedicons)
+   *  - vs-seti
+   *  - Equinusocio.moxer-icons
+   *  - Catppuccin Icons (Catppuccin.catppuccin-vsc-icons)
+   */
+  // Light Theme
+  "workbench.colorTheme": "Squirrelsong Light (Dark Terminal)",
+  "workbench.iconTheme": "catppuccin-latte",
+
+  // Dark theme
+  // "workbench.colorTheme": "Tokyo Storm Gogh",
+  // "workbench.iconTheme": "catppuccin-mocha",
+
+  // Typography
+  "workbench.fontAliasing": "auto",
+
+  // Operator Mono typography preset
+  // "editor.fontSize": 17,
+  // "editor.lineHeight": 27.65,
+  // "editor.letterSpacing": 0.3,
+  // "editor.fontFamily": "Operator Mono, Hack, Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
+  // "editor.fontLigatures": true,
+  // "editor.suggestFontSize": 15,
+  // "editor.suggestLineHeight": 25,
+
+  // MonoLisa typography preset
+  "editor.lineHeight": 1.55, // ? 0 has a similar effect and will automatically adjust based on the font-size.
+  "editor.fontFamily": "MonoLisa, \"Symbols Nerd Font Mono\"",
+  "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss11' on, 'ss08' on",
+  "editor.fontSize": 17,
+
+  // To override or define any workbench UI styles
+  "workbench.colorCustomizations": {
+    // Hide warnings and other distractions from overview ruler (scroll bar)
+    "editorOverviewRuler.warningForeground": "#ffffff00",
+    "editorOverviewRuler.infoForeground": "#ffffff00",
+    "editorOverviewRuler.bracketMatchForeground": "#ffffff00",
+    "editorOverviewRuler.wordHighlightForeground": "#ffffff00",
+    "editorOverviewRuler.wordHighlightTextForeground": "#ffffff00",
+
+    // ErrorLens
+    "errorLens.errorForegroundLight": "#cc5c52",
+    "errorLens.warningForegroundLight": "#de9e59",
+    "errorLens.hintForegroundLight": "#5b9a8b",
+
+    // GitLens
+    "gitlens.gutterUncommittedForegroundColor": "#e87da4",
+    "gitlens.gutterForegroundColor": "#78737d",
+    "gitlens.gutterBackgroundColor": "#fdfdfe00"
+  },
+
+  // "workbench.colorCustomizations": {
+    //   "[Dracula Soft]": {
+      //     "editor.lineHighlightBackground": "#22212ce3",
+      //     "editor.lineHighlightBorder": "#262A36",
+      //     "sideBar.background": "#21222C",
+      //     "sideBarTitle.foreground": "#F8F8F2",
+      //     "sideBarSectionHeader.background": "#282A36",
+  //     "sideBarSectionHeader.border": "#191A21"
+  //   },
+  //   "[Electronic Moonlight]": {
+  //     "editorCursor.background": "#ffffffc9",
+  //     "editorCursor.foreground": "#b6bcc4",
+  //     "editor.lineHighlightBackground": "#1073cf14",
+  //     "editor.lineHighlightBorder": "#9fced11f",
+  //     "terminal.tab.activeBorder": "#81a1c1"
+  //   },
+  //   "[Bearded Theme Arc EolStorm]": {
+  //     "editor.lineHighlightBorder": "#28313f00"
+  //   },
+  //   // https://www.nordtheme.com/docs/colors-and-palettes
+  //   "[Nord]": {
+  //     // Use a 10% brigher foreground color for all comments.
+  //     "activityBar.background": "#3b4252",
+  //     "activityBarBadge.background": "#81a1c1",
+  //     "activityBarBadge.foreground": "#eceff4"
+  //   },
+  //   "[LaserWave Italic]": {
+  //     "activityBar.background": "#3b4252"
+  //   }
+  // },
+
+  // To override or define any code syntax styles of languages like e.g. Go or JavaScript
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "Comment",
+        "scope": ["comment", "punctuation.definition.comment"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Export Default",
+        "scope": ["keyword.control.export"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "[HTML] - Entity Other",
+        "scope": "text.html.basic entity.other",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "[MARKDOWN] - Quote Paragraph",
+        "scope": "markup.quote.markdown meta.paragraph.markdown",
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "[TYPESCRIPT] Returned Type",
+        "scope": ["meta.return.type.ts"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "Italicsify current theme",
+        "scope": [
+          "modifier",
+          "this",
+          "comment",
+          "storage.modifier",
+          // "entity.other.attribute-name.js",
+          // "entity.other.attribute-name.jsx",
+          // "entity.other.attribute-name.ts",
+          // "entity.other.attribute-name.tsx",
+          // "entity.other.attribute-name.id.html",
+          // "entity.other.attribute-name.html",
+          // "entity.other.attribute-name.id.css",
+          // "entity.other.attribute-name.class.css",
+          "entity.other.attribute-name.html"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
+
+  // To override or define any code syntax styles of languages like e.g. Go or /// JavaScript
+  // "editor.tokenColorCustomizations": {
+  //   "[Night Wolf (black)]": {
+  //     "comments": "#7b88a1",
+  //     "textMateRules": [
+  //       {
+  //         "scope": [
+  //           "comment",
+  //           "punctuation.definition.comment",
+  //           "string.quoted.docstring"
+  //         ],
+  //         "settings": {
+  //           "fontStyle": "italic"
+  //         }
+  //       },
+  //       {
+  //         "scope": ["keyword.control", "storage"],
+  //         "settings": {
+  //           "fontStyle": "italic"
+  //         }
+  //       },
+  //       {
+  //         "scope": ["keyword.operator.spread", "keyword.operator.rest"],
+  //         "settings": {
+  //           "fontStyle": "bold"
+  //         }
+  //       },
+  //       {
+  //         "scope": ["keyword.control"],
+  //         "settings": {
+  //           "fontStyle": "italic"
+  //         }
+  //       },
+  //       {
+  //         "scope": [
+  //           "string",
+  //           "constant.other.symbol",
+  //           "constant.other.key",
+  //           "entity.other.inherited-class",
+  //           "markup.heading",
+  //           "markup.inserted.git_gutter",
+  //           "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js",
+  //           "meta.attribute-selector"
+  //         ],
+  //         "settings": {}
+  //       },
+  //       {
+  //         "scope": ["variable.language"],
+  //         "settings": {
+  //           "fontStyle": "italic"
+  //         }
+  //       },
+  //       {
+  //         "scope": ["entity.name.method.js"],
+  //         "settings": {
+  //           "fontStyle": "italic"
+  //         }
+  //       },
+  //       {
+  //         "scope": ["entity.other.attribute-name"],
+  //         "settings": {
+  //           "fontStyle": "italic"
+  //         }
+  //       },
+  //       {
+  //         "scope": [
+  //           "meta.tag.metadata.doctype entity.name.tag",
+  //           "meta.tag.metadata.doctype entity.other.attribute-name"
+  //         ],
+  //         "settings": {
+  //           "fontStyle": "italic"
+  //         }
+  //       },
+  //       {
+  //         "scope": ["*url*", "*link*", "*uri*"],
+  //         "settings": {
+  //           "fontStyle": "underline"
+  //         }
+  //       },
+  //       {
+  //         "scope": [
+  //           "tag.decorator.js entity.name.tag.js",
+  //           "tag.decorator.js punctuation.definition.tag.js"
+  //         ],
+  //         "settings": {
+  //           "fontStyle": "italic"
+  //         }
+  //       },
+  //       {
+  //         "scope": [
+  //           "source.js constant.other.object.key.js string.unquoted.label.js"
+  //         ],
+  //         "settings": {
+  //           "fontStyle": "italic"
+  //         }
+  //       },
+  //       {
+  //         "scope": ["markup.italic"],
+  //         "settings": {
+  //           "fontStyle": "italic"
+  //         }
+  //       },
+  //       {
+  //         "scope": ["markup.bold", "markup.bold string"],
+  //         "settings": {
+  //           "fontStyle": "bold"
+  //         }
+  //       },
+  //       {
+  //         "scope": [
+  //           "markup.bold markup.italic",
+  //           "markup.italic markup.bold",
+  //           "markup.quote markup.bold",
+  //           "markup.bold markup.italic string",
+  //           "markup.italic markup.bold string",
+  //           "markup.quote markup.bold string"
+  //         ],
+  //         "settings": {
+  //           "fontStyle": "bold"
+  //         }
+  //       },
+  //       {
+  //         "scope": ["markup.underline"],
+  //         "settings": {
+  //           "fontStyle": "underline"
+  //         }
+  //       },
+  //       {
+  //         "scope": ["markup.quote"],
+  //         "settings": {
+  //           "fontStyle": "italic"
+  //         }
+  //       },
+  //       {
+  //         "scope": ["meta.separator"],
+  //         "settings": {
+  //           "fontStyle": "bold"
+  //         }
+  //       },
+  //       {
+  //         "scope": [
+  //           "comment",
+  //           "entity.other.attribute-name",
+  //           "entity.name.type.class",
+  //           "constant",
+  //           "storage.modifier",
+  //           "storage.type.class.js",
+  //           "keyword",
+  //           "variable.other",
+  //           "constant.other.object.key.js",
+  //           "string.unquoted.js"
+  //         ],
+  //         "settings": {
+  //           "fontStyle": "italic"
+  //         }
+  //       },
+  //       {
+  //         "scope": [
+  //           "invalid",
+  //           "keyword.operator",
+  //           "constant.numeric.css",
+  //           "keyword.other.unit.px.css",
+  //           "constant.numeric.decimal.js",
+  //           "constant.numeric.json"
+  //         ],
+  //         "settings": {
+  //           "fontStyle": ""
+  //         }
+  //       },
+  //       {
+  //         "name": "String quotes",
+  //         "scope": [
+  //           "punctuation.definition.string.begin",
+  //           "punctuation.definition.string.end"
+  //         ],
+  //         "settings": {
+  //           "foreground": "#7b6995"
+  //         }
+  //       },
+  //       {
+  //         "name": "Property quotes",
+  //         "scope": [
+  //           "punctuation.support.type.property-name.begin",
+  //           "punctuation.support.type.property-name.end"
+  //         ],
+  //         "settings": {
+  //           "foreground": "#7b6995"
+  //         }
+  //       },
+  //       {
+  //         "name": "punctuation",
+  //         "scope": [
+  //           "meta.brace",
+  //           "punctuation",
+  //           "punctuation.bracket",
+  //           "punctuation.section",
+  //           "punctuation.separator",
+  //           "punctuation.comma.dart",
+  //           "punctuation.terminator",
+  //           "punctuation.definition",
+  //           "punctuation.parenthesis",
+  //           "meta.delimiter.comma.js",
+  //           "meta.brace.curly.litobj.js",
+  //           "punctuation.definition.tag",
+  //           "punctuation.other.comma.go",
+  //           "punctuation.section.embedded",
+  //           "punctuation.definition.string",
+  //           "punctuation.definition.tag.jsx",
+  //           "punctuation.definition.tag.end",
+  //           "punctuation.definition.markdown",
+  //           "punctuation.terminator.rule.css",
+  //           "punctuation.definition.block.ts",
+  //           "punctuation.definition.tag.html",
+  //           "punctuation.section.class.end.js",
+  //           "punctuation.definition.tag.begin",
+  //           "punctuation.separator.dict.python",
+  //           "punctuation.section.function.scss",
+  //           "punctuation.section.class.begin.js",
+  //           "punctuation.section.array.end.ruby",
+  //           "punctuation.separator.key-value.js",
+  //           "meta.method-call.with-arguments.js",
+  //           "punctuation.section.scope.end.ruby",
+  //           "punctuation.squarebracket.close.cs",
+  //           "punctuation.squarebracket.open.cs",
+  //           "punctuation.separator.key-value.css",
+  //           "punctuation.definition.constant.css",
+  //           "punctuation.section.array.begin.ruby",
+  //           "punctuation.section.scope.begin.ruby",
+  //           "punctuation.definition.string.end.js",
+  //           "punctuation.definition.parameters.ruby",
+  //           "punctuation.definition.string.begin.js",
+  //           "punctuation.section.class.begin.python",
+  //           "storage.modifier.array.bracket.square.c",
+  //           "punctuation.separator.parameters.python",
+  //           "punctuation.section.group.end.powershell",
+  //           "punctuation.definition.parameters.end.ts",
+  //           "punctuation.section.braces.end.powershell",
+  //           "punctuation.section.function.begin.python",
+  //           "punctuation.definition.parameters.begin.ts",
+  //           "punctuation.section.bracket.end.powershell",
+  //           "punctuation.section.group.begin.powershell",
+  //           "punctuation.section.braces.begin.powershell",
+  //           "punctuation.definition.parameters.end.python",
+  //           "punctuation.definition.typeparameters.end.cs",
+  //           "punctuation.section.bracket.begin.powershell",
+  //           "punctuation.definition.arguments.begin.python",
+  //           "punctuation.definition.parameters.begin.python",
+  //           "punctuation.definition.typeparameters.begin.cs",
+  //           "punctuation.section.block.begin.bracket.curly.c",
+  //           "punctuation.definition.map.begin.bracket.round.scss",
+  //           "punctuation.section.property-list.end.bracket.curly.css",
+  //           "punctuation.definition.parameters.end.bracket.round.java",
+  //           "punctuation.section.property-list.begin.bracket.curly.css",
+  //           "punctuation.definition.parameters.begin.bracket.round.java"
+  //         ],
+  //         "settings": {
+  //           "foreground": "#F8F8F2"
+  //         }
+  //       },
+  //       {
+  //         "name": "punctuation",
+  //         "scope": ["punctuation.definition"],
+  //         "settings": {
+  //           "foreground": "#7b6995"
+  //         }
+  //       },
+  //       {
+  //         "scope": ["variable.language.this.js"],
+  //         "settings": {
+  //           "foreground": "#E26674"
+  //         }
+  //       },
+  //       {
+  //         "name": "functions",
+  //         "scope": [
+  //           "variable.function",
+  //           "keyword.other.special-method",
+  //           "binding.fsharp",
+  //           "support.function",
+  //           "meta.function-call",
+  //           "support.function.misc.scss",
+  //           "meta.method.declaration.ts",
+  //           "entity.name.function.method.js"
+  //         ],
+  //         "settings": {
+  //           "foreground": "#9580FF"
+  //         }
+  //       }
+  //     ]
+  //   },
+  //   "[Nord]": {
+  //     "comments": "#7b88a1",
+  //     "textMateRules": [
+  //       {
+  //         "name": "HTML tag brackets",
+  //         "scope": ["punctuation.definition.tag"],
+  //         "settings": {
+  //           "foreground": "#BBBBBB"
+  //         }
+  //       },
+  //       {
+  //         "name": "Object literal key / property",
+  //         "scope": ["meta.object-literal.key", "support.type.property-name"],
+  //         "settings": {
+  //           "foreground": "#88C0D0",
+  //           "fontStyle": "italic"
+  //         }
+  //       }
+  //     ]
+  //   },
+  //   "[LaserWave Italic]": {
+  //     "comments": "#7b88a1"
+  //   }
+  // },
+
+  /*
+  |--------------------------------------------------------------------------
+  | The Little Things
+  |--------------------------------------------------------------------------
+  */
+
+  // Don't update disabled extensions
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.ignoreRecommendations": true,
+
+  // Enabling highlighting of the indent guide for the current scope
+  "editor.guides.highlightActiveIndentation": true,
+
+  "editor.lineDecorationsWidth": "32", // Undocumented left padding
+
+  // Syntax highlighting
+  "files.associations": {
+    "*.js.snap": "javascript",
+    ".prettierrc": "json"
+  },
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    // Show node_modules but don't show anything inside
+    "node_modules/**/*": true,
+    "**/.next": true
+  },
+
+  "search.seedOnFocus": true,
+  // Exclude from search
+  "search.exclude": {
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/yarn.lock": true,
+    "**/node_modules": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.build": true,
+    "**/.gh-pages": true,
+    "**/.git": true
+  },
+
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/public/**": true,
+    "**/tmp": true,
+  },
+
+  "window.closeWhenEmpty": true,
+  "window.restoreWindows": "all",
+
+  "search.useParentIgnoreFiles": true,
+
+  "editor.accessibilitySupport": "off",
+  "editor.smoothScrolling": true,
+  "editor.largeFileOptimizations": false,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.copyWithSyntaxHighlighting": false,
+
+  "workbench.commandPalette.experimental.suggestCommands": true,
+  "workbench.editorLargeFileConfirmation": 150,
+  // Open JSON editor for settings
+  "workbench.settings.editor": "json",
+
+  "security.promptForLocalFileProtocolHandling": false,
+  "task.problemMatchers.neverPrompt": { "npm": true },
+
+  // Bracket pair colorization
+  // Replaces: https://code.visualstudio.com/blogs/2021/09/29/bracket-pair-colorization
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+
+  // Controls if and when to render horizontal lines when a line of code crosses into another indentation level
+  "editor.guides.bracketPairsHorizontal": "active",
+
+  // When I accidentally hit copy without selecting anything and it overrides my clipboard
+  "editor.emptySelectionClipboard": false,
+
+  // Give it to me as fast as you have it
+  "editor.quickSuggestionsDelay": 0,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "on"
+  },
+
+  // Depends on whether the language, related symbols, e.g. HTML tags, are updated while editing
+  // Replaces: https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag
+  // for HTML files only
+  "editor.linkedEditing": true,
+
+  // Show snippets after any other auto completion so that TS types props go first.
+  "editor.snippetSuggestions": "bottom",
+  "editor.suggestSelection": "first",
+
+  /*
+  |--------------------------------------------------------------------------
+  | Code Validation & Formatting
+  | (ESLint, Prettier, Stylelint & friends..)
+  |--------------------------------------------------------------------------
+  */
+
+  // Common settings
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+
+  // Let ESLint fix any issues it can
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+
+  // JS
+  "javascript.format.enable": false,
+  "javascript.autoClosingTags": true,
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferGoToSourceDefinition": true,
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false,
+  // Auto import modules
+  // Replaces: https://marketplace.visualstudio.com/items?itemName=steoates.autoimport
+  "javascript.suggest.autoImports": true,
+  // Path Intellisense
+  // Replaces: https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense
+  "javascript.suggest.paths": true,
+
+  // TS
+  "typescript.format.enable": false,
+  "typescript.autoClosingTags": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "typescript.preferGoToSourceDefinition": true,
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  // Auto import modules
+  // Replaces: https://marketplace.visualstudio.com/items?itemName=steoates.autoimport
+  "typescript.suggest.autoImports": true,
+  // Path Intellisense
+  // Replaces: https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense
+  "typescript.suggest.paths": true,
+
+  // HTML
+  "html.format.enable": false,
+  "html.format.wrapLineLength": 0,
+  // Auto closing HTML tags
+  // Replaces: https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag
+  "html.autoClosingTags": true,
+
+  // JSON
+  "json.format.enable": false,
+
+  // Markdown
+  "markdown.validate.enabled": true,
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false,
+    // If you want a hard line-break (<br>) in the output,
+    // we need to put two or more spaces at the end of a line.
+    // It is a part of CommonMark, so we don’t want to prevent it.
+    "files.trimTrailingWhitespace": false
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[scminput]": {
+    "editor.rulers": [72],
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 72
+  },
+
+  /*
+  |--------------------------------------------------------------------------
+  | 3rd Party Plugins
+  |--------------------------------------------------------------------------
+  */
+
+  "prettier.requireConfig": true,
+
+  "eslint.rules.customizations": [
+    { "rule": "*", "fixable": true, "severity": "info" }
+  ],
+  "eslint.useESLintClass": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "astro"
+  ],
+
+  "catppuccin-icons.hidesExplorerArrows": true,
+
+  // Code Spell Checker
+  "cSpell.spellCheckDelayMs": 500,
+  "cSpell.enableFiletypes": ["shellscript", "mdx"],
+  "cSpell.customDictionaries": {
+    "my-dictionary": {
+      "name": "my-dictionary",
+      "path": "~/dotfiles/vscode/spellright.dict",
+      "scope": "user",
+      "addWords": true
+    }
+  },
+  "cSpell.userWords": [
+    "antd",
+    "apiaction",
+    "bizdev",
+    "clsx",
+    "consts",
+    "Contentful",
+    "dedupe",
+    "dups",
+    "fecha",
+    "graphql",
+    "hocs",
+    "Inititalize",
+    "lifecycles",
+    "linebreak",
+    "linkedin",
+    "Mapbox",
+    "mapboxgl",
+    "mediabox",
+    "middlewares",
+    "resetpassword",
+    "sendgrid",
+    "Smartlist",
+    "smartlists",
+    "stackoverflow",
+    "strapi",
+    "tanstack",
+    "testid",
+    "Timeframe",
+    "typecheck",
+    "uncommented",
+    "Upvotes",
+    "userspermissions",
+    "watchlist"
+  ],
+
+  // GitLens
+  "gitlens.hovers.currentLine.enabled": true,
+  "gitlens.codeLens.scopes": ["document", "containers"],
+  "gitlens.views.repositories.files.layout": "list",
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.avatars": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.hovers.annotations.changes": false,
+  "gitlens.hovers.currentLine.changes": false,
+  "gitlens.views.commits.files.layout": "list",
+  "gitlens.blame.avatars": false,
+  "gitlens.blame.dateFormat": "YYYY-MM-DD",
+  "gitlens.blame.fontSize": 13,
+  "gitlens.blame.fontWeight": "bold",
+  "gitlens.blame.format": "${agoOrDateShort|4?} ${authorNotYou|14-}",
+  "gitlens.blame.highlight.enabled": false,
+  "gitlens.blame.highlight.locations": ["gutter"],
+  "gitlens.blame.ignoreWhitespace": true,
+  "gitlens.blame.compact": true,
+  "gitlens.currentLine.enabled": true,
+  "gitlens.heatmap.ageThreshold": 90,
+  "gitlens.heatmap.coldColor": "#f7f6f9",
+  "gitlens.heatmap.fadeLines": true,
+  "gitlens.heatmap.hotColor": "#e87da4",
+  "gitlens.hovers.annotations.over": "annotation",
+  "gitlens.keymap": "none",
+  "gitlens.statusBar.enabled": false,
+
+  // ErrorLens
+  "errorLens.fontSize": "14",
+  // Hide info (like unknown words) messages from output to clean up a bit
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "hint"],
+  "errorLens.exclude": ["never (read|used)", "Unknown word"],
+  "errorLens.errorGutterIconColor": "#bc5248",
+  "errorLens.warningGutterIconColor": "#de9e59",
+  "errorLens.hintGutterIconColor": "#eeceac",
+
+  "color-highlight.markRuler": false,
+  "color-highlight.matchWords": false,
+
+  // Important Git config
+  "git.autoStash": true,
+  "git.autofetch": true,
+  "git.allowForcePush": true,
+  "git.inputValidationSubjectLength": 50,
+  "git.openRepositoryInParentFolders": "always",
+
+  // Sonarlint
+  "sonarlint.rules": {
+    "javascript:S6478": {
+      "level": "off"
+    },
+    "typescript:S6478": {
+      "level": "off"
+    },
+    "typescript:S6544": {
+      "level": "off"
+    },
+    "typescript:S4123": {
+      "level": "off"
+    },
+    "typescript:S6582": {
+      "level": "off"
+    },
+    "typescript:S3776": {
+      "level": "off"
+    },
+    "javascript:S4138": {
+      "level": "off"
+    },
+    "typescript:S3735": {
+      "level": "off"
+    },
+    "typescript:S1135": {
+      "level": "off"
+    },
+    "typescript:S6598": {
+      "level": "off"
+    },
+    "typescript:S6564": {
+      "level": "off"
+    },
+    "typescript:S6509": {
+      "level": "off"
+    },
+    "Web:S1135": {
+      "level": "off"
+    }
+  },
+  "sonarlint.pathToNodeExecutable": "/opt/homebrew/Cellar/node/22.2.0/bin/node",
+
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+
+  "conventionalCommits.showNewVersionNotes": false,
+
+  "githubPullRequests.defaultMergeMethod": "squash",
+  "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.fileListLayout": "flat",
+
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass", "variants"],
+
+  "prisma.showPrismaDataPlatformNotification": false,
+
+  "cody.commandHints.enabled": false,
+  "cody.autocomplete.enabled": false,
+}

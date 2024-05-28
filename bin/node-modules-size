@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Find all `node_modules` directories recursively from the current directory
+# and display their total disk usage
+
+find . -type d -name node_modules -prune | tr '\n' '\0' |  xargs -0 du -sch

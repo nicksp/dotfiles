@@ -1,0 +1,39 @@
+# https://starship.rs/config/
+# Run `starship explain` to help dissect the current prompt
+
+# Specify custom format
+# Nerd Fonts nf-seti-coffee \ue61b
+format = """\
+   $directory\
+  $custom\
+  $git_state\
+  $nodejs\
+  $bun\
+  $line_break\
+  $character\
+  """
+
+[directory]
+style = "bold white"
+repo_root_style = "bold"
+read_only = "" # Nerd Fonts nf-fa-lock \uf023
+
+[nodejs]
+style = "bold cyan"
+format = "[via](bold white) [$symbol($version)]($style)"
+
+[bun]
+symbol = "🍔 "
+format = '[via](bold white) [$symbol($version)]($style)'
+
+[character]
+# Nerd Fonts nf-fa-angle_right \f105
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
+
+[custom.git_simple]
+command = "starship-git-simple"
+require_repo = true
+when = true
+ignore_timeout = true
+style = ""

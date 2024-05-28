@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Copy full file path of a given file in the current directory to clipboard
+#
+# Usage:
+#   ppp <file.ext>
+
+readlink -f "$1" | pbcopy

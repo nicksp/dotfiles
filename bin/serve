@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Serve current directory
+#
+# Usage:
+#   serve [port]
+
+port="${1:-8080}"
+open "http://localhost:${port}/"
+ruby -run -e httpd . -p "$port"

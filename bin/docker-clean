@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Shortcut to remove dangling Docker items:
+#   - all stopped containers
+#   - all unused networks
+#   - all unused anonymous volumes
+#   - all unused (incl. dandling) images
+#   - all build cache
+#
+# Show docker disk usage at the end.
+#
+# Does not prompt for confirmation!
+#
+# Based on https://docs.docker.com/config/pruning/
+
+docker system prune -af --volumes && \
+  docker system df

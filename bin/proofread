@@ -1,13 +1,14 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
+# Based on http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
 
 # Common stuff
 CYAN="$(tput setaf 6)"
 UNDERLINE="$(tput sgr 0 1)"
-NOCOLOR="$(tput sgr0)"
-function header() {
-  echo -e "$UNDERLINE$CYAN$1$NOCOLOR"
+RESET="$(tput sgr0)"
+
+header() {
+  echo -e "$UNDERLINE$CYAN$1$RESET"
 }
 
 if [ "$1" = "" ]; then
@@ -16,12 +17,12 @@ if [ "$1" = "" ]; then
 fi
 
 header "Weasel words"
-weasel $1
+lint-weasel-words $1
 echo
 
 header "Passive voice"
-passive $1
+lint-passive-voice $1
 echo
 
 header "Duplicates"
-dups $1
+lint-dups $1

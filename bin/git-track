@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Set up your branch to track a remote branch. Assumes you mean
+# `origin/$branch-name`.
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+remote="${1:-origin}"
+git branch $branch --set-upstream-to $remote/$branch

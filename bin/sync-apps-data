@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Exit on any unset variable
+set -u
+
+# Enables Bear notes/images synchronization
+DB_DIR="$HOME/Library/Group Containers/9K33E3U3T4.net.shinyfrog.bear/Application Data"
+BACKUP_DIR="$HOME/Documents/MYDATA/Bear/Notes/"
+
+mkdir -p "$BACKUP_DIR"
+ln -sfn "$DB_DIR"/* "$BACKUP_DIR"

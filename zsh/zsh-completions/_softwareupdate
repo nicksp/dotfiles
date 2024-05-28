@@ -1,0 +1,94 @@
+#compdef softwareupdate
+
+_softwareupdate_ignored_update_name() {
+  if [[ -z "$_softwareupdate_ignored_updates" ]]; then
+    local res="$(_call_program pkgs softwareupdate --ignored)"
+    _softwareupdate_ignored_updates=("${(Qs/, /)${${res#Current ignored updates: \(}%\)}}")
+  fi
+  if (( ${#_softwareupdate_ignored_updates} > 0 )); then
+    _wanted pkgs expl "ignored package" compadd -a _softwareupdate_ignored_updates && return 0
+  fi
+  return 1
+}
+
+_softwareupdate_update_name() {
+  local name line
+  if [[ -z "$_softwareupdate_updates" ]]; then
+    _softwareupdate_updates=()
+    for line in ${(f)"$(_call_program pkgs softwareupdate --list --no-scan)"}; do
+      if [[ $line == '   '* ]]; then
+        name="${line#   ? }"
+      elif [[ -n "$name" ]]; then
+        _softwareupdate_updates+=("$name:${line#	}")
+        name=""
+      fi
+    done
+  fi
+  if (( ${#_softwareupdate_updates} > 0 )); then
+    _describe -t pkgs "update name" _softwareupdate_updates && return 0
+  fi
+  return 1
+}
+
+_softwareupdate_fullinstaller_version() {
+  local name line
+  if [[ -z "$_softwareupdate_installer_versions" ]]; then
+    _softwareupdate_installer_versions=()
+    for line in ${(f)"$(_call_program pkgs softwareupdate --list-full-installers --no-scan)"}; do
+      if [[ $line == "* "* ]]; then
+        name=${${line#*Version: }%, Size*}
+        _softwareupdate_installer_versions+=("$name")
+      fi
+    done
+  fi
+  if (( ${#_softwareupdate_installer_versions} > 0 )); then
+  _describe -t pkgs "installer version" _softwareupdate_installer_versions && return 0
+  fi
+  return 1
+}
+
+_softwareupdate() {
+  local context state line expl
+  typeset -A opt_args
+
+  _arguments -R \
+    '(-h --help -l --list)-q[quiet mode]' \
+    {-l,--list}'[list all available updates]:*:' \
+    {-d,--download}'[Download only]:*:' \
+    {-e,--cancel-download}'[cancel a download]' \
+    '--background[trigger a background scan and update operation]' \
+    {-i,--install}'[install (requires root)]:*: :->install' \
+    '--list-full-installers[List the available macOS Installers]' \
+    '--fetch-full-installer[install the latest macOS Installer]:*: :->fetch' \
+    '--install-rosetta[Install Rosetta 2]' \
+    '--history[show the install history]:*: :->history' \
+    '--schedule[scheduler preferences (per-user)]:automatic checking:(on off)' \
+    {-h,--help}'[print command usage]:*:' && return 0
+
+  case "$state" in
+    install)
+      _arguments \
+        '(* -a --all)'{-a,--all}'[all available active updates]' \
+        '(* -r --req)'{-r,--req}'[all required active updates]' \
+        '(* -R --restart)'{-R,--restart}'[automatically restart (or shut down) if required to complete installation]' \
+        '--os-only[Only OS updates]' \
+        '--safari-only[Only Safari updates]' \
+        '--stdinpass[Password to authenticate as an owner. Apple Silicon only.]' \
+        '--user[Local username to authenticate as an owner. Apple Silicon only.]' \
+        '*:update name:_softwareupdate_update_name' && return 0
+      ;;
+    fetch)
+      _arguments \
+        '--full-installer-version:installer version:_softwareupdate_fullinstaller_version' \
+        && return 0
+      ;;
+    history)
+      _arguments \
+        '--all[include all processes in history (including App installs)]' \
+      && return 0
+      ;;
+  esac
+  return 1
+}
+
+_softwareupdate "$@"

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Find all `node_modules` directories in the current directory and its subdirectories,
+# and then recursively delete them without any confirmation prompts
+#
+# Based on https://twitter.com/swyx/status/1064672618450579457
+
+find . -name node_modules -exec rm -rf '{}' +

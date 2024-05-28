@@ -1,98 +1,122 @@
-# Nick Plekhanov's Dotfiles
+# ~nicksp 🌮
 
-This is a collection of dotfiles and scripts I use for customizing OS X to my liking and setting up the software development tools I use on a day-to-day basis. They should be cloned to your home directory so that the path is `~/dotfiles/`.  The included setup script creates symlinks from your home directory to the files which are located in `~/dotfiles/`.
+My personal dotfiles for configuring macOS with Zsh and Homebrew.
 
-![Terminal.app](https://raw.github.com/nicksp/dotfiles/master/iterm/nick-terminal.png)
+![nicksp terminal](screenshot.png)
 
-The setup script is smart enough to back up your existing dotfiles into a `~/dotfiles_old/` directory if you already have any dotfiles of the same name as the dotfile symlinks being created in your home directory.
+> [!IMPORTANT]
+> Please only open pull requests that fix bugs or add improvements without any breaking changes.
 
-I also prefer `zsh` as my shell of choice. As such, the setup script will also clone the `oh-my-zsh` repository from my GitHub. It then checks to see if `zsh` is installed. If `zsh` is installed, and it is not already configured as the default shell, the setup script will execute a `chsh -s $(which zsh)` command. This changes the default shell to zsh, and takes effect as soon as a new zsh is spawned or on next login.
+I recommend forking this repository to create your own set of dotfiles.
 
-So, to recap, the install script will:
+## Requirements
 
-- back up any existing dotfiles in your home directory to `~/dotfiles_old/`
-- create symlinks to the dotfiles in `~/dotfiles/` in your home directory
-- clone the `oh-my-zsh` repository from my GitHub (for use with `zsh`)
-- check to see if `zsh` is installed, if it isn't, try to install it
-- if zsh is installed, run a `chsh -s` to set it as the default shell
+- macOS
+- Homebrew (the install script will install Homebrew)
+- Zsh (the install script will install Zsh via Homebrew)
 
-## Features
+## What's in there?
 
 - Handy [binary scripts](bin/)
-- [Stop words](dict/) lists that I use with Marked 2
-- Git aliases
-- zsh aliases
-- Custom zsh theme with Git and battery status, etc: [nicktheme](zsh/themes/nick.zsh-theme)
-- Sensible [OS X defaults](osx/set-defaults.sh)
-- [Install script](setup.sh)
+- [Custom color scheme](colors/)
+- [Git aliases](git/.gitconfig)
+- [Shell aliases](zsh/aliases.zsh)
+- zsh / fzf
+- git / delta syntax-highlighting diff tool
+- Sensible [macOS defaults](setup/macos.sh)
+- [Neovim](tilde/.config/nvim/)
+- [macOS apps and VSCode extensions](setup/Brewfile) I use
+- [macOS tips & tricks](/docs/macOS%20Tips%20&%20Tricks.md)
 
 ## Installation
 
-```sh
-$ git clone https://github.com/nicksp/dotfiles.git ~/dotfiles
-$ cd ~/dotfiles
-$ chmod +x setup.sh
-$ ./setup.sh
+1. Enable **Firewall** under **System Settings** → **Network**
+1. Point the DNS Servers to [Cloudflare DNS](https://one.one.one.one/dns/) 
+    - `1.1.1.1`
+    - `1.0.0.1`
+    - `2606:4700:4700::1111`
+    - `2606:4700:4700::1001`
+1. Configure Git and GitHub SSH
+    1. [Generate SSH key and add it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+    1. [Add your public SSH key to GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+    1. Test your authentication with:
+        ```
+        ssh -T git@github.com
+        ```
+1. Install [fonts](fonts/).
+1. Choose _manual_ or _automatic_ dotfiles installation below.
+
+### Manually
+
+```shell
+git clone git@github.com:nicksp/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+./setup/zsh.sh
+./setup/brew.sh
+./setup/misc.sh
+./setup/vscode.sh
+./setup/bins.sh
+./setup/symlinks.sh
 ```
 
-## Remotely install using curl
+### Automatically
 
-Alternatively, you can install this into `~/dotfiles` remotely without Git using curl:
+To automate the setup of your dotfiles on a new machine, use the [setup](./setup) script from the main branch.
 
-```sh
-sh -c "`curl -fsSL https://raw.github.com/nicksp/dotfiles/master/remote-setup.sh`"
+> [!CAUTION]
+> Use at your own risk!
+
+```shell
+git clone git@github.com:nicksp/dotfiles.git ~/dotfiles
+~/dotfiles/setup.sh
 ```
 
-Or, using wget:
+This will install all required dotfiles in your home directory as symlinks. Everything is then configured via modifying files in `~/dotfiles`.
 
-```sh
-sh -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/nicksp/dotfiles/master/remote-setup.sh`"
+### Additional setup
+
+```shell
+# Set macOS defaults
+./setup/macos.sh
+
+# Use alternative icons for apps
+./setup/icons.sh
+
+# Install colors schemes across the apps
+bin/sync-color-themes
 ```
 
-## Customize
+## Local customizations
 
-### Local Settings
-
-The dotfiles can be easily extended to suit additional local
+The dotfiles can be extended to suit additional local
 requirements by using the following files:
 
 #### `~/.zsh.local`
 
-If the `~/.zsh.local` file exists, it will be automatically sourced
-after all the other [shell related files](shell), thus, allowing its
+If this file exists, it will be automatically sourced
+after all the other shell related files allowing its
 content to add to or overwrite the existing aliases, settings, PATH,
 etc.
 
 #### `~/.gitconfig.local`
 
-If the `~/.gitconfig.local` file exists, it will be automatically
-included after the configurations from [`~/.gitconfig`](git/gitconfig), thus, allowing
+If this file exists, it will be automatically
+included after the configurations from `~/.gitconfig` allowing
 its content to overwrite or add to the existing `git` configurations.
 
-**Note:** Use `~/.gitconfig.local` to store sensitive information such
-as the `git` user credentials, e.g.:
-
-```sh
-[user]
-  name = Nick Plekhanov
-  email = nick@example.com
-```
-
-## OS X Defaults
-
-My favorite part of this repo is the [set-defaults](osx/set-defaults.sh) script for OS X.
-
-## Resources
-
-I actively watch the following repositories and add the best changes to this repository:
-
-- [GitHub ❤ ~/](http://dotfiles.github.com/)
-- [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
-- [Nicolas Gallagher’s dotfiles](https://github.com/necolas/dotfiles)
-- [Cătălin’s dotfiles](https://github.com/alrra/dotfiles)
-- [Paul's dotfiles](https://github.com/paulirish/dotfiles)
-- [Jacob Gillespie’s dotfiles](https://github.com/jacobwg/dotfiles)
+> [!TIP]
+> Use `~/.gitconfig.local` to store [sensitive information](git/) such
+as the `git` user credentials for individual repositories.
 
 ## License
 
-The code is available under the [MIT license](LICENSE).
+MIT License.
+
+## Inspiration
+
+- [holman/dotfiles](https://github.com/holman/dotfiles)
+- [mathiasbynes/dotfiles](https://github.com/mathiasbynens/dotfiles)
+- https://remysharp.com/2018/08/23/cli-improved
+- https://evanhahn.com/a-decade-of-dotfiles/
+- https://cpojer.net/posts/set-up-a-new-mac-fast
+- https://thevaluable.dev/zsh-install-configure-mouseless/

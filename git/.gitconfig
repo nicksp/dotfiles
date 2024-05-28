@@ -1,0 +1,246 @@
+# https://git-scm.com/docs/git-config
+
+# general config
+
+[user]
+  name = Nick Plekhanov
+  email = nicksp@users.noreply.github.com
+
+[github]
+  user = nicksp
+
+[init]
+  defaultBranch = main
+
+[apply]
+  # Detect whitespace errors when applying a patch
+  whitespace = fix
+
+[core]
+  editor = cot --wait
+  pager = delta
+  autocrlf = input
+  safecrlf = false
+  excludesFile = ~/.gitignore
+  quotePath = false
+  # Make `git rebase` safer on macOS
+  # More info: https://www.git-tower.com/blog/make-git-rebase-safe-on-osx/
+  trustctime = false
+
+[help]
+  # Correct typos
+  autoCorrect = 1
+
+[color]
+  # Use colors in Git commands that are capable of colored output when
+  # outputting to the terminal. (This is the default since Git 1.8.4)
+  ui = true
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[color "diff"]
+  meta = blue
+  frag = white
+  old = red bold
+  new = green bold
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+# Any GitHub repo with my username should be checked out r/w by default
+# http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
+[url "git@github.com:nicksp/"]
+  insteadOf = "git://github.com/nicksp/"
+
+# command-specific
+
+[log]
+  # Show branch names with git log
+  decorate = short
+
+[branch]
+  # Show most recently changed branches first
+  sort = -committerdate
+
+[fetch]
+  # Automatically prune deleted branches and tags from your local copy
+  # when you fetch (or pull)
+  prune = true
+  prunetags = true
+
+[pull]
+  # Rebase branches on top of the fetched branch, instead of merging
+  # the default branch from the default remote
+  rebase = true
+
+[push]
+  # When pushing code, always push only your current branch to a branch
+  # of the same name on the receiving end
+  # http://stackoverflow.com/a/23918418/89484
+  default = current
+  # Automatically set up upstream tracking
+  autoSetupRemote = true
+  # Make `git push` automatically push relevant annotated tags when pushing branches out
+  followTags = true
+
+[rebase]
+  autoSquash = true
+
+# aliases
+
+[alias]
+  #
+  # Shortcuts
+  #
+
+  # Open .gitconfig in default editor
+  ecf          = config --global -e
+
+  a            = add
+  aa           = add --all
+
+  c            = commit
+  ca           = commit -a
+  cm           = commit -m
+  cam          = commit -am
+  cne          = commit --no-edit
+  empty        = commit --allow-empty -m
+  amend        = commit --amend --reuse-message=HEAD
+
+  co           = checkout
+  cob          = checkout -b
+  # Jump back to to your last branch
+  prev         = checkout -
+  # Discard local modifications and restore them to their state in the repo index or a commit
+  discard      = checkout --
+
+  br           = branch
+  branch-name  = rev-parse --abbrev-ref HEAD
+
+  s            = status
+  ss           = status -sb
+
+  st           = stash
+  stp          = stash pop
+
+  d            = diff
+  cp           = cherry-pick
+  fp           = fetch --prune --all
+  f            = reflog
+
+  pu           = push
+  puf          = push --force-with-lease
+  put          = push --tags
+  # Pull in remote changes for the current repository and all its submodules
+  p            = pull --recurse-submodules
+
+  # Rebase: skip a rebase step
+  skip         = rebase --skip
+  # Rebase: abort
+  abort        = rebase --abort
+  # Rebase: add changes and continue
+  cont         = !git add . && git rebase --continue
+
+  # Compact and readable log
+  l            = log --graph --pretty=format:'%C(magenta)%h%Creset%C(auto)%d%Creset %s %C(blue bold)— %cr ~ %an%Creset'
+  # Log with list of changed files per each commit
+  ls           = log --stat --abbrev-commit
+
+  #
+  # First-aid
+  #
+
+  # Undo a `git push`
+  undopush     = push -f origin HEAD^:master
+  # Mixed reset (affects HEAD and Index)
+  unstage      = reset HEAD --
+  # Undo last commit but don't throw away the changes (affects HEAD only)
+  undo         = reset --soft HEAD~1
+  # Remove last commit (from HEAD, Index and Working Dir)
+  reset        = reset --hard HEAD~1
+
+  #
+  # Helpers
+  #
+
+  # Show the user email for the current repository
+  whoami       = config user.email
+
+  # List available aliases
+  aliases      = config --get-regexp 'alias.*'
+
+  # List contributors with a number of their commits
+  contribs     = shortlog -sn
+
+  # List of my own commits across all branches
+  my           = !git log --all --no-merges --pretty=format:'%C(reset)%C(bold)%cd %C(reset)%C(white)%s  %C(reset)%h' --date=short --author=\"$(git config user.name)\"
+
+  # How many lines of code I have written today
+  today        = diff --shortstat \"@{0 day ago}\"
+
+  # count number of lines of code in the files of a git project
+  stats        = "!git ls-files | xargs wc -l"
+
+  # List of branches ordered by last change
+  branches     = for-each-ref --sort=-committerdate refs/heads/ --format='%(color:bold)%(refname:short)%(color:reset)\t%(committerdate:relative)'
+
+  # List of files with merge conflicts
+  wtf          = diff --name-only --diff-filter=U
+
+  # Cancel local commits in the branch: git fuck master
+  fuck         = "!f() { git reset --hard origin/$1; }; f"
+
+  # Remove all changes, including untracked files/dirs
+  nuke         = clean -xfd
+
+  # Sharable diff with disabled syntax highlighting and +/- marks
+  patch        = !git --no-pager diff --no-color
+
+  # Merge fresh master into the current branch
+  mmmr         = !git fetch origin master && git merge origin/master --no-edit
+  # Merge fresh main into the current branch
+  mmmn         = !git fetch origin main && git merge origin/main --no-edit
+
+  # Push up the branch and set upstream for the current branch
+  publish      = "!git push --set-upstream origin $(git branch-name)"
+  sha          = log -n 1 --pretty=format:'%H'
+
+# git-delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[add.interactive]
+  useBuiltin = false
+
+[delta]
+  navigate = true # Use n and N to move between diff sections
+  side-by-side = true # Enables the side-by-side view
+  light = true
+  true-color = always
+  grep-line-number-style = normal dim
+  grep-file-style = blue bold
+  tabs = 2
+  grep-match-line-style = normal "#453327" # gray04
+  grep-match-word-style = black yellow
+  grep-separator-symbol = " "
+  hyperlinks = true
+  hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+  colorMovedWS = allow-indentation-change
+
+# include local/private config if relevant
+
+[include]
+  path = ~/.gitconfig.local

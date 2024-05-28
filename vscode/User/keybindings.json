@@ -1,0 +1,191 @@
+[
+  /*
+   * Internal functions
+   */
+  {
+    "key": "ctrl+escape",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "ctrl+[IntlBackslash]",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+3",
+    "command": "copyRelativeFilePath"
+  },
+  {
+    "comment": "This makes my zoom behavior more like chrome",
+    "key": "cmd+0",
+    "command": "workbench.action.zoomReset"
+  },
+  {
+    "comment": "This disables the enter key for autocomplete. Use tab instead. It's annoying when I'm typing quickly and want to go to the next line but have to first clear the autocomplete menu. So I just disabled the enter key here.",
+    "key": "enter",
+    "command": "-acceptSelectedSuggestionOnEnter",
+    "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+  },
+  {
+    "key": "cmd+l",
+    "command": "emojiConsoleLog.addLogMessage"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "-emojiConsoleLog.addLogMessage"
+  },
+  {
+    "comment": "Note: Code’s default implementation of toggling the terminal is silly. If the editor has focus, you will have to first hide, then show the terminal to get it to focus. Below is a keybinding hack you can use to make it sensible again",
+    "key": "ctrl+[Backquote]",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "comment": "Zen mode. When things get too cluttered I hit cmd+k+k",
+    "key": "cmd+k cmd+k",
+    "command": "workbench.action.toggleZenMode"
+  },
+  {
+    "comment": "If I’m in a sidebar or terminal, It’s a small annoyance to have to click the editor to get back into editing mode. This shortcut (cmd+e+e) provides an easy way to focus the editor from anywhere in VS Code.",
+    "key": "cmd+e cmd+e",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.showAllSymbols"
+  },
+  {
+    "key": "cmd+t",
+    "command": "-workbench.action.showAllSymbols"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "cmd+[Slash]",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+[Backslash]",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "editor.action.duplicateSelection"
+  },
+  {
+    "key": "alt+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+.",
+    "command": "-editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+cmd+g shift+cmd+h",
+    "command": "workbench.view.extension.github-pull-requests",
+    "when": "viewContainer.workbench.view.extensions.enabled"
+  },
+  {
+    "comment": "Focuses on the 1st search results when pressing Enter in the search box",
+    "key": "enter",
+    "command": "search.action.focusNextSearchResult",
+    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
+  },
+  {
+    "comment": "Maximizes/minimizes active panel",
+    "key": "cmd+alt+j",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "panelVisible"
+  },
+  {
+    "comment": "The default Cmd+K keybinding doesn't seem to work for me because of either it's redefined manually as a chord keybinding or an extension does it. The only workaround currently is to redefine the Cmd+k keybinding at a higher level (user keybindings.json). Adding this again to the bottom of keybindings.json fixes the problem",
+    "key": "cmd+k",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+
+  // View Git changes
+  {
+    "key": "shift+cmd+c",
+    "command": "git.viewChanges"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+
+  {
+    "comment": "Closes panel when pressing Escape in the editor",
+    "key": "escape",
+    "command": "workbench.action.closePanel",
+    "when": "panelVisible && textInputFocus && !suggestWidgetVisible"
+  },
+  {
+    "comment": "Closes panel when pressing Escape inside the Search panel",
+    "key": "escape",
+    "command": "workbench.action.closePanel",
+    "when": "activePanel == 'workbench.view.search' && panelFocus"
+  },
+  {
+    "comment": "Closes panel when pressing Escape inside the Problems panel",
+    "key": "escape",
+    "command": "workbench.action.closePanel",
+    "when": "activePanel == 'workbench.panel.markers' && panelFocus"
+  },
+  {
+    "comment": "Closes panel when pressing Escape inside the Integrated Terminal panel",
+    "key": "escape",
+    "command": "workbench.action.closePanel",
+    "when": "terminalFocus"
+  },
+  {
+    "comment": "Stages files with a Option+Space",
+    "key": "alt+space",
+    "command": "git.stash",
+    "when": "workbench.scm.active"
+  },
+
+  /*
+   * Plugins
+   */
+
+  // Advanced New File
+  {
+    "key": "cmd+n",
+    "command": "extension.advancedNewFile"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "alt+cmd+g b",
+    "command": "-gitlens.toggleFileBlame",
+    "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /blameable/"
+  },
+  {
+    "key": "shift+cmd+g b",
+    "command": "gitlens.toggleFileBlame",
+    "when": "editorTextFocus && gitlens:activeFileStatus =~ /blameable/"
+  },
+  {
+    "key": "alt+b",
+    "command": "-gitlens.toggleFileBlame",
+    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+  }
+]

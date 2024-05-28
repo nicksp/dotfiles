@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# Get macOS software updates, update Homebrew, npm, Ruby packages, dotfiles and some other software
+
+set -e
+set -u
+set -o pipefail
+
+header() {
+  echo "$(tput sgr 0 1)$(tput setaf 6)$1$(tput sgr0)"
+}
+
+warning() {
+  tput setaf 1
+  echo "/!\\ $1 /!\\"
+  tput sgr0
+}
+
+# Ask for the administrator password upfront
+warning "Activate sudo"
+sudo echo "Sudo activated!"
+echo
+
+# Dotfiles
+# dotfiles
+# echo
+
+# macOS
+header "Updating macOS system..."
+sudo softwareupdate -ia --verbose
+echo
+
+# App Store
+# https://github.com/mas-cli/mas?tab=readme-ov-file#%EF%B8%8F-known-issues
+# header "Updating apps from App Store..."
+# sudo mas upgrade
+# echo
+
+# Homebrew
+header "Updating Homebrew packages..."
+brew update
+brew upgrade
+brew cleanup
+brew doctor
+echo
+
+# Raycast
+header "Updating Raycast and its extensions..."
+open raycast://extensions/raycast/raycast/check-for-updates
+open raycast://extensions/raycast/raycast/check-for-extension-updates
+
+# npm
+header "Updating global npm modules..."
+npm update -g
+echo
+
+# Ruby gems
+# header "Updating Ruby gems..."
+# sudo gem update
+# echo
+
+# Nyan cat!
+nyan

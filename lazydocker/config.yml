@@ -1,0 +1,16 @@
+gui:
+  sidePanelWidth: 0.25
+  expandFocusedSidePanel: true
+  theme:
+    activeBorderColor:
+      - magenta
+      - bold
+    inactiveBorderColor:
+      - white
+    optionsTextColor:
+      - white
+    selectedLineBgColor:
+      - "#503a5c"
+os:
+  openCommand: "open {{filename}}"
+  openLinkCommand: open {{link}}

@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "Brewfile": "ruby",
+    ".gitconfig.*": "properties"
+  },
+  "git.ignoreLimitWarning": true,
+  "cSpell.words": ["brewfile", "dotfiles", "gitignore"]
+}

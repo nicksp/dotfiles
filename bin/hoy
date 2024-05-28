@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Print the current date
+
+set -e
+set -u
+
+exec date '+%Y-%m-%d'

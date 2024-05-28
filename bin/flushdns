@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Flush DNS cache
+
+set -e
+set -u
+
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  sudo dscacheutil -flushcache
+  sudo killall -HUP mDNSResponder
+else
+  echo 'not supported yet'
+fi

@@ -1,0 +1,39 @@
+# ack is a tool like grep, designed for programmers with large trees of source code
+#
+# To install ack, see https://beyondgrep.com/.
+# To use ack, type 'ack <some_keywords>' in terminal.
+# ack will search all files in the current directory & sub-directories.
+
+# Always color, even if piping to a another program
+--nocolor
+--flush
+
+# Follow symlinks
+--follow
+
+# Print the results by group.
+--group
+
+--ignore-case
+
+# Color settings
+--color-filename=white
+--color-lineno=cyan
+--color-match=magenta underline
+
+# Ignore some dirs
+--ignore-dir=node_modules
+--ignore-dir=build
+--ignore-dir=.idea
+--ignore-dir=tmp
+--ignore-dir=log
+--ignore-dir=.tmp
+--ignore-dir=coverage
+--ignore-dir=dist
+
+# Search other filetypes
+--type-add=css=.styl,.scss
+--type-add=js=.coffee,.js,.ts
+--type-set=json=.json
+--type-set=md=.markdown,.md
+--type-set=md=.markdown,.md

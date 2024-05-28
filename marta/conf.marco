@@ -1,0 +1,51 @@
+environment {
+    terminal "WezTerm"
+    textEditor "CotEditor"
+}
+
+behavior {
+    theme "Squirrelsong Light"
+
+    layout {
+        alwaysShowTabBar true
+        showActionBar false
+    }
+
+    setCurrentPathAsWindowTitle true
+
+    table {
+        verticalPadding 3
+        selectGoUpFolderOnEnter true
+
+         defaults {
+             showHiddenFiles true
+        }
+    }
+
+     quickSelect {
+         filterMatchedItems true
+     }
+}
+
+etty {
+    theme "SquirrelsongLight"
+
+    fonts {
+        normal [ "MonoLisa" 15 ]
+    }
+}
+
+fonts {
+    actionBar [ "Default" 13 ]
+    virtualTabs [ "Default Bold" 13 ]
+    files [ "Default" 13 ]
+    statusBar [ "Default Light" 13 ]
+    tabs [ "Default" 11 ]
+    preferences [ "MonoLisa" 14 ]
+}
+
+keyBindings {
+    "F2" "core.rename"
+    "Cmd+Up" "core.go.up"
+    "Cmd+Down" "core.open"
+}

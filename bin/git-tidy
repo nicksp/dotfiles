@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Delete all local branches that have been merged into HEAD + extra cleanup
+
+CYAN="$(tput setaf 6)"
+UNDERLINE="$(tput sgr 0 1)"
+RESET="$(tput sgr0)"
+
+header() { echo -e "\n$UNDERLINE$CYAN$1$RESET\n"; }
+
+branches() {
+  git branch --no-color --merged | grep -v '^*' | grep -v 'master' | grep -v 'main'
+}
+
+# Remove unreachable objects (commits, trees, blobs, etc.) from the Git object database
+header "Deleting unreachable objects..."
+git prune
+
+# Delete all stale remote-tracking branches, these branches have already been
+# removed from the remote repository, but are still locally available in "remotes/".
+header "Deleting stale remote-tracking branches..."
+git remote prune origin
+
+header "Deleting merged branches except for 'master' and 'main'..."
+branches | xargs -n 1 git branch -d
+
+echo "Done."

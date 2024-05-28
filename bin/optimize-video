@@ -1,0 +1,37 @@
+#!/bin/bash
+
+input_file=$1
+output_file="$1.mp4"
+output_webm_file="$1.webm"
+
+if [ -z "$1" ] || [ "$1" = "-h" ]; then
+  echo "$(basename $0) converts given file (.mov, .gif, etc.) to .mp4 using ffmpeg."
+  echo "the output will be stored in the same directory of input file."
+  echo "usage: $(basename $0) <input file>"
+  echo "example: $(basename $0) my-screencast.mov"
+  exit
+fi
+
+# Verify dependencies
+command -v ffmpeg &> /dev/null || { MISSING_DEPS="$MISSING_DEPS ffmpeg"; }
+if [ ! -z "$MISSING_DEPS" ]; then
+  echo "[ERROR] missing dependencies:"
+  echo $MISSING_DEPS
+  exit
+fi
+
+echo "[INFO] making mp4..."
+echo "output file: $output_file"
+
+# Adapted from https://web.dev/articles/replace-gifs-with-videos
+time ffmpeg \
+  -hwaccel auto \
+  -i "$input_file" \
+  -movflags faststart \
+  -pix_fmt yuv420p \
+  -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" \
+  -hide_banner -loglevel error \
+  "$output_file"
+
+# Consider converting GIF animation to a modern and much smaller WebM video
+# time ffmpeg -i "$input_file" -c vp9 -b:v 0 -crf 41 "$output_webm_file"

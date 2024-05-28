@@ -1,8 +1,8 @@
-*.cache
-node_modules
-atom/.apm
-atom/packages
-atom/storage
-atom/blob-store
-chrome
-webstorm/settings.jar
+Brewfile.lock.json
+.DS_Store
+Thumbs.db
+vscode/**/workspaceStorage/
+vscode/**/syncLocalSettings.json
+lazygit/state.yml
+private/
+tilde/.ssh/*

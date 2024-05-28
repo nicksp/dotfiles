@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# One-liner to solve npm issues when package management is giving trouble
+
+rm -rf ./node_modules/ && rm -f package-lock.json && npm install

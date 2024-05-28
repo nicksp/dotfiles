@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Delete all `.DS_Store` in the current directory and its subdirectories
+
+set -e
+set -u
+set -o pipefail
+
+find . -name .DS_Store -delete

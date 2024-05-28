@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Quick grep: ripgrep (rg), ack, or grep
+#
+# See more:
+# https://github.com/BurntSushi/ripgrep
+#
+# Based on https://github.com/sapegin/dotfiles/blob/master/bin/g
+
+if command -v rg &> /dev/null; then
+  # See tilde/.ripgreprc for default options
+  rg --json -C 2 "$@" | delta
+elif command -v ack &> /dev/null; then
+  ack -ri "$@"
+else
+  grep -ri "$@"
+fi
