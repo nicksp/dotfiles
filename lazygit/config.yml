@@ -5,6 +5,7 @@ gui:
   authorColors:
     "Nick Khan": "magenta"
     "Nick S. Khan": "magenta"
+    "Nick Plekhanov": "magenta"
   theme:
     activeBorderColor:
       - magenta
