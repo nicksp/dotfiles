@@ -83,20 +83,26 @@ handle_existing_file() {
     read -n 1 action
 
     case "$action" in
-      o )
-        overwrite=true;;
-      O )
-        overwrite_all=true;;
-      b )
-        backup=true;;
-      B )
-        backup_all=true;;
-      s )
-        skip=true;;
-      S )
-        skip_all=true;;
-      * )
+      o)
+        overwrite=true
         ;;
+      O)
+        overwrite_all=true
+        ;;
+      b)
+        backup=true
+        ;;
+      B)
+        backup_all=true
+        ;;
+      s)
+        skip=true
+        ;;
+      S)
+        skip_all=true
+        ;;
+      *) ;;
+
     esac
   fi
 

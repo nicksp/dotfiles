@@ -51,7 +51,7 @@ echo -e "${light_red}Use it at your own risk."
 
 if [ $# -ne 1 ] || [ "$1" != "-y" ]; then
   echo -e "${yellow}Press Enter key to continue...${reset}\n"
-  read key;
+  read key
 fi
 
 # Backup existing zsh file

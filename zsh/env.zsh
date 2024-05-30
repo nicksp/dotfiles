@@ -29,9 +29,9 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 #
 
 # Enable history so we get auto suggestions
-export HISTFILE="${ZDOTDIR:-$HOME}/.zsh_history"  # History filepath
-export HISTSIZE=100000                            # Maximum events remembered for internal history
-export SAVEHIST=$HISTSIZE                         # Maximum events stored in history file
+export HISTFILE="${ZDOTDIR:-$HOME}/.zsh_history" # History filepath
+export HISTSIZE=100000                           # Maximum events remembered for internal history
+export SAVEHIST=$HISTSIZE                        # Maximum events stored in history file
 
 # Stop autocorrect from suggesting undesired completions
 export CORRECT_IGNORE_FILE=".*"

@@ -10,8 +10,7 @@ I use [Squirrelsong](https://sapegin.me/squirrelsong/) theme wherever possible.
 1. [Marta](https://github.com/sapegin/squirrelsong/tree/master/light/Marta)
 1. [Slack](https://github.com/sapegin/squirrelsong/tree/master/light/Slack)
 1. [Telegram](https://github.com/sapegin/squirrelsong/tree/master/light/Telegram)
-1. [Visual Studio Code
-](https://github.com/sapegin/squirrelsong/tree/master/light/VSCode)
+1. [Visual Studio Code](https://github.com/sapegin/squirrelsong/tree/master/light/VSCode)
 1. [Vivaldi](https://github.com/sapegin/squirrelsong/tree/master/light/Vivaldi)
 1. [WezTerm](https://github.com/sapegin/squirrelsong/tree/master/dark/WezTerm)
 

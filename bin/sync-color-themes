@@ -25,7 +25,10 @@ header() {
 }
 
 bold=$(tput bold)
-highlight=$(tput setaf 3; tput bold)
+highlight=$(
+  tput setaf 3
+  tput bold
+)
 reset=$(tput sgr0)
 
 # Ask for the administrator password upfront

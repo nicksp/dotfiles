@@ -18,7 +18,7 @@
   // Autocompletes
   // https://stackoverflow.com/questions/49956963/markdown-not-using-emmet
   // https://css-tricks.com/can-vs-code-emmet/
-  "emmet.excludeLanguages":["typescript"],
+  "emmet.excludeLanguages": ["typescript"],
   "emmet.includeLanguages": {
     "vue-html": "html",
     "javascript": "javascriptreact",
@@ -41,7 +41,7 @@
   "telemetry.telemetryLevel": "off",
   "sonarlint.disableTelemetry": true,
   "gitlens.telemetry.enabled": true,
-  "cody.telemetry.level":"off",
+  "cody.telemetry.level": "off",
   "redhat.telemetry.enabled": false,
   "workbench.enableExperiments": false,
   // Don't use online search in the settings editor
@@ -56,7 +56,6 @@
   "editor.rulers": [80],
   "editor.cursorStyle": "line",
   "editor.cursorWidth": 2,
-  "editor.detectIndentation": false,
   "editor.cursorBlinking": "solid",
   "window.zoomLevel": 0.35,
 
@@ -124,12 +123,12 @@
   "workbench.commandPalette.preserveInput": false,
 
   /*
-  * Terminal look
-  *
-  * VS Code automatically uses your default shell, but I'm setting it
-  * explicitly. Most of the look is already taken care of, but here are some
-  * settings that aren’t.
-  */
+   * Terminal look
+   *
+   * VS Code automatically uses your default shell, but I'm setting it
+   * explicitly. Most of the look is already taken care of, but here are some
+   * settings that aren’t.
+   */
   "terminal.integrated.profiles.osx": {
     "zsh": {
       "path": "zsh",
@@ -377,7 +376,7 @@
     "**/node_modules/*/**": true,
     "**/.hg/store/**": true,
     "**/public/**": true,
-    "**/tmp": true,
+    "**/tmp": true
   },
 
   "window.closeWhenEmpty": true,
@@ -740,5 +739,5 @@
 
   // Make AI helper less obtrusive
   "cody.commandHints.enabled": false,
-  "cody.autocomplete.enabled": false,
+  "cody.autocomplete.enabled": false
 }

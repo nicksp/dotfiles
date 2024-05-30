@@ -25,7 +25,7 @@ title() {
 # We're all good already
 if [ "$SHELL" == "/opt/homebrew/bin/zsh" ]; then
   echo "Nothing to update. You're already using zsh as your default shell 👏"
-  exit 0;
+  exit 0
 fi
 
 # Ask for the administrator password upfront

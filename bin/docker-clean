@@ -13,5 +13,5 @@
 #
 # Based on https://docs.docker.com/config/pruning/
 
-docker system prune -af --volumes && \
-  docker system df
+docker system prune -af --volumes \
+  && docker system df

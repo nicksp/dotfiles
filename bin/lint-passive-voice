@@ -58,12 +58,12 @@ withheld|withstood|wrung|\
 written"
 
 if [ "$1" = "" ]; then
- echo "Usage: `basename $0` <file> ..."
- exit
+  echo "Usage: $(basename $0) <file> ..."
+  exit
 fi
 
 egrep -n -i --color \
- "\\b(am|are|were|being|is|been|was|be)\
+  "\\b(am|are|were|being|is|been|was|be)\
 \\b[ ]*(\w+ed|($irregulars))\\b" $*
 
 exit $?

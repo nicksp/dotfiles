@@ -26,14 +26,14 @@ if [ -f words/weasels ]; then
 fi
 
 if [ ! "$wordfile" = "" ]; then
-  weasels="xyzabc123";
-  for w in `cat $wordfile`; do
+  weasels="xyzabc123"
+  for w in $(cat $wordfile); do
     weasels="$weasels|$w"
   done
 fi
 
 if [ "$1" = "" ]; then
-  echo "Usage: `basename $0` <file> ..."
+  echo "Usage: $(basename $0) <file> ..."
   exit
 fi
 

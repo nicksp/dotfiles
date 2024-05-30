@@ -2,4 +2,5 @@
 
 # Show my IP address
 
-curl http://ipecho.net/plain; echo
+curl http://ipecho.net/plain
+echo

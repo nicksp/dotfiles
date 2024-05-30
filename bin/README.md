@@ -61,8 +61,7 @@ Copy the current directory path to clipboard.
 
 ## docker-clean
 
-Clear Docker cache and free up space on your 
-system without asking for confirmation.
+Clear Docker cache and free up space on your system without asking for confirmation.
 
 - `docker-clean`
 
@@ -234,13 +233,15 @@ Print nyan cat.
 
 ## optimage
 
-
-
-## optimize-video
-
 Optimize given image(s) with Optimage GUI.
 
 - `optimage {{file1}} {{file2}}`
+
+## optimize-video
+
+Convert GIF animation to a video file and/or a modern and much smaller WebM video.
+
+- `optimize-video {{file}}`
 
 ## passphrase
 
