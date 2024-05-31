@@ -218,6 +218,9 @@
   "git.closeDiffOnOperation": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "git.mergeEditor": true,
+
+  "merge-conflict.autoNavigateNextConflict.enabled": true,
 
   "scm.diffDecorations": "gutter",
   "scm.diffDecorationsGutterPattern": { "modified": false },
@@ -732,6 +735,7 @@
   "githubPullRequests.defaultMergeMethod": "squash",
   "githubPullRequests.pullBranch": "never",
   "githubPullRequests.fileListLayout": "flat",
+  "githubPullRequests.pullPullRequestBranchBeforeCheckout": "pullAndMergeBase",
 
   "tailwindCSS.classAttributes": ["class", "className", "ngClass", "variants"],
 
