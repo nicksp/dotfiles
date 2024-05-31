@@ -179,6 +179,10 @@ install_dotfiles() {
   # CotEditor: install `cot` command-line tool
   symlink_file "/Applications/CotEditor.app/Contents/SharedSupport/bin/cot" "/usr/local/bin/cot"
 
+  # WezTerm
+  mkdir -p "$HOME/.config/wezterm"
+  symlink_file "$DOTFILES_DIR/wezterm/wezterm-session-manager" "$HOME/.config/wezterm/wezterm-session-manager"
+
   # Lazydocker
   symlink_file "$DOTFILES_DIR/lazydocker/config.yml" "$HOME/Library/Application Support/lazydocker/config.yml"
 

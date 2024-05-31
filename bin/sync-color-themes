@@ -37,12 +37,13 @@ sudo echo "Sudo activated!"
 echo
 
 # WezTerm: https://github.com/sapegin/squirrelsong/tree/master/dark/WezTerm
-# Not required since it'll be symlinked.
-# header "Updating WezTerm theme..."
+header "Updating WezTerm theme..."
+# Create a folder with the new color themes
+mkdir -p "$HOME/.config/wezterm/colors"
+# Download a theme and copy to an appropriate place
+sudo curl -o "$HOME/.config/wezterm/colors/squirrelsong-dark.toml" "https://raw.githubusercontent.com/sapegin/squirrelsong/master/dark/WezTerm/squirrelsong-dark.toml"
 
-# cp -f "$DOTFILES/tilde/.config/wezterm/colors/squirrelsong-dark.toml" "$HOME/.config/wezterm/colors/squirrelsong-dark.toml"
-
-# echo "🖌 A new color theme has been installed and ready to use"
+echo "🖌 A new color theme has been installed and ready to use"
 
 # Bat: https://github.com/sharkdp/bat?tab=readme-ov-file#adding-new-themes
 echo ""
