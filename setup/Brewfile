@@ -12,23 +12,23 @@ brew "bat" # `cat` alternative
 brew "eza" # `ls` alternative
 brew "fastfetch" # neofetch replacement
 brew "fd" # `find` alternative
-brew "fnm"
+brew "fnm" # Node.js version manager
 brew "fzf" # fuzzy finder
-brew "gh"
+brew "gh" # GitHub CLI
 brew "git"
 brew "git-delta" # diff pager for `git` and `grep` output
 brew "htop" # `top` alternative
 brew "neovim"
 brew "node" # fallback Node.js version
-brew "pnpm"
-brew "prettyping"
-brew "ripgrep"
-brew "starship"
+brew "pnpm" # efficient Node.js package manager
+brew "prettyping" # `ping` replacement
+brew "ripgrep" # `grep` replacement
+brew "starship" # Prompt manager
 brew "tldr" # `man` alternative
 brew "trash-cli" # safer `rm` alternative
 brew "tree"
 brew "webp"
-brew "zoxide"
+brew "zoxide" # convenient and majical `cd` replacement
 brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
