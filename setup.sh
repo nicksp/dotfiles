@@ -59,6 +59,11 @@ if [[ -e "$HOME/.zshrc" ]]; then
   mv "$HOME/.zshrc" "$HOME/.zshrc.backup"
 fi
 
+# Use Touch ID to authorize sudo
+if [ ! -f /etc/pam.d/sudo_local ]; then
+  echo "auth       sufficient     pam_tid.so" | sudo tee /etc/pam.d/sudo_local
+fi
+
 # Ask for the administrator password upfront
 warning "Activate sudo"
 sudo echo "Sudo activated!"
@@ -91,11 +96,6 @@ echo
 
 # Set macOS defaults
 if [[ "$(uname -s)" == "Darwin" ]]; then
-  # Use Touch ID to authorize sudo
-  if [ ! -f /etc/pam.d/sudo_local ]; then
-    echo "auth       sufficient     pam_tid.so" | sudo tee /etc/pam.d/sudo_local
-  fi
-
   title "Configuring macOS..."
   ./setup/macos.sh
   echo "Defaults configured!" | indent
