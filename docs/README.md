@@ -173,6 +173,12 @@ Show the brief summary of the current state of a Git repository.
 
 - `gss`
 
+## gd
+
+Show the differences (_diff_) between the current state of files in the working directory and the last committed state.
+
+- `gd`
+
 ## gp
 
 Fetch changes from the remote repository and also update any nested Git submodules within the repository.
