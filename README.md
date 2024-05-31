@@ -43,8 +43,8 @@ I recommend forking this repository to create your own set of dotfiles.
         ```
         ssh -T git@github.com
         ```
-1. Install [fonts](fonts/).
-1. Choose _manual_ or _automatic_ dotfiles installation below.
+1. Install [fonts](fonts/)
+1. Choose _manual_ or _automatic_ dotfiles installation below
 
 ### Manually
 
@@ -61,7 +61,7 @@ cd ~/dotfiles
 
 ### Automatically
 
-To automate the setup of your dotfiles on a new machine, use the [setup](./setup) script from the main branch.
+To automate the setup of your dotfiles on a new machine, use the [setup](./setup.sh) script.
 
 > [!CAUTION]
 > Use at your own risk!
