@@ -131,9 +131,15 @@
    */
   "terminal.integrated.profiles.osx": {
     "zsh": {
-      "path": "zsh",
+      "path": "/opt/homebrew/bin/zsh",
       "args": ["-l"]
     }
+  },
+  // Run tasks in interactive shell, otherwise some things (like pnpm installed
+  // using corepack) aren't working
+  "terminal.integrated.automationProfile.osx": {
+    "path": "/opt/homebrew/bin/zsh",
+    "args": ["-i"]
   },
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontSize": 14,
@@ -199,6 +205,7 @@
   "editor.minimap.renderCharacters": false,
   "editor.renderWhitespace": "boundary",
   "outline.problems.badges": false,
+  "outline.showVariables": false,
   "problems.autoReveal": false,
   "problems.decorations.enabled": false,
   "search.decorations.badges": false,
@@ -472,6 +479,7 @@
   "typescript.preferences.quoteStyle": "single",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "typescript.workspaceSymbols.scope": "currentProject",
   "typescript.preferGoToSourceDefinition": true,
   "typescript.enablePromptUseWorkspaceTsdk": true,
   // Auto import modules
