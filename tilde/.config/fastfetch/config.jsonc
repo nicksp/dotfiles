@@ -9,35 +9,36 @@
       "3": "red",
       "4": "magenta",
       "5": "blue",
-      "6": "3"
-    }
+      "6": "3",
+    },
   },
   "modules": [
     {
       "type": "custom",
-      "format": "Nick Khan"
+      "format": "\u001b[1mNick Khan\u001b[0m",
     },
     "separator",
     {
       "type": "custom",
       "key": "URL",
       "keyColor": "yellow",
-      "format": "https://nikkhan.com"
+      "format": "https://nikkhan.com",
     },
     {
       "type": "os",
-      "format": "{2} {10} {8} {11}"
+      "format": "{2} {10} {8} ({11})",
     },
     {
       "type": "shell",
-      "format": "{1} ({7}) v{4}"
+      "format": "{1} v{4} ({7})",
     },
     "terminal",
+    "uptime",
     {
       "type": "weather",
-      "location": "Europe"
+      "location": "Europe",
     },
     "break",
-    "colors"
-  ]
+    "colors",
+  ],
 }
