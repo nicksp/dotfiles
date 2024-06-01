@@ -130,7 +130,7 @@ config.keys = {
         TERM = 'screen-256color',
       },
       args = {
-        'cot',
+        '/Applications/CotEditor.app/Contents/SharedSupport/bin/cot',
         os.getenv('WEZTERM_CONFIG_FILE'),
       },
     },
