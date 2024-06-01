@@ -192,6 +192,9 @@ install_dotfiles() {
   # Marta file manager
   symlink_file "$DOTFILES_DIR/marta/conf.marco" "$HOME/Library/Application Support/org.yanex.marta/conf.marco"
   symlink_file "$DOTFILES_DIR/marta/favorites.marco" "$HOME/Library/Application Support/org.yanex.marta/favorites.marco"
+
+  # Quick-Look plugins to enhance experience using file manager
+  symlink_file "$DOTFILES_DIR/ql-plugins" "$HOME/Library/QuickLook"
 }
 
 install_dotfiles
