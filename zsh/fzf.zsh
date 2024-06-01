@@ -1,6 +1,7 @@
 # Use fzf to search through the fd-results via fd (https://github.com/sharkdp/fd) to include hidden files (but exclude .git folders) and respect .gitignore
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_COMPLETION_TRIGGER='**'
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
 FZF_COLORS="bg:-1,\
@@ -38,15 +39,20 @@ _fzf_compgen_dir() {
 
 # Advanced customization of fzf options via _fzf_comprun function
 # - The first argument to the function is the name of the command.
-# - You should make sure to pass the rest of the arguments to fzf.
+# - Make sure to pass the rest of the arguments to fzf.
 _fzf_comprun() {
   local command=$1
   shift
 
   case "$command" in
-    cd)           fzf --preview 'tree -C {} | head -200'   "$@" ;;
-    tree)         find . -type d | fzf --preview 'tree -C {} | head -200' "$@" ;;
-    *)            fzf "$@" ;;
+    # cd **<TAB>
+    cd)       fzf --preview 'eza --tree --color=always {} | head -200'                        "$@" ;;
+    # tree **<TAB>
+    tree)     fd --type d --hidden | fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    # llt **<TAB>
+    llt)     fd --type d --hidden | fzf --preview 'eza --tree --color=always {} | head -200'  "$@" ;;
+    # any_other_command **<TAB>
+    *)        fzf --preview 'bat -n --color=always {}'                                        "$@" ;;
   esac
 }
 
