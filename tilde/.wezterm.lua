@@ -219,10 +219,10 @@ config.mouse_bindings = {
 		action = act.CompleteSelection('ClipboardAndPrimarySelection'),
 	},
 
-	-- Open links on Cmd+Click
+	-- Open links on Option+Click
 	{
 		event = { Up = { streak = 1, button = 'Left' } },
-		mods = 'CMD',
+		mods = 'OPT',
 		action = act.OpenLinkAtMouseCursor,
 	},
 
