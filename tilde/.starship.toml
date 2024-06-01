@@ -13,6 +13,9 @@ format = """\
   $character\
   """
 
+# Allow longer-running commands commands to keep executing without failing with a warning
+command_timeout = 1000
+
 [directory]
 style = "bold white"
 repo_root_style = "bold"
