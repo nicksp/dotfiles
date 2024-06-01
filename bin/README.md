@@ -37,6 +37,7 @@ Basic usage and examples.
 - [`ssh-copy`](#ssh-copy)
 - [`sync-apps-data`](#sync-apps-data)
 - [`sync-color-themes`](#sync-color-themes)
+- [`tabs2spaces`](#tabs2space)
 - [`update-apps-icons`](#update-apps-icons)
 - [`upup`](#upup)
 - [`wg`](#wg)
@@ -291,6 +292,12 @@ Synchronize Bear notes/note images with a custom folder on a local machine.
 Download and install latest versions of [Squirrelsong](https://sapegin.me/squirrelsong/) themes for supported apps.
 
 - `sync-color-themes`
+
+## tabs2spaces
+
+Convert tabs into spaces and save it to the original file.
+
+- `tabs2spaces {{file}}`
 
 ## update-apps-icons
 

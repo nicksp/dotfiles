@@ -1,0 +1,38 @@
+#!/bin/bash
+#
+# Convert tabs into spaces and save it to the original file
+#
+# Usage:
+#   tabs2spaces [file]
+#
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+# Number of spaces per indentation-level
+tab_width=2
+
+_spacify_file() {
+  expand -t "$tab_width" "$1" > "$temp_file"
+}
+
+# Check if a file argument is provided
+if [ -z "$1" ]; then
+  echo "Usage: $(basename "$0") <file>"
+  exit 1
+fi
+
+if [ ! -f "$1" ]; then
+  echo "Error: File '$1' does not exist."
+  exit 1
+fi
+
+# Create a temporary file which will them be deleted
+temp_file=$(mktemp)
+
+# tabs → spaces conversion
+expand -t "$tab_width" "$1" > "$temp_file"
+mv "$temp_file" "$1"
+
+_spacify_file $1
+echo "Tabs converted to spaces in file '$1'."
