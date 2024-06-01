@@ -75,9 +75,12 @@ command_exists() {
 command_exists bat && alias cat="bat --style=plain"
 
 # Eza: https://eza.rocks/
-command_exists eza && alias ls="eza -a --no-user --no-time"
-command_exists eza && alias ll="eza -a --no-user --long --header -g --icons --git"
-command_exists eza && alias llt="eza -a --icons --tree --git-ignore"
+# Display all clickable entries (incl. hidden files) as a grid with icons
+command_exists eza && alias ls="eza -a --no-user --hyperlink --icons=auto"
+# Display a detailed list of clickable entries (incl. hidden files) with a Git status
+command_exists eza && alias ll="eza -a --no-user --long --header -g --icons --git --hyperlink"
+# Display clickable directory tree
+command_exists eza && alias llt="eza -a --icons --tree --git-ignore --hyperlink"
 
 # Safer reversible file removal: https://github.com/sindresorhus/trash-cli
 command_exists trash && alias rm="trash"

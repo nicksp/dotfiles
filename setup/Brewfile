@@ -26,7 +26,6 @@ brew "ripgrep" # Searching within files (better `grep`)
 brew "starship" # Prompt manager
 brew "tldr" # Community-maintained docs (better `man`)
 brew "trash-cli" # Record and restore removed files (better `rm`)
-brew "tree" # Print directory tree
 brew "webp" # More efficient web images
 brew "zoxide" # Convenient and majical navigation (better `cd`)
 brew "zsh" # A shell of choice
