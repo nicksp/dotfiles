@@ -6,37 +6,37 @@ tap "jesseduffield/lazydocker"
 tap "jesseduffield/lazygit"
 
 # CLI tools
-brew "python@3.11" # required by awscli
-brew "awscli"
-brew "bat" # `cat` alternative
-brew "eza" # `ls` alternative
-brew "fastfetch" # neofetch replacement
-brew "fd" # `find` alternative
+brew "python@3.11" # Required by awscli
+brew "awscli" # Official Amazon AWS command-line interface
+brew "bat" # Output highlighting (better `cat`)
+brew "eza" # Listing files with info (better `ls`)
+brew "fastfetch" # Show pretty system info
+brew "fd" # Find entries in your filesystem (better `find`)
 brew "fnm" # Node.js version manager
-brew "fzf" # fuzzy finder
-brew "gh" # GitHub CLI
-brew "git"
-brew "git-delta" # diff pager for `git` and `grep` output
-brew "htop" # `top` alternative
-brew "neovim"
-brew "node" # fallback Node.js version
-brew "pnpm" # efficient Node.js package manager
-brew "prettyping" # `ping` replacement
-brew "ripgrep" # `grep` replacement
+brew "fzf" # Fuzzy file finder and filtering
+brew "gh" # GitHub CLI: interact with GitHub PRs, issues, repos
+brew "git" # Version control
+brew "git-delta" # Diff pager for `git` and `grep` output (better `diff`)
+brew "htop" # Performance and resource monitoring tool (better `top`)
+brew "neovim" # Text editor for terminal
+brew "node" # Fallback Node.js version
+brew "pnpm" # Efficient Node.js package manager
+brew "prettyping" # Prettier and compact `ping`
+brew "ripgrep" # Searching within files (better `grep`)
 brew "starship" # Prompt manager
-brew "tldr" # `man` alternative
-brew "trash-cli" # safer `rm` alternative
-brew "tree"
-brew "webp"
-brew "zoxide" # convenient and majical `cd` replacement
-brew "zsh"
-brew "zsh-autosuggestions"
-brew "zsh-syntax-highlighting"
-brew "git-friendly/git-friendly/git-friendly"
-brew "jesseduffield/lazydocker/lazydocker"
-brew "jesseduffield/lazygit/lazygit"
+brew "tldr" # Community-maintained docs (better `man`)
+brew "trash-cli" # Record and restore removed files (better `rm`)
+brew "tree" # Print directory tree
+brew "webp" # More efficient web images
+brew "zoxide" # Convenient and majical navigation (better `cd`)
+brew "zsh" # A shell of choice
+brew "zsh-autosuggestions" # Fish-like autosuggestions for Zsh
+brew "zsh-syntax-highlighting" # Fish-like syntax highlighting for Zsh
+brew "git-friendly/git-friendly/git-friendly" # Improved Git commands for common tasks
+brew "jesseduffield/lazydocker/lazydocker" # Full Docker management app
+brew "jesseduffield/lazygit/lazygit" # Full Git management app
 
-# Temporarily required for work projects
+# Temporarily required for some work projects
 brew "libpng"
 brew "cairo"
 brew "giflib"
@@ -46,38 +46,37 @@ brew "librsvg"
 brew "pkg-config"
 
 # GUI apps
-cask "1password@7"
-cask "arc"
-cask "bartender"
-cask "bruno"
-cask "cleanmymac"
-cask "cleanshot"
-cask "coteditor"
-cask "discord"
-cask "docker"
-cask "hazeover"
-cask "insomnia"
-cask "itsycal"
-cask "keka"
-cask "ledger-live"
-cask "marta"
-cask "nordvpn"
-cask "notion"
-cask "optimage"
-cask "qobuz"
-cask "raycast"
-cask "rectangle"
-cask "rocket"
-cask "slack"
-cask "spotify"
-cask "superduper"
-cask "syntax-highlight"
-cask "tableplus"
-cask "telegram"
-cask "tradingview"
-cask "visual-studio-code"
-cask "vivaldi"
-cask "wezterm"
+cask "1password@7" # Password manager
+cask "arc" # Modern browser
+cask "bartender" # Manage menu bar icons
+cask "bruno" # API client
+cask "cleanmymac" # System clean up manager
+cask "cleanshot" # Better screenshot utility
+cask "coteditor" # Simple code/text editor
+cask "discord" # Messaging social platform
+cask "docker" # Running containerized applications
+cask "hazeover" # Fades out inactive windows
+cask "insomnia" # API client
+cask "itsycal" # Tiny popup calendar in a menu bar
+cask "keka" # File archiver and extractor
+cask "ledger-live" # Crypto hardware wallet manager
+cask "marta" # File manager
+cask "nordvpn" # VPN client
+cask "notion" # Note-taking app
+cask "optimage" # Image optimization
+cask "qobuz" # Hi-rez audio streaming platform
+cask "raycast" # All-in-one app / tasks launcher
+cask "rectangle" # Window manager
+cask "rocket" # Handy emojis picker
+cask "slack" # Messaging social platform
+cask "spotify" # Audio streaming platform
+cask "superduper" # Data backup
+cask "syntax-highlight", args: { no_quarantine: true } # Preview many different source code files
+cask "tableplus" # Database managmenent system
+cask "telegram" # Messenger
+cask "visual-studio-code" # Code editor
+cask "vivaldi" # Browser with built-in privacy
+cask "wezterm" # Better terminal emulator
 
 # Fonts
 cask "font-symbols-only-nerd-font"
