@@ -32,15 +32,16 @@ brew bundle | indent
 
 # Extra apps
 echo ""
-title "Install more apps:"
+title "☕️ Install more apps if you need them:"
+echo "brew install --cask tradingview"
+echo "brew install --cask zoom"
 echo "${bold}Tower 2${reset} − https://www.git-tower.com/download-TO2M"
 echo "${bold}Capture One 22 Pro (Build 15.4.3)${reset} − https://support.captureone.com/hc/en-us/articles/7857694102557-Capture-One-22-15-4-3-release-notes"
 echo "${bold}Audirvāna Origin${reset} − https://audirvana.com/audirvana-origin/"
-echo "brew install --cask zoom"
 
 # App Store apps
 echo ""
-title "Install additional apps from App Store:"
+title "🍏 Install additional apps from App Store:"
 echo "https://apps.apple.com/us/app/ia-writer/id775737590?mt=12"
 echo "https://apps.apple.com/us/app/bear-markdown-notes/id1091189122?mt=12"
 echo "https://apps.apple.com/us/app/adblock-for-safari/id1402042596?mt=12"
