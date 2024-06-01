@@ -7,7 +7,8 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 > [!IMPORTANT]
 > Please only open pull requests that fix bugs or add improvements without any breaking changes.
 
-I recommend forking this repository to create your own set of dotfiles.
+> [!WARNING]
+> I recommend forking this repository to create your own set of dotfiles.
 
 ## Requirements
 
@@ -17,16 +18,17 @@ I recommend forking this repository to create your own set of dotfiles.
 
 ## What's in there?
 
-- Handy [binary scripts](bin/)
-- [Custom color scheme](colors/)
-- [Git aliases](git/.gitconfig)
-- [Shell aliases](zsh/aliases.zsh)
-- zsh / fzf
-- git / delta syntax-highlighting diff tool
-- Sensible [macOS defaults](setup/macos.sh)
+- Handy [binary scripts](bin/).
+- [Custom color scheme](colors/).
+- [Custom zsh theme](tilde/.starship.toml) with Git status, etc. using [Starship](https://starship.rs/).
+- [Git aliases](git/.gitconfig).
+- [Shell aliases](zsh/aliases.zsh).
+- zsh / fzf.
+- git / delta syntax-highlighting diff tool.
+- Sensible [macOS defaults](setup/macos.sh).
 - [Neovim](tilde/.config/nvim/)
-- [macOS apps and VSCode extensions](setup/Brewfile) I use
-- [macOS tips & tricks](/docs/macOS%20Tips%20&%20Tricks.md)
+- [macOS apps and VSCode extensions](setup/Brewfile) I use.
+- [macOS tips & tricks](/docs/macOS%20Tips%20&%20Tricks.md).
 
 ## Installation
 
@@ -43,7 +45,7 @@ I recommend forking this repository to create your own set of dotfiles.
         ```
         ssh -T git@github.com
         ```
-1. Install [fonts](fonts/)
+1. Install [MonoLisa font](https://www.monolisa.dev/)
 1. Choose _manual_ or _automatic_ dotfiles installation below
 
 ### Manually
@@ -73,17 +75,24 @@ git clone git@github.com:nicksp/dotfiles.git ~/dotfiles
 
 This will install all required dotfiles in your home directory as symlinks. Everything is then configured via modifying files in `~/dotfiles`.
 
-### Additional setup
+## Extras
+
+### Set macOS defaults
 
 ```shell
-# Set macOS defaults
 ./setup/macos.sh
+```
 
-# Use alternative icons for apps
+### Use alternative apps icons
+
+```shell
 ./setup/icons.sh
+```
 
-# Install colors schemes across the apps
-bin/sync-color-themes
+### Install colors themes
+
+```shell
+sync-color-themes
 ```
 
 ## Local customizations
@@ -108,6 +117,16 @@ its content to overwrite or add to the existing `git` configurations.
 > Use `~/.gitconfig.local` to store [sensitive information](git/) such
 as the `git` user credentials for individual repositories.
 
+## Updating
+
+To update an existing install:
+
+```shell
+cd ~/dotfiles
+git pull
+./setup.sh
+```
+
 ## License
 
 MIT License.
@@ -116,6 +135,7 @@ MIT License.
 
 - [holman/dotfiles](https://github.com/holman/dotfiles)
 - [mathiasbynes/dotfiles](https://github.com/mathiasbynens/dotfiles)
+- [sapegin/dotfiles](https://github.com/sapegin/dotfiles)
 - https://remysharp.com/2018/08/23/cli-improved
 - https://evanhahn.com/a-decade-of-dotfiles/
 - https://cpojer.net/posts/set-up-a-new-mac-fast
