@@ -3,7 +3,7 @@
 # (2) https://scriptingosx.com/2019/07/moving-to-zsh-part-5-completions/
 # (3) https://thevaluable.dev/zsh-completion-guide-examples/
 #
-# TIP: you may have to call `rm -f ~/.zcompdump; compinit` the first time to force a completions cache rebuild
+# TIP: you may have to call `rm -f ~/.zcompdump; compinit` the first time to force a completions cache rebuild or after adding new custom completions
 
 # Load extra completions
 if [[ -d "$DOTFILES/zsh/zsh-completions" ]]; then

@@ -1,0 +1,32 @@
+#compdef tldr
+
+local -a pages platforms
+pages=$(tldr -a1)
+platforms='( android freebsd linux netbsd openbsd osx sunos windows )'
+
+_arguments \
+  '(- *)'{-h,--help}'[show help]' \
+  '(- *)'{-v,--version}'[display version]' \
+  '(- *)'{-l,--list}'[list all commands for chosen platform]' \
+  '(- *)'{-a,--list-all}'[list all commands]' \
+  '(- *)'{-1,--single-column}'[list one command per line (used with -l or -a)]' \
+  '(- *)'{-r,--random}'[show a random command]' \
+  '(- *)'{-s,--search}'[search all pages for query]' \
+  '(- *)'{-e,--random-example}'[show a random example]' \
+  '(- *)'{-m,--markdown}'[show the original markdown format page]' \
+  '(-f --render)'{-f,--render}'[render a specific markdown file]:markdown file:_files -/' \
+  '(-p --platform)'{-p,--platform}"[override platform]:platform:(${(j:|:)platforms})" \
+  '(- *)'{-u,--update}'[update local cache]' \
+  '--android[override operating system with Android]' \
+  '--darwin[override operating system with macOS]' \
+  '--freebsd[override operating system with FreeBSD]' \
+  '--linux[override operating system with Linux]' \
+  '--macos[override operating system with macOS]' \
+  '--netbsd[override operating system with NetBSD]' \
+  '--openbsd[override operating system with OpenBSD]' \
+  '--osx[override operating system with macOS]' \
+  '--sunos[override operating system with SunOS]' \
+  '--win32[override operating system with Windows]' \
+  '--windows[override operating system with Windows]' \
+  '(- *)'{-c,--clear-cache}'[clear local cache]' \
+  "*:page:(${(b)pages})" && return 0

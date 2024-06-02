@@ -1,5 +1,7 @@
 #compdef softwareupdate
 
+# Based on https://github.com/tldr-pages/tldr-node-client/blob/c58c92cd4806840dbe094f28a2a1c47c0f00c67d/bin/completion/zsh/_tldr
+
 _softwareupdate_ignored_update_name() {
   if [[ -z "$_softwareupdate_ignored_updates" ]]; then
     local res="$(_call_program pkgs softwareupdate --ignored)"

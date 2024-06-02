@@ -24,7 +24,7 @@ brew "pnpm" # Efficient Node.js package manager
 brew "prettyping" # Prettier and compact `ping`
 brew "ripgrep" # Searching within files (better `grep`)
 brew "starship" # Prompt manager
-brew "tldr" # Community-maintained docs (better `man`)
+brew "tlrc" # Community-maintained docs (better `man`)
 brew "trash-cli" # Record and restore removed files (better `rm`)
 brew "webp" # More efficient web images
 brew "zoxide" # Convenient and majical navigation (better `cd`)

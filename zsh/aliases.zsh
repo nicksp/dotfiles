@@ -91,9 +91,9 @@ command_exists trash && alias rm="trash"
 # Htop: https://htop.dev/
 command_exists htop && alias top="htop"
 
-# Tldr: https://tldr.sh/
-command_exists tldr && alias man="tldr"
-command_exists tldr && alias help="tldr"
+# Tlrc: https://github.com/tldr-pages/tlrc
+command_exists tldr && alias man="tldr --config ~/.tlrc.toml"
+command_exists tldr && alias help="tldr --config ~/.tlrc.toml"
 
 # Prettyping: https://denilson.sa.nom.br/prettyping/
 command_exists prettyping && alias ping="prettyping --nolegend"
