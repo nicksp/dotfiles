@@ -10,26 +10,30 @@
 # [x] Chrome DevTools
 # [x] CotEditor
 # [x] Marta
+# [x] Syntax Highlight
 # [ ] Bartender
 # [ ] Slack
 # [ ] Telegram
 
-warning() {
-  tput setaf 1
-  echo "/!\\ $1 /!\\"
-  tput sgr0
-}
-
-header() {
-  echo -e "$(tput sgr 0 1)$(tput setaf 6)$1$(tput sgr0)"
-}
-
+red=$(tput setaf 1)
+cyan=$(tput setaf 6)
 bold=$(tput bold)
+underline=$(tput sgr 0 1)
+reset=$(tput sgr0)
 highlight=$(
   tput setaf 3
   tput bold
 )
-reset=$(tput sgr0)
+
+warning() {
+  echo $red
+  echo "/!\\ $1 /!\\"
+  echo $reset
+}
+
+header() {
+  echo -e "${underline}${cyan}${1}${reset}"
+}
 
 # Ask for the administrator password upfront
 warning "Activate sudo"
@@ -168,6 +172,13 @@ sudo command rm -f "/Applications/Marta.app/Contents/Resources/Themes/Squirrelso
 sudo curl -o "/Applications/Marta.app/Contents/Resources/Themes/SquirrelsongLight.ettyTheme" "https://raw.githubusercontent.com/sapegin/squirrelsong/master/light/Marta/SquirrelsongLight.ettyTheme"
 
 echo "🍲 Point to new themes in Marta preferences and restart the app for the changes to take effect."
+
+# Syntax Highlight: https://github.com/sapegin/squirrelsong/tree/master/light/Highlight/
+echo ""
+header "Updating Syntax Highlight theme..."
+sudo curl -o "$HOME/dotfiles/syntax-highlight/themes/Squirrelsong Light.theme" "https://raw.githubusercontent.com/sapegin/squirrelsong/master/light/Highlight/Squirrelsong%20Light.theme"
+
+echo -e "🖍  Import ${underline}Squirrelsong Light.theme${reset} in ${bold}Syntax Highlight − Settings${reset}\nand then select the theme under ${bold}General − Color scheme${reset}"
 
 # Bartender: https://github.com/sapegin/squirrelsong/tree/master/light/Bartender
 echo ""
