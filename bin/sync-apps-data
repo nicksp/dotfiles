@@ -1,11 +1,47 @@
 #!/bin/bash
+#
+# Synchronize apps data with a custom local folder that I back up frequently to an external drive
+#
+# Usage:
+#   sync-apps-data
+#
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
-# Exit on any unset variable
-set -u
+set -eu
 
-# Enables Bear notes/images synchronization
-DB_DIR="$HOME/Library/Group Containers/9K33E3U3T4.net.shinyfrog.bear/Application Data"
-BACKUP_DIR="$HOME/Documents/MYDATA/Bear/Notes/"
+DEST="$HOME/Documents/MYDATA"
 
-mkdir -p "$BACKUP_DIR"
-ln -sfn "$DB_DIR"/* "$BACKUP_DIR"
+CYAN="$(tput setaf 6)"
+UNDERLINE="$(tput sgr 0 1)"
+RESET="$(tput sgr0)"
+
+title() {
+  echo -e "${UNDERLINE}${CYAN}${1}${RESET}\n"
+}
+
+_bk() {
+  title "Backing up $1..."
+  dest_dir="$DEST/$2"
+  mkdir -p "$dest_dir"
+
+  # Remove any files/directories in the destination that are not in the source
+  # for item in "$dest_dir"/*; do
+  #   if [ ! -e "$1/$(basename "$item")" ]; then
+  #     rm -rf "$item"
+  #   fi
+  # done
+
+  # Copy files/directories from the source to the destination
+  for item in "$1"/*; do
+    if [ -d "$item" ]; then
+      cp -R "$item" "$dest_dir"
+    else
+      cp "$item" "$dest_dir"
+    fi
+  done
+}
+
+# Bear notes/images synchronization
+_bk "$HOME/Library/Group Containers/9K33E3U3T4.net.shinyfrog.bear/" "Bear"

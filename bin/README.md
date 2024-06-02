@@ -283,7 +283,7 @@ Copy my public SSH key to clipboard.
 
 ## sync-apps-data
 
-Synchronize Bear notes/note images with a custom folder on a local machine.
+Synchronize apps data with a custom local folder that I back up frequently to an external drive.
 
 - `sync-apps-data`
 
