@@ -76,11 +76,11 @@ command_exists bat && alias cat="bat --style=plain"
 
 # Eza: https://eza.rocks/
 # Display all clickable entries (incl. hidden files) as a grid with icons
-command_exists eza && alias ls="eza -a --no-user --hyperlink --icons=auto"
+command_exists eza && alias ls="eza -a --hyperlink --icons=auto --group-directories-first --color-scale=age"
 # Display a detailed list of clickable entries (incl. hidden files) with a Git status
-command_exists eza && alias ll="eza -a --no-user --long --header -g --icons --git --hyperlink"
+command_exists eza && alias ll="ls --long --no-user --header -g --git"
 # Display clickable directory tree
-command_exists eza && alias llt="eza -a --icons --tree --git-ignore --hyperlink"
+command_exists eza && alias llt="ls --tree --git-ignore"
 
 # Safer reversible file removal: https://github.com/sindresorhus/trash-cli
 command_exists trash && alias rm="trash"
