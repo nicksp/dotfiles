@@ -50,7 +50,7 @@ Make a file executable.
 
 ## colors
 
-Display all the terminal colors configured, in nice panes. Each card has a color code which can be handy when writing some scripts or configuring colors.
+Display all the supported terminal colors configured, in nice panes, along with available text effects. Each card has a color code which can be handy when writing some scripts or configuring colors.
 
 - `colors`
 

@@ -1,6 +1,25 @@
 #!/bin/bash
+#
+# Display supported terminal color palette and text effects
+#
+# Usage:
+#   colors
+#
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
-# Display supported terminal colors with color codes
+set -euo pipefail
+
+CYAN="$(tput setaf 6)"
+UNDERLINE="$(tput sgr 0 1)"
+RESET="$(tput sgr0)"
+
+title() {
+  echo
+  echo -e "${UNDERLINE}${CYAN}${1}${RESET}"
+  echo
+}
 
 # Represent the 16 base colors in the 256-color palette
 for row in {0..15}; do
@@ -13,3 +32,36 @@ for row in {0..15}; do
   done
   echo
 done
+
+title "Escape sequences"
+
+echo "Effects:"
+echo -e "1:             \033[1mBold\033[0m"
+echo -e "2:             \033[2mDimmed\033[0m"
+echo -e "3:             \033[3mItalic\033[0m"
+echo -e "4:             \033[4mUnderline\033[0m"
+echo -e "5:             \033[5mBlinking\033[0m"
+echo -e "6:             \033[6mBlinking fast\033[0m"
+echo -e "7:             \033[7mInverted\033[0m"
+echo -e "8 (invisible): \033[8mInvisible\033[0m"
+echo
+echo "Examples:"
+echo -e "\\\033\[33;44;1m  \033[33;44;1myellow on blue, bold\033[0m \\\033\[0m"
+echo -e "\\\033\[38;5;219m \033[38;5;219m256-color foreground\033[0m \\\033\[0m"
+echo -e "\\\033\[48;5;61m  \033[48;5;61m256-color background\033[0m \\\033\[0m"
+
+title "Tput commands"
+
+echo "Effects:"
+echo "bold:  $(tput bold)Bold$RESET"
+echo "dim:   $(tput dim)Dim$RESET"
+echo "sitm:  $(tput sitm)Italic$RESET"
+echo "smul:  $(tput smul)Underline$RESET"
+echo "blink: $(tput blink)Blinking$RESET"
+echo "rev:   $(tput rev)Inverted$RESET"
+echo "invis: $(tput invis)Invisible$RESET"
+echo
+echo "Examples:"
+echo "\$(tput setaf 3)\$(tput setab 4)\$(tput bold) $(tput setaf 3)$(tput setab 4)$(tput bold)$(tput)yellow on blue, bold$RESET \$(tput sgr0)"
+echo "\$(tput setaf 153)                          $(tput setaf 153)256-color foreground$RESET \$(tput sgr0)"
+echo "\$(tput setab 128)                          $(tput setab 128)256-color background$RESET \$(tput sgr0)"
