@@ -83,11 +83,6 @@ echo
 ./setup/misc.sh
 echo
 
-# Ensure custom scripts are executable
-title "Preparing binary scripts..."
-./setup/bins.sh
-echo
-
 # Install dotfiles symlinks
 title "Configuring software..."
 ./setup/symlinks.sh

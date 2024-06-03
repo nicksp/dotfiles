@@ -1,9 +1,5 @@
 # Setup Scripts
 
-## bins
-
-Changes custom binary files file mode to executable.
-
 ## brew
 
 Installs Homebrew, packages, applications and VSCode extensions using [Brewfile](./Brewfile).
@@ -18,7 +14,7 @@ Sane macOS defaults. Based on [~/.macos](https://mths.be/macos) by @mathiasbynen
 
 ## misc
 
-Installs Xcode Command Line Tools, GitHub CLI, Node.js global packages, etc.
+Installs Xcode Command Line Tools, GitHub CLI, Node.js global packages, changes custom binary files file mode to executable, etc.
 
 ## symlinks
 

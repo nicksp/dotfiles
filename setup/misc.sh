@@ -2,8 +2,22 @@
 
 set -euo pipefail
 
-bold=$(tput bold)
-reset=$(tput sgr0)
+cd "$(dirname "$0")/.."
+
+DOTFILES_DIR="$(pwd)"
+
+BLUE=$(tput setaf 4)
+BOLD=$(tput bold)
+RESET=$(tput sgr0)
+
+indent() {
+  sed 's/^/  /'
+}
+
+info() {
+  echo
+  echo "[ ${BLUE}..${RESET} ] $1" | indent
+}
 
 warning() {
   tput setaf 1
@@ -35,9 +49,16 @@ fi
 # Verify Xcode Command Line Tools successful installation
 xcode-select -p
 
+# Make custom binary scripts executable
+info 'Changing access permissions for binary scripts...'
+find "$DOTFILES_DIR/bin" -type f -not -name '.DS_Store' -not -name 'README.md' -exec chmod +x {} \; -exec bash -c 'printf "\r\033[2K  [ \033[00;32m✔\033[0m ] set for %s\n" "${0##*/}"' {} \;
+echo
+echo 'Done!' | indent
+echo
+
 # GitHub CLI: Authenticate with your GitHub account if the user is not logged in
 if command_exists gh && ! gh auth status &> /dev/null; then
-  echo "[GitHub CLI] You are not logged into any GitHub hosts. To log in, run: ${bold}gh auth login${reset}"
+  echo "[GitHub CLI] You are not logged into any GitHub hosts. To log in, run: ${BOLD}gh auth login${RESET}"
 fi
 
 # Node.js global config

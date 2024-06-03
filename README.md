@@ -56,7 +56,6 @@ cd ~/dotfiles
 ./setup/zsh.sh
 ./setup/brew.sh
 ./setup/misc.sh
-./setup/bins.sh
 ./setup/symlinks.sh
 ```
 
@@ -79,13 +78,13 @@ This will install all required dotfiles in your home directory as symlinks. Ever
 ### Set macOS defaults
 
 ```shell
-./setup/macos.sh
+set-defaults
 ```
 
 ### Use alternative apps icons
 
 ```shell
-./setup/icons.sh
+sync-apps-icons
 ```
 
 ### Install colors themes
