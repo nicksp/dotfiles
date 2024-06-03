@@ -1,3 +1,5 @@
+# Note: The first added entry gets referenced last
+
 if command -v getconf &> /dev/null; then
   PATH="$(getconf PATH)"
 fi
@@ -12,10 +14,13 @@ prepend() {
 prepend "/usr/local/bin"
 
 # Homebrew binaries
-# $(brew --prefix)
+# > $(brew --prefix)
 homebrew_path="/opt/homebrew"
 prepend "$homebrew_path/bin"
 prepend "$homebrew_path/sbin"
+
+# fnm, Node version manager: https://github.com/Schniz/fnm
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
 
 # Custom dotfiles binaries
 prepend "$HOME/dotfiles/bin"

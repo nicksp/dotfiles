@@ -28,9 +28,6 @@ if [ $(command -v "fzf") ]; then
   source $HOME/dotfiles/zsh/fzf.zsh
 fi
 
-# fnm, Node version manager: https://github.com/Schniz/fnm
-eval "$(fnm env --use-on-cd)"
-
 # Setup zoxide: https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
 export _ZO_DATA_DIR=$HOME
 eval "$(zoxide init zsh)"
