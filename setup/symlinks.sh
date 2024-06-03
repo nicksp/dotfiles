@@ -9,8 +9,12 @@ TILDE_DIR="$DOTFILES_DIR/tilde"
 
 EXCLUDE_FILES=(".DS_Store" "Brewfile.lock.json")
 
+indent() {
+  sed 's/^/  /'
+}
+
 info() {
-  printf "  [ \033[00;34m..\033[0m ] $1"
+  printf "[ \033[00;34m..\033[0m ] $1" | indent
   echo
 }
 
@@ -169,15 +173,30 @@ install_dotfiles() {
       fi
     fi
   done
+}
 
-  # Extra dotfiles
-
+install_extras() {
   # Git
   symlink_file "$DOTFILES_DIR/git/.gitconfig" "$HOME/.gitconfig"
   symlink_file "$DOTFILES_DIR/git/.gitignore" "$HOME/.gitignore"
 
-  # CotEditor: install `cot` command-line tool
-  symlink_file "/Applications/CotEditor.app/Contents/SharedSupport/bin/cot" "/usr/local/bin/cot"
+  # CotEditor: Install `cot` command-line tool
+  command -v cot &> /dev/null || {
+    symlink_file "/Applications/CotEditor.app/Contents/SharedSupport/bin/cot" "/usr/local/bin/cot"
+  }
+
+  #
+  # VSCode
+  #
+
+  # Install `code` command in PATH
+  command -v code &> /dev/null || {
+    symlink_file "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" "/usr/local/bin/code"
+  }
+  # Enable settings sync from dotfiles
+  vscode_user_folder="$HOME/Library/Application Support/Code/User"
+  rm -rf "$vscode_user_folder"
+  ln -sfn "$DOTFILES_DIR/vscode/User" "$vscode_user_folder"
 
   # Lazydocker
   symlink_file "$DOTFILES_DIR/lazydocker/config.yml" "$HOME/Library/Application Support/lazydocker/config.yml"
@@ -195,4 +214,6 @@ install_dotfiles() {
 }
 
 install_dotfiles
+install_extras
 echo
+echo 'Done!' | indent

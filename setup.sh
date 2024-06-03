@@ -83,12 +83,6 @@ echo
 ./setup/misc.sh
 echo
 
-# Visual Studio Code settings sync and a CLI tool
-title "Setting up VSCode..."
-./setup/vscode.sh
-echo "VSCode settings are now in sync and a 'code' CLI tool is ready to use!" | indent
-echo
-
 # Ensure custom scripts are executable
 title "Preparing binary scripts..."
 ./setup/bins.sh

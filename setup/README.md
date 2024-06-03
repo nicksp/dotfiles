@@ -24,10 +24,6 @@ Installs Xcode Command Line Tools, GitHub CLI, Node.js global packages, etc.
 
 Creates symlinks to dotfiles by placing them in a home directory.
 
-## vscode
-
-Installs `code` command in PATH and enables settings sync from dotfiles.
-
 ## zsh
 
 Installs Zsh and registers Zsh as the default shell.

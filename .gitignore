@@ -3,6 +3,8 @@ Brewfile.lock.json
 Thumbs.db
 vscode/**/workspaceStorage/
 vscode/**/syncLocalSettings.json
+vscode/**/globalStorage/
+vscode/**/History/
 lazygit/state.yml
 .tlrc/
 private/

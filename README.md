@@ -56,7 +56,6 @@ cd ~/dotfiles
 ./setup/zsh.sh
 ./setup/brew.sh
 ./setup/misc.sh
-./setup/vscode.sh
 ./setup/bins.sh
 ./setup/symlinks.sh
 ```
