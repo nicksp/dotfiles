@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.."
 DOTFILES_DIR="$(pwd)"
 TILDE_DIR="$DOTFILES_DIR/tilde"
 
-EXCLUDE_FILES=(".DS_Store")
+EXCLUDE_FILES=(".DS_Store" "Brewfile.lock.json")
 
 info() {
   printf "  [ \033[00;34m..\033[0m ] $1"
