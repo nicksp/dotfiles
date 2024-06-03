@@ -179,19 +179,16 @@ install_dotfiles() {
   # CotEditor: install `cot` command-line tool
   symlink_file "/Applications/CotEditor.app/Contents/SharedSupport/bin/cot" "/usr/local/bin/cot"
 
-  # WezTerm
-  mkdir -p "$HOME/.config/wezterm"
-  symlink_file "$DOTFILES_DIR/wezterm/wezterm-session-manager" "$HOME/.config/wezterm/wezterm-session-manager"
-
   # Lazydocker
   symlink_file "$DOTFILES_DIR/lazydocker/config.yml" "$HOME/Library/Application Support/lazydocker/config.yml"
 
   # Lazygit
   symlink_file "$DOTFILES_DIR/lazygit/state.yml" "$HOME/Library/Application Support/lazygit/state.yml"
 
-  # Marta file manager
-  symlink_file "$DOTFILES_DIR/marta/conf.marco" "$HOME/Library/Application Support/org.yanex.marta/conf.marco"
-  symlink_file "$DOTFILES_DIR/marta/favorites.marco" "$HOME/Library/Application Support/org.yanex.marta/favorites.marco"
+  # Marta
+  marta_app_data_dir="$HOME/Library/Application Support/org.yanex.marta"
+  symlink_file "$DOTFILES_DIR/marta/conf.marco" "$marta_app_data_dir/conf.marco"
+  symlink_file "$DOTFILES_DIR/marta/favorites.marco" "$marta_app_data_dir/favorites.marco"
 
   # Quick-Look plugins to enhance experience using file manager
   symlink_file "$DOTFILES_DIR/ql-plugins" "$HOME/Library/QuickLook"
