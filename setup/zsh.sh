@@ -24,7 +24,7 @@ title() {
 
 # We're all good already
 if [ "$SHELL" == "/opt/homebrew/bin/zsh" ]; then
-  echo "Nothing to update. You're already using zsh as your default shell 👏"
+  echo "Nothing to update. You're already using Zsh as your default shell 👏"
   exit 0
 fi
 
@@ -38,7 +38,7 @@ zsh_path=$(which zsh)
 # To work around an error for non-standard shell,
 # ensure zsh is a valid shell option
 if ! cat /etc/shells | grep $zsh_path > /dev/null; then
-  title "Adding zsh to list of allowed shells..."
+  title "Adding Zsh to list of allowed shells..."
   sh -c "echo $zsh_path >> /etc/shells"
   echo
 fi

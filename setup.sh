@@ -1,4 +1,10 @@
 #!/bin/bash
+#
+# Set up computer environment
+#
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 set -euo pipefail
 
@@ -14,10 +20,6 @@ reset=$(tput sgr0)
 title() {
   echo "${bold}==> $1${reset}"
   echo
-}
-
-indent() {
-  sed 's/^/  /'
 }
 
 warning() {
@@ -61,6 +63,7 @@ fi
 
 # Use Touch ID to authorize sudo
 if [ ! -f /etc/pam.d/sudo_local ]; then
+  title "🔒 Enabling Touch ID to authorize sudo commands..."
   echo "auth       sufficient     pam_tid.so" | sudo tee /etc/pam.d/sudo_local
 fi
 
@@ -70,23 +73,25 @@ sudo echo "Sudo activated!"
 echo
 
 # Setup Zsh and register it as a default shell
-title "Setting up zsh..."
-./setup/zsh.sh
+title "🐚 Setting up Zsh..."
+$HOME/dotfiles/setup/zsh.sh
 echo
 
 # Install Homebrew and packages/apps
-title "Setting up Homebrew..."
-./setup/brew.sh
+title "🫖 Setting up Homebrew..."
+$HOME/dotfiles/setup/brew.sh
 echo
 
-# Install Xcode & GitHub CLI & Node.js packages
-./setup/misc.sh
+# Install Xcode, GitHub CLI & Node.js packages etc.
+title "🚀 Setting up extra tools..."
+$HOME/dotfiles/setup/misc.sh
 echo
 
 # Install dotfiles symlinks
-title "Configuring software..."
-./setup/symlinks.sh
+title "🍤 Setting up symlinks..."
+$HOME/dotfiles/setup/symlinks.sh
 
-echo "🦏 ${green}All done! Open a new terminal for the changes to take effect.${reset}" | indent
 echo
-bin/nyan
+echo "🦏 ${green}All done! Open a new terminal for the changes to take effect.${reset}"
+
+$HOME/dotfiles/bin/nyan
