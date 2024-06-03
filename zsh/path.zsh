@@ -23,6 +23,7 @@ prepend "$homebrew_path/sbin"
 eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
 
 # Custom dotfiles binaries
+prepend "$HOME/dotfiles/bin/lib"
 prepend "$HOME/dotfiles/bin"
 
 # User binaries
