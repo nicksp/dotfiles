@@ -3,6 +3,12 @@
 # Sane macOS defaults
 # ~/.macos — https://mths.be/macos
 
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  echo "Configuring macOS..."
+else
+  exit 0
+fi
+
 COMPUTERNAME='Mac'
 LOCALHOSTNAME='mac'
 

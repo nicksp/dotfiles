@@ -88,14 +88,6 @@ title "Preparing binary scripts..."
 ./setup/bins.sh
 echo
 
-# Set macOS defaults
-if [[ "$(uname -s)" == "Darwin" ]]; then
-  title "Configuring macOS..."
-  ./setup/macos.sh
-  echo "Defaults configured!" | indent
-  echo
-fi
-
 # Install dotfiles symlinks
 title "Configuring software..."
 ./setup/symlinks.sh
