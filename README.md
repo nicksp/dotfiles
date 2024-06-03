@@ -21,9 +21,9 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 - Handy [binary scripts](bin/).
 - [Custom color scheme](colors/).
 - [Custom zsh theme](tilde/.starship.toml) with Git status, etc. using [Starship](https://starship.rs/).
-- [Git aliases](git/.gitconfig).
+- [Git aliases](tilde/.gitconfig).
 - [Shell aliases](zsh/aliases.zsh).
-- zsh / fzf.
+- zsh / [fzf](zsh/fzf.zsh).
 - git / delta syntax-highlighting diff tool.
 - Sensible [macOS defaults](setup/macos.sh).
 - [Neovim](tilde/.config/nvim/)

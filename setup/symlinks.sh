@@ -7,7 +7,7 @@ cd "$(dirname "$0")/.."
 DOTFILES_DIR="$(pwd)"
 TILDE_DIR="$DOTFILES_DIR/tilde"
 
-EXCLUDE_FILES=(".DS_Store" "Brewfile.lock.json")
+EXCLUDE_FILES=(".DS_Store" "Brewfile.lock.json" "README.md")
 
 indent() {
   sed 's/^/  /'
@@ -176,10 +176,6 @@ install_dotfiles() {
 }
 
 install_extras() {
-  # Git
-  symlink_file "$DOTFILES_DIR/git/.gitconfig" "$HOME/.gitconfig"
-  symlink_file "$DOTFILES_DIR/git/.gitignore" "$HOME/.gitignore"
-
   # CotEditor: Install `cot` command-line tool
   command -v cot &> /dev/null || {
     symlink_file "/Applications/CotEditor.app/Contents/SharedSupport/bin/cot" "/usr/local/bin/cot"
