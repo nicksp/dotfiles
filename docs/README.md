@@ -1,230 +1,233 @@
 # Shell Aliases
 
-Available shell aliases and their usage examples.
+> Available shell aliases and their usage examples.
 
-## fzf
+# fzf
 
-Open fuzzy file finder.
+- Open fuzzy file finder:
 
-- `fzf`
+`fzf`
 
-## fd
+# fd
 
-Find file by name (or regexp).
+- Find file by name (or regexp):
 
-- `fd {{file}}`
+`fd {{file}}`
 
-## z
+# z
 
-Magic opener for directories based on the Zsh command history via [zoxide](https://github.com/ajeetdsouza/zoxide).
+> Magic opener for directories based on the Zsh command history via `zoxide`.
+> More information: <https://github.com/ajeetdsouza/zoxide>.
 
-- `z {{part_of_dir_path}}`
+`z {{part_of_dir_path}}`
 
-## Ctrl+R
+# Ctrl+R
 
-Find in Zsh command history.
+> Find in Zsh command history.
 
----
+> --- 8< -- 8< ---
 
-## .
+# .
 
-Print the current directory path.
+- Print the current directory path:
 
-- `.`
+`.`
 
-## .. 2.. 3.. 4.. 5..
+# .. 2.. 3.. 4.. 5..
 
-Navigate to N parent directories up.
+- Navigate to N parent directories up:
 
-- `..`
-- `2..`
-- `3..`
-- `4..`
-- `5..`
+`..`
+`2..`
+`3..`
+`4..`
+`5..`
 
-## -
+# -
 
-Navigate to a previous working directory.
+- Navigate to a previous working directory:
 
-- `-`
+`-`
 
----
+> --- 8< -- 8< ---
 
-## zshrc
+# zshrc
 
-Open Zsh config file in a default editor.
+- Open Zsh config file in a default editor:
 
-- `zshrc`
+`zshrc`
 
-## reload
+# reload
 
-Reload Zsh config from `~/.zshrc`.
+- Reload Zsh config from `~/.zshrc`:
 
-- `reload`
+`reload`
 
----
+> --- 8< -- 8< ---
 
-## o
+# o
 
-Open Finder.
+- Open Finder:
 
-- `o {{file_or_dir}}`
+`o {{file_or_dir}}`
 
-## oo
+# oo
 
-Open current directory in Finder.
+- Open current directory in Finder:
 
-- `oo`
+`oo`
 
-## e
+# e
 
-Open the specified file in the default editor.
+- Open the specified file in the default editor:
 
-- `e {{file}}`
+`e {{file}}`
 
-## c
+# c
 
-Open current directory in Visual Studio Code
+- Open current directory in Visual Studio Code:
 
-- `c`
+`c`
 
-## t
+# t
 
-Open current directory in Tower Git client.
+- Open current directory in Tower Git client:
 
-- `t`
+`t`
 
-## nn
+# nn
 
-Open current directory in Marta file manager.
+- Open current directory in Marta file manager:
 
-- `nn`
+`nn`
 
-## lg
+# lg
 
-Run [lazygit](https://github.com/jesseduffield/lazygit) in terminal.
+> Run `lazygit` in terminal.
+> More information: <https://github.com/jesseduffield/lazygit>.
 
-- `lg`
+`lg`
 
-## ld
+# ld
 
-Run [lazydocker](https://github.com/jesseduffield/lazydocker) in terminal.
+> Run `lazydocker` in terminal.
+> More information: <https://github.com/jesseduffield/lazydocker>.
 
-- `ld`
+`ld`
 
----
+> --- 8< -- 8< ---
 
-## get
+# get
 
-Download file and save it with the name of the remote file in the current working directory.
+- Download file and save it with the name of the remote file in the current working directory:
 
-- `get {{url}}`
+`get {{url}}`
 
-## mkcd
+# mkcd
 
-Create a directory and navigate to it.
+- Create a directory and navigate to it:
 
-- `mkcd {{dirname}}`
+`mkcd {{dirname}}`
 
-## preview
+# preview
 
-Preview files in the current dir and open them with **⌃+O**.
+- Preview files in the current dir and open them with `Control+O`:
 
-- `preview`
+`preview`
 
-## path
+# path
 
-Print each PATH entry on a separate line.
+- Print each PATH entry on a separate line:
 
-- `path`
+`path`
 
-## cdf
+# cdf
 
-Navigate to the directory shown by the front-most Finder window.
+- Navigate to the directory shown by the front-most Finder window:
 
-- `cdf`
+`cdf`
 
----
+> --- 8< -- 8< ---
 
-## gitroot and gr
+# gitroot and gr
 
-Navigate to the root directory of a Git repository.
+- Navigate to the root directory of a Git repository:
 
-- `gitroot`
-- `gr` − an alias
+`gitroot`
+`gr`
 
-## clonecd
+# clonecd
 
-Clone Git repository and navigate to it.
+- Clone Git repository and navigate to it:
 
-- `clonecd {{url}}`
+`clonecd {{repo_url}}`
 
----
+> --- 8< -- 8< ---
 
-## gs
+# gs
 
-Show the state of the working directory and staging area of a Git repository.
+- Show the state of the working directory and staging area of a Git repository:
 
-- `gs`
+`gs`
 
-## gss
+# gss
 
-Show the brief summary of the current state of a Git repository.
+- Show the brief summary of the current state of a Git repository:
 
-- `gss`
+`gss`
 
-## gd
+# gd
 
-Show the differences (_diff_) between the current state of files in the working directory and the last committed state.
+- Show the differences (`diff`) between the current state of files in the working directory and the last committed state:
 
-- `gd`
+`gd`
 
-## gp
+# gp
 
-Fetch changes from the remote repository and also update any nested Git submodules within the repository.
+- Fetch changes from the remote repository and also update any nested Git submodules within the repository:
 
-- `gp`
+`gp`
 
-## gpu
+# gpu
 
-Upload local commits to a remote repository.
+- Upload local commits to a remote repository:
 
-- `gpu`
+`gpu`
 
-## gpuf
+# gpuf
 
-Make the force push if the remote branch hasn't been updated by someone else since your last pull.
+- Make the force push if the remote branch hasn't been updated by someone else since your last pull:
 
-- `gpuf`
+`gpuf`
 
-## gl
+# gl
 
-Display compact and readable log.
+- Display compact and readable log:
 
-- `gl`
+`gl`
 
----
+> --- 8< -- 8< ---
 
-## shutdownmac
+# shutdownmac
 
-Shut down macOS system.
+- Shut down macOS system:
 
-- `shutdownmac`
+`shutdownmac`
 
-## restartmac
+# restartmac
 
-Restart the computer.
+- Restart the computer:
 
-- `restartmac`
+`restartmac`
 
-## showdesktop
+# showdesktop
 
-Show all desktop icons (useful when presenting).
+- Show all desktop icons (useful when presenting):
 
-- `showdesktop`
+`showdesktop`
 
-## hidedesktop
+# hidedesktop
 
-Hide all desktop icons (useful when presenting).
+- Hide all desktop icons (useful when presenting):
 
-- `hidedesktop`
+`hidedesktop`

@@ -1,6 +1,14 @@
 #!/bin/bash
-
-# Find all `node_modules` directories recursively from the current directory
-# and display their total disk usage
+#
+# Recursively find `node_modules` folders in the current directory and display their total disk usage.
+#
+# - Display `node_modules` folders size:
+#
+# `node-modules-size`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 find . -type d -name node_modules -prune | tr '\n' '\0' | xargs -0 du -sch

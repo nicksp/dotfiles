@@ -1,0 +1,34 @@
+#!/bin/bash
+#
+# Display the tldr help page to show docs from `~/dotfiles/docs` or `~/dotfiles/bin` dirs or default to the tldr-pages project.
+# > More information: <https://github.com/tldr-pages/tlrc>.
+#
+# - Print the tldr page for `docs/README.md``:
+#
+# `help`
+#
+# - Print the tldr page for a specific command (hint: this is how you got here!):
+#
+# `help {{command}}`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+cd "$(dirname "$0")/.." || exit
+
+DOTFILES_DIR="$(pwd)"
+config="$DOTFILES_DIR/tilde/.tlrc.toml"
+
+if [[ "$1" != "" ]]; then
+  md="$("$DOTFILES_DIR"/bin/lib/get-tldr-md "$1")"
+else
+  md="$DOTFILES_DIR/docs/README.md"
+fi
+
+if [ "$md" != "" ]; then
+  tldr --config "$config" --render "$md"
+else
+  tldr --config "$config" "$@"
+fi

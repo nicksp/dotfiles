@@ -1,8 +1,29 @@
 #!/bin/bash
-
-# Initialize Git repository
 #
+# Set up a git repository if one doesn't exist, add all files and make an initial commit.
+#
+# - Set up a git repository in the current working directory:
+#
+# `git-setup`
+#
+# - Set up a git repository in a custom directory:
+#
+# `git-setup {{path/to/repository}}`
+#
+# - Set up a git repository in the current working directory with a custom commit message:
+#
+# `git-setup -m {{commit_message}}`
+#
+# - Set up a git repository in the custom directory with a custom commit message:
+#
+# `git-setup -m {{commit_message}} {{path/to/repository}}`
+#
+# ---
 # Based on https://github.com/tj/git-extras/blob/master/bin/git-setup
+#
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 COMMIT_MESSAGE='Initial commit'
 

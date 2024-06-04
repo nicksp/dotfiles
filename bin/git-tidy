@@ -1,6 +1,15 @@
 #!/bin/bash
-
-# Delete all local branches that have been merged into HEAD + extra cleanup
+#
+# Delete branches that have been merged and perform some extra cleanup.
+#
+# - Run cleanup:
+#
+# `git-tidy`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 CYAN="$(tput setaf 6)"
 UNDERLINE="$(tput sgr 0 1)"

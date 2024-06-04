@@ -1,4 +1,15 @@
 #!/bin/bash
+#
+# Display the up-to-date MIT license.
+#
+# - Print license:
+#
+# `license`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 exec bash -c "tail -n +$(($LINENO + 2)) < $0 | sed s/DATE/$(date +%Y)/"
 

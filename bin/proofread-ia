@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# Run `proofread` on topmost opened file in iA Writer.
+#
+# - Lint iA Writer file:
+#
+# `proofread-ia`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+cd "$(dirname "$0")/.." || exit
+DOTFILES_DIR="$(pwd)"
+
+# Topmost opened file in iA Writer
+source_file=$(osascript -e 'tell application "iA Writer" to set filepath to file of document 1' -e 'POSIX path of filepath')
+
+$DOTFILES_DIR/bin/proofread "$source_file"

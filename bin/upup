@@ -1,6 +1,15 @@
 #!/bin/bash
-
-# Get macOS software updates, update Homebrew, npm, Ruby packages, dotfiles and some other software
+#
+# Get macOS software updates, update Homebrew, npm, dotfiles and some other software.
+#
+# - Run updates:
+#
+# `upup`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 set -e
 set -u
@@ -53,11 +62,6 @@ open raycast://extensions/raycast/raycast/check-for-extension-updates
 header "Updating global npm modules..."
 npm update -g
 echo
-
-# Ruby gems
-# header "Updating Ruby gems..."
-# sudo gem update
-# echo
 
 # Nyan cat!
 nyan

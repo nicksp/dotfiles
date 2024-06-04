@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#
 # Weasel words
 #
 # Based on http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
@@ -13,11 +13,11 @@ weasels="many|various|very|fairly|several|extremely\
 wordfile=""
 
 # Check for an alternate weasel file
-if [ -f $HOME/etc/words/weasels ]; then
+if [ -f "$HOME/etc/words/weasels" ]; then
   wordfile="$HOME/etc/words/weasels"
 fi
 
-if [ -f $WORDSDIR/weasels ]; then
+if [ -f "$WORDSDIR/weasels" ]; then
   wordfile="$WORDSDIR/weasels"
 fi
 
@@ -33,10 +33,10 @@ if [ ! "$wordfile" = "" ]; then
 fi
 
 if [ "$1" = "" ]; then
-  echo "Usage: $(basename $0) <file> ..."
+  echo "Usage: $(basename "$0") <file> ..."
   exit
 fi
 
-egrep -i -n --color "\\b($weasels)\\b" $*
+grep -E -i -n --color "\\b($weasels)\\b" "$*"
 
 exit $?

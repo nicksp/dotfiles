@@ -1,6 +1,15 @@
 #!/bin/bash
-
-# Print the current date
+#
+# Show the current date without time.
+#
+# - Display the date:
+#
+# `hoy`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 set -e
 set -u

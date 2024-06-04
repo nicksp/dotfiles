@@ -1,8 +1,22 @@
 #!/bin/bash
-
-# Replace in files
 #
-# Based on https://github.com/sapegin/dotfiles/blob/master/bin/wg
+# Replace in files. Uses `ripgrep` to find files, so all `ripgrep` arguments work.
+# > Note: Use `g` command for dry-run, and then replace it with `wg` command.
+#
+# - Replace a pattern in a file:
+#
+# `wg {{pattern}} {{filename}} --replace {{replacement}}`
+#
+# - Replace a pattern in all files:
+#
+# `wg {{pattern}} --replace {{replacement}}`
+#
+# ---
+# Based on: https://github.com/sapegin/dotfiles/blob/master/bin/wg
+#
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 RED="$(tput setaf 1)"
 UNDERLINE="$(tput sgr 0 1)"
@@ -13,7 +27,7 @@ error() {
 }
 
 command -v rg &> /dev/null || {
-  error "ripgrep not installed: brew install ripgrep"
+  error "ripgrep is not installed: brew install ripgrep"
   exit 1
 }
 

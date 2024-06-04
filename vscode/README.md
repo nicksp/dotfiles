@@ -1,5 +1,5 @@
 # Visual Studio Code Customization
 
-1. Hide 'Open Editors' from Explorer
-1. Move `Search` feature from **Activity Bar** to Panel.
-1. Stack `Search`, `Problems`, `Output`, `Debug Console`, `Terminal`, `Source Control`, `Gitlens`, `Comments` into the bottom panel.
+1. Hide `Open Editors` from Explorer.
+1. Move `Search`, `Source Control`, `Outline`, `GitHub Pull Requests` and `GitLens` features from **Activity Bar** to the bottom Panel (**View** → **Appearance** → **Panel Position** → **Bottom**).
+1. Stack panels in order: `Search`, `Terminal`, `Source Control`, `Problems`, `Outline`, `Comments`, `Output`, `GitHub Pull Requests`, `GitLens` and hide the rest.

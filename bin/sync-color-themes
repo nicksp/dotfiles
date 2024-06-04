@@ -1,23 +1,26 @@
 #!/bin/bash
 #
-# Download and install Squirrelsong themes
+# Download and install latest versions of Squirrelsong themes for supported apps.
+# > More information: <https://sapegin.me/squirrelsong/>.
 #
-# This script syncs color themes for:
-# [x] WezTerm
-# [x] Bat
-# [x] Bear
-# [x] Vivaldi
-# [x] Chrome DevTools
-# [x] CotEditor
-# [x] Marta
-# [x] Syntax Highlight
-# [/] Bartender
-# [/] Slack
-# [/] Telegram
+# > This script syncs color themes for:
+# > [x] WezTerm
+# > [x] Bat
+# > [x] Bear
+# > [x] Vivaldi
+# > [x] Chrome DevTools
+# > [x] CotEditor
+# > [x] Marta
+# > [x] Syntax Highlight
+# > [/] Bartender
+# > [/] Slack
+# > [/] Telegram
 #
-# Usage:
-#   sync-color-themes
+# - Get themes from the Squirrelsong repo:
 #
+# `sync-color-themes`
+#
+# ---
 # Author: Nick Plekhanov, https://nikkhan.com/
 # License: MIT
 # https://github.com/nicksp/dotfiles

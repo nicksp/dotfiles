@@ -1,8 +1,17 @@
 #!/bin/bash
-
-# Show my commits since yesterday or since last Friday
 #
+# Show my Git commits since yesterday or since last Friday.
+#
+# - Show commits:
+#
+# `git-standup`
+#
+# ---
 # Based on https://github.com/sapegin/dotfiles/blob/master/bin/git-standup
+#
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 yesterworkday() {
   if [[ "1" == "$(date +%u)" ]]; then

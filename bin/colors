@@ -1,10 +1,12 @@
 #!/bin/bash
 #
-# Display supported terminal color palette and text effects
+# Display supported terminal color palette and available text effects.
 #
-# Usage:
-#   colors
+# - Display the palette:
 #
+# `colors`
+#
+# ---
 # Author: Nick Plekhanov, https://nikkhan.com/
 # License: MIT
 # https://github.com/nicksp/dotfiles

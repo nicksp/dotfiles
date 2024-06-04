@@ -1,8 +1,14 @@
 #!/bin/bash
-
-# Copy full file path of a given file in the current directory to clipboard
 #
-# Usage:
-#   ppp <file.ext>
+# Copy full path of a given file in the current directory to clipboard.
+#
+# - Copy file path:
+#
+# `ppp {{file}}`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 readlink -f "$1" | pbcopy

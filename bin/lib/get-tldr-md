@@ -1,0 +1,77 @@
+#!/usr/bin/env node
+//
+// Create a temporary Markdown file for `tldr` with docs for a script in the
+// bin/ folder. File is generated based on a code comment section.
+//
+// Based on https://github.com/sapegin/dotfiles/blob/master/bin/lib/get-tldr-md
+//
+// Author: Nick Plekhanov, https://nikkhan.com/
+// License: MIT
+// https://github.com/nicksp/dotfiles
+
+const path = require('node:path')
+const fs = require('node:fs')
+const os = require('node:os')
+const tmp = require('tmp')
+
+const homeDirectory = os.homedir() ?? process.env.HOME
+const DOTFILES_DIR = `${homeDirectory}/dotfiles`
+
+const BIN_DIR = `${DOTFILES_DIR}/bin`
+const DOCS_DIR = `${DOTFILES_DIR}/docs`
+
+const query = process.argv[2]
+
+function read(file) {
+  return fs.readFileSync(file, 'utf8')
+}
+
+function getDocs(source, name) {
+  // Search for a multi-line comment block within the provided `source` string,
+  // which represents the content of a bin script file
+  const commentRaw = source.match(/((?:(?:\/\/|#)\s+[^\n]+\n)+)/m)
+  if (commentRaw === null) {
+    return ''
+  }
+
+  // Extract a multi-line comment block and remove the comment markers (e.g., // or #)
+  // from the beginning of each line
+  const comment = commentRaw[1].replace(/(^|\n)(?:\/\/|#)\s*/gm, '\n')
+
+  const metaInformationDelimiter = '---'
+  const [docs] = comment.split(metaInformationDelimiter)
+
+  return `# ${name}\n\n> ${docs.trim()}`
+}
+
+function main() {
+  // Check for Markdown file
+  const mdFilePath = `${DOCS_DIR}/${query}.md`
+  if (fs.existsSync(mdFilePath)) {
+    console.log(mdFilePath)
+    process.exit(0)
+  }
+
+  // Check for a script
+  const binFilePath = `${BIN_DIR}/${query}`
+  if (fs.existsSync(binFilePath)) {
+    const source = read(binFilePath)
+    const docs = getDocs(source, query)
+
+    if (docs) {
+      tmp.file((err, tempMdFile) => {
+        if (err) {
+          process.exit(1)
+        }
+
+        fs.writeFileSync(tempMdFile, docs)
+        console.log(tempMdFile)
+        process.exit(0)
+      })
+    } else {
+      process.exit(0)
+    }
+  }
+}
+
+main()

@@ -1,9 +1,24 @@
 #!/bin/bash
-
+#
 # A convenient way to interact with GitHub pull requests using the `gh` CLI tool.
-#  * If no argument is provided, it lists all open pull requests.
-#  * If a number is provided, it checks out the corresponding pull request.
-# * If any other argument is provided, pass down to the `gh pr` command.
+# > More information: <https://cli.github.com/manual/gh_pr>.
+#
+# - List all open PRs:
+#
+# `git-pr`
+#
+# - Check out the corresponding PR:
+#
+# `git-pr {{pr_id}}`
+#
+# - Pass down any other argument(s) to the original `gh pr` command:
+#
+# `git-pr {{arg1}} {{arg2}}`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 if [ -z "$1" ]; then
   gh pr list

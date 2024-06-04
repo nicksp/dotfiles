@@ -1,6 +1,15 @@
 #!/bin/bash
-
-# Copy the current directory path to clipboard
+#
+# Copy the current directory path to clipboard.
+#
+# - Copy dir path:
+#
+# `cpwd`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 set -e
 set -u

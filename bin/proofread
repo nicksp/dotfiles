@@ -1,6 +1,17 @@
 #!/bin/bash
-
+#
+# Run "find duplicate adjacent words", "find abuse of the passive voice" and "find weasel words" linting on a single file.
+#
+# - Lint text:
+#
+# `proofread {{file}}`
+#
+# ---
 # Based on http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
+#
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 # Common stuff
 CYAN="$(tput setaf 6)"
@@ -8,21 +19,21 @@ UNDERLINE="$(tput sgr 0 1)"
 RESET="$(tput sgr0)"
 
 header() {
-  echo -e "$UNDERLINE$CYAN$1$RESET"
+  echo -e "${UNDERLINE}${CYAN}${1}${RESET}"
 }
 
 if [ "$1" = "" ]; then
-  echo "Usage: $(basename $0) <file> ..."
+  echo "Usage: $(basename "$0") <file> ..."
   exit
 fi
 
 header "Weasel words"
-lint-weasel-words $1
+lint-weasel-words "$1"
 echo
 
 header "Passive voice"
-lint-passive-voice $1
+lint-passive-voice "$1"
 echo
 
 header "Duplicates"
-lint-dups $1
+lint-dups "$1"

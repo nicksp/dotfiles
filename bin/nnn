@@ -1,12 +1,20 @@
 #!/bin/bash
 
-# Install a Node.js version required in the project's .nvmrc
+# Install a Node.js version required in the project's `.nvmrc` file.
+# > Note: Uses `fnm` to manage Node.js versions.
 #
-# Usage:
-#   nnn
+# - Switch to a project’s Node.js version:
 #
-# To change the default version:
-#   fnm default 20
+# `nnn`
+#
+# - Change the default Node.js version:
+#
+# `fnm default {{version}}`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 command -v fnm &> /dev/null || {
   echo >&2 "fnm is not installed: brew install fnm"

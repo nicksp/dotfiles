@@ -1,5 +1,14 @@
 #!/bin/bash
-
-# Set macOS defaults
+#
+# Set sane macOS defaults.
+#
+# - Set defaults:
+#
+# `set-defaults`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 exec $DOTFILES/setup/macos.sh

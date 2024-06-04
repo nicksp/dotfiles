@@ -1,7 +1,17 @@
 #!/usr/bin/env python
-
-# Human readable password generator
+#
+# Human readable password generator..
+#
+# - Generate a password:
+#
+# `passphrase`
+#
+# ---
 # Based on https://github.com/Version2beta/passphrase
+#
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 NAMES_DICT = "/usr/share/dict/propernames"
 DICT = "/usr/share/dict/words"

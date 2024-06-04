@@ -1,0 +1,17 @@
+{
+  "name": "dotfiles",
+  "version": "0.0.1",
+  "description": "My personal dotfiles for configuring macOS with Zsh and Homebrew.",
+  "private": "true",
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "Nick Plekhanov",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "3.3.0"
+  },
+  "dependencies": {
+    "tmp": "0.2.3"
+  }
+}

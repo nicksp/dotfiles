@@ -1,7 +1,19 @@
 #!/bin/bash
-
-# Set up your branch to track a remote branch. Assumes you mean
-# `origin/$branch-name`.
+#
+# Set up a local branch to track a remote branch.
+#
+# - Track remote branch from a default `origin`:
+#
+#  `git-track`
+#
+# - Track remote branch from a custom `origin`:
+#
+# `git-track {{origin}}`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 remote="${1:-origin}"

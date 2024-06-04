@@ -1,6 +1,15 @@
 #!/bin/bash
-
-# Show my IP address
+#
+# Show my IP address.
+#
+# - Show my IP:
+#
+# `myip`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 curl http://ipecho.net/plain
 echo

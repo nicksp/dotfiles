@@ -93,7 +93,6 @@ command_exists htop && alias top="htop"
 
 # Tlrc: https://github.com/tldr-pages/tlrc
 command_exists tldr && alias man="tldr --config ~/.tlrc.toml"
-command_exists tldr && alias help="tldr --config ~/.tlrc.toml"
 
 # Prettyping: https://denilson.sa.nom.br/prettyping/
 command_exists prettyping && alias ping="prettyping --nolegend"

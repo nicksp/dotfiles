@@ -1,9 +1,19 @@
 #!/bin/bash
-
-# Serve current directory
 #
-# Usage:
-#   serve [port]
+# Serve current directory with an HTTP server.
+#
+# - Start a server with the default port (`8080`):
+#
+# `serve`
+#
+# - Start a server with a specific port:
+#
+# `serve {{port}}`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
 port="${1:-8080}"
 open "http://localhost:${port}/"

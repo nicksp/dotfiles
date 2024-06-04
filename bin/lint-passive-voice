@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#
 # Abuse of the passive voice
 #
 # Based on http://matt.might.net/articles/shell-scripts-for-passive-voice-weasel-words-duplicates/
@@ -58,12 +58,12 @@ withheld|withstood|wrung|\
 written"
 
 if [ "$1" = "" ]; then
-  echo "Usage: $(basename $0) <file> ..."
+  echo "Usage: $(basename "$0") <file> ..."
   exit
 fi
 
-egrep -n -i --color \
+grep -E -n -i --color \
   "\\b(am|are|were|being|is|been|was|be)\
-\\b[ ]*(\w+ed|($irregulars))\\b" $*
+\\b[ ]*(\w+ed|($irregulars))\\b" "$*"
 
 exit $?

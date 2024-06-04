@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+# Convert JPEG/PNG images to WebP format.
+# > Note: Requires `webp`.
+#
+# - Optimize a specific image:
+#
+# `optimize-image {{file.jpg}}`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+set -euo pipefail
+
+RED="$(tput setaf 1)"
+UNDERLINE="$(tput sgr 0 1)"
+RESET="$(tput sgr0)"
+
+error() {
+  echo -e "$UNDERLINE$RED$1$RESET\n"
+}
+
+# Check if arguments are provided
+if [ "$#" -eq 0 ] || [ "$1" = "-h" ]; then
+  echo "$(basename $0) converts all given images to webp using cwebp."
+  echo -e "The output will be stored in the same directory of input file(s).\n"
+  echo "Usage: $(basename $0) <input_file>"
+  exit 1
+fi
+
+if ! command -v cwebp &> /dev/null; then
+  error "Webp is not installed: brew install webp"
+  exit 1
+fi
+
+for file in "$@"; do
+  filename=${file%\.*}
+  cwebp -q 75 -quiet $file -o $(basename ${filename}).webp
+done

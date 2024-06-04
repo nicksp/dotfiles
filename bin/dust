@@ -1,4 +1,14 @@
 #!/bin/bash
+#
+# List the size of files & dirs in the current directory.
+#
+# - List the size:
+#
+# `dust`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
 
-# List current dir files & dirs sizes
 du -sh * | sort -hr

@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# Flush the DNS cache.
+#
+# - Clear the cache:
+#
+# `flush-dns`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+set -e
+set -u
+
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  sudo dscacheutil -flushcache
+  sudo killall -HUP mDNSResponder
+else
+  echo 'Your system is not supported yet.'
+fi
