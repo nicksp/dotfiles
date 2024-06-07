@@ -121,7 +121,6 @@
   discard      = checkout --
 
   br           = branch
-  branch-name  = rev-parse --abbrev-ref HEAD
 
   s            = status
   ss           = status -sb
@@ -174,6 +173,15 @@
 
   # List available aliases
   aliases      = config --get-regexp 'alias.*'
+
+  # Display the current branch name
+  branchname   = rev-parse --abbrev-ref HEAD
+
+  # Copy the current branch name to the clipboard
+  cpbranchname = !git branchname | tr -d '\n' | tr -d ' ' | pbcopy
+
+  # Display the date of the last commit of the active Git branch
+  lastcommit   = !git log --pretty=format:'%ar' | head -n 1
 
   # List contributors with a number of their commits
   contribs     = shortlog -sn

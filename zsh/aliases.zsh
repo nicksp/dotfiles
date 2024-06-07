@@ -48,6 +48,7 @@ alias e="$EDITOR"
 alias c="code ."
 alias where="which"
 alias pn="pnpm"
+alias nvm="fnm"
 
 # Apps
 

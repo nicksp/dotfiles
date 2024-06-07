@@ -38,6 +38,24 @@ List available Git aliases.
 
 - `g aliases`
 
+## branchname
+
+Display the current branch name.
+
+- `g branchname`
+
+## cpbranchname
+
+Copy the current branch name to the clipboard.
+
+- `g cpbranchname`
+
+## lastcommit
+
+Display the date of the last commit of the active Git branch.
+
+- `g lastcommit`
+
 ## contribs
 
 List contributors with a number of their commits.
