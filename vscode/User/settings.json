@@ -203,7 +203,6 @@
   "editor.overviewRulerBorder": false,
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
-  "editor.renderWhitespace": "boundary",
   "outline.problems.badges": false,
   "outline.showVariables": false,
   "problems.autoReveal": false,
