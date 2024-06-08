@@ -1,6 +1,25 @@
 # Use fzf to search through the fd-results via fd (https://github.com/sharkdp/fd) to include hidden files (but exclude .git folders) and respect .gitignore
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+
+# CTRL-T − Paste the selected files onto the command-line.
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# Preview file content using bat (https://github.com/sharkdp/bat)
+export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always {}'"
+
+# ALT-C − cd into the selected directory.
+# Print tree structure in the preview window
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {}'"
+
+# CTRL-R − Paste the selected command from history onto the command-line.
+# CTRL-/ to toggle small preview window to see the full command
+# CTRL-Y to copy the command into clipboard using pbcopy
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window down:3:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
+
 export FZF_COMPLETION_TRIGGER='**'
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
@@ -17,14 +36,18 @@ pointer:#6b503c,\
 marker:#6b503c,\
 spinner:#6b503c"
 
+# https://vitormv.github.io/fzf-themes/
 export FZF_DEFAULT_OPTS="--height 60% \
 --border sharp \
 --layout reverse \
 --color '$FZF_COLORS' \
 --prompt '∷ ' \
 --pointer ▶ \
+--marker ⇒ \
 --bind='ctrl-o:execute(code {})+abort' \
---marker ⇒"
+--bind 'ctrl-/:change-preview-window(hidden|)' \
+--preview-window='border-sharp' \
+--info right"
 
 # Use fd to respect .gitignore, include hidden files and exclude `.git` folders
 # - The first argument to the function ($1) is the base path to start traversal
@@ -46,13 +69,11 @@ _fzf_comprun() {
 
   case "$command" in
     # cd **<TAB>
-    cd)       fzf --preview 'eza --tree --color=always {} | head -200'                        "$@" ;;
-    # tree **<TAB>
-    tree)     fd --type d --hidden | fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    cd)      fzf --preview 'eza --tree --color=always {} | head -200'                        "$@" ;;
     # llt **<TAB>
-    llt)     fd --type d --hidden | fzf --preview 'eza --tree --color=always {} | head -200'  "$@" ;;
+    llt)     fd --type d --hidden | fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
     # any_other_command **<TAB>
-    *)        fzf --preview 'bat -n --color=always {}'                                        "$@" ;;
+    *)       fzf --preview 'bat -n --color=always {}'                                        "$@" ;;
   esac
 }
 
