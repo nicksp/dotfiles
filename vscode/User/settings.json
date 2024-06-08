@@ -737,16 +737,12 @@
     "!Split sequence"
   ],
 
-  "conventionalCommits.showNewVersionNotes": false,
-
   "githubPullRequests.defaultMergeMethod": "squash",
   "githubPullRequests.pullBranch": "never",
   "githubPullRequests.fileListLayout": "flat",
   "githubPullRequests.pullPullRequestBranchBeforeCheckout": "pullAndMergeBase",
 
   "tailwindCSS.classAttributes": ["class", "className", "ngClass", "variants"],
-
-  "prisma.showPrismaDataPlatformNotification": false,
 
   // Make AI helper less obtrusive
   "cody.commandHints.enabled": false,

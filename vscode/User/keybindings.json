@@ -166,7 +166,7 @@
   // Advanced New File
   {
     "key": "cmd+n",
-    "command": "extension.advancedNewFile"
+    "command": "filebunny.createFile"
   },
   {
     "key": "shift+cmd+c",
