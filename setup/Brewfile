@@ -48,7 +48,6 @@ brew "pkg-config"
 cask "1password@7" # Password manager
 cask "arc" # Modern browser
 cask "bartender" # Manage menu bar icons
-cask "bruno" # API client
 cask "cleanmymac" # System clean up manager
 cask "cleanshot" # Better screenshot utility
 cask "coteditor" # Simple code/text editor
