@@ -7,6 +7,7 @@ format = """\
    $directory\
   $custom\
   $git_state\
+  $git_status\
   $nodejs\
   $bun\
   $line_break\
@@ -28,6 +29,10 @@ format = "[via](bold white) [$symbol($version)]($style)"
 [bun]
 symbol = "🍔 "
 format = '[via](bold white) [$symbol($version)]($style)'
+
+[git_status]
+format = '([\[$conflicted$modified$staged$untracked$ahead_behind\]]($style) )'
+style = "white"
 
 [character]
 # Nerd Fonts nf-fa-angle_right \f105
