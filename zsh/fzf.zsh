@@ -43,7 +43,7 @@ export FZF_DEFAULT_OPTS="--height 60% \
 --color '$FZF_COLORS' \
 --prompt '∷ ' \
 --pointer ▶ \
---marker ⇒ \
+--marker '✔ ' \
 --bind='ctrl-o:execute(code {})+abort' \
 --bind 'ctrl-/:change-preview-window(hidden|)' \
 --preview-window='border-sharp' \
