@@ -25,9 +25,10 @@ setopt cd_silent
 # Expansion and Globbing
 #
 
-# Case insensitive globbing to mimic macOS file system behavior
+# Case insensitive globbing (to mimic macOS file system behavior)
 setopt no_case_glob
 # Enable extended globbing via additional pattern matching capabilities
+# More information: https://wiki.zshell.dev/community/zsh_guide/roadmap/expansion
 setopt extended_glob
 
 #
