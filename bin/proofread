@@ -23,7 +23,7 @@ header() {
 }
 
 if [ "$1" = "" ]; then
-  echo "Usage: $(basename "$0") <file> ..."
+  echo "Usage: $(basename "$0") <file>"
   exit
 fi
 

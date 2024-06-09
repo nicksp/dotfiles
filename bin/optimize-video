@@ -14,10 +14,14 @@
 set -euo pipefail
 
 if [ "$#" -eq 0 ] || [ -z "$1" ] || [ "$1" = "-h" ]; then
-  echo "$(basename $0) converts given file (.mov, .gif, etc.) to .mp4 using ffmpeg."
-  echo -e "The output will be stored in the same directory of input file.\n"
   echo "Usage: $(basename $0) <input_file>"
+  echo
+  echo "Convert given file (.mov, .gif, etc.) to .mp4 using ffmpeg."
+  echo "The output will be stored in the same directory of input file."
+  echo
   echo "Example: $(basename $0) my-screencast.mov"
+  echo
+  echo "Run \"help $(basename $0)\" for more information on a command."
   exit 1
 fi
 

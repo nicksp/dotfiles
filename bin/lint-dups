@@ -9,7 +9,7 @@ use strict ;
 my $DupCount = 0 ;
 
 if (!@ARGV) {
-  print "Usage: dups <file> ...\n" ;
+  print "Usage: dups <file>\n" ;
   exit ;
 }
 

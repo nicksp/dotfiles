@@ -24,9 +24,12 @@ error() {
 
 # Check if arguments are provided
 if [ "$#" -eq 0 ] || [ "$1" = "-h" ]; then
-  echo "$(basename $0) converts all given images to webp using cwebp."
-  echo -e "The output will be stored in the same directory of input file(s).\n"
   echo "Usage: $(basename $0) <input_file>"
+  echo
+  echo "Convert all given images to webp using cwebp."
+  echo "The output will be stored in the same directory of input file(s)."
+  echo
+  echo "Run \"help $(basename $0)\" for more information on a command."
   exit 1
 fi
 
