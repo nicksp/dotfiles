@@ -21,6 +21,7 @@ alias projects="cd $WORKSPACE"
 # zshrc config
 alias zshrc="$EDITOR ~/.zshrc"
 alias reload="source ~/.zshrc && echo 'Shell config reloaded from ~/.zshrc'"
+alias s="reload"
 
 # Sane defaults for built-ins (verbose and interactive)
 alias cp='cp -iv'
@@ -42,6 +43,8 @@ alias -- +x="chmod +x"
 alias o="open"
 alias oo="open ."
 alias g="git"
+alias d="docker"
+alias dc="docker-compose"
 alias v="nvim"
 alias vim="nvim"
 alias e="$EDITOR"
