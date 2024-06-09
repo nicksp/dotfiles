@@ -123,11 +123,11 @@
 
 `get {{url}}`
 
-# mkcd
+# take
 
 - Create a directory and navigate to it:
 
-`mkcd {{dirname}}`
+`take {{dirname}}`
 
 # preview
 
