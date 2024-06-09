@@ -5,14 +5,14 @@
 #
 # TIP: you may have to call `rm -f ~/.zcompdump; compinit` the first time to force a completions cache rebuild or after adding new custom completions
 
+#
+# General
+#
+
 # Load extra completions
 if [[ -d "$DOTFILES/zsh/zsh-completions" ]]; then
   fpath=($DOTFILES/zsh/zsh-completions $fpath)
 fi
-
-# TODO: Consider removing this after a clean laptop reinstall.
-# For some reason, the completions path Brew installs into isn't in my fpath, so adding this manually.
-fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 
 # Enable the native Zsh completion system
 autoload -Uz compinit
@@ -28,30 +28,34 @@ fi
 # ...with hidden files
 _comp_options+=(globdots)
 
+#
 # Base options
+#
 
-# Move cursor to end if word had one match
+# Shift the cursor to the end of the word after tab-completion
 setopt always_to_end
 # Automatically list choices on ambiguous completion
 setopt auto_list
-# Automatically use menu completion
+# Automatically select the first element of completion menu
+setopt menu_complete
+# Show completion menu on successive tab press
 setopt auto_menu
-# Show autocompletion menu with globs
-setopt glob_complete
-# Complete from both ends of a word
-# setopt complete_in_word
+# Allow completion from both ends of a word and within a word
+setopt complete_in_word
 
-# Improve autocompletion menu style to match even if we made a typo,
-# and enable navigation using the arrow keys.
 #
-# Zstyle pattern − :completion:<function>:<completer>:<command>:<argument>:<tag>
+# zstyles
+#
 
-# Select completions with arrow keys in a menu
+# Zstyle pattern
+# :completion:<function>:<completer>:<command>:<argument>:<tag>
+
+# Have the menu highlight as we cycle through options with arrow keys
 zstyle ':completion:*' menu select
 # Group results by category (named after the tags)
 zstyle ':completion:*' group-name ''
 # Enable approximate matches for completion
-zstyle ':completion:::::' completer _expand _complete _ignored _approximate
+zstyle ':completion:*' completer _expand _extensions _complete _ignored _approximate
 
 # Case and hyphen insensitive
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|=*' 'l:|=* r:|=*'
@@ -70,17 +74,21 @@ zstyle ':completion::complete:*' cache-path "$HOME/.zcompcache"
 # Complete the alias when _expand_alias is used as a function
 zstyle ':completion:*' complete true
 
+zstyle ':completion:*' file-sort modification
+
 zstyle ':completion:*:*:*:*:corrections' format '%F{yellow}!- %d (errors: %e) -!%f'
 zstyle ':completion:*:*:*:*:descriptions' format '%F{blue}-- %D %d --%f'
 zstyle ':completion:*:*:*:*:messages' format ' %F{purple} -- %d --%f'
 zstyle ':completion:*:*:*:*:warnings' format ' %F{red}-- no matches found --%f'
+zstyle ':completion:*:default' list-prompt '%S%M matches%s'
 # Colors for files and directory
 zstyle ':completion:*:*:*:*:default' list-colors ${(s.:.)LS_COLORS}
 
+# Preferred order of autocomplete groups
+zstyle ':completion:*:*:-command-:*:*' group-order aliases builtins functions commands
+
 # Only display some tags for the command cd
 zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-directories
-
-zstyle ':completion:*:*:-command-:*:*' group-order alias builtins functions commands
 
 zstyle ':completion:*' keep-prefix true
 
