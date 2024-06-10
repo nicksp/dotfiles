@@ -166,13 +166,13 @@
 
 # gs
 
-- Show the state of the working directory and staging area of a Git repository:
+- Show the state of the working directory and staging area of a Git repository OR list directory contents in case of a non Git repo:
 
 `gs`
 
 # gss
 
-- Show the brief summary of the current state of a Git repository:
+- Show the brief summary of the current state of a Git repository OR list directory contents in case of a non Git repo:
 
 `gss`
 
