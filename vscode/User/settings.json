@@ -705,7 +705,7 @@
       "level": "off"
     }
   },
-  "sonarlint.pathToNodeExecutable": "/opt/homebrew/Cellar/node/22.2.0/bin/node",
+  "sonarlint.pathToNodeExecutable": "/opt/homebrew/Cellar/node/22.3.0/bin/node",
 
   "yaml.customTags": [
     "!And",
