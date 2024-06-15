@@ -106,26 +106,30 @@
   aa           = add --all
 
   c            = commit
+  # Commit by adding all unstaged changes
   ca           = commit -a
   cm           = commit -m
   cam          = commit -am
   cne          = commit --no-edit
   empty        = commit --allow-empty -m
-  amend        = commit --amend --reuse-message=HEAD
+  amend        = commit --amend --no-edit
 
   co           = checkout
   cob          = checkout -b
   # Jump back to to your last branch
   prev         = checkout -
-  # Discard local modifications and restore them to their state in the repo index or a commit
-  discard      = checkout --
+  # Discard all unstaged changes in the working tree and revert them to their state in the HEAD commit
+  discard      = checkout .
 
   br           = branch
+  bra          = branch -a
 
   s            = status
   ss           = status -sb
 
+  # Put all uncommitted changes in a temporary storage
   st           = stash
+  # Retrieve the last stored changes again
   stp          = stash pop
 
   d            = diff
@@ -157,8 +161,8 @@
 
   # Undo a `git push`
   undopush     = push -f origin HEAD^:master
-  # Mixed reset (affects HEAD and Index)
-  unstage      = reset HEAD --
+  # Unstage all staged changes but leave them in the working tree (mixed reset)
+  unstage      = reset HEAD
   # Undo last commit but don't throw away the changes (affects HEAD only)
   undo         = reset --soft HEAD~1
   # Remove last commit (from HEAD, Index and Working Dir)
@@ -204,8 +208,11 @@
   # Cancel local commits in the branch: git fuck master
   fuck         = "!f() { git reset --hard origin/$1; }; f"
 
-  # Remove all changes, including untracked files/dirs
-  nuke         = clean -xfd
+  # Delete all untracked files and folders
+  cfd          = clean -fd
+
+  # Delete all changes, including untracked files and folders
+  nuke         = !git reset --hard && git clean -fd
 
   # Sharable diff with disabled syntax highlighting and +/- marks
   patch        = !git --no-pager diff --no-color
