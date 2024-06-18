@@ -16,6 +16,14 @@
   # Detect whitespace errors when applying a patch
   whitespace = fix
 
+[rerere]
+  # Remember how you resolved a merge conflict and automatically reapply if it sees it again
+  enabled = true
+
+[transfer]
+  # Avoid data corruption
+  fsckobjects = true
+
 [core]
   editor = cot --wait
   pager = delta
@@ -58,11 +66,21 @@
 [url "git@github.com:nicksp/"]
   insteadOf = "git://github.com/nicksp/"
 
+# When accidentally cloning the HTTP version of a repository instead of the SSH version
+[url "git@github.com:"]
+	insteadOf = "https://github.com/"
+
 # command-specific
+
+[commit]
+  # Include the diff of the changes at the bottom of the commit message template
+  verbose = true
 
 [log]
   # Show branch names with git log
   decorate = short
+  # Display dates as '2023-05-25 13:54:51' instead of 'Thu May 25 13:54:51 2023'
+  date = iso
 
 [branch]
   # Show most recently changed branches first
@@ -72,7 +90,7 @@
   # Automatically prune deleted branches and tags from your local copy
   # when you fetch (or pull)
   prune = true
-  prunetags = true
+  pruneTags = true
 
 [pull]
   # Rebase branches on top of the fetched branch, instead of merging
@@ -85,11 +103,16 @@
   # http://stackoverflow.com/a/23918418/89484
   default = current
   # Automatically set up upstream tracking
+  # when no upstream tracking exists for the current branch
   autoSetupRemote = true
   # Make `git push` automatically push relevant annotated tags when pushing branches out
   followTags = true
+  # Make `push --force-with-lease` even safer by ensuring the tip of the remote
+  # was actually pulled into your local branch at some point
+  useForceIfIncludes = true
 
 [rebase]
+  # Automatically include the `--autosquash` option when doing a `git rebase --interactive`
   autoSquash = true
 
 # aliases
@@ -229,6 +252,8 @@
 # git-delta
 
 [interactive]
+  # Syntax highlight code when you run `git add -p`
+  # to interactively stage hunks (portions) of changes from modified files
   diffFilter = delta --color-only
 
 [add.interactive]
@@ -249,10 +274,14 @@
   hyperlinks-file-link-format = "vscode://file/{path}:{line}"
 
 [merge]
-  conflictstyle = diff3
+  conflictStyle = zdiff3
 
 [diff]
+  # Clearer diff output
+  algorithm = histogram
+  # Use different colors to highlight lines in diffs that have been “moved”
   colorMoved = default
+  # Ignore indentation changes
   colorMovedWS = allow-indentation-change
 
 # include local/private config if relevant
