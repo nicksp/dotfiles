@@ -49,7 +49,7 @@ cask "1password@7" # Password manager
 cask "arc" # Modern browser
 cask "bartender" # Manage menu bar icons
 cask "cleanmymac" # System clean up manager
-cask "cleanshot" # Better screenshot utility
+cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
 cask "discord" # Messaging social platform
 cask "docker" # Running containerized applications
