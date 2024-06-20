@@ -75,6 +75,8 @@
 [commit]
   # Include the diff of the changes at the bottom of the commit message template
   verbose = true
+  # Custom template for new commit messages
+  template = ~/.gitmessage
 
 [log]
   # Show branch names with git log
