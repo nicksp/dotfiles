@@ -28,6 +28,7 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 alias grep="grep -i --color=auto"
+alias mkdir="mkdir -p"
 
 # Typos
 alias sl="ls"
