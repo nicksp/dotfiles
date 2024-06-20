@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# Kill the process running on the provided port.
+#
+# - Release the port:
+#
+# `clear-port {{port}}`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+set -euo pipefail
+
+if [ "$#" -eq 0 ]; then
+  echo "Usage: $(basename "$0") <port_number>"
+  exit 1
+fi
+
+port_num="$(lsof -ti4TCP:"$1")"
+if [ $? -eq 0 ]; then
+  kill "$port_num"
+fi
