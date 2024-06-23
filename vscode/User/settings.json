@@ -264,9 +264,12 @@
     "editorOverviewRuler.wordHighlightTextForeground": "#ffffff00",
 
     // ErrorLens
-    "errorLens.errorForegroundLight": "#cc5c52",
-    "errorLens.warningForegroundLight": "#de9e59",
-    "errorLens.hintForegroundLight": "#5b9a8b",
+    "errorLens.errorForegroundLight": "#e5ada8",
+    "errorLens.errorBackgroundLight": "#f3dcda40",
+    "errorLens.warningForegroundLight": "#eeceac",
+    "errorLens.warningBackgroundLight": "#f7e7d540",
+    "errorLens.hintForegroundLight": "#adccc5",
+    "errorLens.hintBackgroundLight": "#d6e6e240",
 
     // GitLens
     "gitlens.gutterUncommittedForegroundColor": "#e87da4",
