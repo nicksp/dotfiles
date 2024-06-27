@@ -209,6 +209,7 @@
   "problems.decorations.enabled": false,
   "search.decorations.badges": false,
   "testing.openTesting": "openOnTestFailure",
+  "typos.diagnosticSeverity": "Information",
   "window.commandCenter": false,
 
   /*
@@ -262,6 +263,9 @@
     "editorOverviewRuler.bracketMatchForeground": "#ffffff00",
     "editorOverviewRuler.wordHighlightForeground": "#ffffff00",
     "editorOverviewRuler.wordHighlightTextForeground": "#ffffff00",
+
+    // Hide vertical borders in zen/centered mode
+    "editorGroup.border": "#ffffff00",
 
     // ErrorLens
     "errorLens.errorForegroundLight": "#e5ada8",
@@ -741,7 +745,6 @@
   ],
 
   "githubPullRequests.defaultMergeMethod": "squash",
-  "githubPullRequests.pullBranch": "never",
   "githubPullRequests.fileListLayout": "flat",
   "githubPullRequests.pullPullRequestBranchBeforeCheckout": "pullAndMergeBase",
 
