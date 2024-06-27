@@ -16,7 +16,7 @@ Operator = { Colour="#5f9b8d" }
 Interpolation = { Colour="#9bae7e", Bold=true }
 Hover = { Colour="", Custom = { { Format = "html", Style = "cursor:help;", Override = false } } }
 Error = { Colour="#d67e76" }
-ErrorMessage = { Colour="#bc5248", Custom = { { Format = "html", Style = "border:solid 1px red; margin-left: 3em;", Override = false } } }
+ErrorMessage = { Colour="#c06159", Custom = { { Format = "html", Style = "border:solid 1px red; margin-left: 3em;", Override = false } } }
 
 Keywords = {
 	{ Colour="#ac9bc5", Bold=true },
