@@ -8,8 +8,9 @@
 --max-columns=150
 --max-columns-preview
 
-# Ignore npm/Yarn lock files, etc.
+# Ignore npm/pnpm/Yarn lock files, etc.
 --glob=!package-lock.json
+--glob=!pnpm-lock.yaml
 --glob=!yarn.lock
 --glob=!.git
 
