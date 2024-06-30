@@ -81,7 +81,7 @@
   "workbench.editor.customLabels.patterns": {
     "**/routes/**/+page.svelte": "${dirname(1)}/${dirname}",
     "**/routes/**/+page.server.ts": "/${dirname} [server]",
-    "**/app/**/page.tsx": "${dirname}.${extname}",
+    "**/app/**/page.tsx": "${dirname} ${filename}",
     "**/app/**/layout.tsx": "${dirname}/layout.${extname}",
     // Quick open files by their folder name if the file name is index.*
     "**/index.*": "${dirname}/${filename}.${extname}"
