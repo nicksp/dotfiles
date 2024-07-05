@@ -180,6 +180,12 @@ config.keys = {
     mods = 'CMD',
     action = act.SendKey({ key = 'e', mods = 'CTRL' }),
   },
+  -- Delete the whole line
+  {
+    key = 'Backspace',
+    mods = 'CMD',
+    action = wezterm.action.SendKey({ key = 'u', mods = 'CTRL' }),
+  },
 
   -- Case-insensitive search
   {
