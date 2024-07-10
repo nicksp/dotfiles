@@ -445,6 +445,15 @@
 
   /*
   |--------------------------------------------------------------------------
+  | Accessibility
+  |--------------------------------------------------------------------------
+  */
+
+  // To make links easier to distinguish from regular text in the workbench
+  "accessibility.underlineLinks": true,
+
+  /*
+  |--------------------------------------------------------------------------
   | Code Validation & Formatting
   | (ESLint, Prettier, Stylelint & friends..)
   |--------------------------------------------------------------------------
