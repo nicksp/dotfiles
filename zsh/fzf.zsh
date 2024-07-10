@@ -78,4 +78,5 @@ _fzf_comprun() {
   esac
 }
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
