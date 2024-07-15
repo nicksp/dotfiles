@@ -426,6 +426,9 @@
   // When I accidentally hit copy without selecting anything and it overrides my clipboard
   "editor.emptySelectionClipboard": false,
 
+  // Always use indentation from EditorConfig/Prettier instead of file own indentation
+  "editor.detectIndentation": false,
+
   // Give it to me as fast as you have it
   "editor.quickSuggestionsDelay": 0,
   "editor.quickSuggestions": {
