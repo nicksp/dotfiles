@@ -50,6 +50,8 @@ setopt_if_exists hist_ignore_all_dups
 setopt_if_exists hist_find_no_dups
 # Remove superfluous blanks from history items
 setopt_if_exists hist_reduce_blanks
+# Don't store commands prefixed with a space
+setopt_if_exists hist_ignore_space
 # When using history expansion (!!, !$, etc.), present for user confirmation/editing
 setopt_if_exists hist_verify
 # Do not append history entries to the history file
