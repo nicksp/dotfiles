@@ -2,17 +2,20 @@
 
 I use [Squirrelsong](https://sapegin.me/squirrelsong/) theme wherever possible.
 
-1. [Bat](https://github.com/sapegin/squirrelsong/blob/master/dark/Sublime%20Text/Squirrelsong%20Dark/Squirrelsong%20Dark.tmTheme)
-1. [Bartender](https://github.com/sapegin/squirrelsong/tree/master/light/Bartender)
-1. [Bear](https://github.com/sapegin/squirrelsong/tree/master/light/Bear)
-1. [Google Chrome DevTools](https://github.com/sapegin/squirrelsong/tree/master/light/Chrome%20DevTools)
-1. [CotEditor](https://github.com/sapegin/squirrelsong/tree/master/light/CotEditor)
-1. [Marta](https://github.com/sapegin/squirrelsong/tree/master/light/Marta)
-1. [Slack](https://github.com/sapegin/squirrelsong/tree/master/light/Slack)
-1. [Telegram](https://github.com/sapegin/squirrelsong/tree/master/light/Telegram)
-1. [Visual Studio Code](https://github.com/sapegin/squirrelsong/tree/master/light/VSCode)
-1. [Vivaldi](https://github.com/sapegin/squirrelsong/tree/master/light/Vivaldi)
-1. [WezTerm](https://github.com/sapegin/squirrelsong/tree/master/dark/WezTerm)
+1. [Bartender](https://github.com/sapegin/squirrelsong/tree/master/themes/Bartender)
+1. [Bat](https://github.com/sapegin/squirrelsong/tree/master/themes/Sublime%20Text/Squirrelsong%20Dark)
+1. [Bear](https://github.com/sapegin/squirrelsong/tree/master/themes/Bear)
+1. [Chrome DevTools](https://github.com/sapegin/squirrelsong/tree/master/themes/Chrome%20DevTools)
+1. [CotEditor](https://github.com/sapegin/squirrelsong/tree/master/themes/CotEditor)
+1. [Fzf](https://github.com/sapegin/squirrelsong/tree/master/themes/Fzf)
+1. [Marta](https://github.com/sapegin/squirrelsong/tree/master/themes/Marta)
+1. [Slack](https://github.com/sapegin/squirrelsong/tree/master/themes/Slack)
+1. [Syntax Highlight](https://github.com/sapegin/squirrelsong/tree/master/themes/Highlight)
+1. [Telegram](https://github.com/sapegin/squirrelsong/tree/master/themes/Telegram)
+1. [Visual Studio Code](https://github.com/sapegin/squirrelsong/tree/master/themes/VSCode/SquirrelsongLight)
+1. [Vivaldi](https://github.com/sapegin/squirrelsong/tree/master/themes/Vivaldi)
+1. [WezTerm](https://github.com/sapegin/squirrelsong/tree/master/themes/WezTerm)
+1. [macOS](https://github.com/sapegin/squirrelsong/tree/master/themes/macOS)
 
 > [!TIP]
 > Run `sync-color-themes` script periodically to download and update latest versions of themes for the majority of the apps above.

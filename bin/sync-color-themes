@@ -15,6 +15,7 @@
 # > [/] Bartender
 # > [/] Slack
 # > [/] Telegram
+# > [/] macOS
 #
 # - Get themes from the Squirrelsong repo:
 #
@@ -37,9 +38,9 @@ RESET=$(tput sgr0)
 HIGHLIGHT=$(tput sgr 0 1)
 
 warning() {
-  echo $RED
+  echo "$RED"
   echo "/!\\ $1 /!\\"
-  echo $RESET
+  echo "$RESET"
 }
 
 header() {
@@ -128,38 +129,39 @@ sudo echo "Sudo activated!"
 echo
 
 #
-# WezTerm: https://github.com/sapegin/squirrelsong/tree/master/dark/WezTerm
+# WezTerm: https://github.com/sapegin/squirrelsong/tree/master/themes/WezTerm
 #
 
 header "Installing WezTerm theme..."
 
-local_install "dark/WezTerm/squirrelsong-dark.toml" "tilde/.config/wezterm/colors"
+local_install "themes/WezTerm/squirrelsong-dark.toml" "tilde/.config/wezterm/colors"
 echo "🌈 A new color theme has been installed and ready to use"
 
 #
 # Bat: https://github.com/sharkdp/bat?tab=readme-ov-file#adding-new-themes
+# Theme: https://github.com/sapegin/squirrelsong/tree/master/themes/Sublime%20Text
 #
 
 header "Installing Bat theme..."
 
-local_install "dark/Sublime%20Text/Squirrelsong%20Dark/Squirrelsong%20Dark.tmTheme" "tilde/.config/bat/themes"
+local_install "themes/Sublime%20Text/Squirrelsong%20Dark/Squirrelsong%20Dark.tmTheme" "tilde/.config/bat/themes"
 # Update the binary cache
 bat cache --build
 echo "🌈 A new color theme has been installed and ready to use"
 
 #
-# Bear: https://github.com/sapegin/squirrelsong/tree/master/light/Bear
+# Bear: https://github.com/sapegin/squirrelsong/tree/master/themes/Bear
 #
 
 header "Installing Bear theme..."
 
 bear_themes_dir="/Applications/Bear.app/Contents/Frameworks/BearCore.framework/Resources"
 sudo command rm -f "$bear_themes_dir/Red Graphite.theme"
-system_install "light/Bear/Squirrelsong%20Light.theme" "$bear_themes_dir/Red Graphite.theme"
+system_install "themes/Bear/Squirrelsong%20Light.theme" "$bear_themes_dir/Red Graphite.theme"
 echo "🌈 Now choose ${HIGHLIGHT}Red Graphite${RESET} theme in Bear settings"
 
 #
-# Marta: https://github.com/sapegin/squirrelsong/tree/master/light/Marta
+# Marta: https://github.com/sapegin/squirrelsong/tree/master/themes/Marta
 #
 
 header "Installing Marta theme..."
@@ -168,26 +170,26 @@ marta_app_themes_dir="$HOME/Library/Application Support/org.yanex.marta/Themes"
 marta_terminal_themes_dir="/Applications/Marta.app/Contents/Resources/Themes"
 
 sudo command rm -f "$marta_terminal_themes_dir/SquirrelsongLight.ettyTheme"
-system_install "light/Marta/Squirrelsong%20Light.theme" "$marta_app_themes_dir/Squirrelsong Light.theme"
-system_install "light/Marta/SquirrelsongLight.ettyTheme" "$marta_terminal_themes_dir/SquirrelsongLight.ettyTheme"
+system_install "themes/Marta/Squirrelsong%20Light.theme" "$marta_app_themes_dir/Squirrelsong Light.theme"
+system_install "themes/Marta/SquirrelsongLight.ettyTheme" "$marta_terminal_themes_dir/SquirrelsongLight.ettyTheme"
 echo "🌈 Point to new themes in Marta preferences and restart the app for the changes to take effect"
 
 #
-# Syntax Highlight: https://github.com/sapegin/squirrelsong/tree/master/light/Highlight/
+# Syntax Highlight: https://github.com/sapegin/squirrelsong/tree/master/themes/Highlight
 #
 
 header "Installing Syntax Highlight theme..."
 
-local_install "light/Highlight/Squirrelsong%20Light.theme" "syntax-highlight/themes"
-echo "🌈 Import ${HIGHLIGHT}Squirrelsong Light.theme${RESET} in ${BOLD}Syntax Highlight − Settings${RESET} and then select the theme under ${BOLD}General − Color scheme${RESET}"
+local_install "themes/Highlight/Squirrelsong%20Light.theme" "syntax-highlight/themes"
+echo "🌈 Import ${HIGHLIGHT}Squirrelsong Light.theme${RESET} in ${BOLD}Syntax Highlight − Settings${RESET} and then select the theme under ${BOLD}General − Color scheme${RESET} for ${BOLD}Light${RESET} and ${BOLD}Dark${RESET} modes"
 
 #
-# Vivaldi: https://github.com/sapegin/squirrelsong/tree/master/light/Vivaldi
+# Vivaldi: https://github.com/sapegin/squirrelsong/tree/master/themes/Vivaldi
 #
 
 header "Installing Vivaldi theme..."
 
-my_data_install "light/Vivaldi/Squirrelsong%20Light.zip" "squirrelsong-master/light/Vivaldi"
+my_data_install "themes/Vivaldi/Squirrelsong%20Light.zip" "squirrelsong-master/themes/Vivaldi"
 echo ""
 echo "🌈 Follow these steps to install the theme:"
 echo ""
@@ -197,12 +199,12 @@ echo "− Select ${HIGHLIGHT}Squirrelsong Light.zip${RESET}."
 echo "− Select ${BOLD}Squirrelsong Light${RESET} in ${BOLD}Theme${RESET} list."
 
 #
-# CotEditor: https://github.com/sapegin/squirrelsong/tree/master/light/CotEditor
+# CotEditor: https://github.com/sapegin/squirrelsong/tree/master/themes/CotEditor
 #
 
 header "Installing CotEditor theme..."
 
-my_data_install "light/CotEditor/Squirrelsong%20Light.cottheme" "squirrelsong-master/light/CotEditor"
+my_data_install "themes/CotEditor/Squirrelsong%20Light.cottheme" "squirrelsong-master/themes/CotEditor"
 echo ""
 echo "🌈 Follow these steps to install the theme:"
 echo ""
@@ -211,19 +213,19 @@ echo "− Import ${HIGHLIGHT}Squirrelsong Light.cottheme${RESET}"
 echo "− Select ${BOLD}Squirrelsong Light${RESET} in ${BOLD}Theme${RESET} list."
 
 #
-# Chrome DevTools in Vivaldi: https://github.com/sapegin/squirrelsong/tree/master/light/Chrome%20DevTools
+# Chrome DevTools: https://github.com/sapegin/squirrelsong/tree/master/themes/Chrome%20DevTools
 #
 
 header "Installing Chrome DevTools theme..."
 
-my_data_install "https://github.com/sapegin/squirrelsong/archive/refs/heads/master.zip" "squirrelsong-master/light/Chrome DevTools/extension"
+my_data_install "https://github.com/sapegin/squirrelsong/archive/refs/heads/master.zip" "squirrelsong-master/themes/Chrome DevTools/extension-light"
 echo ""
 echo "🌈 Follow these steps to install the extension:"
 echo ""
 echo "− Go to chrome://extensions in your browser."
 echo "− Turn on ${BOLD}Developer mode${RESET}."
 echo "− Press ${BOLD}Load unpacked${RESET} button."
-echo "− Select the ${HIGHLIGHT}light/Chrome DevTools/extension${RESET} folder of this repository."
+echo "− Select the ${HIGHLIGHT}Chrome DevTools/extension-light${RESET} folder of this repository."
 echo "− Open DevTools settings."
 echo "− Make sure that the ${BOLD}Light${RESET} theme is selected in the ${BOLD}Preferences${RESET} → ${BOLD}Appearance${RESET} section."
 echo "− Make sure that the ${BOLD}Allow extensions to load custom stylesheets${RESET} checkbox is selected in the ${BOLD}Experiments${RESET} section."
@@ -231,19 +233,25 @@ echo "− Make sure that the ${BOLD}Allow extensions to load custom stylesheets$
 # --- 8< -- 8< ---
 
 #
-# Bartender: https://github.com/sapegin/squirrelsong/tree/master/light/Bartender
+# Bartender: https://github.com/sapegin/squirrelsong/tree/master/themes/Bartender
 #
 
-header "☕ Install Bartender theme: https://github.com/sapegin/squirrelsong/tree/master/light/Bartender"
+header "☕ Install Bartender theme: https://github.com/sapegin/squirrelsong/tree/master/themes/Bartender"
 
 #
-# Slack: https://github.com/sapegin/squirrelsong/tree/master/light/Slack
+# Slack: https://github.com/sapegin/squirrelsong/tree/master/themes/Slack
 #
 
-header "☕ Install Slack theme: https://github.com/sapegin/squirrelsong/tree/master/light/Slack"
+header "☕ Install Slack theme: https://github.com/sapegin/squirrelsong/tree/master/themes/Slack"
 
 #
-# Telegram: https://github.com/sapegin/squirrelsong/tree/master/light/Telegram
+# Telegram: https://github.com/sapegin/squirrelsong/tree/master/themes/Telegram
 #
 
-header "☕ Install Telegram theme: https://github.com/sapegin/squirrelsong/tree/master/light/Telegram"
+header "☕ Install Telegram theme: https://github.com/sapegin/squirrelsong/tree/master/themes/Telegram"
+
+#
+# macOS: https://github.com/sapegin/squirrelsong/tree/master/themes/macOS
+#
+
+header "☕ Tweak macOS colors: https://github.com/sapegin/squirrelsong/tree/master/themes/macOS"
