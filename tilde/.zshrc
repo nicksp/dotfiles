@@ -30,7 +30,7 @@ fi
 
 # Setup zoxide: https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
 export _ZO_DATA_DIR=$HOME
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Allow local (private) customizations (not checked in to version control)
 [ -f ~/.zsh.local ] && source ~/.zsh.local
