@@ -89,9 +89,20 @@
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   },
   {
+    "comment": "Kill the current terminal tab",
     "key": "cmd+w",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
+  },
+  {
+    "comment": "Show list of sYmbols in the current file",
+    "key": "cmd+y",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "comment": "Show list of sYmbols in the workspace",
+    "key": "cmd+shift+y",
+    "command": "workbench.action.showAllSymbols"
   },
   {
     "key": "shift+cmd+g shift+cmd+h",
