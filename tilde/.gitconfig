@@ -115,6 +115,7 @@
 
 [rebase]
   # Automatically include the `--autosquash` option when doing a `git rebase --interactive`
+  # See more: https://thoughtbot.com/blog/autosquashing-git-commits
   autoSquash = true
 
 # aliases
@@ -127,28 +128,34 @@
   # Open .gitconfig in default editor
   ecf          = config --global -e
 
+  # Add (stage) files
   a            = add
   aa           = add --all
 
+  # Commit
   c            = commit
-  # Commit by adding all unstaged changes
+  # ... by adding all unstaged changes
   ca           = commit -a
   cm           = commit -m
-  cam          = commit -am
-  cne          = commit --no-edit
   empty        = commit --allow-empty -m
+  # Add new staged files to the latest commit by preserving its commit message
   amend        = commit --amend --no-edit
+  # Add all modified files to the latest commit
+  append       = commit -a --amend --no-edit
 
+  # Checkout
   co           = checkout
   cob          = checkout -b
-  # Jump back to to your last branch
-  prev         = checkout -
   # Discard all unstaged changes in the working tree and revert them to their state in the HEAD commit
   discard      = checkout .
 
+  # Branching
   br           = branch
   bra          = branch -a
+  # Jump back to to your last branch
+  prev         = checkout -
 
+  # Status
   s            = status
   ss           = status -sb
 
@@ -160,11 +167,12 @@
   d            = diff
   cp           = cherry-pick
   fp           = fetch --prune --all
-  f            = reflog
 
+  # Push
   pu           = push
   puf          = push --force-with-lease
   put          = push --tags
+
   # Pull in remote changes for the current repository and all its submodules
   p            = pull --recurse-submodules
 
@@ -276,10 +284,13 @@
   hyperlinks-file-link-format = "vscode://file/{path}:{line}"
 
 [merge]
+  # See more: https://www.ductile.systems/zdiff3/
   conflictStyle = zdiff3
 
 [diff]
   # Clearer diff output
+  # See more (1): https://luppeng.wordpress.com/2020/10/10/when-to-use-each-of-the-git-diff-algorithms/
+  # See more (2): https://link.springer.com/article/10.1007/s10664-019-09772-z
   algorithm = histogram
   # Use different colors to highlight lines in diffs that have been “moved”
   colorMoved = default
