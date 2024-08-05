@@ -117,7 +117,6 @@
   // We have a lot of space in the window title, so why not use it to show where we are
   // This comes in handy when the Explorer is closed and we're switching over
   // between multiple projects.
-  "window.titleBarStyle": "custom",
   "window.title": "${activeEditorMedium}${separator}${rootName} ${dirty}",
 
   "window.openFilesInNewWindow": "off",
@@ -422,7 +421,6 @@
 
   "search.useParentIgnoreFiles": true,
 
-  "editor.accessibilitySupport": "off",
   "editor.smoothScrolling": true,
   "editor.largeFileOptimizations": false,
   "editor.semanticHighlighting.enabled": true,
@@ -474,6 +472,7 @@
   |--------------------------------------------------------------------------
   */
 
+  "editor.accessibilitySupport": "off",
   // To make links easier to distinguish from regular text in the workbench
   "accessibility.underlineLinks": true,
 
@@ -572,6 +571,9 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
