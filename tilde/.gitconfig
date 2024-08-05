@@ -176,6 +176,11 @@
   # Pull in remote changes for the current repository and all its submodules
   p            = pull --recurse-submodules
 
+  # Worktree
+  wta          = worktree add
+  wtl          = worktree list
+  wtr          = worktree remove
+
   # Rebase: skip a rebase step
   skip         = rebase --skip
   # Rebase: abort
