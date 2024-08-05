@@ -85,6 +85,9 @@
   "editor.inlineSuggest.enabled": true,
   "editor.inlineSuggest.suppressSuggestions": true,
   "editor.tabCompletion": "on",
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingComments": "never",
+  "editor.autoClosingQuotes": "never",
 
   // Peek-less Go to navigation
   "editor.gotoLocation.multipleDeclarations": "goto",
