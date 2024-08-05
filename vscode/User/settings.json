@@ -108,7 +108,7 @@
   "editor.stickyScroll.maxLineCount": 3,
 
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.unfoldOnClickAfterEndOfLine": true,
+  "editor.folding": false,
 
   // Top window bar
   // We have a lot of space in the window title, so why not use it to show where we are
