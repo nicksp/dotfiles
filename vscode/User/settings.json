@@ -158,11 +158,13 @@
     "args": ["-i"]
   },
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.lineHeight": 1.1,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorStyleInactive": "none",
   "terminal.integrated.cursorWidth": 2,
   "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+  "terminal.integrated.shellIntegration.showCommandGuide": false,
   "terminal.integrated.stickyScroll.enabled": true,
   "terminal.integrated.tabs.enableAnimation": false,
   "terminal.integrated.tabStopWidth": 2,
@@ -175,6 +177,7 @@
   "terminal.integrated.commandsToSkipShell": ["workbench.action.closePanel"],
   "terminal.integrated.gpuAcceleration": "on",
   "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.initialHint": false,
   "terminal.integrated.hideOnStartup": "always",
   "terminal.integrated.tabs.showActions": "never",
 
