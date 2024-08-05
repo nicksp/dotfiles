@@ -51,7 +51,7 @@
   // Code startup & new file creation
   "files.defaultLanguage": "markdown",
   "workbench.startupEditor": "newUntitledFile",
-  "window.newWindowDimensions": "maximized",
+  "window.newWindowDimensions": "inherit",
 
   // Privacy
   "telemetry.telemetryLevel": "off",
@@ -596,6 +596,7 @@
   */
 
   "prettier.requireConfig": true,
+  "prettier.useEditorConfig": false,
 
   "eslint.rules.customizations": [
     { "rule": "*", "fixable": true, "severity": "info" }
