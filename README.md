@@ -33,7 +33,7 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 ## Installation
 
 1. Enable **Firewall** under **System Settings** → **Network**
-1. Point the DNS Servers to [Cloudflare DNS](https://one.one.one.one/dns/) 
+1. Point the DNS Servers to [Cloudflare DNS](https://one.one.one.one/dns/)
     - `1.1.1.1`
     - `1.0.0.1`
     - `2606:4700:4700::1111`
@@ -42,9 +42,11 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
     1. [Generate SSH key and add it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
     1. [Add your public SSH key to GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
     1. Test your authentication with:
+
         ```
         ssh -T git@github.com
         ```
+
 1. Install [MonoLisa font](https://www.monolisa.dev/)
 1. Choose _manual_ or _automatic_ dotfiles installation below
 
@@ -134,7 +136,7 @@ MIT License.
 - [holman/dotfiles](https://github.com/holman/dotfiles)
 - [mathiasbynes/dotfiles](https://github.com/mathiasbynens/dotfiles)
 - [sapegin/dotfiles](https://github.com/sapegin/dotfiles)
-- https://remysharp.com/2018/08/23/cli-improved
-- https://evanhahn.com/a-decade-of-dotfiles/
-- https://cpojer.net/posts/set-up-a-new-mac-fast
-- https://thevaluable.dev/zsh-install-configure-mouseless/
+- <https://remysharp.com/2018/08/23/cli-improved>
+- <https://evanhahn.com/a-decade-of-dotfiles/>
+- <https://cpojer.net/posts/set-up-a-new-mac-fast>
+- <https://thevaluable.dev/zsh-install-configure-mouseless/>
