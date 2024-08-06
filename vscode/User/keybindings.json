@@ -179,24 +179,33 @@
     "key": "cmd+n",
     "command": "filebunny.createFile"
   },
+
+  // Mini Markdown
   {
-    "key": "shift+cmd+c",
-    "command": "-workbench.action.terminal.openNativeConsole",
-    "when": "!terminalFocus"
+    "key": "cmd+b",
+    "command": "-miniMarkdown.toggleStrongEmphasis",
+    "when": "!editorReadonly && editorLangId == 'markdown'"
   },
   {
-    "key": "alt+cmd+g b",
-    "command": "-gitlens.toggleFileBlame",
-    "when": "editorTextFocus && config.gitlens.keymap == 'chorded' && gitlens:activeFileStatus =~ /blameable/"
+    "key": "ctrl+b",
+    "command": "miniMarkdown.toggleStrongEmphasis",
+    "when": "!editorReadonly && editorLangId == 'markdown'"
   },
   {
-    "key": "shift+cmd+g b",
-    "command": "gitlens.toggleFileBlame",
-    "when": "editorTextFocus && gitlens:activeFileStatus =~ /blameable/"
+    "key": "cmd+i",
+    "command": "-miniMarkdown.toggleEmphasis",
+    "when": "!editorReadonly && editorLangId == 'markdown'"
   },
   {
-    "key": "alt+b",
-    "command": "-gitlens.toggleFileBlame",
-    "when": "editorTextFocus && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /blameable/"
+    "key": "ctrl+i",
+    "command": "miniMarkdown.toggleEmphasis",
+    "when": "!editorReadonly && editorLangId == 'markdown'"
+  },
+
+  // Just Blame
+  {
+    "key": "shift+cmd+g shift+cmd+b",
+    "command": "justBlame.toggleBlame",
+    "when": "editorTextFocus"
   }
 ]
