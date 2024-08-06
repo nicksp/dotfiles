@@ -63,6 +63,8 @@
   // Don't use online search in the settings editor
   "workbench.settings.enableNaturalLanguageSearch": false,
 
+  "workbench.editor.enablePreview": false,
+  "editor.copyWithSyntaxHighlighting": false,
   // Sensible multi-cursor trigger
   "editor.multiCursorModifier": "ctrlCmd",
 
@@ -429,7 +431,6 @@
   "editor.smoothScrolling": true,
   "editor.largeFileOptimizations": false,
   "editor.semanticHighlighting.enabled": true,
-  "editor.copyWithSyntaxHighlighting": false,
 
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.editorLargeFileConfirmation": 150,
