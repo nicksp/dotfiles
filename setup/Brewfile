@@ -4,6 +4,7 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "jesseduffield/lazydocker"
 tap "jesseduffield/lazygit"
+tap "oven-sh/bun"
 
 # CLI tools
 brew "python@3.11" # Required by awscli
@@ -34,6 +35,7 @@ brew "zsh-syntax-highlighting" # Fish-like syntax highlighting for Zsh
 brew "git-friendly/git-friendly/git-friendly" # Improved Git commands for common tasks
 brew "jesseduffield/lazydocker/lazydocker" # Full Docker management app
 brew "jesseduffield/lazygit/lazygit" # Full Git management app
+brew "oven-sh/bun/bun" # Bun runtime
 
 # Temporarily required for some work projects
 brew "libpng"
