@@ -167,7 +167,7 @@
   "terminal.integrated.cursorWidth": 2,
   "terminal.integrated.shellIntegration.decorationsEnabled": "never",
   "terminal.integrated.shellIntegration.showCommandGuide": false,
-  "terminal.integrated.stickyScroll.enabled": true,
+  "terminal.integrated.stickyScroll.enabled": false,
   "terminal.integrated.tabs.enableAnimation": false,
   "terminal.integrated.tabStopWidth": 2,
   // Use normal colors for bold text
