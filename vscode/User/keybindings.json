@@ -1,17 +1,280 @@
 [
-  /*
-   * Internal functions
+  /**
+   * Panels & Views
    */
+
+  {
+    "comment": "Toggle the left secondary sidebar",
+    "key": "cmd+1",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "alt+cmd+b",
+    "command": "-workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "comment": "Toggle the right primary sidebar",
+    "key": "cmd+2",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "comment": "Toggle the bottom panel",
+    "key": "cmd+3",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "comment": "Toggle source control (Git) panel",
+    "key": "cmd+k cmd+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm"
+  },
+  {
+    "comment": "Toggle Explorer in the sidebar",
+    "key": "cmd+k cmd+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer"
+  },
+  {
+    "comment": "Toggle Debugger in the sidebar",
+    "key": "cmd+k cmd+d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "-workbench.view.debug"
+  },
+  {
+    "comment": "Toggle eXtensions in the sidebar",
+    "key": "cmd+k cmd+x",
+    "command": "workbench.view.extensions",
+    "when": "viewContainer.workbench.view.extensions.enabled"
+  },
+  {
+    "key": "shift+cmd+x",
+    "command": "-workbench.view.extensions"
+  },
+  {
+    "comment": "Open list of pull Requests in the sidebar",
+    "key": "cmd+k cmd+r",
+    "command": "pr:github.focus"
+  },
+  {
+    "comment": "Toggle Status bar",
+    "key": "cmd+k cmd+s",
+    "command": "workbench.action.toggleStatusbarVisibility"
+  },
+  {
+    "comment": "Maximize/minimize active panel",
+    "key": "cmd+alt+j",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "panelVisible"
+  },
+  {
+    "comment": "Close sidebar when pressing Escape in the editor",
+    "key": "escape",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarVisible && textInputFocus && !suggestWidgetVisible"
+  },
+  {
+    "comment": "Close panel when pressing Escape in the editor",
+    "key": "escape",
+    "command": "workbench.action.closePanel",
+    "when": "panelVisible && textInputFocus && !suggestWidgetVisible"
+  },
+  {
+    "comment": "Close panel when pressing Escape inside the Search panel",
+    "key": "escape",
+    "command": "workbench.action.closePanel",
+    "when": "activePanel == 'workbench.view.search' && panelFocus"
+  },
+  {
+    "comment": "Close panel when pressing Escape inside the Problems panel",
+    "key": "escape",
+    "command": "workbench.action.closePanel",
+    "when": "activePanel == 'workbench.panel.markers' && panelFocus"
+  },
+  {
+    "comment": "Close panel when pressing Escape inside the Integrated Terminal panel",
+    "key": "escape",
+    "command": "workbench.action.closePanel",
+    "when": "terminalFocus"
+  },
+  {
+    "comment": "Switch to the first Terminal. Note: Code’s default implementation of toggling the terminal is silly. If the editor has focus, you will have to first hide, then show the terminal to get it to focus. Below is a keybinding hack you can use to make it sensible again",
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.focusAtIndex1",
+    "when": "!terminalFocus"
+  },
+  {
+    "comment": "Switch to the next Terminal",
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "ctrl+[Backquote]",
+    "command": "-workbench.action.terminal.toggleTerminal"
+  },
+  {
+      "key": "shift+cmd+]",
+      "command": "-workbench.action.terminal.focusNext"
+  },
+  {
+      "key": "shift+cmd+[",
+      "command": "-workbench.action.terminal.focusPrevious"
+  },
+
+  /**
+   * Quick Open
+   */
+
+  {
+    // Pro tip: Press cmd+enter to open selected file in a split editor
+    "comment": "Open recent files",
+    "key": "cmd+o",
+    "command": "workbench.action.quickOpenPreviousEditor"
+  },
+  {
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "comment": "Show list of sYmbols in the current file",
+    "key": "cmd+y",
+    "command": "workbench.action.gotoSymbol"
+  },
+  {
+    "key": "cmd+shift+o",
+    "command": "-workbench.action.gotoSymbol"
+  },
+  {
+    "comment": "Show list of sYmbols in the workspace",
+    "key": "cmd+shift+y",
+    "command": "workbench.action.showAllSymbols"
+  },
+  {
+    "key": "cmd+t",
+    "command": "-workbench.action.showAllSymbols"
+  },
+  {
+    "comment": "Open command Palette",
+    "key": "cmd+p",
+    "command": "workbench.action.showCommands",
+    "when": "!scmRepository"
+  },
+  {
+    "key": "f1",
+    "command": "-workbench.action.showCommands"
+  },
+  {
+    "comment": "Open run Task menu",
+    "key": "cmd+k cmd+t",
+    "command": "workbench.action.tasks.runTask",
+    "when": "!scmRepository"
+  },
+  {
+    "key": "cmd+k cmd+t",
+    "command": "-workbench.action.selectTheme"
+  },
+  {
+    "comment": "Open run Build task menu",
+    "key": "cmd+k cmd+b",
+    "command": "workbench.action.tasks.build",
+    "when": "taskCommandsRegistered"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "-workbench.action.tasks.build"
+  },
+
+  /**
+   * Code editing and navigation
+   */
+
+  {
+    "comment": "If I’m in a sidebar or terminal, it’s a small annoyance to have to click the editor to get back into editing mode. This shortcut (cmd+e+e) provides an easy way to focus the editor from anywhere in VS Code.",
+    "key": "cmd+e cmd+e",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
+
+  /**
+   * Terminal
+   */
+
+  {
+    "comment": "Split terminal panel vertically",
+    "key": "ctrl+n",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  {
+    "comment": "Focus terminal panel to the right",
+    "key": "ctrl+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "comment": "Focus terminal panel to the left",
+    "key": "ctrl+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "comment": "Kill the current terminal tab",
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+
+  /**
+   * File Explorer
+   */
+
+  {
+    "key": "cmd+d",
+    "command": "fileutils.duplicateFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+    // Matches macOS Finder
+    "comment": "Create a New file",
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    // Matches macOS Finder
+    "comment": "Create a New folder",
+    "key": "shift+cmd+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+
+  /**
+   * Internal Functions
+   */
+
   {
     "key": "ctrl+escape",
     "command": "workbench.action.toggleActivityBarVisibility"
   },
   {
-    "key": "ctrl+[IntlBackslash]",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "cmd+3",
+    "key": "cmd+4",
     "command": "copyRelativeFilePath"
   },
   {
@@ -34,35 +297,9 @@
     "command": "-emojiConsoleLog.addLogMessage"
   },
   {
-    "comment": "Note: Code’s default implementation of toggling the terminal is silly. If the editor has focus, you will have to first hide, then show the terminal to get it to focus. Below is a keybinding hack you can use to make it sensible again",
-    "key": "ctrl+[Backquote]",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
     "comment": "Zen mode. When things get too cluttered I hit cmd+k+k",
     "key": "cmd+k cmd+k",
     "command": "workbench.action.toggleZenMode"
-  },
-  {
-    "comment": "If I’m in a sidebar or terminal, It’s a small annoyance to have to click the editor to get back into editing mode. This shortcut (cmd+e+e) provides an easy way to focus the editor from anywhere in VS Code.",
-    "key": "cmd+e cmd+e",
-    "command": "workbench.action.focusActiveEditorGroup"
-  },
-  {
-    "key": "cmd+r",
-    "command": "workbench.action.showAllSymbols"
-  },
-  {
-    "key": "cmd+t",
-    "command": "-workbench.action.showAllSymbols"
-  },
-  {
-    "key": "cmd+t",
-    "command": "workbench.action.quickOpen"
-  },
-  {
-    "key": "cmd+p",
-    "command": "-workbench.action.quickOpen"
   },
   {
     "key": "cmd+[Slash]",
@@ -75,10 +312,6 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "shift+cmd+d",
-    "command": "editor.action.duplicateSelection"
-  },
-  {
     "key": "alt+enter",
     "command": "editor.action.quickFix",
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
@@ -89,37 +322,10 @@
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   },
   {
-    "comment": "Kill the current terminal tab",
-    "key": "cmd+w",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus"
-  },
-  {
-    "comment": "Show list of sYmbols in the current file",
-    "key": "cmd+y",
-    "command": "workbench.action.gotoSymbol"
-  },
-  {
-    "comment": "Show list of sYmbols in the workspace",
-    "key": "cmd+shift+y",
-    "command": "workbench.action.showAllSymbols"
-  },
-  {
-    "key": "shift+cmd+g shift+cmd+h",
-    "command": "workbench.view.extension.github-pull-requests",
-    "when": "viewContainer.workbench.view.extensions.enabled"
-  },
-  {
     "comment": "Focuses on the 1st search results when pressing Enter in the search box",
     "key": "enter",
     "command": "search.action.focusNextSearchResult",
     "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
-  },
-  {
-    "comment": "Maximizes/minimizes active panel",
-    "key": "cmd+alt+j",
-    "command": "workbench.action.toggleMaximizedPanel",
-    "when": "panelVisible"
   },
   {
     "comment": "The default Cmd+K keybinding doesn't seem to work for me because of either it's redefined manually as a chord keybinding or an extension does it. The only workaround currently is to redefine the Cmd+k keybinding at a higher level (user keybindings.json). Adding this again to the bottom of keybindings.json fixes the problem",
@@ -138,31 +344,6 @@
     "command": "-workbench.action.terminal.openNativeConsole",
     "when": "!terminalFocus"
   },
-
-  {
-    "comment": "Closes panel when pressing Escape in the editor",
-    "key": "escape",
-    "command": "workbench.action.closePanel",
-    "when": "panelVisible && textInputFocus && !suggestWidgetVisible"
-  },
-  {
-    "comment": "Closes panel when pressing Escape inside the Search panel",
-    "key": "escape",
-    "command": "workbench.action.closePanel",
-    "when": "activePanel == 'workbench.view.search' && panelFocus"
-  },
-  {
-    "comment": "Closes panel when pressing Escape inside the Problems panel",
-    "key": "escape",
-    "command": "workbench.action.closePanel",
-    "when": "activePanel == 'workbench.panel.markers' && panelFocus"
-  },
-  {
-    "comment": "Closes panel when pressing Escape inside the Integrated Terminal panel",
-    "key": "escape",
-    "command": "workbench.action.closePanel",
-    "when": "terminalFocus"
-  },
   {
     "comment": "Stages files with a Option+Space",
     "key": "alt+space",
@@ -170,14 +351,16 @@
     "when": "workbench.scm.active"
   },
 
-  /*
+  /**
    * Plugins
    */
 
   // Advanced New File
   {
+    "comment": "Create a new file",
     "key": "cmd+n",
-    "command": "filebunny.createFile"
+    "command": "filebunny.createFile",
+    "when": "editorTextFocus"
   },
 
   // Mini Markdown
