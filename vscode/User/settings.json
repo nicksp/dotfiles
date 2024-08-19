@@ -87,6 +87,8 @@
   "editor.inlineSuggest.enabled": true,
   "editor.inlineSuggest.suppressSuggestions": true,
   "editor.tabCompletion": "on",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.wordBasedSuggestions": "off",
   "editor.autoClosingBrackets": "never",
   "editor.autoClosingComments": "never",
   "editor.autoClosingQuotes": "never",
@@ -465,9 +467,10 @@
   // for HTML files only
   "editor.linkedEditing": true,
 
-  // Show snippets after any other auto completion so that TS types props go first.
-  "editor.snippetSuggestions": "bottom",
+  // Show snippets after any other intellisense results so that TS types props go first
   "editor.suggestSelection": "first",
+  "editor.snippetSuggestions": "bottom",
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
 
   /*
   |--------------------------------------------------------------------------
