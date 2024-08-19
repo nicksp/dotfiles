@@ -3,6 +3,7 @@
 // Create a temporary Markdown file for `tldr` with docs for a script in the
 // bin/ folder. File is generated based on a code comment section.
 //
+// ---
 // Based on https://github.com/sapegin/dotfiles/blob/master/bin/lib/get-tldr-md
 //
 // Author: Nick Plekhanov, https://nikkhan.com/
