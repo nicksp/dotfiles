@@ -225,7 +225,6 @@
   "editor.hideCursorInOverviewRuler": true,
   "editor.overviewRulerBorder": false,
   "editor.minimap.enabled": false,
-  "editor.minimap.renderCharacters": false,
   "outline.problems.badges": false,
   "outline.showVariables": false,
   "problems.autoReveal": false,
@@ -458,8 +457,6 @@
   // Give it to me as fast as you have it
   "editor.quickSuggestionsDelay": 0,
   "editor.quickSuggestions": {
-    "other": "on",
-    "comments": "off",
     "strings": "on"
   },
 
