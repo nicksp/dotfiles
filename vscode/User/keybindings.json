@@ -359,7 +359,7 @@
   {
     "comment": "Create a new file",
     "key": "cmd+n",
-    "command": "filebunny.createFile",
+    "command": "fileutils.newFileAtRoot",
     "when": "editorTextFocus"
   },
 
