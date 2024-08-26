@@ -56,7 +56,6 @@
   // Privacy
   "telemetry.telemetryLevel": "off",
   "sonarlint.disableTelemetry": true,
-  "gitlens.telemetry.enabled": true,
   "cody.telemetry.level": "off",
   "redhat.telemetry.enabled": false,
   "workbench.enableExperiments": false,
@@ -303,11 +302,6 @@
     "errorLens.warningBackgroundLight": "#f7e7d540",
     "errorLens.hintForegroundLight": "#adccc5",
     "errorLens.hintBackgroundLight": "#d6e6e240",
-
-    // GitLens
-    "gitlens.gutterUncommittedForegroundColor": "#e87da4",
-    "gitlens.gutterForegroundColor": "#78737d",
-    "gitlens.gutterBackgroundColor": "#fdfdfe00"
   },
 
   // To override or define any code syntax styles of languages like e.g. Go or JavaScript
@@ -664,34 +658,6 @@
     "userspermissions",
     "watchlist"
   ],
-
-  // GitLens
-  "gitlens.hovers.currentLine.enabled": true,
-  "gitlens.codeLens.scopes": ["document", "containers"],
-  "gitlens.views.repositories.files.layout": "list",
-  "gitlens.codeLens.enabled": false,
-  "gitlens.hovers.avatars": false,
-  "gitlens.hovers.currentLine.over": "line",
-  "gitlens.hovers.annotations.changes": false,
-  "gitlens.hovers.currentLine.changes": false,
-  "gitlens.views.commits.files.layout": "list",
-  "gitlens.blame.avatars": false,
-  "gitlens.blame.dateFormat": "YYYY-MM-DD",
-  "gitlens.blame.fontSize": 13,
-  "gitlens.blame.fontWeight": "bold",
-  "gitlens.blame.format": "${agoOrDateShort|4?} ${authorNotYou|14-}",
-  "gitlens.blame.highlight.enabled": false,
-  "gitlens.blame.highlight.locations": ["gutter"],
-  "gitlens.blame.ignoreWhitespace": true,
-  "gitlens.blame.compact": true,
-  "gitlens.currentLine.enabled": true,
-  "gitlens.heatmap.ageThreshold": 90,
-  "gitlens.heatmap.coldColor": "#f7f6f9",
-  "gitlens.heatmap.fadeLines": true,
-  "gitlens.heatmap.hotColor": "#e87da4",
-  "gitlens.hovers.annotations.over": "annotation",
-  "gitlens.keymap": "none",
-  "gitlens.statusBar.enabled": false,
 
   // ErrorLens
   "errorLens.fontSize": "14",
