@@ -155,19 +155,6 @@ config.keys = {
     action = act.TogglePaneZoomState
   },
 
-  -- TODO: Select character to the left
-  {
-    key = 'LeftArrow',
-    mods = 'SHIFT',
-    action = act.DisableDefaultAssignment,
-  },
-  -- TODO: Select character to the right
-  {
-    key = 'RightArrow',
-    mods = 'SHIFT',
-    action = act.DisableDefaultAssignment,
-  },
-
   -- Go to beginning of line
   {
     key = 'LeftArrow',

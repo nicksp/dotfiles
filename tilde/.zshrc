@@ -1,9 +1,13 @@
+# Load configs
 source $HOME/dotfiles/zsh/path.zsh
 source $HOME/dotfiles/zsh/env.zsh
 source $HOME/dotfiles/zsh/options.zsh
 source $HOME/dotfiles/zsh/aliases.zsh
 source $HOME/dotfiles/zsh/completion.zsh
 source $HOME/dotfiles/zsh/key-bindings.zsh
+
+# Load plugins
+source $HOME/dotfiles/zsh/plugins/zsh-shift-select.plugin.zsh
 
 # Sets the window title nicely no matter where you are
 DISABLE_AUTO_TITLE="true"
