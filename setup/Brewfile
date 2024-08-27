@@ -69,7 +69,6 @@ cask "raycast" # All-in-one app / tasks launcher
 cask "rectangle" # Window manager
 cask "rocket" # Handy emojis picker
 cask "slack" # Messaging social platform
-cask "spotify" # Audio streaming platform
 cask "superduper" # Data backup
 cask "syntax-highlight", args: { no_quarantine: true } # Preview many different source code files
 cask "tableplus" # Database managmenent system

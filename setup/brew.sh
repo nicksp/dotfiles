@@ -33,7 +33,6 @@ brew bundle | indent
 # Extra apps
 echo ""
 title "☕️ Install more apps if you need them:"
-echo "brew install --cask tradingview"
 echo "brew install --cask zoom"
 echo "brew install --cask figma"
 echo "${bold}Tower 2${reset} − https://www.git-tower.com/download-TO2M"
@@ -43,15 +42,10 @@ echo "${bold}Audirvāna Origin${reset} − https://audirvana.com/audirvana-origi
 # App Store apps
 echo ""
 title "🍏 Install additional apps from App Store:"
-echo "https://apps.apple.com/us/app/ia-writer/id775737590?mt=12"
 echo "https://apps.apple.com/us/app/bear-markdown-notes/id1091189122?mt=12"
-echo "https://apps.apple.com/us/app/adblock-for-safari/id1402042596?mt=12"
 echo "https://apps.apple.com/us/app/colorslurp/id1287239339"
-echo "https://apps.apple.com/us/app/elmedia-universal-video-player/id937759555?mt=12"
 echo "https://apps.apple.com/us/app/spark-mail-ai-email-inbox/id6445813049?mt=12"
 echo "https://apps.apple.com/us/app/klack/id6446206067?mt=12"
-echo "https://apps.apple.com/us/app/photobulk-watermark-in-batch/id537211143?mt=12"
-echo "https://apps.apple.com/us/app/pixea/id1507782672?mt=12"
 echo "https://apps.apple.com/us/app/tadam/id531349534?mt=12"
 echo "https://apps.apple.com/us/app/things-3/id904280696?mt=12"
 
