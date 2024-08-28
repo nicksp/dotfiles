@@ -291,11 +291,15 @@ wezterm.on('format-window-title', function(tab, pane, tabs, panes, config)
 end)
 
 -- Set the correct window size at the startup
+-- Load the previous configuration
 wezterm.on('gui-startup', function(cmd)
   local _, _, window = wezterm.mux.spawn_window(cmd or {})
 
   -- Open full screen
   window:gui_window():maximize()
+
+  -- Restore previous session state
+  session_manager.restore_state(window:gui_window())
 end)
 
 --- 8< -- 8< ---
