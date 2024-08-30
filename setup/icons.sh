@@ -43,10 +43,6 @@ echo
 # https://icon-icons.com/icon/floppy-disk/30728
 update_icon "Marta" "/Applications/Marta.app" "/Applications/Marta.app/Contents/Resources/AppIcon.icns" "$ICONS_DIR/Floppy.icns"
 
-# Notion
-# https://dribbble.com/shots/4886987-Notion-Icon-Replacement
-update_icon "Notion" "/Applications/Notion.app" "/Applications/Notion.app/Contents/Resources/electron.icns" "$ICONS_DIR/Notion.icns"
-
 # Spark Desktop
 # https://macosicons.com/#/email%20003
 update_icon "Spark Desktop" "/Applications/Spark Desktop.app" "/Applications/Spark Desktop.app/Contents/Resources/icon.icns" "$ICONS_DIR/Mail.icns"
