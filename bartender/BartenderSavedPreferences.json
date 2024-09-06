@@ -1,0 +1,113 @@
+{
+  "menuBarColoringSpaceSettings" : {
+    "displayNumber" : "",
+    "spaceID" : "",
+    "menuBarStyling" : {
+      "RoundBelowMenuBar" : false,
+      "Shadow" : false,
+      "HideNotch" : false,
+      "HiddenInactiveMenuBar" : false,
+      "RoundBottomOfScreen" : false,
+      "RoundedCorners" : 0,
+      "BackgroundColors" : [
+        {
+          "color" : {
+            "red" : 0,
+            "alpha" : 0,
+            "green" : 0,
+            "blue" : 0
+          },
+          "location" : 0
+        }
+      ],
+      "BorderThickness" : 0,
+      "BorderColor" : [
+        0,
+        0,
+        0,
+        1
+      ],
+      "SeperatePills" : false,
+      "RoundedMenuBar" : false,
+      "RoundTopOfMenuBar" : false
+    },
+    "displayID" : "",
+    "spaceNumber" : 0,
+    "screenName" : "",
+    "isNotched" : false
+  },
+  "thresholdForScreenIsLarge" : 3000,
+  "delayBeforeShowingOnHover" : 0.2,
+  "showBartenderBar" : false,
+  "hoverOverEmptyMenuBarSpace" : true,
+  "triggerSettings" : {
+    "DCC8BB1B-FF45-482B-963F-F0FE49F7C227" : {
+      "isActive" : true,
+      "triggerSpecificDict" : "{\"Battery-percentage\":10.389229910714288,\"Battery-When\":\"lessThan\"}",
+      "profileToActivate" : "9DCC1E5B-E6FE-4727-8843-5FE0B1512B2A",
+      "uniqueID" : "DCC8BB1B-FF45-482B-963F-F0FE49F7C227",
+      "icon" : {
+        "isTemplate" : false
+      },
+      "isBuiltIn" : false,
+      "description" : "",
+      "type" : [
+        "Battery"
+      ],
+      "hasTriggered" : false,
+      "triggeredConditions" : [
+
+      ],
+      "name" : "Show Battery when battery condition met",
+      "isSpecial" : false
+    },
+    "357573CA-D35C-4FF3-B469-C47A54A1B071" : {
+      "icon" : {
+        "isTemplate" : false
+      },
+      "description" : "",
+      "isActive" : true,
+      "profileToActivate" : "AE1F7743-E14E-4B29-B1F5-974C8CBA3499",
+      "hasTriggered" : false,
+      "triggerSpecificDict" : "{\"ShowOn\":\"AllDisconnected\",\"WiFiSSID\":\"\"}",
+      "triggeredConditions" : [
+
+      ],
+      "isBuiltIn" : false,
+      "uniqueID" : "357573CA-D35C-4FF3-B469-C47A54A1B071",
+      "isSpecial" : false,
+      "name" : "Show Wi-Fi when not connected",
+      "type" : [
+        "WiFi"
+      ]
+    },
+    "TimeMachine1" : {
+      "isSpecial" : false,
+      "triggeredConditions" : [
+
+      ],
+      "isActive" : false,
+      "isBuiltIn" : false,
+      "triggerSpecificDict" : "{\"Script\":\"tmutil status | awk -F'=' '\\\/Running\\\/ {print $2*1}'\"}",
+      "icon" : {
+        "isTemplate" : true,
+        "sfSymbolName" : "SFSymbol:\/\/bolt.fill"
+      },
+      "uniqueID" : "TimeMachine1",
+      "name" : "Show Time Machine when time machine is backing up.",
+      "hasTriggered" : false,
+      "description" : "",
+      "type" : [
+        "Script"
+      ]
+    }
+  },
+  "clickOnEmptyBarSpace" : true,
+  "onlyShowOnNotch" : false,
+  "startAtLogin" : true,
+  "hideAllForInactiveBars" : false,
+  "useSystemLanguage" : true,
+  "showAllWhenScreenIsLarge" : false,
+  "swipeOrScrollMenuBar" : false,
+  "showMenuBarIcon" : true
+}
