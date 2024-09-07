@@ -28,7 +28,7 @@ brew upgrade
 
 # Install fonts, tools, apps & vscode extensions
 title "Installing software..."
-brew bundle | indent
+brew bundle --file=./setup/Brewfile | indent
 
 # Extra apps
 echo ""
