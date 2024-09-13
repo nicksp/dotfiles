@@ -668,6 +668,7 @@
   "errorLens.warningGutterIconColor": "#de9e59",
   "errorLens.hintGutterIconColor": "#eeceac",
 
+  "color-highlight.markerType": "underline",
   "color-highlight.markRuler": false,
   "color-highlight.matchWords": false,
 
