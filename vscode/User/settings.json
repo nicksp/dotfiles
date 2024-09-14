@@ -485,12 +485,15 @@
 
   // Common settings
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.formatOnPaste": true,
-  "editor.formatOnType": true,
+  "files.autoSave": "onFocusChange",
+  // Don’t autosave files with syntax errors
+  "files.autoSaveWhenNoErrors": true,
 
   // Let ESLint fix any issues it can
   "editor.codeActionsOnSave": {
+    // Trigger lint autofixing on explicit save (not on autosave)
     "source.fixAll": "explicit",
     "source.organizeImports": "never"
   },
@@ -542,27 +545,21 @@
 
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": false,
     // If you want a hard line-break (<br>) in the output,
     // we need to put two or more spaces at the end of a line.
     // It is a part of CommonMark, so we don’t want to prevent it.
@@ -570,14 +567,12 @@
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
   },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
@@ -598,7 +593,8 @@
   "prettier.useEditorConfig": false,
 
   "eslint.rules.customizations": [
-    { "rule": "*", "fixable": true, "severity": "info" }
+    // Change the severity of all autofixable issues to `off`
+    { "rule": "*", "fixable": true, "severity": "off" }
   ],
   "eslint.useESLintClass": true,
   "eslint.validate": [
