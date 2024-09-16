@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-
-// Patches Catppuccin Latte icons for VS Code with Squirrelsong color palette.
-// > More information: <https://github.com/catppuccin/vscode-icons/>.
+//
+// Patch Catppuccin Latte icons for VS Code with Squirrelsong color palette.
+// > More information: <https://github.com/catppuccin/vscode-icons>.
 //
 // ---
 // Based on <https://github.com/sapegin/dotfiles/blob/master/bin/sync-vscode-icons>
