@@ -95,11 +95,11 @@
 
 `t`
 
-# nn
+# ff
 
 - Open current directory in Marta file manager:
 
-`nn`
+`ff`
 
 # lg
 

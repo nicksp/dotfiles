@@ -50,6 +50,7 @@ alias v="nvim"
 alias vim="nvim"
 alias e="$EDITOR"
 alias c="code ."
+alias cc="code ."
 alias where="which"
 alias pn="pnpm"
 alias nvm="fnm"
@@ -66,7 +67,7 @@ alias ld="lazydocker"
 alias lg="lazygit --use-config-dir $DOTFILES/lazygit"
 
 # File Manager
-alias nn="open -a 'Marta' ."
+alias ff="open -a 'Marta' ."
 
 #
 # Built-ins upgrades
