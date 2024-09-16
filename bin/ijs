@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# Run interactive JS shell.
+#
+# - Start REPL JS session:
+#
+# `ijs`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+set -euo pipefail
+
+command_exists() {
+  command -v "$@" &> /dev/null
+}
+
+if command_exists bun; then
+  exec bun repl
+elif command_exists deno; then
+  exec deno repl
+elif hash command_exists node; then
+  exec node
+elif command_exists osascript; then
+  exec osascript -il JavaScript
+else
+  echo 'no js runtime found' 1>&2
+  exit 1
+fi
