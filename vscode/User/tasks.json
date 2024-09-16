@@ -1,0 +1,70 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Project: Reveal in Finder",
+      "type": "shell",
+      "command": "open -a 'Finder' '${workspaceFolder}'",
+      "presentation": {
+        "reveal": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Folder: Reveal in Finder",
+      "type": "shell",
+      "command": "open -a 'Finder' '${fileDirname}'",
+      "presentation": {
+        "reveal": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Project: Reveal in Marta",
+      "type": "shell",
+      "command": "open -a 'Marta' '${workspaceFolder}'",
+      "presentation": {
+        "reveal": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Folder: Reveal in Marta",
+      "type": "shell",
+      "command": "open -a 'Marta' '${fileDirname}'",
+      "presentation": {
+        "reveal": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "File: Reveal in Marta",
+      "type": "shell",
+      "command": "open -a 'Marta' '${file}'",
+      "presentation": {
+        "reveal": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Project: Reveal in WezTerm",
+      "type": "shell",
+      "command": "open -a 'WezTerm' --args start --cwd '${workspaceFolder}'",
+      "presentation": {
+        "reveal": "never"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Folder: Reveal in WezTerm",
+      "type": "shell",
+      "command": "open -a 'WezTerm' --args start --cwd '${fileDirname}'",
+      "presentation": {
+        "reveal": "never"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
