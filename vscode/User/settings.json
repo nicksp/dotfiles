@@ -88,9 +88,7 @@
   "editor.tabCompletion": "on",
   "editor.acceptSuggestionOnEnter": "off",
   "editor.wordBasedSuggestions": "off",
-  "editor.autoClosingBrackets": "never",
   "editor.autoClosingComments": "never",
-  "editor.autoClosingQuotes": "never",
 
   // Peek-less Go to navigation
   "editor.gotoLocation.multipleDeclarations": "goto",
@@ -114,7 +112,6 @@
   "editor.stickyScroll.maxLineCount": 3,
 
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.folding": false,
 
   // Top window bar
   // We have a lot of space in the window title, so why not use it to show where we are
@@ -714,7 +711,6 @@
   ],
 
   "githubPullRequests.defaultMergeMethod": "squash",
-  "githubPullRequests.fileListLayout": "flat",
   "githubPullRequests.pullPullRequestBranchBeforeCheckout": "pullAndMergeBase",
 
   "tailwindCSS.classAttributes": ["class", "className", "ngClass", "variants"],
