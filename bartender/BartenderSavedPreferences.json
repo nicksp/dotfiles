@@ -1,14 +1,31 @@
 {
+  "showBartenderBar" : false,
+  "delayBeforeShowingOnHover" : 0.2,
+  "clickOnEmptyBarSpace" : true,
+  "swipeOrScrollMenuBar" : false,
   "menuBarColoringSpaceSettings" : {
-    "displayNumber" : "",
-    "spaceID" : "",
+    "screenName" : "Built-in Retina Display",
+    "spaceNumber" : 1,
+    "displayNumber" : "1",
+    "isNotched" : false,
+    "spaceID" : "Default-Space-Display-1",
+    "displayID" : "37D8832A-2D66-02CA-B9F7-8F30A301B230",
     "menuBarStyling" : {
-      "RoundBelowMenuBar" : false,
-      "Shadow" : false,
-      "HideNotch" : false,
-      "HiddenInactiveMenuBar" : false,
+      "SeperatePills" : false,
       "RoundBottomOfScreen" : false,
+      "Shadow" : false,
+      "RoundedMenuBar" : false,
+      "RoundTopOfMenuBar" : false,
+      "BorderColor" : [
+        0,
+        0,
+        0,
+        1
+      ],
+      "HiddenInactiveMenuBar" : false,
       "RoundedCorners" : 0,
+      "HideNotch" : false,
+      "RoundBelowMenuBar" : false,
       "BackgroundColors" : [
         {
           "color" : {
@@ -20,94 +37,77 @@
           "location" : 0
         }
       ],
-      "BorderThickness" : 0,
-      "BorderColor" : [
-        0,
-        0,
-        0,
-        1
-      ],
-      "SeperatePills" : false,
-      "RoundedMenuBar" : false,
-      "RoundTopOfMenuBar" : false
-    },
-    "displayID" : "",
-    "spaceNumber" : 0,
-    "screenName" : "",
-    "isNotched" : false
+      "BorderThickness" : 0
+    }
   },
-  "thresholdForScreenIsLarge" : 3000,
-  "delayBeforeShowingOnHover" : 0.2,
-  "showBartenderBar" : false,
-  "hoverOverEmptyMenuBarSpace" : true,
+  "showMenuBarIcon" : true,
+  "useSystemLanguage" : true,
+  "hideAllForInactiveBars" : false,
+  "onlyShowOnNotch" : false,
+  "showAllWhenScreenIsLarge" : false,
+  "startAtLogin" : true,
   "triggerSettings" : {
-    "DCC8BB1B-FF45-482B-963F-F0FE49F7C227" : {
-      "isActive" : true,
-      "triggerSpecificDict" : "{\"Battery-percentage\":10.389229910714288,\"Battery-When\":\"lessThan\"}",
-      "profileToActivate" : "9DCC1E5B-E6FE-4727-8843-5FE0B1512B2A",
-      "uniqueID" : "DCC8BB1B-FF45-482B-963F-F0FE49F7C227",
+    "357573CA-D35C-4FF3-B469-C47A54A1B071" : {
+      "triggerSpecificDict" : "{\"ShowOn\":\"AllDisconnected\",\"WiFiSSID\":\"\"}",
       "icon" : {
         "isTemplate" : false
       },
+      "uniqueID" : "357573CA-D35C-4FF3-B469-C47A54A1B071",
+      "profileToActivate" : "AE1F7743-E14E-4B29-B1F5-974C8CBA3499",
       "isBuiltIn" : false,
+      "hasTriggered" : false,
+      "type" : [
+        "WiFi"
+      ],
+      "isActive" : true,
+      "isSpecial" : false,
       "description" : "",
+      "triggeredConditions" : [
+
+      ],
+      "name" : "Show Wi-Fi when not connected"
+    },
+    "DCC8BB1B-FF45-482B-963F-F0FE49F7C227" : {
+      "isBuiltIn" : false,
+      "isSpecial" : false,
+      "description" : "",
+      "isActive" : true,
+      "hasTriggered" : false,
       "type" : [
         "Battery"
       ],
-      "hasTriggered" : false,
       "triggeredConditions" : [
 
       ],
-      "name" : "Show Battery when battery condition met",
-      "isSpecial" : false
-    },
-    "357573CA-D35C-4FF3-B469-C47A54A1B071" : {
+      "profileToActivate" : "9DCC1E5B-E6FE-4727-8843-5FE0B1512B2A",
+      "uniqueID" : "DCC8BB1B-FF45-482B-963F-F0FE49F7C227",
+      "triggerSpecificDict" : "{\"Battery-percentage\":10.389229910714288,\"Battery-When\":\"lessThan\"}",
       "icon" : {
         "isTemplate" : false
       },
-      "description" : "",
-      "isActive" : true,
-      "profileToActivate" : "AE1F7743-E14E-4B29-B1F5-974C8CBA3499",
-      "hasTriggered" : false,
-      "triggerSpecificDict" : "{\"ShowOn\":\"AllDisconnected\",\"WiFiSSID\":\"\"}",
-      "triggeredConditions" : [
-
-      ],
-      "isBuiltIn" : false,
-      "uniqueID" : "357573CA-D35C-4FF3-B469-C47A54A1B071",
-      "isSpecial" : false,
-      "name" : "Show Wi-Fi when not connected",
-      "type" : [
-        "WiFi"
-      ]
+      "name" : "Show Battery when battery condition met"
     },
     "TimeMachine1" : {
+      "hasTriggered" : false,
+      "name" : "Show Time Machine when time machine is backing up.",
+      "triggerSpecificDict" : "{\"Script\":\"tmutil status | awk -F'=' '\\\/Running\\\/ {print $2*1}'\"}",
+      "isActive" : false,
       "isSpecial" : false,
+      "uniqueID" : "TimeMachine1",
       "triggeredConditions" : [
 
       ],
-      "isActive" : false,
-      "isBuiltIn" : false,
-      "triggerSpecificDict" : "{\"Script\":\"tmutil status | awk -F'=' '\\\/Running\\\/ {print $2*1}'\"}",
       "icon" : {
-        "isTemplate" : true,
-        "sfSymbolName" : "SFSymbol:\/\/bolt.fill"
+        "sfSymbolName" : "SFSymbol:\/\/bolt.fill",
+        "isTemplate" : true
       },
-      "uniqueID" : "TimeMachine1",
-      "name" : "Show Time Machine when time machine is backing up.",
-      "hasTriggered" : false,
-      "description" : "",
       "type" : [
         "Script"
-      ]
+      ],
+      "isBuiltIn" : false,
+      "description" : ""
     }
   },
-  "clickOnEmptyBarSpace" : true,
-  "onlyShowOnNotch" : false,
-  "startAtLogin" : true,
-  "hideAllForInactiveBars" : false,
-  "useSystemLanguage" : true,
-  "showAllWhenScreenIsLarge" : false,
-  "swipeOrScrollMenuBar" : false,
-  "showMenuBarIcon" : true
+  "thresholdForScreenIsLarge" : 3000,
+  "hoverOverEmptyMenuBarSpace" : true
 }
