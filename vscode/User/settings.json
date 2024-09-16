@@ -612,48 +612,13 @@
   "cSpell.spellCheckDelayMs": 500,
   "cSpell.enableFiletypes": ["shellscript", "mdx"],
   "cSpell.customDictionaries": {
-    "my-dictionary": {
-      "name": "my-dictionary",
+    "spellright": {
+      "name": "spellright",
       "path": "~/dotfiles/vscode/spellright.dict",
       "scope": "user",
       "addWords": true
     }
   },
-  "cSpell.userWords": [
-    "antd",
-    "apiaction",
-    "bizdev",
-    "clsx",
-    "consts",
-    "Contentful",
-    "dedupe",
-    "dups",
-    "fecha",
-    "graphql",
-    "hocs",
-    "Inititalize",
-    "lifecycles",
-    "linebreak",
-    "linkedin",
-    "Mapbox",
-    "mapboxgl",
-    "mediabox",
-    "middlewares",
-    "resetpassword",
-    "sendgrid",
-    "Smartlist",
-    "smartlists",
-    "stackoverflow",
-    "strapi",
-    "tanstack",
-    "testid",
-    "Timeframe",
-    "typecheck",
-    "uncommented",
-    "Upvotes",
-    "userspermissions",
-    "watchlist"
-  ],
 
   // ErrorLens
   "errorLens.fontSize": "14",
