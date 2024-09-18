@@ -1,4 +1,4 @@
-# https://git-scm.com/docs/git-config
+# See more: https://git-scm.com/docs/git-config
 
 # general config
 
@@ -66,9 +66,9 @@
 [url "git@github.com:nicksp/"]
   insteadOf = "git://github.com/nicksp/"
 
-# When accidentally cloning the HTTP version of a repository instead of the SSH version
-[url "git@github.com:"]
-	insteadOf = "https://github.com/"
+# When accidentally cloning the HTTPS version of a repository instead of the SSH version
+[url "git@github.com:nicksp/"]
+  insteadOf = "https://github.com/nicksp/"
 
 # command-specific
 

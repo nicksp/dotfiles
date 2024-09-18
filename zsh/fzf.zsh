@@ -1,4 +1,5 @@
 # Use fzf to search through the fd-results via fd (https://github.com/sharkdp/fd) to include hidden files (but exclude .git folders) and respect .gitignore
+# See more: https://github.com/junegunn/fzf/blob/master/ADVANCED.md
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
 
 # CTRL-T − Paste the selected files onto the command-line.
