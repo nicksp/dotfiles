@@ -2,6 +2,14 @@
 
 ## System Settings
 
+### Apple Account
+
+- **Personal Information** → **Communication Preferences** − Disable all options
+
+### Wi-Fi
+
+- Click **Details…** for the trusted connected network → **Private Wi-Fi address** − `Rotating`
+
 ### Notifications
 
 - Disable all except critical ones like email client and messaging apps
@@ -29,6 +37,7 @@
 ### General
 
 - **Software Update** → **Automatic Updates** − Enable all options
+- **AutoFill & Passwords** → **Verification Codes** → **Delete After Use** - `On`
 - **Sharing** → **Content and Media** − Disable all options
 - **Sharing** → **Accessories & Internet** − Disable all options
 - **Sharing** → **Advanced** − Disable all options
@@ -37,8 +46,9 @@
 ### Appearance
 
 - **Appearance** − `Auto`
-- **Accent colour** − `Graphite`
+- **Accent color** − `Graphite`
 - **Sidebar icon size** − `Large`
+- **Allow wallpaper tinting in windows** − `On`
 - **Show scroll bars** − `When scrolling`
 
 ### Accessibility
@@ -46,19 +56,22 @@
 - **Vision** → **Display** → **Reduce transparency** - `On`
 - **Vision** → **Display** → **Pointer** → **Pointer size** - between 1st and 2nd delimiters
 
-### Control Centre
+### Control Center
 
-- **Control Centre Modules** − Set all to `Don't Show in Menu Bar` except:
+- **Control Center Modules** − Set all to `Don't Show in Menu Bar` except:
   - **Wi-Fi** − `Show`
   - **Focus** − `Show When Active`
 - **Battery** − `Show in Menu Bar`
 - **Menu Bar Only** − Set all to `Don't Show in Menu Bar`
   - **Clock** − Never show date, Digital style
 
-### Siri & Spotlight
+### Siri
 
-- Disable **Ask Siri**
-- **Spotlight** → **Search results** − Turn on the following ones:
+- Disable **Siri Requests** → **Siri**
+
+### Spotlight
+
+- **Search results** − Turn on the following ones:
   - Applications
   - Calculator
   - Conversion
@@ -68,19 +81,24 @@
   - PDF Documents
   - Spreadsheets
   - System Settings
+- **Improve Search** − `Off`
+
+### iCloud
+
+- **Advanced Data Protection** − `On`
 
 ### Privacy & Security
 
-- **Location Services** → **System Services** − Turn on the following ones:
-  - System customisation
+- **Location Services** → **System Services** − Turn on the following ones _only_:
+  - System customization
   - Find My Mac
   - Networking and wireless
-- **Location Services** → **System Services** → **Show location icon in Control Centre…** − `On`
+- **Location Services** → **System Services** → **Show location icon in Control Center…** − `On`
 - **App Management** − Enable these applications to update/delete other apps:
   - Raycast
   - WezTerm (_to be able to run some patching scripts_)
 - **Analytics & Improvements** − Set everything to `Off`
-- **Apple Advertising** → **Personalised Ads** − `Off`
+- **Apple Advertising** → **Personalized Ads** − `Off`
 - **Security** → **Allow applications downloaded from** − `App Store and identified developers`
 
 ### Desktop & Dock
@@ -88,18 +106,22 @@
 - Change the size to close to Small
 - Remove all icons from the the Dock that I don't use
 - **Dock** → **Magnification** − `Off`
-- **Dock** → **Double-click a window's title bar to** − `Zoom`
-- **Dock** → **Minimise windows into application icon** − `On`
+- **Dock** → **Double-click a window's title bar to** − `Fill`
+- **Dock** → **Minimize windows into application icon** − `On`
 - **Dock** → **Automatically hide and show the Dock** − `On`
+- **Dock** → **Animate opening applications** − `On`
 - **Dock** → **Show indicators for open applications** − `On`
 - **Dock** → **Show suggested and recent apps in Dock** − `Off`
 - **State Manager** − `Off`
 - **Widgets** → **Widget style** − `Monochrome`
 - **Widgets** → **Use iPhone widgets** − `Off`
-- **Default web browser** − `Arc.app`
+- **Default web browser** − `Vivaldi.app`
 - **Windows** → **Prefer tabs when opening documents** − `In Full Screen`
 - **Windows** → **Ask to keep changes when closing documents** − `On`
 - **Windows** → **Close windows when quitting an application** − `Off`
+- **Windows** → **Tile by dragging windows to screen edges** − `On`
+- **Windows** → **Hold ⌥ key while dragging windows to tile** − `On`
+- **Windows** → **Tiled windows have margins** − `Off`
 - **Mission Control** → **Automatically rearrange Spaces…** − `On`
 - **Mission Control** → **When switching to an application, switch to a Space…** − `Off`
 - **Mission Control** → **Group windows by application** − `On`
@@ -114,17 +136,19 @@
 
 ### Displays
 
+- **Advanced…** → **Show resolutions as list** − `On`
 - Set comfortable resolution
 - **Brightness** around `85%`
-- **Automatically adjust bightness** − `Off`
+- **Automatically adjust brightness** − `Off`
 - **True Tone** − `On`
-- **Colour Profile** − `Colour LCD`
+- **Color profile** − `Color LCD`
 - **Night Shift…** − `Off`
 
 ### Battery
 
 - **Low Power Mode** − `Never`
-- **Options…** → **Slightly dim display on battery** − `On`
+- **Battery Health** → **Optimized Battery Charging** − `On`
+- **Options…** → **Slightly dim the display on battery** − `On`
 
 ### Lock Screen
 
@@ -187,6 +211,7 @@
 
 - I like to customize Finder so I can get to all of my most used places quickly:
   - My user's home
+  - `dotfiles` directory
   - Desktop
   - Applications
   - Downloads
@@ -201,8 +226,8 @@
   - **Advanced** − Enable **Show all filename extensions**
   - **Advanced** − Enable **Show warning before changing an extension**
   - **Advanced** − Enable **Show warning before removing from iCloud Drive**
-  - **Advanced** − Enable **Show warning before emptying the Bin**
-  - **Advanced** − Disable **Remove items from the Bin after 30 days**
+  - **Advanced** − Enable **Show warning before emptying the Trash**
+  - **Advanced** − Disable **Remove items from the Trash after 30 days**
   - **Advanced** → **When performing a search:** − `Search the Current Folder`
 - Enable showing hidden files
 - **View** → **Show Sidebar**
