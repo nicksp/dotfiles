@@ -453,12 +453,6 @@
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
-  {
-    "comment": "The default Cmd+K keybinding doesn't seem to work for me because of either it's redefined manually as a chord keybinding or an extension does it. The only workaround currently is to redefine the Cmd+k keybinding at a higher level. Adding this again to the bottom of keybindings.json fixes the problem",
-    "key": "cmd+k",
-    "command": "workbench.action.terminal.clear",
-    "when": "terminalFocus"
-  },
 
   /**
    * Markdown
@@ -795,41 +789,6 @@
   },
 
   /**
-   * Internal Functions
-   */
-
-  {
-    "comment": "",
-    "key": "ctrl+escape",
-    "command": "workbench.action.toggleActivityBarVisibility"
-  },
-  {
-    "comment": "Copy relative path of the currently open file",
-    "key": "cmd+4",
-    "command": "copyRelativeFilePath"
-  },
-  {
-    "comment": "Make my zoom behavior more like in Chrome",
-    "key": "cmd+0",
-    "command": "workbench.action.zoomReset"
-  },
-  {
-    "comment": "Disable the Enter key for autocomplete. Use tab instead. It's annoying when I'm typing quickly and want to go to the next line but have to first clear the autocomplete menu. So I just disabled the enter key here.",
-    "key": "enter",
-    "command": "-acceptSelectedSuggestion"
-  },
-  {
-    "comment": "Don't autocomplete on Enter in terminal, just on Tab: more ways to get rid of the autocomplete when you don't need it.",
-    "key": "enter",
-    "command": "-workbench.action.terminal.acceptSelectedSuggestion"
-  },
-  {
-    "comment": "Zen mode. When things get too cluttered I hit cmd+k+k",
-    "key": "cmd+k cmd+k",
-    "command": "workbench.action.toggleZenMode"
-  },
-
-  /**
    * Plugins
    */
 
@@ -902,5 +861,41 @@
   {
     "key": "cmd+k cmd+w",
     "command": "-workbench.action.closeAllEditors"
+  },
+
+  /**
+   * Internal Functions
+   */
+
+  {
+    "comment": "",
+    "key": "ctrl+escape",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "comment": "Copy relative path of the currently open file",
+    "key": "cmd+4",
+    "command": "copyRelativeFilePath"
+  },
+  {
+    "comment": "Make my zoom behavior more like in Chrome",
+    "key": "cmd+0",
+    "command": "workbench.action.zoomReset"
+  },
+  {
+    "comment": "Disable the Enter key for autocomplete. Use tab instead. It's annoying when I'm typing quickly and want to go to the next line but have to first clear the autocomplete menu. So I just disabled the enter key here.",
+    "key": "enter",
+    "command": "-acceptSelectedSuggestion"
+  },
+  {
+    "comment": "Don't autocomplete on Enter in terminal, just on Tab: more ways to get rid of the autocomplete when you don't need it.",
+    "key": "enter",
+    "command": "-workbench.action.terminal.acceptSelectedSuggestion"
+  },
+  {
+    "comment": "The default Cmd+K keybinding doesn't seem to work for me because of either it's redefined manually as a chord keybinding or an extension does it. The only workaround currently is to redefine the Cmd+k keybinding at a higher level. Adding this again to the bottom of keybindings.json fixes the problem",
+    "key": "cmd+k",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
   }
 ]
