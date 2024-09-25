@@ -1,6 +1,12 @@
 [
   /**
-   * Panels & Views
+   * - Cmd+* − most actively used commands
+   * - Cmd+K Cmd+* − namespace for less frequently used commands
+   * - Cmd+M Cmd+* − namespace for Emmet commands
+   */
+
+  /**
+   * Panels and Views
    */
 
   {
@@ -114,30 +120,6 @@
     "command": "workbench.action.closePanel",
     "when": "terminalFocus"
   },
-  {
-    "comment": "Switch to the first Terminal. Note: Code’s default implementation of toggling the terminal is silly. If the editor has focus, you will have to first hide, then show the terminal to get it to focus. Below is a keybinding hack you can use to make it sensible again",
-    "key": "cmd+t",
-    "command": "workbench.action.terminal.focusAtIndex1",
-    "when": "!terminalFocus"
-  },
-  {
-    "comment": "Switch to the next Terminal",
-    "key": "cmd+t",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-  },
-  {
-    "key": "ctrl+[Backquote]",
-    "command": "-workbench.action.terminal.toggleTerminal"
-  },
-  {
-      "key": "shift+cmd+]",
-      "command": "-workbench.action.terminal.focusNext"
-  },
-  {
-      "key": "shift+cmd+[",
-      "command": "-workbench.action.terminal.focusPrevious"
-  },
 
   /**
    * Quick Open
@@ -201,21 +183,252 @@
     "key": "shift+cmd+b",
     "command": "-workbench.action.tasks.build"
   },
+  {
+    // Matches cmd+o (Open recent files)
+    "comment": "Search and switch between open projects",
+    "key": "cmd+;",
+    "command": "workbench.action.switchWindow"
+  },
 
   /**
-   * Code editing and navigation
+   * Code Editing and Navigation
    */
 
   {
-    "comment": "If I’m in a sidebar or terminal, it’s a small annoyance to have to click the editor to get back into editing mode. This shortcut (cmd+e+e) provides an easy way to focus the editor from anywhere in VS Code.",
+    "comment": "If I'm in a sidebar or terminal, it's a small annoyance to have to click the editor to get back into editing mode. This shortcut (cmd+e+e) provides an easy way to focus the Editor from anywhere in VS Code.",
     "key": "cmd+e cmd+e",
     "command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "comment": "Format and Save (to make autosave save files without formatting)",
+    "key": "cmd+s",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "editor.action.format",
+        "workbench.action.files.save"
+      ]
+    }
+  },
+  {
+    "key": "cmd+s",
+    "command": "-workbench.action.files.save"
+  },
+  {
+    "comment": "Erase (delete) current or selected lines",
+    "key": "cmd+e",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "comment": "Duplicate current Line or selected Lines",
+    "key": "cmd+l",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+l",
+    "command": "-expandLineSelection"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction"
+  },
+  {
+    "comment": "Join selected lines",
+    "key": "cmd+j",
+    "command": "editor.action.joinLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-editor.action.joinLines"
+  },
+  {
+    "comment": "Open quick fix menu",
+    "key": "alt+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+.",
+    "command": "-editor.action.quickFix",
+  },
+  {
+    "comment": "Fold",
+    "key": "shift+cmd+[",
+    "command": "editor.fold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "alt+cmd+[",
+    "command": "-editor.fold"
+  },
+  {
+    "comment": "Unfold",
+    "key": "shift+cmd+]",
+    "command": "editor.unfold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "alt+cmd+]",
+    "command": "-editor.unfold"
+  },
+  {
+    // Matches cmd+/ to add an inline comment
+    "comment": "Block comment selection",
+    "key": "cmd+alt+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment"
+  },
+  {
+    // Matches cmd+f2 (Change all Occurrences)
+    // Skips the current selected occurrence
+    "comment": "Move selection to the next occurrence",
+    "key": "alt+f2",
+    "command": "editor.action.moveSelectionToNextFindMatch",
+    "when": "editorFocus && editorHasMultipleSelections"
+  },
+  {
+    "key": "alt+f2",
+    "command": "-editor.action.accessibleView"
+  },
+  {
+    // Undo the last selected occurrence
+    "comment": "Move selection to the previous occurrence",
+    "key": "cmd+backspace",
+    "command": "editor.action.moveSelectionToPreviousFindMatch",
+    "when": "editorFocus && editorHasMultipleSelections"
+  },
+  {
+    "comment": "Add cursors to the end of a selection or entire selected lines",
+    "key": "cmd+right",
+    "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus && editorHasSelection"
+  },
+  {
+    "key": "shift+alt+i",
+    "command": "-editor.action.insertCursorAtEndOfEachLineSelected"
+  },
+  {
+    "comment": "Split editor panel vertically",
+    "key": "ctrl+n",
+    "command": "workbench.action.splitEditor",
+    "when": "editorFocus"
+  },
+  {
+    "comment": "Close the current editor panel",
+    "key": "ctrl+w",
+    "command": "workbench.action.joinAllGroups",
+    "when": "editorFocus"
+  },
+  {
+    "comment": "Focus editor panel to the right",
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight",
+    "when": "editorFocus"
+  },
+  {
+    "comment": "Focus editor panel to the left",
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft",
+    "when": "editorFocus"
+  },
+  {
+    "comment": "Grow the current editor panel size",
+    "key": "ctrl+=",
+    "command": "workbench.action.increaseViewSize",
+    "when": "editorFocus"
+  },
+  {
+    "comment": "Shrink the current editor panel size",
+    "key": "ctrl+-",
+    "command": "workbench.action.decreaseViewSize",
+    "when": "editorFocus"
+  },
+  {
+    "comment": "Go to definition",
+    "key": "cmd+enter",
+    "command": "editor.action.revealDefinition",
+    "when": "editorHasDefinitionProvider && editorTextFocus"
+  },
+  {
+    "comment": "Find all references",
+    "key": "cmd+alt+enter",
+    "command": "references-view.findReferences",
+    "when": "editorHasReferenceProvider"
+  },
+  {
+    "key": "f12",
+    "command": "-editor.action.revealDefinition"
+  },
+    {
+    "key": "cmd+f12",
+    "command": "-editor.action.revealDefinition"
+  },
+  {
+    "key": "cmd+f12",
+    "command": "-editor.action.goToImplementation"
+  },
+  {
+    "key": "alt+f12",
+    "command": "-editor.action.peekDefinition"
+  },
+  {
+    "key": "shift+alt+f12",
+    "command": "-references-view.findReferences"
+  },
+  {
+    "key": "shift+cmd+f12",
+    "command": "-editor.action.peekImplementation"
   },
 
   /**
    * Terminal
    */
 
+  {
+    "comment": "Create a New terminal",
+    "key": "cmd+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new"
+  },
+  {
+    "comment": "Switch to the first Terminal. Note: Code's default implementation of toggling the terminal is silly. If the editor has focus, you will have to first hide, then show the terminal to get it to focus. Below is a keybinding hack you can use to make it sensible again",
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.focusAtIndex1",
+    "when": "!terminalFocus"
+  },
+  {
+    "comment": "Switch to the next Terminal",
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "ctrl+[Backquote]",
+    "command": "-workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "shift+cmd+]",
+    "command": "-workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "shift+cmd+[",
+    "command": "-workbench.action.terminal.focusPrevious"
+  },
   {
     "comment": "Split terminal panel vertically",
     "key": "ctrl+n",
@@ -240,12 +453,328 @@
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
+  {
+    "comment": "The default Cmd+K keybinding doesn't seem to work for me because of either it's redefined manually as a chord keybinding or an extension does it. The only workaround currently is to redefine the Cmd+k keybinding at a higher level. Adding this again to the bottom of keybindings.json fixes the problem",
+    "key": "cmd+k",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+
+  /**
+   * Markdown
+   */
+  {
+    "comment": "Open Markdown preview",
+    "key": "cmd+k cmd+m",
+    "command": "markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "cmd+k v",
+    "command": "-markdown.showPreviewToSide"
+  },
+
+  /**
+   * Emmet (eMMet)
+   */
+
+  {
+    "comment": "Select the Inner contents of a tag",
+    "key": "cmd+m cmd+i",
+    "command": "editor.emmet.action.balanceIn",
+    "when": "editorTextFocus"
+  },
+  {
+    "comment": "Select the Outer contents of a tag",
+    "key": "cmd+m cmd+o",
+    "command": "editor.emmet.action.balanceOut",
+    "when": "editorTextFocus"
+  },
+  {
+    "comment": "Wrap with emmet abbreviation",
+    "key": "cmd+m cmd+w",
+    "command": "editor.emmet.action.wrapWithAbbreviation",
+    "when": "editorTextFocus"
+  },
+  {
+    "comment": "Move cursor to a matching tag",
+    "key": "cmd+m cmd+m",
+    "command": "editor.emmet.action.matchTag",
+    "when": "editorTextFocus"
+  },
+  {
+    "comment": "Rename a tag",
+    "key": "cmd+m cmd+r",
+    "command": "editor.emmet.action.updateTag",
+    "when": "editorTextFocus"
+  },
+  {
+    "comment": "Remove the tag but keep the contents",
+    "key": "cmd+m cmd+backspace",
+    "command": "editor.emmet.action.removeTag",
+    "when": "editorTextFocus"
+  },
+
+  /**
+   * Settings (preferences)
+   */
+
+  {
+    "comment": "Open user settings (JSON)",
+    "key": "cmd+,",
+    "command": "workbench.action.openSettingsJson"
+  },
+  {
+    "comment": "Open user keybindings (JSON)",
+    "key": "alt+,",
+    "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+
+  /**
+   * Git
+   */
+  {
+    // Matches GitHub Desktop create pull request command
+    "comment": "Create a new pull Request",
+    "key": "cmd+r",
+    "command": "pr.create",
+    "when": "focusedView == workbench.scm"
+  },
+  {
+    // Matches GitHub Desktop push command
+    "comment": "Sync changes with the remote",
+    "key": "cmd+p",
+    "command": "git.sync",
+    "when": "focusedView == workbench.scm"
+  },
+  {
+    "comment": "View all Changes",
+    "key": "shift+cmd+c",
+    "command": "git.viewChanges"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    // TODO: Find a way to make it simply a space
+    "comment": "Stage selected files in the source control list",
+    "key": "alt+space",
+    "command": "git.stash",
+    "when": "workbench.scm.active"
+  },
+
+  /**
+   * Search (find)
+   */
+
+  // cmd+f: find in current file (default)
+  // cmd+shift+f: find in files (default)
+  {
+    "comment": "Replace in current file",
+    "key": "cmd+r",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+cmd+f",
+    "command": "-editor.action.startFindReplaceAction"
+  },
+  {
+    "comment": "Replace in files",
+    "key": "cmd+shift+r",
+    "command": "workbench.action.replaceInFiles"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "-workbench.action.replaceInFiles"
+  },
+  {
+    "comment": "Focus on the 1st search results when pressing Enter in the search box",
+    "key": "enter",
+    "command": "search.action.focusNextSearchResult",
+    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
+  },
+  {
+    "comment": "Replace all in the current file",
+    "key": "cmd+enter",
+    "command": "editor.action.replaceAll",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "comment": "Replace all in files",
+    "key": "cmd+enter",
+    "command": "search.action.replaceAll",
+    "when": "replaceActive && searchViewletVisible && !findWidgetVisible"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "-editor.action.replaceAll"
+  },
+  {
+    "key": "alt+cmd+enter",
+    "command": "-editor.action.replaceAll"
+  },
+  {
+    "key": "alt+cmd+enter",
+    "command": "-search.action.replaceAll"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "-search.action.openInEditor"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "toggleSearchCaseSensitive",
+    "when": "searchViewletFocus && !fileMatchOrFolderMatchFocus"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "toggleSearchEditorCaseSensitive",
+    "when": "inSearchEditor && searchInputBoxFocus"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "toggleFindCaseSensitive",
+    "when": "findInputFocussed"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "workbench.action.terminal.toggleFindCaseSensitive",
+    "when": "terminalFindVisible && terminalHasBeenCreated || terminalFindVisible && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "toggleSearchEditorWholeWord",
+    "when": "inSearchEditor && searchInputBoxFocus"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "workbench.action.terminal.toggleFindWholeWord",
+    "when": "terminalFindVisible && terminalHasBeenCreated || terminalFindVisible && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "toggleFindWholeWord",
+    "when": "findInputFocussed"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "toggleSearchWholeWord",
+    "when": "searchViewletFocus"
+  },
+  {
+    "key": "ctrl+3",
+    "command": "toggleSearchEditorRegex",
+    "when": "inSearchEditor && searchInputBoxFocus"
+  },
+  {
+    "key": "ctrl+3",
+    "command": "workbench.action.terminal.toggleFindRegex",
+    "when": "terminalFindVisible && terminalHasBeenCreated || terminalFindVisible && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+3",
+    "command": "toggleSearchRegex",
+    "when": "searchViewletFocus"
+  },
+  {
+    "key": "ctrl+3",
+    "command": "toggleFindRegex",
+    "when": "findInputFocussed"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "-workbench.action.openEditorAtIndex1"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "-workbench.action.openEditorAtIndex2"
+  },
+  {
+    "key": "ctrl+3",
+    "command": "-workbench.action.openEditorAtIndex3"
+  },
+  {
+    "key": "ctrl+4",
+    "command": "-workbench.action.openEditorAtIndex4"
+  },
+  {
+    "key": "ctrl+5",
+    "command": "-workbench.action.openEditorAtIndex5"
+  },
+  {
+    "key": "ctrl+6",
+    "command": "-workbench.action.openEditorAtIndex6"
+  },
+  {
+    "key": "ctrl+7",
+    "command": "-workbench.action.openEditorAtIndex7"
+  },
+  {
+    "key": "ctrl+8",
+    "command": "-workbench.action.openEditorAtIndex8"
+  },
+  {
+    "key": "ctrl+9",
+    "command": "-workbench.action.openEditorAtIndex9"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "-workbench.action.lastEditorInGroup"
+  },
+  {
+    "key": "alt+cmd+w",
+    "command": "-toggleSearchEditorWholeWord"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-toggleSearchEditorRegex"
+  },
+  {
+    "key": "alt+cmd+w",
+    "command": "-workbench.action.terminal.toggleFindWholeWord"
+  },
+  {
+    "key": "alt+cmd+w",
+    "command": "-toggleFindWholeWord"
+  },
+  {
+    "key": "alt+cmd+w",
+    "command": "-toggleSearchWholeWord"
+  },
+  {
+    "key": "alt+cmd+c",
+    "command": "-toggleSearchEditorCaseSensitive"
+  },
+  {
+    "key": "alt+cmd+c",
+    "command": "-workbench.action.terminal.toggleFindCaseSensitive"
+  },
+  {
+    "key": "alt+cmd+c",
+    "command": "-toggleFindCaseSensitive"
+  },
+  {
+    "key": "alt+cmd+c",
+    "command": "-toggleSearchCaseSensitive"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-workbench.action.terminal.toggleFindRegex"
+  },
+  {
+    "key": "alt+cmd+r",
+    "command": "-toggleSearchRegex"
+  },
 
   /**
    * File Explorer
    */
 
   {
+    "comment": "Duplicate selected in explorer file as…",
     "key": "cmd+d",
     "command": "fileutils.duplicateFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
@@ -270,85 +799,34 @@
    */
 
   {
+    "comment": "",
     "key": "ctrl+escape",
     "command": "workbench.action.toggleActivityBarVisibility"
   },
   {
+    "comment": "Copy relative path of the currently open file",
     "key": "cmd+4",
     "command": "copyRelativeFilePath"
   },
   {
-    "comment": "This makes my zoom behavior more like chrome",
+    "comment": "Make my zoom behavior more like in Chrome",
     "key": "cmd+0",
     "command": "workbench.action.zoomReset"
   },
   {
-    "comment": "This disables the enter key for autocomplete. Use tab instead. It's annoying when I'm typing quickly and want to go to the next line but have to first clear the autocomplete menu. So I just disabled the enter key here.",
+    "comment": "Disable the Enter key for autocomplete. Use tab instead. It's annoying when I'm typing quickly and want to go to the next line but have to first clear the autocomplete menu. So I just disabled the enter key here.",
     "key": "enter",
-    "command": "-acceptSelectedSuggestionOnEnter",
-    "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
+    "command": "-acceptSelectedSuggestion"
   },
   {
-    "key": "cmd+l",
-    "command": "emojiConsoleLog.addLogMessage"
-  },
-  {
-    "key": "ctrl+alt+l",
-    "command": "-emojiConsoleLog.addLogMessage"
+    "comment": "Don't autocomplete on Enter in terminal, just on Tab: more ways to get rid of the autocomplete when you don't need it.",
+    "key": "enter",
+    "command": "-workbench.action.terminal.acceptSelectedSuggestion"
   },
   {
     "comment": "Zen mode. When things get too cluttered I hit cmd+k+k",
     "key": "cmd+k cmd+k",
     "command": "workbench.action.toggleZenMode"
-  },
-  {
-    "key": "cmd+[Slash]",
-    "command": "editor.action.commentLine",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+cmd+[Backslash]",
-    "command": "-editor.action.commentLine",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+enter",
-    "command": "editor.action.quickFix",
-    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "cmd+.",
-    "command": "-editor.action.quickFix",
-    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-  },
-  {
-    "comment": "Focuses on the 1st search results when pressing Enter in the search box",
-    "key": "enter",
-    "command": "search.action.focusNextSearchResult",
-    "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible"
-  },
-  {
-    "comment": "The default Cmd+K keybinding doesn't seem to work for me because of either it's redefined manually as a chord keybinding or an extension does it. The only workaround currently is to redefine the Cmd+k keybinding at a higher level (user keybindings.json). Adding this again to the bottom of keybindings.json fixes the problem",
-    "key": "cmd+k",
-    "command": "workbench.action.terminal.clear",
-    "when": "terminalFocus"
-  },
-
-  // View Git changes
-  {
-    "key": "shift+cmd+c",
-    "command": "git.viewChanges"
-  },
-  {
-    "key": "shift+cmd+c",
-    "command": "-workbench.action.terminal.openNativeConsole",
-    "when": "!terminalFocus"
-  },
-  {
-    "comment": "Stages files with a Option+Space",
-    "key": "alt+space",
-    "command": "git.stash",
-    "when": "workbench.scm.active"
   },
 
   /**
@@ -390,5 +868,39 @@
     "key": "shift+cmd+g shift+cmd+b",
     "command": "justBlame.toggleBlame",
     "when": "editorTextFocus"
+  },
+
+  // Jest Runner
+  // {
+    // TODO: Find a suitable shortcut not to interfere with the others
+    // "comment": "Run a test Method",
+    // "key": "cmd+k cmd+m",
+    // "command": "extension.runJest"
+  // },
+  {
+    "comment": "Run a test File",
+    "key": "cmd+k cmd+f",
+    "command": "extension.runJestFile"
+  },
+  {
+    "comment": "Run the Previous test",
+    "key": "cmd+k cmd+p",
+    "command": "extension.runPrevJest"
+  },
+
+  // Rewrap
+  {
+    "comment": "ReWrap current comment",
+    "key": "cmd+k cmd+w",
+    "command": "rewrap.rewrapComment",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+q",
+    "command": "-rewrap.rewrapComment"
+  },
+  {
+    "key": "cmd+k cmd+w",
+    "command": "-workbench.action.closeAllEditors"
   }
 ]
