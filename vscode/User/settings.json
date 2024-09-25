@@ -217,17 +217,23 @@
   "editor.glyphMargin": false,
   "editor.showFoldingControls": "never", // ?
   "editor.renderLineHighlight": "none",
+  "editor.occurrencesHighlight": "off",
   "editor.inlayHints.padding": true,
   "editor.lineNumbers": "off",
   "editor.scrollbar.horizontal": "hidden",
   "editor.hideCursorInOverviewRuler": true,
   "editor.overviewRulerBorder": false,
   "editor.minimap.enabled": false,
+  "editor.lightbulb.enabled": "off",
   "outline.problems.badges": false,
   "outline.showVariables": false,
   "problems.autoReveal": false,
   "problems.decorations.enabled": false,
   "search.decorations.badges": false,
+  "git.decorations.enabled": false,
+  "scm.diffDecorations": "gutter",
+  "scm.diffDecorationsGutterPattern": { "modified": false },
+  "scm.diffDecorationsIgnoreTrimWhitespace": "true",
   "testing.openTesting": "openOnTestFailure",
   "typos.diagnosticSeverity": "Information",
   "window.commandCenter": false,
@@ -249,9 +255,6 @@
 
   "merge-conflict.autoNavigateNextConflict.enabled": true,
 
-  "scm.diffDecorations": "gutter",
-  "scm.diffDecorationsGutterPattern": { "modified": false },
-  "scm.diffDecorationsIgnoreTrimWhitespace": "true",
   "scm.inputFontFamily": "editor",
   "scm.inputFontSize": 16,
   "scm.inputMaxLineCount": 20,
@@ -271,7 +274,7 @@
   "workbench.fontAliasing": "auto",
 
   // MonoLisa typography preset
-  "editor.lineHeight": 1.55, // ? 0 has a similar effect and will automatically adjust based on the font-size.
+  "editor.lineHeight": 1.6, // ? 0 has a similar effect and will automatically adjust based on the font-size.
   "editor.fontFamily": "MonoLisa, \"Symbols Nerd Font Mono\"",
   "editor.fontLigatures": "'calt' on, 'liga' off, 'zero' on, 'ss11' on, 'ss08' on",
   "editor.fontSize": 17,
@@ -586,7 +589,9 @@
   |--------------------------------------------------------------------------
   */
 
+  // Only run Prettier in projects that are set up to use it
   "prettier.requireConfig": true,
+  // Do not look at `.editorconfig` files for Prettier configuration
   "prettier.useEditorConfig": false,
 
   "eslint.rules.customizations": [
