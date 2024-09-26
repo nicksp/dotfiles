@@ -555,7 +555,7 @@
     // TODO: Find a way to make it simply a space
     "comment": "Stage selected files in the source control list",
     "key": "alt+space",
-    "command": "git.stash",
+    "command": "git.stage",
     "when": "workbench.scm.active"
   },
 
