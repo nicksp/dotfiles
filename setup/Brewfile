@@ -7,7 +7,6 @@ tap "jesseduffield/lazygit"
 tap "oven-sh/bun"
 
 # CLI tools
-brew "python@3.11" # Required by awscli
 brew "awscli" # Official Amazon AWS command-line interface
 brew "bat" # Output highlighting (better `cat`)
 brew "eza" # Listing files with info (better `ls`)
@@ -23,6 +22,7 @@ brew "neovim" # Text editor for terminal
 brew "node" # Fallback Node.js version
 brew "pnpm" # Efficient Node.js package manager
 brew "prettyping" # Prettier and compact `ping`
+brew "python@3.11" # Required by awscli
 brew "ripgrep" # Searching within files (better `grep`)
 brew "starship" # Prompt manager
 brew "tlrc" # Community-maintained docs (better `man`)
@@ -46,6 +46,9 @@ brew "pango"
 brew "librsvg"
 brew "pkg-config"
 
+# Fonts
+cask "font-symbols-only-nerd-font"
+
 # GUI apps
 cask "1password@7" # Password manager
 cask "arc" # Modern browser
@@ -56,6 +59,7 @@ cask "coteditor" # Simple code/text editor
 cask "discord" # Messaging social platform
 cask "docker" # Running containerized applications
 cask "hazeover" # Fades out inactive windows
+cask "hyperkey" # Enables mapping hyper key to the caps lock key
 cask "insomnia" # API client
 cask "itsycal" # Tiny popup calendar in a menu bar
 cask "keka" # File archiver and extractor
@@ -77,10 +81,8 @@ cask "visual-studio-code" # Code editor
 cask "vivaldi" # Browser with built-in privacy
 cask "wezterm" # Better terminal emulator
 
-# Fonts
-cask "font-symbols-only-nerd-font"
 
-# VSCode extensions
+# VS Code extensions
 vscode "astro-build.astro-vscode"
 vscode "bierner.markdown-preview-github-styles"
 vscode "bradlc.vscode-tailwindcss"
