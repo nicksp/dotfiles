@@ -260,7 +260,6 @@
   "scm.inputFontSize": 16,
   "scm.inputMaxLineCount": 20,
   "scm.inputMinLineCount": 4,
-  "scm.showHistoryGraph": false,
 
   /*
   |--------------------------------------------------------------------------
