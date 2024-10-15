@@ -115,6 +115,8 @@ export BAT_THEME="Squirrelsong Dark"
 export NEXT_TELEMETRY_DISABLED=1
 # https://www.gatsbyjs.com/docs/telemetry/
 export GATSBY_TELEMETRY_DISABLED=1
+# https://astro.build/telemetry/
+export ASTRO_TELEMETRY_DISABLED=1
 
 # Homebrew: https://docs.brew.sh/Manpage#environment
 export HOMEBREW_INSTALL_BADGE='☕'
