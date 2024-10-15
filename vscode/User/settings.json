@@ -89,6 +89,7 @@
   "editor.acceptSuggestionOnEnter": "off",
   "editor.wordBasedSuggestions": "off",
   "editor.autoClosingComments": "never",
+  "editor.experimentalEditContextEnabled": true,
 
   // Peek-less Go to navigation
   "editor.gotoLocation.multipleDeclarations": "goto",
@@ -726,5 +727,5 @@
   "supermaven.enableDeleteSuggestions": false,
   "supermaven.enableFixWithSupermaven": false,
   "supermaven.enableJumpSuggestions": false,
-  "supermaven.enableSuggestionHighlighting": false,
+  "supermaven.enableSuggestionHighlighting": false
 }
