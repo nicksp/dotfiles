@@ -91,7 +91,7 @@
 
 # t
 
-- Open current directory in Tower Git client:
+- Open current directory in Github Desktop git client:
 
 `t`
 

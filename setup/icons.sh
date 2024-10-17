@@ -47,10 +47,6 @@ update_icon "Marta" "/Applications/Marta.app" "/Applications/Marta.app/Contents/
 # https://macosicons.com/#/email%20003
 update_icon "Spark Desktop" "/Applications/Spark Desktop.app" "/Applications/Spark Desktop.app/Contents/Resources/icon.icns" "$ICONS_DIR/Mail.icns"
 
-# Git Tower
-# https://dribbble.com/shots/1694053-Git-App-Icon
-update_icon "Tower" "/Applications/Tower.app" "/Applications/Tower.app/Contents/Resources/Icon.icns" "$ICONS_DIR/Git.icns"
-
 # WezTerm
 # https://github.com/dhanishgajjar/terminal-icons?tab=readme-ov-file
 update_icon "WezTerm" "/Applications/WezTerm.app" "/Applications/WezTerm.app/Contents/Resources/terminal.icns" "$ICONS_DIR/Terminal.icns"
@@ -62,11 +58,6 @@ update_icon "Visual Studio Code" "/Applications/Visual Studio Code.app" "/Applic
 # Vivaldi
 # https://macosicons.com/#/Netscape%20Navigator
 update_icon "Vivaldi" "/Applications/Vivaldi.app" "/Applications/Vivaldi.app/Contents/Resources/app.icns" "$ICONS_DIR/Browser.icns"
-
-# Arc
-# TODO: The default icon gets restored after the app restart
-# https://dribbble.com/shots/18601645-Arc-The-Browser-Company
-update_icon "Arc" "/Applications/Arc.app" "/Applications/Arc.app/Contents/Resources/AppIcon.icns" "$ICONS_DIR/Arc.icns"
 
 # Zoom
 # https://dribbble.com/shots/23820258-Zoom-MacOS-Replacement-Icon

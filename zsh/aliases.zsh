@@ -58,7 +58,7 @@ alias nvm="fnm"
 # Apps
 
 # Git client
-alias t="open -a 'Tower' ."
+alias t="github ."
 
 # Lazydocker
 alias ld="lazydocker"

@@ -52,7 +52,6 @@ cask "font-symbols-only-nerd-font"
 
 # GUI apps
 cask "1password@7" # Password manager
-cask "arc" # Modern browser
 cask "bartender" # Manage menu bar icons
 cask "cleanmymac" # System clean up manager
 cask "cleanshot" # Annotated screenshots & quick videos
