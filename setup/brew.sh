@@ -33,9 +33,10 @@ brew bundle | indent
 # Extra apps
 echo ""
 title "☕️ Install more apps if you need them:"
-echo "brew install --cask zoom"
+echo "brew install --cask daisydisk"
 echo "brew install --cask figma"
-echo "${bold}Tower 2${reset} − https://www.git-tower.com/download-TO2M"
+echo "brew install --cask zoom"
+echo "${bold}Contrast${reset} − https://github.com/soffes/contrast"
 echo "${bold}Capture One 22 Pro (Build 15.4.3)${reset} − https://support.captureone.com/hc/en-us/articles/7857694102557-Capture-One-22-15-4-3-release-notes"
 echo "${bold}Audirvāna Origin${reset} − https://audirvana.com/audirvana-origin/"
 

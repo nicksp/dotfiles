@@ -9,6 +9,7 @@ tap "oven-sh/bun"
 # CLI tools
 brew "awscli" # Official Amazon AWS command-line interface
 brew "bat" # Output highlighting (better `cat`)
+brew "docker-compose" # Dev environments using Docker
 brew "eza" # Listing files with info (better `ls`)
 brew "fastfetch" # Show pretty system info
 brew "fd" # Find entries in your filesystem (better `find`)
@@ -56,16 +57,17 @@ cask "bartender" # Manage menu bar icons
 cask "cleanmymac" # System clean up manager
 cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
-cask "discord" # Messaging social platform
 cask "docker" # Running containerized applications
-cask "hazeover" # Fades out inactive windows
+cask "github" # GitHub Desktop GUI
+cask "hazeover", args: { require_sha: false } # Fades out inactive windows
 cask "hyperkey" # Enables mapping hyper key to the caps lock key
 cask "insomnia" # API client
 cask "itsycal" # Tiny popup calendar in a menu bar
 cask "keka" # File archiver and extractor
 cask "ledger-live" # Crypto hardware wallet manager
+cask "legcord" # Messaging social platform
 cask "marta" # File manager
-cask "nordvpn" # VPN client
+cask "nordvpn", args: { require_sha: false } # VPN client
 cask "notion" # Note-taking app
 cask "optimage" # Image optimization
 cask "qobuz" # Hi-rez audio streaming platform
@@ -73,14 +75,13 @@ cask "raycast" # All-in-one app / tasks launcher
 cask "rectangle" # Window manager
 cask "rocket" # Handy emojis picker
 cask "slack" # Messaging social platform
-cask "superduper" # Data backup
+cask "superduper", args: { require_sha: false } # Data backup
 cask "syntax-highlight", args: { no_quarantine: true } # Preview many different source code files
 cask "tableplus" # Database managmenent system
 cask "telegram" # Messenger
 cask "visual-studio-code" # Code editor
-cask "vivaldi" # Browser with built-in privacy
+cask "vivaldi", args: { no_quarantine: true } # Browser with built-in privacy
 cask "wezterm" # Better terminal emulator
-
 
 # VS Code extensions
 vscode "astro-build.astro-vscode"
