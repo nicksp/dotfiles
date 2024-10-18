@@ -114,7 +114,7 @@ included after the configurations from `~/.gitconfig` allowing
 its content to overwrite or add to the existing `git` configurations.
 
 > [!TIP]
-> Use `~/.gitconfig.local` to store [sensitive information](git/) such
+> Use `~/.gitconfig.local` to store sensitive information such
 as the `git` user credentials for individual repositories.
 
 ## Updating
