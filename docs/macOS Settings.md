@@ -8,13 +8,16 @@
 
 ### Wi-Fi
 
-- Click **Details…** for the trusted connected network → **Private Wi-Fi address** − `Rotating`
+- Click **Details…** for the trusted connected home network
+  - **Private Wi-Fi address** − `Rotating`
+  - **Limit IP address tracking** — `On`
 
 ### Notifications
 
 - Disable all except critical ones like email client and messaging apps
 - **Show previews** → `When Unlocked`
 - **Allow notifications when the screen is locked** → `Off`
+- **Allow notifications from iPhone** → `Off`
 
 ### Focus
 
@@ -53,6 +56,7 @@
 
 ### Accessibility
 
+- **Vision** → **Display** → **Prefer non-blinking cursor** - `On`
 - **Vision** → **Display** → **Reduce transparency** - `On`
 - **Vision** → **Display** → **Pointer** → **Pointer size** - between 1st and 2nd delimiters
 
@@ -109,10 +113,14 @@
 - **Dock** → **Double-click a window's title bar to** − `Fill`
 - **Dock** → **Minimize windows into application icon** − `On`
 - **Dock** → **Automatically hide and show the Dock** − `On`
-- **Dock** → **Animate opening applications** − `On`
+- **Dock** → **Animate opening applications** − `Off`
 - **Dock** → **Show indicators for open applications** − `On`
 - **Dock** → **Show suggested and recent apps in Dock** − `Off`
-- **State Manager** − `Off`
+- **Desktop & Stage Manager** → **Show Items** − `On Desktop`
+- **Desktop & Stage Manager** → **Click wallpaper to reveal desktop** − `Only in Stage Manager`
+- **Desktop & Stage Manager** → **Stage Manager** − `Off`
+- **Desktop & Stage Manager** → **Show recent apps in Stage Manager** − `Off`
+- **Widgets** → **Show Widgets** − `On Desktop`
 - **Widgets** → **Widget style** − `Monochrome`
 - **Widgets** → **Use iPhone widgets** − `Off`
 - **Default web browser** − `Vivaldi.app`
@@ -120,6 +128,7 @@
 - **Windows** → **Ask to keep changes when closing documents** − `On`
 - **Windows** → **Close windows when quitting an application** − `Off`
 - **Windows** → **Tile by dragging windows to screen edges** − `On`
+- **Windows** → **Drag windows to menu bar to fill screen** − `Off`
 - **Windows** → **Hold ⌥ key while dragging windows to tile** − `On`
 - **Windows** → **Tiled windows have margins** − `Off`
 - **Mission Control** → **Automatically rearrange Spaces…** − `On`
@@ -165,11 +174,11 @@
 - **Key repeat rate** − `Fast`
 - **Delay until repeat** − `Short`
 - **Adjust keyboard brightness in low light** − `Off`
-- **Adjust keyboard brightness in low light** − `Off`
 - **Keyboard brightness** − at around `20%`
 - **Turn keyboard backlight off after inactivity** − `After 5 Minutes`
 - **Press 🌐 key to** − `Change Input Source`
 - **Keyboard navigation** − `On`
+- **Keyboard navigation** → **Keyboard Shortcuts…** → **Spotlight** → Disable **Show Spotlight search**
 - **Text Input** **Text Replacements…**
   - `@@` → `your.email@gmail.com`
   - `->` → `→`
@@ -177,7 +186,7 @@
   - **Show Input menu in menu bar** − `On`
   - **Automatically switch to a document's input source** − `Off`
   - **Correct spelling automatically** − `Off`
-  - **Capitalise words automatically** − `Off`
+  - **Capitalize words automatically** − `Off`
   - **Show inline predictive text** − `Off`
   - **Add full stop with double-space** − `Off`
   - **Use smart quotes and dashes** − `On`
@@ -218,16 +227,24 @@
   - Documents
   - User's Library
 - Settings
-  - **General** → **Show these items on the desktop**
-    - Hard discs
-    - External discs
+  - **General** → **Show these items on the desktop** — Disable all
   - **General** → **New Finder windows show:** − User's directory
   - **General** − Enable **Open folders in tabs instead of new windows**
+  - **Tags** — Disable all
+  - **Sidebar** → **Show these items in the sidebar**:
+    - Applications
+    - Desktop
+    - Documents
+    - Downloads
+    - User's directory
+    - Hard discs
+    - External discs
   - **Advanced** − Enable **Show all filename extensions**
-  - **Advanced** − Enable **Show warning before changing an extension**
+  - **Advanced** − Disable **Show warning before changing an extension**
   - **Advanced** − Enable **Show warning before removing from iCloud Drive**
   - **Advanced** − Enable **Show warning before emptying the Trash**
   - **Advanced** − Disable **Remove items from the Trash after 30 days**
+  - **Advanced** → **Keep folders on top:** − Enable both variants
   - **Advanced** → **When performing a search:** − `Search the Current Folder`
 - Enable showing hidden files
 - **View** → **Show Sidebar**
@@ -240,6 +257,10 @@
 
 - `cmd+shift+h` − takes you home
 - `cmd .` − show hidden files and folders
+
+## iPhone Mirroring
+
+- **Settings…** → **Require Mac login to access iPhone** — `Automatically authenticate`
 
 ## Other Defaults
 

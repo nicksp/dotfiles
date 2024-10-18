@@ -14,7 +14,7 @@ Useful browser tips:
 
 ## Tip #2
 
-If you're running a macOS terminal command and want to make it a lower priority so it doesn't slow your computer down as much, prepend it with "nice -n 5 <command>".
+If you're running a macOS terminal command and want to make it a lower priority so it doesn't slow your computer down as much, prepend it with "nice -n 5 \<command\>".
 
 Example:
 
@@ -24,7 +24,7 @@ The number can be `-20` to `19` (default `0`). `19` is "nicest" (the lowest prio
 
 ## Tip #3
 
-Hold `Option` and click your WiFi icon to get your IP address along with sme extended info.
+Hold `Option` and click your WiFi icon to get your IP address along with the extended info.
 
 ## Tip #4
 
@@ -145,12 +145,12 @@ In Finder, hold Option and click Go, and then select Library. In the Finder wind
 
 Clean up `node_modules`.
 
-1. First, change directory to where you want to look for `node_modules`. 
+1. First, change directory to where you want to look for `node_modules`.
 1. Look for all the directories with `node_modules` and print the locations:
 
-    ```sh
-    find . -name "node_modules" -type d -prune -print | xargs du -chs
-    ```
+   ```sh
+   find . -name "node_modules" -type d -prune -print | xargs du -chs
+   ```
 
 1. Above is showing you all of the `node_modules` inside the directory you moved into. You can delete these manually if you wanted but if you want to delete all of the ones displayed run the following command.
 
