@@ -1,6 +1,0 @@
-require("nicksp.plugins-setup")
-require("nicksp.core.options")
-require("nicksp.core.keymaps")
-require("nicksp.core.color-scheme")
-require("nicksp.plugins.comment")
-require("nicksp.plugins.nvim-tree")

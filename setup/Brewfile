@@ -19,7 +19,6 @@ brew "gh" # GitHub CLI: interact with GitHub PRs, issues, repos
 brew "git" # Version control
 brew "git-delta" # Diff pager for `git` and `grep` output (better `diff`)
 brew "htop" # Performance and resource monitoring tool (better `top`)
-brew "neovim" # Text editor for terminal
 brew "node" # Fallback Node.js version
 brew "pnpm" # Efficient Node.js package manager
 brew "prettyping" # Prettier and compact `ping`

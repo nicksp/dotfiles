@@ -26,7 +26,7 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 - zsh / [fzf](zsh/fzf.zsh).
 - git / delta syntax-highlighting diff tool.
 - Sensible [macOS defaults](setup/macos.sh).
-- [Neovim](tilde/.config/nvim/)
+- Config for other apps and utils.
 - [macOS apps and VSCode extensions](setup/Brewfile) I use.
 - [macOS tips & tricks](/docs/macOS%20Tips%20&%20Tricks.md).
 
