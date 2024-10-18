@@ -800,28 +800,6 @@
     "when": "editorTextFocus"
   },
 
-  // Mini Markdown
-  {
-    "key": "cmd+b",
-    "command": "-miniMarkdown.toggleStrongEmphasis",
-    "when": "!editorReadonly && editorLangId == 'markdown'"
-  },
-  {
-    "key": "ctrl+b",
-    "command": "miniMarkdown.toggleStrongEmphasis",
-    "when": "!editorReadonly && editorLangId == 'markdown'"
-  },
-  {
-    "key": "cmd+i",
-    "command": "-miniMarkdown.toggleEmphasis",
-    "when": "!editorReadonly && editorLangId == 'markdown'"
-  },
-  {
-    "key": "ctrl+i",
-    "command": "miniMarkdown.toggleEmphasis",
-    "when": "!editorReadonly && editorLangId == 'markdown'"
-  },
-
   // Just Blame
   {
     "key": "shift+cmd+g shift+cmd+b",
