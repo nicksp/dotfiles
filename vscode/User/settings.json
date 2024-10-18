@@ -560,7 +560,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
     // If you want a hard line-break (<br>) in the output,
     // we need to put two or more spaces at the end of a line.
     // It is a part of CommonMark, so we don’t want to prevent it.
