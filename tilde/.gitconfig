@@ -134,7 +134,7 @@
 
   # Add (stage) files
   a            = add
-  aa           = add --all
+  aa           = add -A
 
   # Commit
   c            = commit
@@ -168,7 +168,10 @@
   # Retrieve the last stored changes again
   stp          = stash pop
 
+  # Unstaged changes (working directory vs. staging area)
   d            = diff
+  # Staged changes (staging area vs. last commit)
+  dc           = diff --cached
   cp           = cherry-pick
   fp           = fetch --prune --all
 
@@ -193,7 +196,8 @@
   cont         = !git add . && git rebase --continue
 
   # Compact and readable log
-  l            = log --graph --pretty=format:'%C(magenta)%h%Creset%C(auto)%d%Creset %s %C(blue bold)— %cr ~ %an%Creset'
+  l            = log --graph --pretty=tformat:'%C(magenta)%h%Creset%C(auto)%d%Creset %s %C(blue bold)— %cr, %an%Creset' -30
+  la           = log --graph --pretty=tformat:'%C(magenta)%h%Creset%C(auto)%d%Creset %s %C(blue bold)— %cr, %an%Creset'
   # Log with list of changed files per each commit
   ls           = log --stat --abbrev-commit
 
