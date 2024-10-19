@@ -45,13 +45,18 @@ echo
 # sudo mas upgrade
 # echo
 
-# Homebrew
+# Homebrew formulae
 header "Updating Homebrew packages..."
 brew update
 brew upgrade
 brew cleanup
 brew doctor
 echo
+
+# Homebrew casks
+header "Updating Homebrew casks..."
+brew upgrade --dry-run --cask $(brew list --cask)
+echo "> Run 'brew upgrade --dry-run --cask \$(brew list --cask)' to actually perform an upgrade."
 
 # Raycast
 header "Updating Raycast and its extensions..."
