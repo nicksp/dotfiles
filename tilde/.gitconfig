@@ -70,6 +70,10 @@
 [url "git@github.com:nicksp/"]
   insteadOf = "https://github.com/nicksp/"
 
+[protocol "file"]
+  # Always permit operations using file protocol without any restrictions or warnings
+  allow = always
+
 # command-specific
 
 [commit]
