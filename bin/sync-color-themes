@@ -12,7 +12,7 @@
 # > [x] CotEditor
 # > [x] Marta
 # > [x] Syntax Highlight
-# > [/] Bartender
+# > [/] Ice
 # > [/] Slack
 # > [/] Telegram
 # > [/] macOS
@@ -233,10 +233,10 @@ echo "− Make sure that the ${BOLD}Allow extensions to load custom stylesheets$
 # --- 8< -- 8< ---
 
 #
-# Bartender: https://github.com/sapegin/squirrelsong/tree/master/themes/Bartender
+# Ice: https://github.com/sapegin/squirrelsong/tree/master/themes/Ice
 #
 
-header "☕ Install Bartender theme: https://github.com/sapegin/squirrelsong/tree/master/themes/Bartender"
+header "☕ Install Ice theme: https://github.com/sapegin/squirrelsong/tree/master/themes/Ice"
 
 #
 # Slack: https://github.com/sapegin/squirrelsong/tree/master/themes/Slack

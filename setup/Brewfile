@@ -51,7 +51,6 @@ cask "font-symbols-only-nerd-font"
 
 # GUI apps
 cask "1password@7" # Password manager
-cask "bartender" # Manage menu bar icons
 cask "cleanmymac" # System clean up manager
 cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
@@ -61,6 +60,7 @@ cask "hazeover", args: { require_sha: false } # Fades out inactive windows
 cask "hyperkey" # Enables mapping hyper key to the caps lock key
 cask "insomnia" # API client
 cask "itsycal" # Tiny popup calendar in a menu bar
+cask "jordanbaird-ice" # Manage menu bar icons
 cask "keka" # File archiver and extractor
 cask "ledger-live" # Crypto hardware wallet manager
 cask "legcord" # Messaging social platform

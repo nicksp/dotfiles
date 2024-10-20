@@ -2,7 +2,7 @@
 
 I use [Squirrelsong](https://sapegin.me/squirrelsong/) theme wherever possible.
 
-1. [Bartender](https://github.com/sapegin/squirrelsong/tree/master/themes/Bartender)
+1. [Ice](https://github.com/sapegin/squirrelsong/tree/master/themes/Ice)
 1. [Bat](https://github.com/sapegin/squirrelsong/tree/master/themes/Sublime%20Text/Squirrelsong%20Dark)
 1. [Bear](https://github.com/sapegin/squirrelsong/tree/master/themes/Bear)
 1. [Chrome DevTools](https://github.com/sapegin/squirrelsong/tree/master/themes/Chrome%20DevTools)
