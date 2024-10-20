@@ -724,8 +724,4 @@
   // Make AI helper less obtrusive
   "cody.commandHints.enabled": false,
   "cody.autocomplete.enabled": false,
-  "supermaven.enableDeleteSuggestions": false,
-  "supermaven.enableFixWithSupermaven": false,
-  "supermaven.enableJumpSuggestions": false,
-  "supermaven.enableSuggestionHighlighting": false
 }
