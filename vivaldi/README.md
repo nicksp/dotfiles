@@ -33,3 +33,4 @@
 - Squirrelsong Light DevTools Theme — <https://github.com/sapegin/squirrelsong/tree/master/themes/Chrome%20DevTools>
 - Video Speed Controller — <https://chromewebstore.google.com/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk>
 - Wappalyzer — <https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg>
+- 1Password – Password Manager — <https://chromewebstore.google.com/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa>
