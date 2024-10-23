@@ -70,6 +70,7 @@ cask "optimage" # Image optimization
 cask "orbstack" # Running containerized applications. Ships `docker-compose` as well
 cask "pearcleaner", args: { require_sha: false } # Clean up macOS from junk and apps leftovers
 cask "qobuz" # Hi-rez audio streaming platform
+cask "quitter", args: { require_sha: false } # Quit apps after periods of inactivity
 cask "raycast" # All-in-one app / tasks launcher
 cask "rectangle" # Window manager
 cask "rocket" # Handy emojis picker
