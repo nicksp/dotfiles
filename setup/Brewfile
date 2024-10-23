@@ -51,7 +51,6 @@ cask "font-symbols-only-nerd-font"
 
 # GUI apps
 cask "1password" # Password manager
-cask "cleanmymac" # System clean up manager
 cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
 cask "firefox@developer-edition" # Dev tools for web dev work
@@ -69,6 +68,7 @@ cask "nordvpn", args: { require_sha: false } # VPN client
 cask "notion" # Note-taking app
 cask "optimage" # Image optimization
 cask "orbstack" # Running containerized applications. Ships `docker-compose` as well
+cask "pearcleaner", args: { require_sha: false } # Clean up macOS from junk and apps leftovers
 cask "qobuz" # Hi-rez audio streaming platform
 cask "raycast" # All-in-one app / tasks launcher
 cask "rectangle" # Window manager
