@@ -19,13 +19,20 @@
 ## Install extensions
 
 - React Developer Tools — <https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi>
-- JSON Formatter — <https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en>
+- JSON Formatter — <https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa>
 - Bypass Paywalls — <https://github.com/iamadamdev/bypass-paywalls-chrome/>
 - AI Grammar Checker & Paraphraser – LanguageTool — <https://chromewebstore.google.com/detail/ai-grammar-checker-paraph/oldceeleldhonbafppcapldpdifcinji>
 - Blank Sky New Tab Page — <https://chromewebstore.google.com/detail/blank-sky-new-tab-page/bafoejhfmmcjdjlkihjbgcmifcinomaj>
 - Accessibility Insights for Web — <https://chromewebstore.google.com/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni>
 - uBlock Origin — <https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm>. Allow in Incognito
-- Skip Redirect — <https://chromewebstore.google.com/detail/skip-redirect/jaoafjdoijdconemdmodhbfpianehlon>. Allow in Incognito
+  - Setup your [blocking mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode)
+  - Enable `AdGuard Tracking Protection`
+  - Enable `AdGuard URL Tracking Protection`
+  - Enable `uBlock filters – Annoyances`
+  - Import [Actually Legitimate URL Shortener Tool](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
+    - Check `Import…` under `Filter lists`
+    - Paste in the linked URL above
+    - Click `Apply changes`
 - Privacy Badger — <https://chromewebstore.google.com/detail/privacy-badger/pkehgijcmpdhfbdbbnkijodmdjhbjlgp>. Allow in Incognito
 - Exodus Web3 Wallet — <https://chromewebstore.google.com/detail/exodus-web3-wallet/aholpfdialjgjfhomihkjbmgjidlcdno>
 - Github Issue Reactions — <https://chromewebstore.google.com/detail/github-issue-reactions/enekincdenmmbpgkbhflknhaphpajnfd>
@@ -34,3 +41,4 @@
 - Video Speed Controller — <https://chromewebstore.google.com/detail/video-speed-controller/nffaoalbilbmmfgbnbgppjihopabppdk>
 - Wappalyzer — <https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg>
 - 1Password – Password Manager — <https://chromewebstore.google.com/detail/1password-%E2%80%93-password-mana/aeblfdkhhhdcdjpifhhbdiojplfjncoa>
+- Atomic CSS Devtools — <https://chromewebstore.google.com/detail/atomic-css-devtools/cbjhfeooiomphlikkblgdageenemhpgc>

@@ -52,7 +52,6 @@
     - Check `Import…` under `Filter lists`
     - Paste in the linked URL above
     - Click `Apply changes`
-- Skip Redirect — <https://addons.mozilla.org/en-US/firefox/addon/skip-redirect/>. Run in Private Windows
 - Privacy Badger <https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/>. Run in Private Windows
   - Firefox now [includes tracker blocking](https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/), but I leave Privacy Badger enabled.
 - React Developer Tools — <https://addons.mozilla.org/en-US/firefox/addon/react-devtools/>
@@ -61,3 +60,4 @@
 - OctoLinker — <https://addons.mozilla.org/en-US/firefox/addon/octolinker/>
 - Video Speed Controller − <https://addons.mozilla.org/en-US/firefox/addon/videospeed/>
 - Wappalyzer — <https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/>
+- Atomic CSS Devtools — <https://addons.mozilla.org/en-US/firefox/addon/atomic-css-devtools/>
