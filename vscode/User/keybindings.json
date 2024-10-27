@@ -807,6 +807,30 @@
     "when": "editorTextFocus"
   },
 
+  // Dash
+  {
+    "comment": "Open Help for the current symbol in Dash",
+    "key": "cmd+k cmd+h",
+    "command": "extension.dash.specific",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "-extension.dash.specific"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "-extension.dash.emptySyntax"
+  },
+  {
+    "key": "alt+h",
+    "command": "-extension.dash.customSyntax"
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "-extension.dash.all"
+  },
+
   // Jest Runner
   // {
     // TODO: Find a suitable shortcut not to interfere with the others

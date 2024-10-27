@@ -52,6 +52,7 @@ cask "font-symbols-only-nerd-font"
 cask "1password" # Password manager
 cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
+cask "dash" # API documentation reader
 cask "firefox@developer-edition" # Dev tools for web dev work
 cask "github" # GitHub Desktop GUI
 cask "hazeover", args: { require_sha: false } # Fades out inactive windows
@@ -89,6 +90,7 @@ vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc-icons"
 vscode "davidanson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
+vscode "deerawan.vscode-dash"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "firsttris.vscode-jest-runner"
