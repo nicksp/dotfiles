@@ -55,6 +55,10 @@
   old = red bold
   new = green bold
 
+[column]
+  # Put any list output into columns
+  ui = auto
+
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
@@ -97,6 +101,8 @@
   # when you fetch (or pull)
   prune = true
   pruneTags = true
+  # Cache the index of all the commit objects to speed up some Git commands
+  writeCommitGraph = true
 
 [pull]
   # Rebase branches on top of the fetched branch, instead of merging
@@ -121,6 +127,8 @@
   # Automatically include the `--autosquash` option when doing a `git rebase --interactive`
   # See more: https://thoughtbot.com/blog/autosquashing-git-commits
   autoSquash = true
+  # Auto-update dependent branches during rebase
+  updateRefs = true
 
 # aliases
 
