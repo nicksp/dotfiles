@@ -6,9 +6,13 @@
 
 - Check **Open previous windows and tabs**
 - Check **Always ask you where to save files**
+- **Applications** → **Extensible Markup Language (XML)** → Select **Always ask**
+- **Applications** → **mailto** → Select **Always ask**
+- **Applications** → **Scalable Vector Graphics (SVG)** → Select **Always ask**
+- **Applications** → **What should Firefox Developer Edition do with other files?** → Select **Ask whether to open or save files**
 - Check **Automatically install updates (recommended)**
-- Uncheck **Recommend extensions as you browse**
-- Uncheck **Recommend features as you browse**
+- **Browsing** → Uncheck **Recommend extensions as you browse**
+- **Browsing** → Uncheck **Recommend features as you browse**
 
 ### Home
 
@@ -20,19 +24,20 @@
 - Uncheck **Show search suggestions**
 - Uncheck **Show recent searches**
 - Delete all **Search Engines** except for **DuckDuckGo**
-- **Address Bar** → Uncheck **Search engines**
+- **Address Bar** → Uncheck **Search engines** and **Shortcuts**
 
 ### Privacy & Security
 
 - **Enhanced Tracking Protection** → Select **Strict** Enhanced Tracking Protection
-- **Website Privacy Preferences** → Check **Tell websites not to sell or share my data**
-- **Website Privacy Preferences** → Check **Send websites a “Do Not Track” request**
+- **Website Privacy Preferences** → Uncheck **Tell websites not to sell or share my data**
+- **Website Privacy Preferences** → Uncheck **Send websites a “Do Not Track” request**
+- **Cookies and Site Data** → Check **Delete cookies and site data when Firefox Developer Edition is closed**
 - **Passwords** → Uncheck **Ask to save passwords**
 - **Passwords** → Uncheck **Require device sign in to fill and manage passwords**
 - **Passwords** → Uncheck **Use a Primary Password**
 - **Autofill** → Uncheck **Save and fill payment methods**
 - Firefox Developer Edition will **Use custom settings for history**
-  - Check **Remember browsing and download history** and uncheck others
+  - Check **Always use private browsing mode**
 - **Firefox Developer Edition Data Collection and Use** → Uncheck **Allow Firefox Developer Edition to send technical and interaction data to Mozilla**
 - **Firefox Developer Edition Data Collection and Use** → Uncheck **Allow Firefox Developer Edition to make personalized extension recommendations**
 - **Firefox Developer Edition Data Collection and Use** → Uncheck **Allow Firefox Developer Edition to install and run studies**
@@ -45,9 +50,8 @@
 
 - uBlock Origin — <https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/>. Run in Private Windows
   - Setup your [blocking mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode)
-  - Enable `AdGuard Tracking Protection`
   - Enable `AdGuard URL Tracking Protection`
-  - Enable `uBlock filters – Annoyances`
+  - Enable `EasyList – Cookie Notices`
   - Import [Actually Legitimate URL Shortener Tool](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
     - Check `Import…` under `Filter lists`
     - Paste in the linked URL above

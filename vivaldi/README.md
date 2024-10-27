@@ -26,9 +26,8 @@
 - Accessibility Insights for Web — <https://chromewebstore.google.com/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni>
 - uBlock Origin — <https://chromewebstore.google.com/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm>. Allow in Incognito
   - Setup your [blocking mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode)
-  - Enable `AdGuard Tracking Protection`
   - Enable `AdGuard URL Tracking Protection`
-  - Enable `uBlock filters – Annoyances`
+  - Enable `EasyList – Cookie Notices`
   - Import [Actually Legitimate URL Shortener Tool](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)
     - Check `Import…` under `Filter lists`
     - Paste in the linked URL above
