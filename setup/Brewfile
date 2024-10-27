@@ -22,7 +22,6 @@ brew "node" # Fallback Node.js version
 brew "pnpm" # Efficient Node.js package manager
 brew "prettyping" # Prettier and compact `ping`
 brew "python@3.11" # Required by awscli
-brew "readdle-spark" # Email client
 brew "ripgrep" # Searching within files (better `grep`)
 brew "starship" # Prompt manager
 brew "tlrc" # Community-maintained docs (better `man`)
@@ -64,7 +63,6 @@ cask "keka" # File archiver and extractor
 cask "ledger-live" # Crypto hardware wallet manager
 cask "legcord" # Messaging / Community
 cask "marta" # File manager
-cask "nordvpn", args: { require_sha: false } # VPN client
 cask "notion" # Note-taking app
 cask "optimage" # Image optimization
 cask "orbstack" # Running containerized applications. Ships `docker-compose` as well
@@ -72,6 +70,7 @@ cask "pearcleaner", args: { require_sha: false } # Clean up macOS from junk and 
 cask "qobuz" # Hi-rez audio streaming platform
 cask "quitter", args: { require_sha: false } # Quit apps after periods of inactivity
 cask "raycast" # All-in-one app / tasks launcher
+cask "readdle-spark" # Email client
 cask "rectangle" # Window manager
 cask "rocket" # Handy emojis picker
 cask "slack" # Messaging social platform
