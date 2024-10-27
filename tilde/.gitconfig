@@ -130,7 +130,7 @@
   #
 
   # Open .gitconfig in default editor
-  ecf          = config --global -e
+  conf         = config --global -e
 
   # Add (stage) files
   a            = add
@@ -147,24 +147,26 @@
   # Add all modified files to the latest commit
   append       = commit -a --amend --no-edit
 
-  # Checkout
-  co           = checkout
-  cob          = checkout -b
-  # Discard all unstaged changes in the working tree and revert them to their state in the HEAD commit
-  discard      = checkout .
-
   # Branching
   br           = branch
+  # Better branch output
+  brb          = !git for-each-ref --color --sort=-committerdate --format=$'%(color:red)%(ahead-behind:HEAD)\t%(color:blue)%(refname:short)\t%(color:yellow)%(committerdate:relative)\t%(color:default)%(describe)' refs/heads/ --no-merged | sed 's/ /\t/' | column -s=$'\t' -t -c 'Ahead,Behind,Branch Name,Last Commit,Description'
   bra          = branch -a
+  # Change current branch
+  cb           = switch
+  # Create and switch to a new branch
+  nb           = switch -c
   # Jump back to to your last branch
-  prev         = checkout -
+  prev         = switch -
 
   # Status
   s            = status
   ss           = status -sb
 
-  # Put all uncommitted changes in a temporary storage
+  # Put all uncommitted changes in tracked files in a temporary storage
   st           = stash
+  # Stash all ignored and untracked files and then clean up with `git clean`
+  sta          = stash --all
   # Retrieve the last stored changes again
   stp          = stash pop
 
@@ -208,10 +210,12 @@
   # Undo a `git push`
   undopush     = push -f origin HEAD^:master
   # Unstage all staged changes but leave them in the working tree (mixed reset)
-  unstage      = reset HEAD
+  unstage      = restore --staged .
+  # Discard all unstaged changes in the working tree and revert them to their state in the HEAD commit
+  discard      = restore .
   # Undo last commit but don't throw away the changes (affects HEAD only)
   undo         = reset --soft HEAD~1
-  # Remove last commit (from HEAD, Index and Working Dir)
+  # Remove last commit (from HEAD, Index and Working tree)
   reset        = reset --hard HEAD~1
 
   #
