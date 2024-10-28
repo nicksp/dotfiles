@@ -43,9 +43,9 @@ echo
 # https://icon-icons.com/icon/floppy-disk/30728
 update_icon "Marta" "/Applications/Marta.app" "/Applications/Marta.app/Contents/Resources/AppIcon.icns" "$ICONS_DIR/Floppy.icns"
 
-# Spark Desktop
+# Mimestream
 # https://macosicons.com/#/email%20003
-update_icon "Spark Desktop" "/Applications/Spark Desktop.app" "/Applications/Spark Desktop.app/Contents/Resources/icon.icns" "$ICONS_DIR/Mail.icns"
+# update_icon "Mimestream" "/Applications/Mimestream.app" "/Applications/Mimestream.app/Contents/Resources/AppIcon.icns" "$ICONS_DIR/Mail.icns"
 
 # WezTerm
 # https://github.com/dhanishgajjar/terminal-icons?tab=readme-ov-file

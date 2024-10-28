@@ -64,6 +64,7 @@ cask "keka" # File archiver and extractor
 cask "ledger-live" # Crypto hardware wallet manager
 cask "legcord" # Messaging / Community
 cask "marta" # File manager
+cask "mimestream" # Email client
 cask "notion" # Note-taking app
 cask "optimage" # Image optimization
 cask "orbstack" # Running containerized applications. Ships `docker-compose` as well
@@ -71,7 +72,6 @@ cask "pearcleaner", args: { require_sha: false } # Clean up macOS from junk and 
 cask "qobuz" # Hi-rez audio streaming platform
 cask "quitter", args: { require_sha: false } # Quit apps after periods of inactivity
 cask "raycast" # All-in-one app / tasks launcher
-cask "readdle-spark" # Email client
 cask "rectangle" # Window manager
 cask "rocket" # Handy emojis picker
 cask "slack" # Messaging social platform
