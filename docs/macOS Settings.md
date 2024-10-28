@@ -104,6 +104,7 @@
 - **Analytics & Improvements** − Set everything to `Off`
 - **Apple Advertising** → **Personalized Ads** − `Off`
 - **Security** → **Allow applications downloaded from** − `App Store and identified developers`
+- Turn on **FileVault** for an extra layer of security by keeping someone from decrypting or getting access to your data without entering your login password
 
 ### Desktop & Dock
 
