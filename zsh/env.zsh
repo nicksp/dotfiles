@@ -113,6 +113,8 @@ export BAT_THEME="Squirrelsong Dark"
 # Privacy
 # https://nextjs.org/telemetry
 export NEXT_TELEMETRY_DISABLED=1
+# https://docs.strapi.io/dev-docs/configurations/environment/#strapis-environment-variables
+export STRAPI_TELEMETRY_DISABLED=1
 # https://www.gatsbyjs.com/docs/telemetry/
 export GATSBY_TELEMETRY_DISABLED=1
 # https://astro.build/telemetry/
