@@ -14,15 +14,18 @@
 
 ### Notifications
 
-- Disable all except critical ones like email client and messaging apps
 - **Show previews** → `When Unlocked`
-- **Allow notifications when the screen is locked** → `Off`
-- **Allow notifications from iPhone** → `Off`
+- Disable **Allow notifications when the screen is locked**
+- Disable **Allow notifications when mirroring or sharing the display**
+- Disable **Allow notifications from iPhone**
+- Enable and tweak **Summarize previews**
+- Disable all application notifications except critical ones sending important updates like messenger apps, banks.
 
 ### Focus
 
-- 3 profiles
+- 4 profiles
   - Do Not Disturb
+  - Reduce Interruptions
   - Sleep
   - Work
 - **Share across devices** → `On`
@@ -69,9 +72,13 @@
 - **Menu Bar Only** − Set all to `Don't Show in Menu Bar`
   - **Clock** − Never show date, Digital style
 
-### Siri
+### Apple Intelligence & Siri
 
-- Disable **Siri Requests** → **Siri**
+- Enable **Apple Intelligence**
+- Enable **Siri Requests** → **Siri**
+- Disable **Siri Requests** → **Listen for**
+- **Siri Requests** → **Keyboard shortcut** − `⌃s`
+- **Siri Requests** → **Language** − `English (United States)`
 
 ### Spotlight
 
