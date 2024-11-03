@@ -55,8 +55,7 @@ echo
 
 # Homebrew casks
 header "Updating Homebrew casks..."
-brew upgrade --dry-run --cask $(brew list --cask)
-echo "> Run 'brew upgrade --cask \$(brew list --cask)' to actually perform an upgrade."
+brew upgrade --cask $(brew list --cask)
 
 # Raycast
 header "Updating Raycast and its extensions..."
