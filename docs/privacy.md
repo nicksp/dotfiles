@@ -14,3 +14,6 @@
     - <https://ipleak.net>
     - <https://browserleaks.com/dns>
     - <https://speed.cloudflare.com>
+1. Perform a browser security check against tracking and fingerprinting:
+    - <https://coveryourtracks.eff.org>
+    - <https://privacytests.org/me.html>
