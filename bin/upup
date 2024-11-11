@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Get macOS software updates, update Homebrew, npm, dotfiles and some other software.
+# Get macOS software updates, update Homebrew, npm, dotfiles, VS Code and some other software.
 #
 # - Run updates:
 #
@@ -31,8 +31,8 @@ sudo echo "Sudo activated!"
 echo
 
 # Dotfiles
-# dotfiles
-# echo
+dotfiles
+echo
 
 # macOS
 header "Updating macOS system..."

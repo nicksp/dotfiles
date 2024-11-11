@@ -14,7 +14,6 @@ alias cd..='cd ..'
 alias -- -="cd -" # previous working directory
 
 # Hot-access directories
-alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
 alias projects="cd $WORKSPACE"
 
