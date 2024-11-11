@@ -52,4 +52,4 @@ echo "https://apps.apple.com/us/app/things-3/id904280696?mt=12"
 
 # Remove outdated versions of formulae and casks from the cellar
 # Besides, this will run `brew autoremove` to remove all the hanging, no longer needed packages
-brew cleanup
+brew cleanup --prune=all

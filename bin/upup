@@ -48,8 +48,19 @@ echo
 # Homebrew formulae
 header "Updating Homebrew packages..."
 brew update
-brew upgrade
-brew cleanup
+
+outdated_packages=$(brew outdated)
+if [ -z "$outdated_packages" ]; then
+  echo "✨ All packages already up-to-date."
+else
+  echo "📦 Outdated packages:"
+  echo "$outdated_packages"
+
+  brew upgrade
+fi
+
+brew cleanup --prune=all
+brew missing
 brew doctor
 echo
 
