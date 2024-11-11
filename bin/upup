@@ -67,5 +67,12 @@ header "Updating global npm modules..."
 npm update -g
 echo
 
+# VS Code extensions
+header "Updating VS Code extensions..."
+for extension in $(code --list-extensions); do
+  # Reinstall each extension (which automatically updates it if there is a newer version)
+  code --install-extension $extension --force
+done
+
 # Nyan cat!
 nyan
