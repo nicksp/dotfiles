@@ -34,6 +34,7 @@ brew bundle | indent
 echo ""
 title "☕️ Install more apps if you need them:"
 echo "brew install --cask daisydisk"
+echo "brew install --cask dbngin"
 echo "brew install --cask figma"
 echo "HOMEBREW_CASK_OPTS="" brew install --cask ibkr"
 echo "brew install --cask zoom"
