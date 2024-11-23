@@ -119,6 +119,8 @@ export STRAPI_TELEMETRY_DISABLED=1
 export GATSBY_TELEMETRY_DISABLED=1
 # https://astro.build/telemetry/
 export ASTRO_TELEMETRY_DISABLED=1
+# https://storybook.js.org/docs/configure/telemetry
+export STORYBOOK_DISABLE_TELEMETRY=1
 
 # Homebrew: https://docs.brew.sh/Manpage#environment
 export HOMEBREW_INSTALL_BADGE='☕'
