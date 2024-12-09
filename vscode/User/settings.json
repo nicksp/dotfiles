@@ -47,6 +47,7 @@
   },
   "emmet.triggerExpansionOnTab": true,
   "emmet.showExpandedAbbreviation": "never",
+  "emmet.showSuggestionsAsSnippets": true,
 
   // Code startup & new file creation
   "files.defaultLanguage": "markdown",
@@ -302,7 +303,7 @@
     "errorLens.warningForegroundLight": "#eeceac",
     "errorLens.warningBackgroundLight": "#f7e7d540",
     "errorLens.hintForegroundLight": "#adccc5",
-    "errorLens.hintBackgroundLight": "#d6e6e240",
+    "errorLens.hintBackgroundLight": "#d6e6e240"
   },
 
   // To override or define any code syntax styles of languages like e.g. Go or JavaScript
@@ -545,19 +546,19 @@
   "markdown.validate.enabled": true,
 
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
@@ -567,13 +568,13 @@
     "files.trimTrailingWhitespace": false
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
@@ -723,5 +724,5 @@
 
   // Make AI helper less obtrusive
   "cody.commandHints.enabled": false,
-  "cody.autocomplete.enabled": false,
+  "cody.autocomplete.enabled": false
 }
