@@ -91,6 +91,9 @@
   "editor.wordBasedSuggestions": "off",
   "editor.autoClosingComments": "never",
   "editor.experimentalEditContextEnabled": true,
+  "editor.pasteAs.preferences": [
+    "text.updateImports"
+  ],
 
   // Peek-less Go to navigation
   "editor.gotoLocation.multipleDeclarations": "goto",
@@ -240,6 +243,7 @@
   "testing.openTesting": "openOnTestFailure",
   "typos.diagnosticSeverity": "Information",
   "window.commandCenter": false,
+  "workbench.navigationControl.enabled": false,
 
   /*
   |--------------------------------------------------------------------------
