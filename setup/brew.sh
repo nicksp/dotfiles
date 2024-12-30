@@ -39,7 +39,6 @@ echo "brew install --cask figma"
 echo "HOMEBREW_CASK_OPTS="" brew install --cask ibkr"
 echo "brew install --cask zoom"
 echo "${bold}Contrast${reset} − https://github.com/soffes/contrast"
-echo "${bold}Capture One 22 Pro (Build 15.4.3)${reset} − https://support.captureone.com/hc/en-us/articles/7857694102557-Capture-One-22-15-4-3-release-notes"
 echo "${bold}Audirvāna Origin${reset} − https://audirvana.com/audirvana-origin/"
 
 # App Store apps
