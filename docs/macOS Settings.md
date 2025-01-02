@@ -106,8 +106,9 @@
   - Networking and wireless
 - **Location Services** → **System Services** → **Show location icon in Control Center…** − `On`
 - **App Management** − Enable these applications to update/delete other apps:
+  - Ghostty (_to be able to run some patching scripts_)
+  - Pearcleaner
   - Raycast
-  - WezTerm (_to be able to run some patching scripts_)
 - **Analytics & Improvements** − Set everything to `Off`
 - **Apple Advertising** → **Personalized Ads** − `Off`
 - **Security** → **Allow applications downloaded from** − `App Store and identified developers`

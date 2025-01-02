@@ -1,5 +1,5 @@
 environment {
-    terminal "WezTerm"
+    terminal "Ghostty"
     textEditor "CotEditor"
 }
 

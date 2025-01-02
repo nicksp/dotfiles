@@ -56,6 +56,7 @@ cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
 cask "dash" # API documentation reader
 cask "firefox@developer-edition" # Dev tools for web dev work
+cask "ghostty" # Better terminal emulator
 cask "github" # GitHub Desktop GUI
 cask "hazeover", args: { require_sha: false } # Fades out inactive windows
 cask "hyperkey" # Enables mapping hyper key to the caps lock key
@@ -82,7 +83,6 @@ cask "tableplus" # Database managmenent system
 cask "telegram" # Messenger
 cask "visual-studio-code" # Code editor
 cask "vivaldi", args: { no_quarantine: true } # Browser with built-in privacy
-cask "wezterm" # Better terminal emulator
 
 # VS Code extensions
 vscode "astro-build.astro-vscode"

@@ -1,0 +1,42 @@
+font-family = MonoLisa
+font-style = MonoLisa
+font-size = 15
+
+# Disable ligatures and configure font features
+font-feature = calt
+font-feature = -clig
+font-feature = -liga
+font-feature = zero
+font-feature = ss01
+
+theme = Squirrelsong Dark
+minimum-contrast = 1.1
+macos-icon = custom-style
+macos-titlebar-style = tabs
+
+window-padding-x = 8
+window-padding-y = 12
+
+# Bar non-blinking cursor
+adjust-cursor-thickness = 2
+cursor-style = bar
+cursor-style-blink = false
+shell-integration = zsh
+shell-integration-features = no-cursor
+mouse-hide-while-typing = true
+
+window-save-state = always
+
+clipboard-trim-trailing-spaces = true
+copy-on-select = true
+
+# Hot keys
+# Toggle the "quick" terminal globally from the top
+keybind = global:cmd+escape=toggle_quick_terminal
+
+# Switch between panes
+keybind = super+shift+left=goto_split:previous
+keybind = super+shift+right=goto_split:next
+
+# Delete the whole line
+keybind = super+backspace=text:\x15s

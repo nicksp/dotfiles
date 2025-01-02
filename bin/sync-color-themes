@@ -4,7 +4,6 @@
 # > More information: <https://sapegin.me/squirrelsong/>.
 #
 # > This script syncs color themes for:
-# > [x] WezTerm
 # > [x] Bat
 # > [x] Bear
 # > [x] Vivaldi
@@ -12,6 +11,7 @@
 # > [x] CotEditor
 # > [x] Marta
 # > [x] Syntax Highlight
+# > [x] Ghostty
 # > [/] Ice
 # > [/] Slack
 # > [/] Telegram
@@ -129,12 +129,12 @@ sudo echo "Sudo activated!"
 echo
 
 #
-# WezTerm: https://github.com/sapegin/squirrelsong/tree/master/themes/WezTerm
+# Ghostty: https://github.com/sapegin/squirrelsong/tree/master/themes/Ghostty
 #
 
-header "Installing WezTerm theme..."
+header "Installing Ghostty theme..."
 
-local_install "themes/WezTerm/squirrelsong-dark.toml" "tilde/.config/wezterm/colors"
+local_install "themes/Ghostty/Squirrelsong%20Dark" "tilde/.config/ghostty/themes"
 echo "🌈 A new color theme has been installed and ready to use"
 
 #

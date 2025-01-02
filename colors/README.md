@@ -14,7 +14,7 @@ I use [Squirrelsong](https://sapegin.me/squirrelsong/) theme wherever possible.
 1. [Telegram](https://github.com/sapegin/squirrelsong/tree/master/themes/Telegram)
 1. [Visual Studio Code](https://github.com/sapegin/squirrelsong/tree/master/themes/VSCode/SquirrelsongLight)
 1. [Vivaldi](https://github.com/sapegin/squirrelsong/tree/master/themes/Vivaldi)
-1. [WezTerm](https://github.com/sapegin/squirrelsong/tree/master/themes/WezTerm)
+1. [Ghostty](https://github.com/sapegin/squirrelsong/tree/master/themes/Ghostty)
 1. [macOS](https://github.com/sapegin/squirrelsong/tree/master/themes/macOS)
 
 > [!TIP]

@@ -47,10 +47,6 @@ update_icon "Marta" "/Applications/Marta.app" "/Applications/Marta.app/Contents/
 # https://macosicons.com/#/email%20003
 # update_icon "Mimestream" "/Applications/Mimestream.app" "/Applications/Mimestream.app/Contents/Resources/AppIcon.icns" "$ICONS_DIR/Mail.icns"
 
-# WezTerm
-# https://github.com/dhanishgajjar/terminal-icons?tab=readme-ov-file
-update_icon "WezTerm" "/Applications/WezTerm.app" "/Applications/WezTerm.app/Contents/Resources/terminal.icns" "$ICONS_DIR/Terminal.icns"
-
 # Visual Studio Code
 # https://dribbble.com/shots/15424559-VS-Code-replacement-icon
 update_icon "Visual Studio Code" "/Applications/Visual Studio Code.app" "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns" "$ICONS_DIR/Code.icns"
