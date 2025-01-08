@@ -43,10 +43,6 @@ echo
 # https://icon-icons.com/icon/floppy-disk/30728
 update_icon "Marta" "/Applications/Marta.app" "/Applications/Marta.app/Contents/Resources/AppIcon.icns" "$ICONS_DIR/Floppy.icns"
 
-# Mimestream
-# https://macosicons.com/#/email%20003
-# update_icon "Mimestream" "/Applications/Mimestream.app" "/Applications/Mimestream.app/Contents/Resources/AppIcon.icns" "$ICONS_DIR/Mail.icns"
-
 # Visual Studio Code
 # https://dribbble.com/shots/15424559-VS-Code-replacement-icon
 update_icon "Visual Studio Code" "/Applications/Visual Studio Code.app" "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns" "$ICONS_DIR/Code.icns"
@@ -54,9 +50,6 @@ update_icon "Visual Studio Code" "/Applications/Visual Studio Code.app" "/Applic
 # Vivaldi
 # https://macosicons.com/#/Netscape%20Navigator
 update_icon "Vivaldi" "/Applications/Vivaldi.app" "/Applications/Vivaldi.app/Contents/Resources/app.icns" "$ICONS_DIR/Browser.icns"
-
-# Zoom
-# https://dribbble.com/shots/23820258-Zoom-MacOS-Replacement-Icon
 
 # Reset caches and restart Dock
 sudo rm -rf /Library/Caches/com.apple.iconservices.store
