@@ -19,7 +19,7 @@
 - Disable **Allow notifications when mirroring or sharing the display**
 - Disable **Allow notifications from iPhone**
 - Enable and tweak **Summarize previews**
-- Disable all application notifications except critical ones sending important updates like messenger apps, banks.
+- Disable all application notifications except for Calendar, Reminders, Screen Time, Things, Wallet, music app, and messenger apps.
 
 ### Focus
 
@@ -62,6 +62,7 @@
 - **Vision** → **Display** → **Prefer non-blinking cursor** - `On`
 - **Vision** → **Display** → **Reduce transparency** - `On`
 - **Vision** → **Display** → **Pointer** → **Pointer size** - between 1st and 2nd delimiters
+- **Motor** → **Pointer Control** → **Mouse Options…** → **Scroll speed** - Max
 
 ### Control Center
 
@@ -187,6 +188,7 @@
 - **Turn keyboard backlight off after inactivity** − `After 5 Minutes`
 - **Press 🌐 key to** − `Change Input Source`
 - **Keyboard navigation** − `On`
+- **Keyboard navigation** → **Keyboard Shortcuts…** → **Mission Control** → Disable all except for **Mission Control**, **Application windows** and **Show Desktop**
 - **Keyboard navigation** → **Keyboard Shortcuts…** → **Spotlight** → Disable **Show Spotlight search**
 - **Text Input** **Text Replacements…**
   - `@@` → `your.email@gmail.com`
@@ -220,6 +222,7 @@
 - **Natural scrolling** − `Off`
 - **Swipe between pages** − `Off`
 - **Swipe between full-screen applications** − `Swipe Left of Right with Three Fingers`
+- **Notification Center** − `Off`
 - **Mission Control** − `Swipe Up with Three Fingers`
 - **App Exposé** − `Swipe Down with Three Fingers`
 - **Launchpad** − `On`
@@ -237,7 +240,7 @@
   - User's Library
 - Settings
   - **General** → **Show these items on the desktop** — Disable all
-  - **General** → **New Finder windows show:** − User's directory
+  - **General** → **New Finder windows show:** − Downloads
   - **General** − Enable **Open folders in tabs instead of new windows**
   - **Tags** — Disable all
   - **Sidebar** → **Show these items in the sidebar**:
@@ -274,3 +277,12 @@
 ## Other Defaults
 
 A few more commands to change some defaults. Run [`macos.sh`](../setup/macos.sh) to apply those.
+
+## Built-in macOS Applications
+
+- Pages
+  - **View** → `Show Word Count`
+- Notes
+  - **Settings** → **New note starts with:** — `Title`
+  - **Settings** — Disable **Group notes by date**
+  - **Settings** — Enable **Use Touch ID**
