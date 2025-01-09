@@ -34,7 +34,7 @@
   // Autocompletes
   // https://stackoverflow.com/questions/49956963/markdown-not-using-emmet
   // https://css-tricks.com/can-vs-code-emmet/
-  "emmet.excludeLanguages": ["typescript"],
+  "emmet.excludeLanguages": [],
   "emmet.includeLanguages": {
     "vue-html": "html",
     "javascript": "javascriptreact",
@@ -46,7 +46,8 @@
     "javascript": "jsx"
   },
   "emmet.triggerExpansionOnTab": true,
-  "emmet.showExpandedAbbreviation": "never",
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.showAbbreviationSuggestions": false,
   "emmet.showSuggestionsAsSnippets": true,
 
   // Code startup & new file creation
