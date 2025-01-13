@@ -58,7 +58,7 @@ cask "dash" # API documentation reader
 cask "firefox@developer-edition" # Dev tools for web dev work
 cask "ghostty" # Better terminal emulator
 cask "github" # GitHub Desktop GUI
-cask "hazeover", args: { require_sha: false } # Fades out inactive windows
+cask "hazeover" # Fades out inactive windows
 cask "hyperkey" # Enables mapping hyper key to the caps lock key
 cask "itsycal" # Tiny popup calendar in a menu bar
 cask "jordanbaird-ice" # Manage menu bar icons
@@ -70,14 +70,14 @@ cask "mimestream" # Email client
 cask "notion" # Note-taking app
 cask "optimage" # Image optimization
 cask "orbstack" # Running containerized applications. Ships `docker-compose` as well
-cask "pearcleaner", args: { require_sha: false } # Clean up macOS from junk and apps leftovers
+cask "pearcleaner" # Clean up macOS from junk and apps leftovers
 cask "qobuz" # Hi-rez audio streaming platform
-cask "quitter", args: { require_sha: false } # Quit apps after periods of inactivity
+cask "quitter" # Quit apps after periods of inactivity
 cask "raycast" # All-in-one app / tasks launcher
 cask "rectangle" # Window manager
 cask "rocket" # Handy emojis picker
 cask "slack" # Messaging social platform
-cask "superduper", args: { require_sha: false } # Data backup
+cask "superduper" # Data backup
 cask "syntax-highlight", args: { no_quarantine: true } # Preview many different source code files
 cask "tableplus" # Database managmenent system
 cask "telegram" # Messenger

@@ -130,7 +130,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
 export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/setup/Brewfile"
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --require-sha"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # git-friendly: disable bundle after pull
 export GIT_FRIENDLY_NO_BUNDLE=true
