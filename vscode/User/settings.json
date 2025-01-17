@@ -523,7 +523,6 @@
   // TS
   "typescript.format.enable": false,
   "typescript.autoClosingTags": true,
-  "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.quoteStyle": "single",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.preferences.preferTypeOnlyAutoImports": true,
