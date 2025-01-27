@@ -122,6 +122,15 @@ export ASTRO_TELEMETRY_DISABLED=1
 # https://storybook.js.org/docs/configure/telemetry
 export STORYBOOK_DISABLE_TELEMETRY=1
 
+# Node & NPM
+export NPM_CONFIG_INIT_AUTHOR_NAME="Nick Khan"
+export NPM_CONFIG_INIT_AUTHOR_URL="https://nikkhan.com"
+export NPM_CONFIG_INIT_LICENSE="MIT"
+export NPM_CONFIG_INIT_VERSION="0.0.0"
+export NPM_CONFIG_PROGRESS="true"
+export NPM_CONFIG_SAVE="true"
+export NPM_CONFIG_UPDATE_NOTIFIER="false"
+
 # Homebrew: https://docs.brew.sh/Manpage#environment
 export HOMEBREW_INSTALL_BADGE='☕'
 export HOMEBREW_NO_GITHUB_API=1
