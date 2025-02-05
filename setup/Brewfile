@@ -60,6 +60,7 @@ cask "ghostty" # Better terminal emulator
 cask "github" # GitHub Desktop GUI
 cask "hazeover" # Fades out inactive windows
 cask "hyperkey" # Enables mapping hyper key to the caps lock key
+cask "iina" # Modern media player
 cask "itsycal" # Tiny popup calendar in a menu bar
 cask "jordanbaird-ice" # Manage menu bar icons
 cask "keka" # File archiver and extractor
@@ -83,6 +84,7 @@ cask "tableplus" # Database managmenent system
 cask "telegram" # Messenger
 cask "visual-studio-code" # Code editor
 cask "vivaldi", args: { no_quarantine: true } # Browser with built-in privacy
+cask "whatsapp" # Messenger
 
 # VS Code extensions
 vscode "astro-build.astro-vscode"
