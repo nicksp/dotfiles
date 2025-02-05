@@ -25,9 +25,9 @@ brew "python@3.11" # Required by awscli
 brew "ripgrep" # Searching within files (better `grep`)
 brew "starship" # Prompt manager
 brew "tlrc" # Community-maintained docs (better `man`)
-brew "trash-cli" # Record and restore removed files (better `rm`)
+brew "trash-cli", link: true # Record and restore removed files (better `rm`)
 brew "webp" # More efficient web images
-brew "zoxide" # Convenient and majical navigation (better `cd`)
+brew "zoxide" # Convenient and magical navigation (better `cd`)
 brew "zsh" # A shell of choice
 brew "zsh-autosuggestions" # Fish-like autosuggestions for Zsh
 brew "zsh-syntax-highlighting" # Fish-like syntax highlighting for Zsh
@@ -79,7 +79,7 @@ cask "rocket" # Handy emojis picker
 cask "slack" # Messaging social platform
 cask "superduper" # Data backup
 cask "syntax-highlight", args: { no_quarantine: true } # Preview many different source code files
-cask "tableplus" # Database managmenent system
+cask "tableplus" # Database management system
 cask "telegram" # Messenger
 cask "visual-studio-code" # Code editor
 cask "vivaldi", args: { no_quarantine: true } # Browser with built-in privacy
