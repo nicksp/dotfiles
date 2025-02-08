@@ -121,6 +121,8 @@ export GATSBY_TELEMETRY_DISABLED=1
 export ASTRO_TELEMETRY_DISABLED=1
 # https://storybook.js.org/docs/configure/telemetry
 export STORYBOOK_DISABLE_TELEMETRY=1
+# https://vercel.com/docs/cli/about-telemetry#telemetry
+VERCEL_TELEMETRY_DISABLED=1
 
 # Node & NPM
 export NPM_CONFIG_INIT_AUTHOR_NAME="Nick Khan"
