@@ -1,7 +1,7 @@
 # Ignore case, unless the pattern includes capital letters
 --smart-case
 
-# Include hidden files (good for .eslinrc kind of files)
+# Include hidden files (good for .eslintrc kind of files)
 --hidden
 
 # Don't let ripgrep vomit really long lines to my terminal, and show a preview.

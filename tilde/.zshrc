@@ -9,7 +9,7 @@ source $HOME/dotfiles/zsh/key-bindings.zsh
 # Load plugins
 source $HOME/dotfiles/zsh/plugins/zsh-shift-select.plugin.zsh
 
-# Sets the window title nicely no matter where you are
+# Set the window title nicely no matter where you are
 DISABLE_AUTO_TITLE="true"
 _set_terminal_title() {
   local title="$(basename "$PWD")"
@@ -38,6 +38,13 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Allow local (private) customizations (not checked in to version control)
 [ -f ~/.zsh.local ] && source ~/.zsh.local
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 
 # Welcome!
 # fastfetch
