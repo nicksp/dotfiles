@@ -727,6 +727,7 @@
   "tailwindCSS.classAttributes": ["class", "className", "ngClass", "variants"],
 
   // Make AI helper less obtrusive
+  "cody.autocomplete.enabled": false,
   "cody.commandHints.enabled": false,
-  "cody.autocomplete.enabled": false
+  "cody.codeActions.enabled": false
 }
