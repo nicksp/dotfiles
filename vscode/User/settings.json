@@ -146,6 +146,10 @@
   "workbench.tree.indent": 20,
 
   "workbench.commandPalette.preserveInput": false,
+  "workbench.editorAssociations": {
+    // Don't open SVG files as preview
+    "*.svg": "default"
+  },
 
   /*
    * Terminal look
