@@ -242,6 +242,7 @@
   "problems.decorations.enabled": false,
   "search.decorations.badges": false,
   "git.decorations.enabled": false,
+  "git.blame.editorDecoration.enabled": false,
   "scm.diffDecorations": "gutter",
   "scm.diffDecorationsGutterPattern": { "modified": false },
   "scm.diffDecorationsIgnoreTrimWhitespace": "true",
