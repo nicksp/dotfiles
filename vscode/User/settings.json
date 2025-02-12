@@ -688,6 +688,9 @@
     },
     "Web:S1135": {
       "level": "off"
+    },
+    "css:S4662": {
+      "level": "off"
     }
   },
 
