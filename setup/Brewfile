@@ -58,7 +58,6 @@ cask "dash" # API documentation reader
 cask "firefox@developer-edition" # Dev tools for web dev work
 cask "ghostty" # Better terminal emulator
 cask "github" # GitHub Desktop GUI
-cask "hyperkey" # Enables mapping hyper key to the caps lock key
 cask "iina" # Modern media player
 cask "itsycal" # Tiny popup calendar in a menu bar
 cask "jordanbaird-ice" # Manage menu bar icons
