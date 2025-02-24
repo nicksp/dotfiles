@@ -16,6 +16,22 @@
       "console.log('\\\\n\\\\n\\\\n**************************************************************************')"
     ]
   },
+  "React function component": {
+    "prefix": "rfc",
+    "body": [
+      "type ${TM_FILENAME_BASE/^([a-z])|[\\-](\\w)/${1:/upcase}${2:/upcase}/g}Props = Readonly<{",
+      "  $1",
+      "}>",
+      "",
+      "function ${TM_FILENAME_BASE/^([a-z])|[\\-](\\w)/${1:/upcase}${2:/upcase}/g}({ $2 }: ${TM_FILENAME_BASE/^([a-z])|[\\-](\\w)/${1:/upcase}${2:/upcase}/g}Props) {",
+      "  return ${0:<></>}",
+      "}",
+      "",
+      "export { ${TM_FILENAME_BASE/^([a-z])|[\\-](\\w)/${1:/upcase}${2:/upcase}/g} }"
+    ],
+    "description": "Template of a new React functional component with TypeScript",
+    "scope": "typescriptreact"
+  },
   "React useState": {
     "prefix": "useState",
     "body": [
@@ -91,10 +107,10 @@
   },
   "import React from 'react'": {
     "prefix": "impr",
-    "body": "import React from 'react'"
+    "body": "import * as React from 'react'"
   },
   "throw log": {
     "prefix": "tl",
     "body": "throw new Error(JSON.stringify($0, null, 2))"
-  },
+  }
 }
