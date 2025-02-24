@@ -61,7 +61,7 @@ fi
 
 brew cleanup --prune=all
 brew missing
-brew doctor
+brew doctor || true
 echo
 
 # Homebrew casks
