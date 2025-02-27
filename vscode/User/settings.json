@@ -623,7 +623,13 @@
 
   // Code Spell Checker
   "cSpell.spellCheckDelayMs": 500,
-  "cSpell.enableFiletypes": ["shellscript", "mdx"],
+  "cSpell.enabledFileTypes": {
+    "*": true,
+    "mdx": true
+  },
+  "cSpell.numSuggestions": 5,
+  "cSpell.minWordLength": 3,
+  "cSpell.suggestionMenuType": "quickFix",
   "cSpell.customDictionaries": {
     "spellright": {
       "name": "spellright",
