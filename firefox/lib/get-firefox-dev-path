@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# Get the path to the Firefox Developer Edition profile folder.
+#
+# - Get the profile folder:
+#
+# `get-firefox-dev-path`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+firefox_app_support_dir="$HOME/Library/Application Support/Firefox"
+
+# Find Firefox Developer Edition profile
+profile_dir="$firefox_app_support_dir/Profiles"
+
+# Try to find by directory name pattern first
+firefox_dev_profile=$(find "$profile_dir" -maxdepth 1 -type d -name "*dev-edition*" 2>/dev/null | head -1)
+
+# If not found by name pattern, check profiles.ini
+if [ -z "$firefox_dev_profile" ] && [ -f "$firefox_app_support_dir/profiles.ini" ]; then
+  profile_path=$(grep -A 5 "Name=dev-edition" "$firefox_app_support_dir/profiles.ini" | grep "Path=" | head -1 | cut -d= -f2)
+  if [ -n "$profile_path" ]; then
+    firefox_dev_profile="$profile_dir/$profile_path"
+  fi
+fi
+
+# Output the path
+echo "$firefox_dev_profile"

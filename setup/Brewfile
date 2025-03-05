@@ -55,7 +55,7 @@ cask "bruno" # Local-first API client
 cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
 cask "dash" # API documentation reader
-cask "firefox@developer-edition" # Dev tools for web dev work
+cask "firefox@developer-edition" # Browser with configurable privacy
 cask "ghostty" # Better terminal emulator
 cask "github" # GitHub Desktop GUI
 cask "iina" # Modern media player
@@ -81,7 +81,6 @@ cask "syntax-highlight", args: { no_quarantine: true } # Preview many different 
 cask "tableplus" # Database management system
 cask "telegram" # Messenger
 cask "visual-studio-code" # Code editor
-cask "vivaldi", args: { no_quarantine: true } # Browser with built-in privacy
 cask "whatsapp" # Messenger
 
 # VS Code extensions

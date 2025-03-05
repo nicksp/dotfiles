@@ -6,12 +6,12 @@
 # > This script syncs color themes for:
 # > [x] Bat
 # > [x] Bear
-# > [x] Vivaldi
 # > [x] Chrome DevTools
 # > [x] CotEditor
 # > [x] Marta
 # > [x] Syntax Highlight
 # > [x] Ghostty
+# > [/] Firefox
 # > [/] Ice
 # > [/] Slack
 # > [/] Telegram
@@ -184,21 +184,6 @@ local_install "themes/Highlight/Squirrelsong%20Light.theme" "syntax-highlight/th
 echo "🌈 Import ${HIGHLIGHT}Squirrelsong Light.theme${RESET} in ${BOLD}Syntax Highlight − Settings${RESET} and then select the theme under ${BOLD}General − Color scheme${RESET} for ${BOLD}Light${RESET} and ${BOLD}Dark${RESET} modes"
 
 #
-# Vivaldi: https://github.com/sapegin/squirrelsong/tree/master/themes/Vivaldi
-#
-
-header "Installing Vivaldi theme..."
-
-my_data_install "themes/Vivaldi/Squirrelsong%20Light.zip" "squirrelsong-master/themes/Vivaldi"
-echo ""
-echo "🌈 Follow these steps to install the theme:"
-echo ""
-echo "− Open ${BOLD}Settings${RESET}, then ${BOLD}Themes${RESET}."
-echo "− Press ${BOLD}Open Theme...${RESET} button."
-echo "− Select ${HIGHLIGHT}Squirrelsong Light.zip${RESET}."
-echo "− Select ${BOLD}Squirrelsong Light${RESET} in ${BOLD}Theme${RESET} list."
-
-#
 # CotEditor: https://github.com/sapegin/squirrelsong/tree/master/themes/CotEditor
 #
 
@@ -231,6 +216,12 @@ echo "− Make sure that the ${BOLD}Light${RESET} theme is selected in the ${BOL
 echo "− Make sure that the ${BOLD}Allow extensions to load custom stylesheets${RESET} checkbox is selected in the ${BOLD}Experiments${RESET} section."
 
 # --- 8< -- 8< ---
+
+#
+# Firefox: https://github.com/sapegin/squirrelsong/tree/master/themes/Firefox#installation-from-firefox-add-ons-marketplace
+#
+
+header "☕ Install Firefox theme: https://github.com/sapegin/squirrelsong/tree/master/themes/Firefox"
 
 #
 # Ice: https://github.com/sapegin/squirrelsong/tree/master/themes/Ice

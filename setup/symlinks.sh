@@ -33,7 +33,7 @@ fail() {
 }
 
 symlink_file() {
-  local src=$1 dst=$2
+  local src=$1 dst=$2 isHardLink=${3:-false}
 
   local overwrite
   local backup
@@ -73,8 +73,13 @@ symlink_file() {
 
   # "false" or empty
   if [ "$skip" != "true" ]; then
-    ln -sf "$1" "$2"
-    success "linked $1 to $2"
+    if [ "$isHardLink" = true ]; then
+        ln -f "$1" "$2"
+        success "hard linked $1 to $2"
+    else
+        ln -sf "$1" "$2"
+        success "symlinked $1 to $2"
+    fi
   else
     success "skipped $src"
   fi
@@ -176,6 +181,10 @@ install_dotfiles() {
 }
 
 install_extras() {
+  local overwrite_all=false
+  local backup_all=false
+  local skip_all=false
+
   # CotEditor: Install `cot` command-line tool
   command -v cot &> /dev/null || {
     symlink_file "/Applications/CotEditor.app/Contents/SharedSupport/bin/cot" "/usr/local/bin/cot"
@@ -207,6 +216,12 @@ install_extras() {
 
   # Quick-Look plugins to enhance experience using file manager
   symlink_file "$DOTFILES_DIR/ql-plugins" "$HOME/Library/QuickLook"
+
+  # Firefox Developer Edition
+  ff_dev_profile_dir="$("$DOTFILES_DIR"/firefox/lib/get-firefox-dev-path)"
+  symlink_file "$DOTFILES_DIR/firefox/user.js" "$ff_dev_profile_dir/user.js" true
+  rm -rf "$ff_dev_profile_dir/chrome"
+  ln -sfn "$DOTFILES_DIR/firefox/chrome" "$ff_dev_profile_dir/chrome"
 }
 
 install_dotfiles

@@ -1,6 +1,6 @@
 # Squirrelsong Color Theme
 
-I use [Squirrelsong](https://sapegin.me/squirrelsong/) theme wherever possible.
+I use [Squirrelsong](https://sapegin.me/squirrelsong/) theme wherever exists.
 
 1. [Ice](https://github.com/sapegin/squirrelsong/tree/master/themes/Ice)
 1. [Bat](https://github.com/sapegin/squirrelsong/tree/master/themes/Sublime%20Text/Squirrelsong%20Dark)
@@ -13,7 +13,7 @@ I use [Squirrelsong](https://sapegin.me/squirrelsong/) theme wherever possible.
 1. [Syntax Highlight](https://github.com/sapegin/squirrelsong/tree/master/themes/Highlight)
 1. [Telegram](https://github.com/sapegin/squirrelsong/tree/master/themes/Telegram)
 1. [Visual Studio Code](https://github.com/sapegin/squirrelsong/tree/master/themes/VSCode/SquirrelsongLight)
-1. [Vivaldi](https://github.com/sapegin/squirrelsong/tree/master/themes/Vivaldi)
+1. [Firefox](https://github.com/sapegin/squirrelsong/tree/master/themes/Firefox)
 1. [Ghostty](https://github.com/sapegin/squirrelsong/tree/master/themes/Ghostty)
 1. [macOS](https://github.com/sapegin/squirrelsong/tree/master/themes/macOS)
 

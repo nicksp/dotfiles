@@ -16,6 +16,12 @@ const config = {
         trailingComma: 'none',
       },
     },
+    {
+      files: 'firefox/user.js',
+      options: {
+        semi: true,
+      },
+    },
   ],
 }
 

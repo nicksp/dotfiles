@@ -47,9 +47,9 @@ update_icon "Marta" "/Applications/Marta.app" "/Applications/Marta.app/Contents/
 # https://dribbble.com/shots/15424559-VS-Code-replacement-icon
 update_icon "Visual Studio Code" "/Applications/Visual Studio Code.app" "/Applications/Visual Studio Code.app/Contents/Resources/Code.icns" "$ICONS_DIR/Code.icns"
 
-# Vivaldi
+# Firefox Developer Edition
 # https://macosicons.com/#/Netscape%20Navigator
-update_icon "Vivaldi" "/Applications/Vivaldi.app" "/Applications/Vivaldi.app/Contents/Resources/app.icns" "$ICONS_DIR/Browser.icns"
+# update_icon "Firefox Developer Edition" "/Applications/Firefox Developer Edition.app" "/Applications/Firefox Developer Edition.app/Contents/Resources/firefox.icns" "$ICONS_DIR/Browser.icns"
 
 # Reset caches and restart Dock
 sudo rm -rf /Library/Caches/com.apple.iconservices.store

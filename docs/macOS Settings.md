@@ -133,7 +133,7 @@
 - **Widgets** → **Show Widgets** − `On Desktop`
 - **Widgets** → **Widget style** − `Monochrome`
 - **Widgets** → **Use iPhone widgets** − `Off`
-- **Default web browser** − `Vivaldi.app`
+- **Default web browser** − `Firefox Developer Edition.app`
 - **Windows** → **Prefer tabs when opening documents** − `In Full Screen`
 - **Windows** → **Ask to keep changes when closing documents** − `On`
 - **Windows** → **Close windows when quitting an application** − `Off`
