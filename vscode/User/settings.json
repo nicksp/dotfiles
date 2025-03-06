@@ -254,10 +254,11 @@
   "scm.diffDecorations": "gutter",
   "scm.diffDecorationsGutterPattern": { "modified": false },
   "scm.diffDecorationsIgnoreTrimWhitespace": "true",
-  "testing.openTesting": "openOnTestFailure",
+  "testing.automaticallyOpenTestResults": "openOnTestFailure",
   "typos.diagnosticSeverity": "Information",
   "window.commandCenter": false,
   "workbench.navigationControl.enabled": false,
+  "chat.commandCenter.enabled": false,
 
   /*
   |--------------------------------------------------------------------------
