@@ -46,6 +46,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+# Add GPG key
+export GPG_TTY=$(tty)
+
 # Welcome!
 # fastfetch
 

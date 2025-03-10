@@ -5,6 +5,7 @@
 [user]
   name = Nick Plekhanov
   email = nicksp@users.noreply.github.com
+  signingKey = 77258BB2E99B579D
 
 [github]
   user = nicksp
@@ -85,6 +86,12 @@
   verbose = true
   # Custom template for new commit messages
   template = ~/.gitmessage
+  # Sign all commits by default
+  gpgSign = true
+
+[tag]
+  # Sign all tags by default
+  gpgSign = true
 
 [log]
   # Show branch names with git log

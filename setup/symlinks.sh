@@ -209,6 +209,9 @@ install_extras() {
   # Lazygit
   symlink_file "$DOTFILES_DIR/lazygit/state.yml" "$HOME/Library/Application Support/lazygit/state.yml"
 
+  # GPG
+  symlink_file "$DOTFILES_DIR/gpg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
+
   # Marta
   marta_app_data_dir="$HOME/Library/Application Support/org.yanex.marta"
   symlink_file "$DOTFILES_DIR/marta/conf.marco" "$marta_app_data_dir/conf.marco"

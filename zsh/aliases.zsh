@@ -51,6 +51,8 @@ alias cc="code ."
 alias where="which"
 alias pn="pnpm"
 alias nvm="fnm"
+# List the long form of the GPG keys for which you have both a public and private key
+alias gpgkeys="gpg --list-secret-keys --keyid-format=long"
 
 # Apps
 

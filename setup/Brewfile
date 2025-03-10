@@ -17,8 +17,10 @@ brew "fzf" # Fuzzy file finder and filtering
 brew "gh" # GitHub CLI: interact with GitHub PRs, issues, repos
 brew "git" # Version control
 brew "git-delta" # Diff pager for `git` and `grep` output (better `diff`)
+brew "gnupg" # Encryption and signing capabilities for data verification
 brew "htop" # Performance and resource monitoring tool (better `top`)
 brew "node" # Fallback Node.js version
+brew "pinentry-mac" # Securely enter your GPG passphrase
 brew "pnpm" # Efficient Node.js package manager
 brew "prettyping" # Prettier and compact `ping`
 brew "python@3.11" # Required by awscli
@@ -43,7 +45,7 @@ brew "giflib"
 brew "jpeg"
 brew "pango"
 brew "librsvg"
-brew "pkg-config"
+brew "pkgconf"
 
 # Fonts
 cask "font-symbols-only-nerd-font"
