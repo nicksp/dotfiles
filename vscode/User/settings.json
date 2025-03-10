@@ -176,13 +176,8 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorStyleInactive": "none",
   "terminal.integrated.cursorWidth": 2,
-  // Enable terminal intellisense
-  "terminal.integrated.suggest.enabled": true,
-  "terminal.integrated.suggest.quickSuggestions": {
-    "commands": "off",
-    "arguments": "on",
-    "unknown": "off"
-  },
+  // Disable terminal intellisense
+  "terminal.integrated.suggest.enabled": false,
   "terminal.integrated.suggest.inlineSuggestion": "off",
   "terminal.integrated.shellIntegration.decorationsEnabled": "never",
   "terminal.integrated.shellIntegration.showCommandGuide": false,
