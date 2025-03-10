@@ -118,7 +118,8 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain KeyRepeat -int 1
+# Set a shorter Delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Set language and text formats
@@ -206,6 +207,16 @@ defaults write NSGlobalDomain AppleFontSmoothing -int 1
 
 # Enable HiDPI display modes (requires restart)
 sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+
+###############################################################################
+# Security                                                                    #
+###############################################################################
+
+# Enable Firewall Service
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+
+# Enable Stealth Mode (Prevent others from discovering your Mac)
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 
 ###############################################################################
 # Finder                                                                      #

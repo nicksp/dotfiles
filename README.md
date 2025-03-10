@@ -32,7 +32,6 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 
 ## Installation
 
-1. Enable **Firewall** under **System Settings** → **Network**
 1. Point the DNS Servers to [Cloudflare DNS](https://one.one.one.one/dns/)
     - `1.1.1.1`
     - `1.0.0.1`
