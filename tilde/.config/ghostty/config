@@ -13,6 +13,7 @@ theme = Squirrelsong Dark
 minimum-contrast = 1.1
 macos-icon = custom-style
 macos-titlebar-style = tabs
+macos-window-shadow = false
 
 window-padding-x = 8
 window-padding-y = 12
@@ -29,6 +30,9 @@ window-save-state = always
 
 clipboard-trim-trailing-spaces = true
 copy-on-select = clipboard
+
+# It interferes with some accessibility features like Touch ID
+macos-auto-secure-input = false
 
 # Hot keys
 # Toggle the "quick" terminal globally from the top
