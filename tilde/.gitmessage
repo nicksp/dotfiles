@@ -1,8 +1,20 @@
 
+############################################## 50-CHARACTER SUBJECT LINE ##############################################
+# Pattern: <type>(scope): description
+# Use ! for breaking changes (ie. feat(auth)!: change authentication flow to use JWT tokens)
+# `build`: Changes that affect the build system or external dependencies
+# `ci`: Changes to our CI configuration files and scripts
+# `docs`: Documentation only changes
+# `feat`: A new feature
+# `fix`: A bug fix
+# `perf`: A code change that improves performance
+# `refactor`: A code change that neither fixes a bug nor adds a feature
+# `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+# `test`: Adding new tests or adjusting existing tests
+####################################################################################################################
 
-# 50-character subject line
-#
-# 72-character wrapped longer description. This should answer:
+####################################################################################################################
+# Commit message body. Stick to 72 characters per line. This should answer:
 #
 # * Why was this change necessary?
 # * How does it address the problem?
@@ -12,5 +24,6 @@
 #
 # Add co-authors if you worked on this code with others:
 #
-# Co-authored-by: Full Name <email@example.com>
-# Co-authored-by: Full Name <email@example.com>
+# Co-authored-by: Full Name <email1@example.com>
+# Co-authored-by: Full Name <email2@example.com>
+####################################################################################################################
