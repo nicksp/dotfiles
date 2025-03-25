@@ -1,7 +1,5 @@
 # Taps
 tap "git-friendly/git-friendly"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "jesseduffield/lazydocker"
 tap "jesseduffield/lazygit"
 tap "oven-sh/bun"
