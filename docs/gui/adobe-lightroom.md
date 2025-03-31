@@ -27,6 +27,6 @@
 
 - **X:** reject
 - **Z:** pick
-- **Z:** unset flag
+- **U:** unset flag
 - **0:** unset stars
 - **5:** 5 stars
