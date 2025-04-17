@@ -56,6 +56,8 @@ user_pref('browser.download.always_ask_before_handling_new_types', true);
 user_pref('browser.download.alwaysOpenPanel', false);
 // Don't add downloads to the system's "recent documents" list
 user_pref('browser.download.manager.addToRecentDocs', false);
+// Allow web apps to override default Firefox hotkeys
+user_pref('permissions.default.shortcuts', 0);
 
 // Configure available search shortcuts
 user_pref('browser.urlbar.shortcuts.bookmarks', true);
