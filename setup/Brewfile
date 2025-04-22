@@ -58,7 +58,6 @@ cask "dash" # API documentation reader
 cask "firefox@developer-edition" # Browser with configurable privacy
 cask "ghostty" # Better terminal emulator
 cask "github" # GitHub Desktop GUI
-cask "iina" # Modern media player
 cask "itsycal" # Tiny popup calendar in a menu bar
 cask "jordanbaird-ice" # Manage menu bar icons
 cask "keka" # File archiver and extractor
