@@ -22,6 +22,7 @@ Is automated via `user.js` and `chrome/userChrome.css`. Copy them to your [Firef
   - Firefox now [includes tracker blocking](https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/), but I leave Privacy Badger enabled.
 - 1Password — <https://addons.mozilla.org/en-US/firefox/addon/1password-x-password-manager/>
 - React Developer Tools — <https://addons.mozilla.org/en-US/firefox/addon/react-devtools/>
+- Refined GitHub — <https://addons.mozilla.org/en-US/firefox/addon/refined-github-/>
 - EditThisCookie2 — <https://addons.mozilla.org/en-US/firefox/addon/etc2/>
 - Atomic CSS Devtools — <https://addons.mozilla.org/en-US/firefox/addon/atomic-css-devtools/>
 - Grammar and Spell Checker - LanguageTool — <https://addons.mozilla.org/en-US/firefox/addon/languagetool/>
