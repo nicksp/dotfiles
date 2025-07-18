@@ -744,8 +744,13 @@
 
   "tailwindCSS.classAttributes": ["class", "className", "ngClass", "variants"],
 
-  // Make AI helper less obtrusive
-  "cody.autocomplete.enabled": false,
-  "cody.commandHints.enabled": false,
-  "cody.codeActions.enabled": false
+  // Tweak AI helper
+  "kilo-code.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
 }
