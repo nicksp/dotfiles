@@ -1,0 +1,44 @@
+#!/bin/bash
+#
+# Play internet radio stations.
+# > Available genres: `lofi`, `octave`, `salsa`, `mix`, `mellow`, `rock`, `world`, `general`, `hits`, `eurodance`, `80s`.
+#
+# - Play a radio station by genre:
+#
+# `radio {{genre}}`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+set -euo pipefail
+
+if [ "$1" == lofi ]; then
+  url='https://live.hunter.fm/lofi_low'
+elif [ "$1" == octave ]; then
+  url='https://octaverecords.out.airtime.pro/octaverecords_b'
+elif [ "$1" == salsa ]; then
+  url='https://latinasalsa.ice.infomaniak.ch/latinasalsa.mp3'
+elif [ "$1" == mix ]; then
+  url='http://radio3.radio-calico.com:8080/calico'
+elif [ "$1" == mellow ]; then
+  url='https://stream.radioparadise.com/mellow-flacm'
+elif [ "$1" == rock ]; then
+  url='https://stream.radioparadise.com/rock-flacm'
+elif [ "$1" == world ]; then
+  url='https://stream.radioparadise.com/global-flacm'
+elif [ "$1" == general ]; then
+  url='https://stream.radioparadise.com/flacm'
+elif [ "$1" == hits ]; then
+  url='https://stream.joyhits.online:8072/joyhits.flac.ogg'
+elif [ "$1" == eurodance ]; then
+  url='https://stream.radioclub80.cl:8032/stream.euro80flac'
+elif [ "$1" == 80s ]; then
+  url='https://stream.radioclub80.cl:8002/clasicos80.flac'
+else
+  echo "Oops. I don't know \"$1\"." 1>&2
+  exit 1
+fi
+
+exec mpv --quiet --term-status-msg='${media-title} - ${metadata/artist}' "$url"
