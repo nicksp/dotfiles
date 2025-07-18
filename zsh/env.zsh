@@ -123,6 +123,8 @@ export ASTRO_TELEMETRY_DISABLED=1
 export STORYBOOK_DISABLE_TELEMETRY=1
 # https://vercel.com/docs/cli/about-telemetry#telemetry
 VERCEL_TELEMETRY_DISABLED=1
+# https://github.com/aws/aws-cdk/issues/34892
+CDK_DISABLE_CLI_TELEMETRY=1
 
 # Node & NPM
 export NPM_CONFIG_INIT_AUTHOR_NAME="Nick Khan"
