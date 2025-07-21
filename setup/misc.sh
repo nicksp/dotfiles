@@ -68,6 +68,6 @@ npm config set save-exact true
 # Npm packages
 packages=(
   npm-upgrade
-  yo
+  aws-cdk
 )
 npm install -g "${packages[@]}"

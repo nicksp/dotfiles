@@ -5,6 +5,7 @@ tap "jesseduffield/lazygit"
 tap "oven-sh/bun"
 
 # CLI tools
+brew "aws-cdk" # AWS Cloud Development Kit
 brew "awscli" # Official Amazon AWS command-line interface
 brew "bat" # Output highlighting (better `cat`)
 brew "eza" # Listing files with info (better `ls`)
@@ -24,6 +25,7 @@ brew "pnpm" # Efficient Node.js package manager
 brew "prettyping" # Prettier and compact `ping`
 brew "python@3.11" # Required by awscli
 brew "ripgrep" # Searching within files (better `grep`)
+brew "sops" # Secrets manager
 brew "starship" # Prompt manager
 brew "tlrc" # Community-maintained docs (better `man`)
 brew "trash-cli", link: true # Record and restore removed files (better `rm`)
