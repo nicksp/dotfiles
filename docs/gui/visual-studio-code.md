@@ -33,6 +33,7 @@
 - **F2:** rename symbol
 - **Cmd+F2:** change all occurrences
 - **Alt+Enter:** quick fix or refactor
+- **Cmd+I:** Open inline Copilot chat
 
 ## Debugging
 

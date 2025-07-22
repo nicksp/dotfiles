@@ -745,6 +745,13 @@
   "tailwindCSS.classAttributes": ["class", "className", "ngClass", "variants"],
 
   // Tweak AI helper
+  "github.copilot.editor.enableCodeActions": false,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
   "kilo-code.allowedCommands": [
     "npm test",
     "npm install",

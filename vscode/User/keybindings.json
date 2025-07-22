@@ -189,6 +189,11 @@
     "key": "cmd+;",
     "command": "workbench.action.switchWindow"
   },
+  {
+    // Activate Copilot inline chat instead
+    "key": "cmd+i",
+    "command": "-kilo-code.ghost.promptCodeSuggestion"
+  },
 
   /**
    * Code Editing and Navigation
