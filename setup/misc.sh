@@ -69,5 +69,6 @@ npm config set save-exact true
 packages=(
   npm-upgrade
   aws-cdk
+  @anthropic-ai/claude-code
 )
 npm install -g "${packages[@]}"
