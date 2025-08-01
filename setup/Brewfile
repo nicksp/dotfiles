@@ -40,12 +40,12 @@ brew "jesseduffield/lazygit/lazygit" # Full Git management app
 brew "oven-sh/bun/bun" # Bun runtime
 
 # Temporarily required for some work projects
-brew "libpng"
 brew "cairo"
 brew "giflib"
 brew "jpeg"
-brew "pango"
+brew "libpng"
 brew "librsvg"
+brew "pango"
 brew "pkgconf"
 
 # Fonts
@@ -55,8 +55,10 @@ cask "font-symbols-only-nerd-font"
 cask "1password" # Password manager
 cask "adobe-creative-cloud" # Adobe Photoshop & Lightroom
 cask "bruno" # Local-first API client
+brew "claude" # Claude for Desktop
 cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
+cask "cursor" # AI Code editor
 cask "dash" # API documentation reader
 cask "firefox@developer-edition" # Browser with configurable privacy
 cask "ghostty" # Better terminal emulator
