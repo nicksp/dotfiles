@@ -44,3 +44,6 @@ keybind = super+shift+right=goto_split:next
 
 # Delete the whole line
 keybind = super+backspace=text:\x15s
+
+# Insert newline
+keybind = shift+enter=text:\n
