@@ -87,20 +87,25 @@ cask "visual-studio-code" # Code editor
 cask "whatsapp" # Messenger
 
 # VS Code extensions
+vscode "anthropic.claude-code"
 vscode "astro-build.astro-vscode"
+vscode "bierner.markdown-mermaid"
 vscode "bierner.markdown-preview-github-styles"
-vscode "biomejs.biome"
 vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc-icons"
 vscode "davidanson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
 vscode "deerawan.vscode-dash"
+vscode "dejmedus.tailwind-sorter"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
+vscode "github.copilot" # Auto-installed when Copilot chat is used
+vscode "github.copilot-chat"
 vscode "github.vscode-pull-request-github"
 vscode "kilocode.kilo-code"
 vscode "kisstkondoros.vscode-gutter-preview"
 vscode "meganrogge.template-string-converter"
+vscode "ms-azuretools.vscode-containers" # Auto-installed by Docker extension
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-vscode.node-debug2"
 vscode "naumovs.color-highlight"
