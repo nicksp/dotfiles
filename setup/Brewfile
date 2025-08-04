@@ -55,7 +55,6 @@ cask "font-symbols-only-nerd-font"
 cask "1password" # Password manager
 cask "adobe-creative-cloud" # Adobe Photoshop & Lightroom
 cask "bruno" # Local-first API client
-brew "claude" # Claude for Desktop
 cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
 cask "cursor" # AI Code editor
