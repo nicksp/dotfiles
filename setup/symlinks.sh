@@ -203,6 +203,19 @@ install_extras() {
   rm -rf "$vscode_user_folder"
   ln -sfn "$DOTFILES_DIR/vscode/User" "$vscode_user_folder"
 
+  #
+  # Cursor
+  #
+
+  # Install `cursor` command in PATH
+  command -v cursor &> /dev/null || {
+    symlink_file "/Applications/Cursor.app/Contents/Resources/app/bin/cursor" "/usr/local/bin/cursor"
+  }
+  # Enable settings sync from dotfiles
+  cursor_user_folder="$HOME/Library/Application Support/Cursor/User"
+  rm -rf "$cursor_user_folder"
+  ln -sfn "$DOTFILES_DIR/cursor/User" "$cursor_user_folder"
+
   # Lazydocker
   symlink_file "$DOTFILES_DIR/lazydocker/config.yml" "$HOME/Library/Application Support/lazydocker/config.yml"
 

@@ -1,0 +1,116 @@
+{
+  "🦆 console.log()": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "cl",
+    "body": [
+      "console.log('${1|🦀,🦜,🌭,🐷,🦆,🌮,🍟,🌽,🥐,🫒,🍪,🚀,🎉,💪,🤷‍♂️,🕵️‍♂️,🛳️,🐙,🍄,🐴|}', $2)",
+      "$0"
+    ],
+    "description": "Log output to console"
+  },
+  "spaced console.log()": {
+    "prefix": "scl",
+    "body": [
+      "console.log('**************************************************************************\\\\n\\\\n\\\\n')",
+      "console.log($0)",
+      "console.log('\\\\n\\\\n\\\\n**************************************************************************')"
+    ]
+  },
+  "React function component": {
+    "prefix": "rfc",
+    "body": [
+      "type ${TM_FILENAME_BASE/^([a-z])|[\\-](\\w)/${1:/upcase}${2:/upcase}/g}Props = Readonly<{",
+      "  $1",
+      "}>",
+      "",
+      "function ${TM_FILENAME_BASE/^([a-z])|[\\-](\\w)/${1:/upcase}${2:/upcase}/g}({ $2 }: ${TM_FILENAME_BASE/^([a-z])|[\\-](\\w)/${1:/upcase}${2:/upcase}/g}Props) {",
+      "  return ${0:<></>}",
+      "}",
+      "",
+      "export { ${TM_FILENAME_BASE/^([a-z])|[\\-](\\w)/${1:/upcase}${2:/upcase}/g} }"
+    ],
+    "description": "Template of a new React functional component with TypeScript",
+    "scope": "typescriptreact"
+  },
+  "React useState": {
+    "prefix": "useState",
+    "body": [
+      "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState(${2:default${1/(.*)/${1:/capitalize}/}})"
+    ],
+  },
+  "React useEffect": {
+    "prefix": "useEffect",
+    "body": [
+      "useEffect(() => {",
+      "  $1",
+      "}, [$2])$0"
+    ]
+  },
+  "React useCallback": {
+    "prefix": "useCallback",
+    "body": [
+      "useCallback(() => {",
+      "  $1",
+      "}, [$2])$0"
+    ]
+  },
+  "React useMemo": {
+    "prefix": "useMemo",
+    "body": [
+      "useMemo(() => {",
+      "  $1",
+      "}, [$2])$0"
+    ]
+  },
+  "beforeEach test": {
+    "prefix": "beforeEach",
+    "body": [
+      "beforeEach(() => {",
+      "  $1",
+      "})"
+    ]
+  },
+  "afterEach test": {
+    "prefix": "afterEach",
+    "body": [
+      "afterEach(() => {",
+      "  $1",
+      "})"
+    ]
+  },
+  "describe test": {
+    "prefix": "describe",
+    "body": [
+      "describe('${1:description}', () => {",
+      "  $0",
+      "})"
+    ]
+  },
+  "it test": {
+    "prefix": "it",
+    "body": [
+      "it('${1:description}', () => {",
+      "  $0",
+      "})"
+    ]
+  },
+  "describe + it test": {
+    "prefix": "jdesc",
+    "body": [
+      "describe ('$1', () => {",
+      "  it('$2', () => {",
+      "    $3",
+      "    expect(1).toEqual(2)",
+      "  })",
+      "})"
+    ]
+  },
+  "import React from 'react'": {
+    "prefix": "impr",
+    "body": "import * as React from 'react'"
+  },
+  "throw log": {
+    "prefix": "tl",
+    "body": "throw new Error(JSON.stringify($0, null, 2))"
+  }
+}

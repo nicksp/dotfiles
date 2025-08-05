@@ -5,6 +5,10 @@ vscode/**/workspaceStorage/
 vscode/**/syncLocalSettings.json
 vscode/**/globalStorage/
 vscode/**/History/
+cursor/**/workspaceStorage/
+cursor/**/syncLocalSettings.json
+cursor/**/globalStorage/
+cursor/**/History/
 lazygit/state.yml
 .tlrc/
 private/
