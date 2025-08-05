@@ -1,0 +1,21 @@
+# https://cli.github.com/manual/gh_config
+
+# What protocol to use when performing git operations. Supported values: ssh, https
+git_protocol: ssh
+# What editor gh should run when creating issues, pull requests, etc. If blank, will refer to environment.
+editor:
+# A pager program to send command output to, e.g. "less". Set the value to "cat" to disable the pager.
+pager: cat
+# Aliases allow you to create nicknames for gh commands
+aliases:
+  bugs: issue list --label bugs
+  diff: pr diff
+  clone: repo clone
+  co: pr checkout
+  pv: pr view --web
+  v: repo view --web
+  status: >
+    !gh api graphql -f emoji="${1%% *}" -f msg="${1#* }" -f query='mutation ($msg: String!, $emoji: String) {changeUserStatus(input:{message:$msg,emoji:$emoji}) {status { message, emoji }}}'
+  prl: >
+    pr list --json number,title,headRefName,author,createdAt --template '{{tablerow (color "white" "ID") (color "white" "TITLE") (color "white" "BRANCH") (color "white" "AUTHOR") (color "white" "CREATED AT")}}{{range .}}{{tablerow (printf "#%v" .number | autocolor "green") .title (.headRefName | color "cyan") (.author.login | color "yellow") (timeago .createdAt | autocolor "blue") }}{{end}}'
+version: "1"
