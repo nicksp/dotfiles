@@ -262,6 +262,7 @@
   // Show me whitespace in diffs, just in case some slips through, and shows up in the GitHub PR
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.experimental.showMoves": true,
+  "diffEditor.codeLens": true,
 
   "git.closeDiffOnOperation": true,
   "git.confirmSync": false,
