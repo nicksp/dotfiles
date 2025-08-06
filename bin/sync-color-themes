@@ -154,7 +154,7 @@ echo "🌈 A new color theme has been installed and ready to use"
 
 header "Installing Bear theme..."
 
-bear_themes_dir="/Applications/Bear.app/Contents/Frameworks/BearCore.framework/Versions/A/Resources"
+bear_themes_dir="/Applications/Bear.app/Contents/Frameworks/BearCore.framework/Resources"
 sudo command rm -f "$bear_themes_dir/Red Graphite.theme"
 system_install "themes/Bear/Squirrelsong%20Light.theme" "$bear_themes_dir/Red Graphite.theme"
 echo "🌈 Now choose ${HIGHLIGHT}Red Graphite${RESET} theme in Bear settings"
