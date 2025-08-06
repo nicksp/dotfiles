@@ -6,7 +6,6 @@
 # > This script syncs color themes for:
 # > [x] Bat
 # > [x] Bear
-# > [x] Chrome DevTools
 # > [x] CotEditor
 # > [x] Marta
 # > [x] Syntax Highlight
@@ -196,24 +195,6 @@ echo ""
 echo "− Open ${BOLD}Settings${RESET}, then ${BOLD}Appearance${RESET}."
 echo "− Import ${HIGHLIGHT}Squirrelsong Light.cottheme${RESET}"
 echo "− Select ${BOLD}Squirrelsong Light${RESET} in ${BOLD}Theme${RESET} list."
-
-#
-# Chrome DevTools: https://github.com/sapegin/squirrelsong/tree/master/themes/Chrome%20DevTools
-#
-
-header "Installing Chrome DevTools theme..."
-
-my_data_install "https://github.com/sapegin/squirrelsong/archive/refs/heads/master.zip" "squirrelsong-master/themes/Chrome DevTools/extension-light"
-echo ""
-echo "🌈 Follow these steps to install the extension:"
-echo ""
-echo "− Go to chrome://extensions in your browser."
-echo "− Turn on ${BOLD}Developer mode${RESET}."
-echo "− Press ${BOLD}Load unpacked${RESET} button."
-echo "− Select the ${HIGHLIGHT}Chrome DevTools/extension-light${RESET} folder of this repository."
-echo "− Open DevTools settings."
-echo "− Make sure that the ${BOLD}Light${RESET} theme is selected in the ${BOLD}Preferences${RESET} → ${BOLD}Appearance${RESET} section."
-echo "− Make sure that the ${BOLD}Allow extensions to load custom stylesheets${RESET} checkbox is selected in the ${BOLD}Experiments${RESET} section."
 
 # --- 8< -- 8< ---
 
