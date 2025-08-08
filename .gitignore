@@ -13,7 +13,3 @@ lazygit/state.yml
 .tlrc/
 private/
 tilde/.ssh/*
-tilde/.zsh_history
-tilde/.zcompdump
-tilde/.zsh_sessions/
-tilde/db.zo
