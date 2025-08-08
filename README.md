@@ -27,8 +27,8 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 - git / delta syntax-highlighting diff tool.
 - Sensible [macOS defaults](setup/macos.sh).
 - Config for other apps and utils.
-- [macOS apps and VSCode/Cursor extensions](setup/Brewfile) I use.
-- [macOS tips & tricks](/docs/macOS%20Tips%20&%20Tricks.md).
+- [macOS apps and VSCode / Cursor extensions](setup/Brewfile) I use.
+- [macOS tips & tricks](/docs/macos%20tips%20&%20tricks.md).
 
 ## Installation
 
