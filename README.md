@@ -19,6 +19,7 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 ## What's in there?
 
 - Handy [binary scripts](bin/).
+- AI agents [config automation](ai-agents/).
 - [Custom color scheme](colors/).
 - [Custom zsh theme](tilde/.starship.toml) with Git status, etc. using [Starship](https://starship.rs/).
 - [Git aliases](tilde/.gitconfig).
@@ -29,6 +30,8 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 - Config for other apps and utils.
 - [macOS apps and VSCode / Cursor extensions](setup/Brewfile) I use.
 - [macOS tips & tricks](/docs/macos%20tips%20&%20tricks.md).
+- [LLM cost reduction tips](/docs/llm%20cost%20reduction.md).
+- [Claude Code best practices](/docs/claude%20code%20best%20practices.md).
 
 ## Installation
 

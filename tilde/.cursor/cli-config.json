@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "editor": {
+    "vimMode": false
+  },
+  "model": {
+    "modelId": "claude-4-sonnet",
+    "displayModelId": "sonnet-4",
+    "displayName": "Claude 4 Sonnet",
+    "displayNameShort": "Sonnet 4",
+    "aliases": [
+      "sonnet",
+      "sonnet-4"
+    ]
+  },
+  "hasChangedDefaultModel": true,
+  "permissions": {
+    "allow": [
+      "Shell(ls)"
+    ],
+    "deny": []
+  },
+  "privacyCache": {
+    "ghostMode": true,
+    "privacyMode": 2,
+    "updatedAt": 1754645355455
+  }
+}

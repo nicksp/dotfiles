@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "context7": {
+      "url": "https://mcp.context7.com/mcp",
+      "custom_instruction": {
+        "text": "Never retrieve more than 10000 tokens at a time from the get-library-docs tool.\nAlways search for a specific topic when using the get-library-docs tools."
+      },
+      "disabled": false
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest", "--vision"],
+      "disabled": false
+    },
+    "Neon": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.neon.tech/mcp"]
+    }
+  }
+}

@@ -13,6 +13,9 @@ prepend() {
 # CotEditor and VSCode install their CLI tools here
 prepend "/usr/local/bin"
 
+# Cursor CLI installs here
+prepend "$HOME/.local/bin"
+
 # Homebrew binaries
 # > $(brew --prefix)
 homebrew_path="/opt/homebrew"

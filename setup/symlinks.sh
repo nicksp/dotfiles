@@ -238,6 +238,34 @@ install_extras() {
   symlink_file "$DOTFILES_DIR/firefox/user.js" "$ff_dev_profile_dir/user.js" true
   rm -rf "$ff_dev_profile_dir/chrome"
   ln -sfn "$DOTFILES_DIR/firefox/chrome" "$ff_dev_profile_dir/chrome"
+
+  #
+  # AI agents
+  #
+
+  LLMS_FILENAME="agent-instructions.md"
+  LLMS_COMMANDS_DIR="$DOTFILES_DIR/ai-agents/commands"
+  LLMS_AGENTS_DIR="$DOTFILES_DIR/ai-agents/claude-code/agents"
+  LLMS_INSTRUCTIONS="$DOTFILES_DIR/ai-agents/$LLMS_FILENAME"
+  MCP_FILE="$DOTFILES_DIR/ai-agents/mcp.json"
+
+  # Claude
+  CLAUDE_DIR="$HOME/.claude"
+  CLAUDE_COMMANDS_DIR="$CLAUDE_DIR/commands"
+  CLAUDE_AGENTS_DIR="$CLAUDE_DIR/agents"
+  symlink_file "$LLMS_INSTRUCTIONS" "$CLAUDE_DIR/CLAUDE.md"
+  rm -rf "$CLAUDE_COMMANDS_DIR" && ln -sfn "$LLMS_COMMANDS_DIR" "$CLAUDE_COMMANDS_DIR"
+  rm -rf "$CLAUDE_AGENTS_DIR" && ln -sfn "$LLMS_AGENTS_DIR" "$CLAUDE_AGENTS_DIR"
+
+  # Kilo Code
+  KILO_CODE_DIR="$HOME/.kilocode"
+  KILO_CODE_COMMANDS_DIR="$KILO_CODE_DIR/workflows"
+  symlink_file "$LLMS_INSTRUCTIONS" "$KILO_CODE_DIR/rules/$LLMS_FILENAME"
+  rm -rf "$KILO_CODE_COMMANDS_DIR" && ln -sfn "$LLMS_COMMANDS_DIR" "$KILO_CODE_COMMANDS_DIR"
+
+  # Cursor
+  CURSOR_DIR="$HOME/.cursor"
+  symlink_file "$MCP_FILE" "$CURSOR_DIR/mcp.json"
 }
 
 install_dotfiles
