@@ -11,6 +11,12 @@
 
 Run “Install 'cursor' command in PATH” from the command palette (View → Command Palette) to make Cursor available from the command line.
 
+## Dim Catppuccin Latte icon theme icons colors
+
+```shell
+sync-cursor-icons
+```
+
 ## Install extensions
 
 See [Brewfile](../setup/Brewfile) for a list of extensions.

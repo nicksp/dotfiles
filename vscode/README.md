@@ -11,9 +11,15 @@
 
 Run “Install 'code' command in PATH” from the command palette (View → Command Palette) to make Code available from the command line.
 
+## Dim Catppuccin Latte icon theme icons colors
+
+```shell
+sync-vscode-icons
+```
+
 ## Install extensions
 
-```bash
+```shell
 brew bundle install --file setup/Brewfile
 ```
 
