@@ -19,6 +19,17 @@
     "command": "-workbench.action.toggleAuxiliaryBar"
   },
   {
+    "comment": "Maximize left secondary sidebar",
+    "key": "shift+cmd+1",
+    "command": "workbench.action.maximizeAuxiliaryBar"
+  },
+  {
+    "comment": "Minimize left secondary sidebar",
+    "key": "shift+cmd+1",
+    "command": "workbench.action.restoreAuxiliaryBar",
+    "when": "auxiliaryBarMaximized"
+  },
+  {
     "comment": "Toggle the right primary sidebar",
     "key": "cmd+2",
     "command": "workbench.action.toggleSidebarVisibility"
@@ -904,5 +915,5 @@
     "key": "cmd+k",
     "command": "workbench.action.terminal.clear",
     "when": "terminalFocus"
-  }
+  },
 ]
