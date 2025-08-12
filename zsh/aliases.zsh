@@ -15,7 +15,9 @@ alias -- -="cd -" # previous working directory
 
 # Hot-access directories
 alias library="cd $HOME/Library"
-alias projects="cd $WORKSPACE"
+alias proj="cd $WORKSPACE"
+alias forks="cd $WORKSPACE/forks"
+alias i="cd $WORKSPACE/oss"
 
 # zshrc config
 alias zshrc="$EDITOR ~/.zshrc"
@@ -50,10 +52,10 @@ alias e="$EDITOR"
 alias c="code ."
 alias cc="code ."
 alias cr="cursor ."
-alias sops="EDITOR=\"code --wait\" sops"
 alias where="which"
 alias pn="pnpm"
 alias nvm="fnm"
+alias sops="EDITOR=\"code --wait\" sops"
 alias python="python3"
 # List the long form of the GPG keys for which you have both a public and private key
 alias gpgkeys="gpg --list-secret-keys --keyid-format=long"
