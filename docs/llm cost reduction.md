@@ -28,8 +28,11 @@ The cost depends mainly on _A)_ context size (i.e. how many tokens are fed to th
     - `structure.md` — Outlines the project's organization, database schema, and architecture patterns
 - Code indexing should also help you reduce cost, it does require some setup though.
 - Use expensive models only where they’re actually relevant, and run the actual code generation on a cheaper model.
-- Don’t try to do everything from start to finish in one chat session. Write your code in chunks, and when you’re happy with one chunk start a new Task to deal with the next one. Otherwise you’re unnecessarily bloating the context with things that have nothing to do with what you’re asking.
-- Give the assistant small and clearly limited tasks. That way it is much easier to keep track of how much you’re spending. If you ask it to generate the entire program in one go, it’ll cost some x amount and you have no way of knowing what it is before it’s finished, and you also can’t correct false assumptions/misunderstandings early, so fixing them afterwards requires a lot of unnecessary work. If you give it small tasks, you see the cost after each step and if something isn’t as you wanted, you can catch it immediately.
+- Consider using CLI tools instead of MCP servers. Too many available tools can reduce model performance and consume more tokens.
+  - Use MCP servers that expose a small number of high-level tools.
+  - Disable MCP tools that you aren’t using.
+- Keep it short, keep it focused. Break very large tasks up into smaller sub-tasks, one per chat session.
+  - Otherwise you’re unnecessarily bloating the context with things that have nothing to do with what you’re asking.
 
 ## Helpful Pages
 

@@ -25,7 +25,7 @@ Consider these suggestions as starting points when using Claude Code.
 
 ## Prompt Engineering
 
-1. Be as specific in your instructions as you would with another engineer for the best results.
+1. Be explicit and specific with your instructions.
     1. Specificity leads to better alignment with expectations.
     2. Tell LLM what is SHOULD do rather than what NOT to do.
 2. Clear context regularly with `/clear` to maintain focused conversations.
