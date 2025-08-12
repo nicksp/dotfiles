@@ -53,12 +53,25 @@ alias c="code ."
 alias cc="code ."
 alias cr="cursor ."
 alias where="which"
-alias pn="pnpm"
-alias nvm="fnm"
 alias sops="EDITOR=\"code --wait\" sops"
 alias python="python3"
 # List the long form of the GPG keys for which you have both a public and private key
 alias gpgkeys="gpg --list-secret-keys --keyid-format=long"
+
+# Node Package Manager
+alias pn="pnpm"
+alias nvm="fnm"
+
+alias nio="ni --prefer-offline"
+alias ns="nr start"
+alias nd="nr dev"
+alias nb="nr build"
+alias nbw="nr build --watch"
+alias nt="nr test"
+alias ntw="nr test --watch"
+alias ntc="nr typecheck"
+alias lint="nr lint"
+alias lintf="nr lint --fix"
 
 # Apps
 
