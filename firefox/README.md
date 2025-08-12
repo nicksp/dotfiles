@@ -24,9 +24,8 @@ Is automated via `user.js` and `chrome/userChrome.css`. Copy them to your [Firef
 - React Developer Tools — <https://addons.mozilla.org/en-US/firefox/addon/react-devtools/>
 - Refined GitHub — <https://addons.mozilla.org/en-US/firefox/addon/refined-github-/>
 - EditThisCookie2 — <https://addons.mozilla.org/en-US/firefox/addon/etc2/>
-- Atomic CSS Devtools — <https://addons.mozilla.org/en-US/firefox/addon/atomic-css-devtools/>
+- Catppuccin for Web File Explorer Icons — <https://addons.mozilla.org/en-US/firefox/addon/catppuccin-web-file-icons/>
 - Grammar and Spell Checker - LanguageTool — <https://addons.mozilla.org/en-US/firefox/addon/languagetool/>
 - Blank Sky New Tab Page — <https://addons.mozilla.org/en-US/firefox/addon/blank-sky-new-tab-page/>. _Run in Private Windows_
-- OctoLinker — <https://addons.mozilla.org/en-US/firefox/addon/octolinker/>
 - Github Issue Reactions — <https://addons.mozilla.org/en-US/firefox/addon/github-issue-reactions/>
 - Video Speed Controller − <https://addons.mozilla.org/en-US/firefox/addon/videospeed/>
