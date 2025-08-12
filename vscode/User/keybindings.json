@@ -21,13 +21,8 @@
   {
     "comment": "Maximize left secondary sidebar",
     "key": "shift+cmd+1",
-    "command": "workbench.action.maximizeAuxiliaryBar"
-  },
-  {
-    "comment": "Minimize left secondary sidebar",
-    "key": "shift+cmd+1",
-    "command": "workbench.action.restoreAuxiliaryBar",
-    "when": "auxiliaryBarMaximized"
+    "command": "workbench.action.toggleMaximizedAuxiliaryBar",
+    "when": "auxiliaryBarVisible"
   },
   {
     "comment": "Toggle the right primary sidebar",
