@@ -263,6 +263,10 @@ install_extras() {
   symlink_file "$LLMS_INSTRUCTIONS" "$KILO_CODE_DIR/rules/$LLMS_FILENAME"
   rm -rf "$KILO_CODE_COMMANDS_DIR" && ln -sfn "$LLMS_COMMANDS_DIR" "$KILO_CODE_COMMANDS_DIR"
 
+  # Amp
+  AMP_DIR="$HOME/.config"
+  symlink_file "$LLMS_INSTRUCTIONS" "$AMP_DIR/AGENT.md"
+
   # Cursor
   CURSOR_DIR="$HOME/.cursor"
   symlink_file "$MCP_FILE" "$CURSOR_DIR/mcp.json"

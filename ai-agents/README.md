@@ -10,6 +10,7 @@ A collection of specialized system prompts and slash commands for AI agents to a
 - [x] Cursor
 - [x] Claude Code
 - [x] Kilo Code
+- [x] Amp
 
 ## What It Does
 
@@ -37,6 +38,7 @@ Helps LLM powered tools like Cursor and Claude Code understand how to interact w
 1. **Cursor**: Paste [file content](./agent-instructions.md) in your project's `.cursorrules` file
 2. **Claude Code**: Paste [file content](./agent-instructions.md) in `~/.claude/CLAUDE.md` (automated ✔️)
 3. **Kilo Code**: Paste [file content](./agent-instructions.md) in `~/.kilocode/rules/agent-instructions.md` (automated ✔️)
+4. **Amp**: Paste [file content](./agent-instructions.md) in `~/.config/AGENT.md` (automated ✔️)
 
 ### Add MCP servers
 
@@ -45,12 +47,13 @@ Helps LLM powered tools like Cursor and Claude Code understand how to interact w
 1. **Cursor**: Paste [file content](./mcp.json) in `~/.cursor/mcp.json` (automated ✔️)
 2. **Claude Code**: Paste [file content](./mcp.json) in `~/.claude.json` or your project's `.mcp.json` file
 3. **Kilo Code**: Paste [file content](./mcp.json) in your project's `.kilocode/mcp.json` file
+4. **Amp**: Paste [file content](./mcp.json) in `~/.config/amp/settings.json` as `amp.mcpServers` and in VS Code settings as `amp.mcpServers` (automated ✔️)
 
 #### Available servers
 
+- [Playwright MCP Server](https://github.com/microsoft/playwright-mcp)
 - [Context7 MCP Server](https://github.com/upstash/context7)
 - [Neon MCP Server](https://github.com/neondatabase-labs/mcp-server-neon)
-- [Playwright MCP Server](https://github.com/microsoft/playwright-mcp)
 
 ### Add slash commands
 

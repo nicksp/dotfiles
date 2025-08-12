@@ -70,6 +70,7 @@ packages=(
   npm-upgrade
   aws-cdk
   @anthropic-ai/claude-code
+  @sourcegraph/amp
   @antfu/ni
 )
 npm install -g "${packages[@]}"
