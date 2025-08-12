@@ -9,12 +9,13 @@
     },
     "playwright": {
       "command": "npx",
-      "args": ["@playwright/mcp@latest", "--vision"],
+      "args": ["-y", "@playwright/mcp@latest", "--headless", "--isolated"],
       "disabled": false
     },
     "Neon": {
       "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.neon.tech/mcp"]
+      "args": ["-y", "mcp-remote", "https://mcp.neon.tech/mcp"],
+      "disabled": true
     }
   }
 }
