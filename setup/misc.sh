@@ -64,6 +64,7 @@ fi
 # Node.js global config
 npm config set loglevel warn
 npm config set save-exact true
+npm config set fund false
 
 # Npm packages
 packages=(
