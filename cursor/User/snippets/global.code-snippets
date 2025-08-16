@@ -4,19 +4,21 @@
     "prefix": "cl",
     "body": [
       "console.log('${1|🦀,🦜,🌭,🐷,🦆,🌮,🍟,🌽,🥐,🫒,🍪,🚀,🎉,💪,🤷‍♂️,🕵️‍♂️,🛳️,🐙,🍄,🐴|}', $2)",
-      "$0"
+      "$0",
     ],
-    "description": "Log output to console"
+    "description": "Log output to console",
   },
-  "spaced console.log()": {
+  "🦆 spaced console.log()": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "scl",
     "body": [
       "console.log('**************************************************************************\\\\n\\\\n\\\\n')",
       "console.log($0)",
-      "console.log('\\\\n\\\\n\\\\n**************************************************************************')"
-    ]
+      "console.log('\\\\n\\\\n\\\\n**************************************************************************')",
+    ],
   },
   "React function component": {
+    "scope": "typescriptreact",
     "prefix": "rfc",
     "body": [
       "type ${TM_FILENAME_BASE/^([a-z])|[\\-](\\w)/${1:/upcase}${2:/upcase}/g}Props = Readonly<{",
@@ -27,90 +29,66 @@
       "  return ${0:<></>}",
       "}",
       "",
-      "export { ${TM_FILENAME_BASE/^([a-z])|[\\-](\\w)/${1:/upcase}${2:/upcase}/g} }"
+      "export { ${TM_FILENAME_BASE/^([a-z])|[\\-](\\w)/${1:/upcase}${2:/upcase}/g} }",
     ],
     "description": "Template of a new React functional component with TypeScript",
-    "scope": "typescriptreact"
   },
   "React useState": {
-    "prefix": "useState",
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "us",
     "body": [
-      "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState(${2:default${1/(.*)/${1:/capitalize}/}})"
+      "const [$1, set${1/(.*)/${1:/capitalize}/}] = useState(${2:default${1/(.*)/${1:/capitalize}/}})",
     ],
   },
   "React useEffect": {
-    "prefix": "useEffect",
-    "body": [
-      "useEffect(() => {",
-      "  $1",
-      "}, [$2])$0"
-    ]
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "ue",
+    "body": ["useEffect(() => {", "  $1", "}, [$2])$0"],
   },
   "React useCallback": {
-    "prefix": "useCallback",
-    "body": [
-      "useCallback(() => {",
-      "  $1",
-      "}, [$2])$0"
-    ]
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "uc",
+    "body": ["useCallback(() => {", "  $1", "}, [$2])$0"],
   },
   "React useMemo": {
-    "prefix": "useMemo",
-    "body": [
-      "useMemo(() => {",
-      "  $1",
-      "}, [$2])$0"
-    ]
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "um",
+    "body": ["useMemo(() => {", "  $1", "}, [$2])$0"],
   },
   "beforeEach test": {
-    "prefix": "beforeEach",
-    "body": [
-      "beforeEach(() => {",
-      "  $1",
-      "})"
-    ]
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "be",
+    "body": ["beforeEach(() => {", "  $1", "})"],
   },
   "afterEach test": {
-    "prefix": "afterEach",
-    "body": [
-      "afterEach(() => {",
-      "  $1",
-      "})"
-    ]
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "ae",
+    "body": ["afterEach(() => {", "  $1", "})"],
   },
   "describe test": {
-    "prefix": "describe",
-    "body": [
-      "describe('${1:description}', () => {",
-      "  $0",
-      "})"
-    ]
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "desc",
+    "body": ["describe('${1:description}', () => {", "  $0", "})"],
   },
   "it test": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "it",
-    "body": [
-      "it('${1:description}', () => {",
-      "  $0",
-      "})"
-    ]
+    "body": ["it('${1:description}', () => {", "  $0", "})"],
   },
-  "describe + it test": {
-    "prefix": "jdesc",
-    "body": [
-      "describe ('$1', () => {",
-      "  it('$2', () => {",
-      "    $3",
-      "    expect(1).toEqual(2)",
-      "  })",
-      "})"
-    ]
+  "import": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
+    "prefix": "im",
+    "body": ["import { $1 } from '$2';"],
+    "description": "Import a module",
   },
   "import React from 'react'": {
+    "scope": "javascriptreact,typescriptreact",
     "prefix": "impr",
-    "body": "import * as React from 'react'"
+    "body": "import * as React from 'react'",
   },
   "throw log": {
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "tl",
-    "body": "throw new Error(JSON.stringify($0, null, 2))"
-  }
+    "body": "throw new Error(JSON.stringify($0, null, 2))",
+  },
 }
