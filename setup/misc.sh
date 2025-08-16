@@ -70,6 +70,7 @@ npm config set fund false
 packages=(
   npm-upgrade
   aws-cdk
+  serverless
   @anthropic-ai/claude-code
   @sourcegraph/amp
   @antfu/ni
