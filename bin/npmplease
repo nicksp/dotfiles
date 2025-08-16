@@ -11,4 +11,4 @@
 # License: MIT
 # https://github.com/nicksp/dotfiles
 
-rm -rf ./node_modules/ && rm -f package-lock.json && npm install
+rm -rf ./node_modules/ && rm -f package-lock.json && nio
