@@ -917,10 +917,6 @@
     "command": "composerMode.steering_architect"
   },
   {
-    "key": "cmd+e",
-    "command": "composerMode.background"
-  },
-  {
     "key": "cmd+i",
     "command": "-composer.startComposerPrompt"
   },
