@@ -62,6 +62,7 @@ alias gpgkeys="gpg --list-secret-keys --keyid-format=long"
 alias pn="pnpm"
 alias nvm="fnm"
 
+# https://github.com/antfu/ni
 alias nio="ni --prefer-offline"
 alias ns="nr start"
 alias nd="nr dev"
@@ -70,6 +71,7 @@ alias nbw="nr build --watch"
 alias nt="nr test"
 alias ntw="nr test --watch"
 alias ntc="nr typecheck"
+alias nf="nr format"
 alias lint="nr lint"
 alias lintf="nr lint --fix"
 
