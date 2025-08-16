@@ -14,4 +14,4 @@ cd "$HOME/dotfiles" &> /dev/null || return
 echo "Pulling changes from upstream..."
 git pull
 echo
-echo "🦆 Open a new terminal for the changes to take effect."
+echo "🦏 Open a new terminal for the changes to take effect."
