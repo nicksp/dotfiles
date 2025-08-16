@@ -913,10 +913,6 @@
     "command": "composerMode.steering_architect"
   },
   {
-    "key": "shift+cmd",
-    "command": "composerMode.steering_architect"
-  },
-  {
     "key": "cmd+i",
     "command": "-composer.startComposerPrompt"
   },
