@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# Print nyan cat.
+# Print nyan dog.
 #
-# - Print a cat:
+# - Print:
 #
 # `nyan`
 #
@@ -10,22 +10,28 @@
 # Author: Nick Plekhanov, https://nikkhan.com/
 # License: MIT
 # https://github.com/nicksp/dotfiles
+#
+## Dogs inspiration:
+# https://www.asciiart.eu/animals/dogs
 
 RED="$(tput setaf 1)"
 GREEN="$(tput setaf 2)"
 YELLOW="$(tput setaf 3)"
 CYAN="$(tput setaf 6)"
+MAGENTA="$(tput setaf 5)"
 WHITE="$(tput setaf 7)"
 BOLD="$(tput bold)"
 RESET="$(tput sgr0)"
 
 echo
 echo -en $RED'-_-_-_-_-_-_-_-'
-echo -e $RESET$BOLD$WHITE'  ／l、'$RESET
-echo -en $YELLOW$WHIT'_-_-_-_-_-_-_-'
-echo -e $RESET$BOLD$WHITE'（ﾟ､ ｡ ７'$RESET
+echo -e $RESET$BOLD$WHITE'/\\___/\\'$RESET
+echo -en $YELLOW'_-_-_-_-_-_-_-_'
+echo -e $RESET$BOLD$WHITE'`)@ @('"'"''$RESET
 echo -en $GREEN'-_-_-_-_-_-_-_-'
-echo -e $RESET$BOLD$WHITE'l  ~ ヽ'$RESET
-echo -en $CYAN'-_-_-_-_-_-_-_-'
-echo -e $RESET$BOLD$WHITE'じしf_,)ノ'$RESET
+echo -e $RESET$BOLD$WHITE'{_:Y:.}_'$RESET
+echo -en $CYAN'_-_-_-_-_-_-_-_'
+echo -e $RESET$BOLD$WHITE'( )U-'"'"'( )'$RESET
+echo -en $MAGENTA'-_-_-_-_-_-_-_-'
+echo -e $RESET$BOLD$WHITE'```   '"'"''"'"''"'"''$RESET
 echo

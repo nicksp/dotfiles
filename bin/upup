@@ -85,5 +85,5 @@ for extension in $(code --list-extensions); do
   code --install-extension $extension --force
 done
 
-# Nyan cat!
+# Nyan dog!
 nyan
