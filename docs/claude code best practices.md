@@ -23,11 +23,11 @@ Consider these suggestions as starting points when using Claude Code.
     1. `.claude/commands/` for project-level commands
     2. `~/.claude/commands` for user-level commands
 
-## Prompt Engineering
+## Context Engineering
 
 1. Be explicit and specific with your instructions.
     1. Specificity leads to better alignment with expectations.
-    2. Tell LLM what is SHOULD do rather than what NOT to do.
+    2. Tell LLM what it SHOULD do instead of what NOT to do.
 2. Clear context regularly with `/clear` to maintain focused conversations.
     1. Even better, restart the *claude* session.
 3. Add emphasis to instructions with "IMPORTANT" or "YOU MUST" as needed.
@@ -37,9 +37,11 @@ Consider these suggestions as starting points when using Claude Code.
     2. **Use Escape** — balance letting Claude work and interjecting at the right times. Press Escape once to stop. Press Escape twice to jump back in the conversation.
     3. **Ask Claude to undo changes**.
 6. Use checklists and scratchpads for complex workflows.
-7. Use the word "think" to trigger extended thinking mode.
+7. Use terms like "deep dive", "comprehensive", "analyze", "evaluate", "assess", "research", or "make a report" to trigger thoroughness.
+8. Use the word "think" to trigger extended thinking mode.
     1. "think" < "think hard" < "think harder" < "ultrathink"
         1. Extended thinking works really well if Claude already has something in context.
+9. Match your prompt style to the desired response style.
 
 ## Common Workflows
 
@@ -100,6 +102,7 @@ Use Claude Code for learning and exploration by asking general questions about y
 ## Useful Links
 
 - [Claude Code: Best practices for agentic coding](https://www.anthropic.com/engineering/claude-code-best-practices)
+- [Claude 4 best practices](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices)
 - [Common workflows](https://docs.anthropic.com/en/docs/claude-code/common-workflows)
 - [Claude Code Memory Management](https://docs.anthropic.com/en/docs/claude-code/memory)
 - [General Prompt Engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)
