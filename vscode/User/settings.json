@@ -751,10 +751,14 @@
   "kilo-code.allowedCommands": [
     "npm test",
     "npm install",
+    "pnpm install",
     "tsc",
     "git log",
     "git diff",
-    "git show"
+    "git show",
+    "npm run lint",
+    "npm run typecheck",
+    "npm run format"
   ],
   "kilo-code.deniedCommands": [],
   "amp.tab.enabled": false,
