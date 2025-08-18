@@ -2,7 +2,7 @@
 #
 # Set up computer environment
 #
-# Author: Nick Plekhanov, https://nikkhan.com/
+# Author: Nick Plekhanov, https://plekhanov.me
 # License: MIT
 # https://github.com/nicksp/dotfiles
 

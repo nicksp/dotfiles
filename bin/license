@@ -7,7 +7,7 @@
 # `license`
 #
 # ---
-# Author: Nick Plekhanov, https://nikkhan.com/
+# Author: Nick Plekhanov, https://plekhanov.me
 # License: MIT
 # https://github.com/nicksp/dotfiles
 
@@ -15,7 +15,7 @@ exec bash -c "tail -n +$(($LINENO + 2)) < $0 | sed s/DATE/$(date +%Y)/"
 
 MIT License
 
-Copyright (c) 2016−DATE Nick Plekhanov <https://nikkhan.com/>
+Copyright (c) 2016−DATE Nick Plekhanov <https://plekhanov.me>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
