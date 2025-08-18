@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# Synchronize apps data, color themes, apps icons, VS Code and Cursor icons color palette.
+#
+# - Run the synchronization:
+#
+# `sync-all`
+#
+# ---
+# Author: Nick Plekhanov, https://nikkhan.com/
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+set -euo pipefail
+
+BOLD=$(tput bold)
+RESET=$(tput sgr0)
+
+"$DOTFILES/bin/sync-apps-data"
+echo "✅ ${BOLD}Done${RESET}"
+echo
+
+"$DOTFILES/bin/sync-color-themes"
+echo "✅ ${BOLD}Done${RESET}"
+echo
+
+"$DOTFILES/bin/sync-apps-icons"
+echo "✅ ${BOLD}Done${RESET}"
+echo
+
+"$DOTFILES/bin/sync-vscode-icons"
+echo "✅ ${BOLD}Done${RESET}"
+echo
+
+"$DOTFILES/bin/sync-cursor-icons"
+echo "✅ ${BOLD}Done${RESET}"
+echo
