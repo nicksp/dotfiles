@@ -74,6 +74,8 @@ alias ntc="nr typecheck"
 alias nf="nr format"
 alias lint="nr lint"
 alias lintf="nr lint --fix"
+alias release="nr release"
+alias re="nr release"
 
 # Apps
 
