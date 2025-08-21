@@ -38,7 +38,7 @@ Helps LLM powered tools like Cursor and Claude Code understand how to interact w
 1. **Cursor**: Paste [file content](./agent-instructions.md) in your project's `.cursorrules` file
 2. **Claude Code**: Paste [file content](./agent-instructions.md) in `~/.claude/CLAUDE.md` (automated ✔️)
 3. **Kilo Code**: Paste [file content](./agent-instructions.md) in `~/.kilocode/rules/agent-instructions.md` (automated ✔️)
-4. **Amp**: Paste [file content](./agent-instructions.md) in `~/.config/AGENT.md` (automated ✔️)
+4. **Amp**: Paste [file content](./agent-instructions.md) in `~/.config/AGENTS.md` (automated ✔️)
 
 ### Add MCP servers
 

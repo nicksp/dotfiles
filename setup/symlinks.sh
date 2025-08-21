@@ -265,7 +265,7 @@ install_extras() {
 
   # Amp
   AMP_DIR="$HOME/.config"
-  symlink_file "$LLMS_INSTRUCTIONS" "$AMP_DIR/AGENT.md"
+  symlink_file "$LLMS_INSTRUCTIONS" "$AMP_DIR/AGENTS.md"
 
   # Cursor
   CURSOR_DIR="$HOME/.cursor"
