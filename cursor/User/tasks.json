@@ -65,18 +65,6 @@
         "reveal": "never"
       },
       "problemMatcher": []
-    },
-    {
-      "label": "Project: Open in GitHub",
-      "type": "shell",
-      "command": "git remote get-url origin | sed 's/\\.git$//' | sed 's/git@github\\.com:/https:\\/\\/github\\.com\\//' | xargs open",
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "presentation": {
-        "reveal": "never"
-      },
-      "problemMatcher": []
     }
   ]
 }

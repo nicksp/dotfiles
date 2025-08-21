@@ -108,6 +108,7 @@ vscode "ms-azuretools.vscode-containers" # Auto-installed by Docker extension
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-vscode.node-debug2"
 vscode "naumovs.color-highlight"
+vscode "nicksp.reveal-on-github"
 vscode "orta.vscode-twoslash-queries"
 vscode "redhat.vscode-yaml"
 vscode "sapegin.emoji-console-log"
