@@ -200,6 +200,12 @@
     "key": "cmd+i",
     "command": "-kilo-code.ghost.promptCodeSuggestion"
   },
+  {
+    // Activate Copilot inline chat instead
+    "key": "cmd+i",
+    "command": "-amp.agent.toggleVisibility",
+    "when": "amp.primaryShortcuts"
+  },
 
   /**
    * Code Editing and Navigation
