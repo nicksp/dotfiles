@@ -866,22 +866,6 @@
     "command": "extension.runPrevJest"
   },
 
-  // Rewrap
-  {
-    "comment": "ReWrap current comment",
-    "key": "cmd+k cmd+w",
-    "command": "rewrap.rewrapComment",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+q",
-    "command": "-rewrap.rewrapComment"
-  },
-  {
-    "key": "cmd+k cmd+w",
-    "command": "-workbench.action.closeAllEditors"
-  },
-
   /**
    * Internal Functions
    */
