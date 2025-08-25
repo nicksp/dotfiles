@@ -204,10 +204,7 @@
     "key": "cmd+s",
     "command": "runCommands",
     "args": {
-      "commands": [
-        "editor.action.format",
-        "workbench.action.files.save"
-      ]
+      "commands": ["editor.action.format", "workbench.action.files.save"]
     }
   },
   {
@@ -256,7 +253,7 @@
   },
   {
     "key": "cmd+.",
-    "command": "-editor.action.quickFix",
+    "command": "-editor.action.quickFix"
   },
   {
     "comment": "Fold",
@@ -370,7 +367,7 @@
     "key": "f12",
     "command": "-editor.action.revealDefinition"
   },
-    {
+  {
     "key": "cmd+f12",
     "command": "-editor.action.revealDefinition"
   },
@@ -833,10 +830,10 @@
 
   // Jest Runner
   // {
-    // TODO: Find a suitable shortcut not to interfere with the others
-    // "comment": "Run a test Method",
-    // "key": "cmd+k cmd+m",
-    // "command": "extension.runJest"
+  // TODO: Find a suitable shortcut not to interfere with the others
+  // "comment": "Run a test Method",
+  // "key": "cmd+k cmd+m",
+  // "command": "extension.runJest"
   // },
   {
     "comment": "Run a test File",
