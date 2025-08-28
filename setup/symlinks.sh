@@ -264,8 +264,10 @@ install_extras() {
   rm -rf "$KILO_CODE_COMMANDS_DIR" && ln -sfn "$LLMS_COMMANDS_DIR" "$KILO_CODE_COMMANDS_DIR"
 
   # Amp
-  AMP_DIR="$HOME/.config"
-  symlink_file "$LLMS_INSTRUCTIONS" "$AMP_DIR/AGENTS.md"
+  AMP_DIR="$HOME/.config/amp"
+  AMP_COMMANDS_DIR="$AMP_DIR/commands"
+  symlink_file "$LLMS_INSTRUCTIONS" "$HOME/.config/AGENTS.md"
+  rm -rf "$AMP_COMMANDS_DIR" && ln -sfn "$LLMS_COMMANDS_DIR" "$AMP_COMMANDS_DIR"
 
   # Cursor
   CURSOR_DIR="$HOME/.cursor"

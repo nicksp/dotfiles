@@ -62,6 +62,7 @@ Helps LLM powered tools like Cursor and Claude Code understand how to interact w
 1. **Cursor**: Copy the [command files](./commands/) to your project's `.cursor/commands/`
 2. **Claude Code**: Copy the [command files](./commands/) to `~/.claude/commands/` (automated ✔️)
 3. **Kilo Code**: Copy the [command files](./commands/) to `~/.kilocode/workflows/` (automated ✔️)
+4. **Amp**: Copy the [command files](./commands/) to `~/.config/amp/commands/` (automated ✔️)
 
 #### Available commands
 
