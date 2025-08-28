@@ -748,6 +748,8 @@
     "markdown": false,
     "scminput": false
   },
+  // Disable annoying hints "Cmd+I to continue with Copilot"
+  "inlineChat.lineNaturalLanguageHint": false,
   "kilo-code.allowedCommands": [
     "npm test",
     "npm install",
