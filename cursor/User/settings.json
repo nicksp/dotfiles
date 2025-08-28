@@ -160,7 +160,6 @@
   "scm.diffDecorationsIgnoreTrimWhitespace": "true",
   "testing.automaticallyOpenTestResults": "openOnTestFailure",
   "typos.diagnosticSeverity": "Information",
-  "window.commandCenter": false,
   "workbench.navigationControl.enabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.experimental.showMoves": true,
@@ -477,5 +476,6 @@
   "cursor.composer.shouldChimeAfterChatFinishes": true,
   "cursor.composer.backspaceRemoveContext": false,
   "cursor.chat.terminalShowHoverHint": false,
-  "cursor.composer.shouldAutoScrollToBottom": false
+  "cursor.composer.shouldAutoScrollToBottom": false,
+  "cursor.composer.usageSummaryDisplay": "always"
 }
