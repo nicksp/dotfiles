@@ -38,13 +38,13 @@ zsh_path=$(which zsh)
 # To work around an error for non-standard shell,
 # ensure zsh is a valid shell option
 if ! cat /etc/shells | grep $zsh_path > /dev/null; then
-  title "Adding Zsh to list of allowed shells..."
+  title "Adding Zsh to list of allowed shells…"
   sh -c "echo $zsh_path >> /etc/shells"
   echo
 fi
 
 # Set the default shell to ZSH
-title "Changing your shell to $zsh_path..."
+title "Changing your shell to $zsh_path…"
 chsh -s "$zsh_path"
 echo "Your shell has been changed to zsh, please restart your terminal or tab"
 echo

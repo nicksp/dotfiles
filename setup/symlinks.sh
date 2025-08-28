@@ -131,7 +131,7 @@ handle_existing_file() {
 }
 
 install_dotfiles() {
-  info 'Installing dotfiles...'
+  info 'Installing dotfiles…'
 
   local overwrite_all=false
   local backup_all=false

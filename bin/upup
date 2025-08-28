@@ -35,18 +35,18 @@ dotfiles
 echo
 
 # macOS
-header "Updating macOS system..."
+header "Updating macOS system…"
 sudo softwareupdate -ia --verbose
 echo
 
 # App Store
 # https://github.com/mas-cli/mas?tab=readme-ov-file#%EF%B8%8F-known-issues
-# header "Updating apps from App Store..."
+# header "Updating apps from App Store…"
 # sudo mas upgrade
 # echo
 
 # Homebrew formulae
-header "Updating Homebrew packages..."
+header "Updating Homebrew packages…"
 brew update
 
 outdated_packages=$(brew outdated)
@@ -65,21 +65,21 @@ brew doctor || true
 echo
 
 # Homebrew casks
-header "Updating Homebrew casks..."
+header "Updating Homebrew casks…"
 brew upgrade --cask $(brew list --cask)
 
 # Raycast
-header "Updating Raycast and its extensions..."
+header "Updating Raycast and its extensions…"
 open raycast://extensions/raycast/raycast/check-for-updates
 open raycast://extensions/raycast/raycast/check-for-extension-updates
 
 # npm
-header "Updating global npm modules..."
+header "Updating global npm modules…"
 npm update -g
 echo
 
 # VS Code extensions
-header "Updating VS Code extensions..."
+header "Updating VS Code extensions…"
 for extension in $(code --list-extensions); do
   # Reinstall each extension (which automatically updates it if there is a newer version)
   code --install-extension $extension --force

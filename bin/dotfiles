@@ -11,7 +11,7 @@ set -eu
 
 cd "$HOME/dotfiles" &> /dev/null || return
 
-echo "Pulling changes from upstream..."
+echo "Pulling changes from upstream…"
 git pull
 echo
 echo "🦏 Open a new terminal for the changes to take effect."

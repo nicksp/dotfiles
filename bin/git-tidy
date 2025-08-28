@@ -22,15 +22,15 @@ branches() {
 }
 
 # Remove unreachable objects (commits, trees, blobs, etc.) from the Git object database
-header "Deleting unreachable objects..."
+header "Deleting unreachable objects…"
 git prune
 
 # Delete all stale remote-tracking branches, these branches have already been
 # removed from the remote repository, but are still locally available in "remotes/".
-header "Deleting stale remote-tracking branches..."
+header "Deleting stale remote-tracking branches…"
 git remote prune origin
 
-header "Deleting merged branches except for 'master' and 'main'..."
+header "Deleting merged branches except for 'master' and 'main'…"
 branches | xargs -n 1 git branch -d
 
 echo "Done."

@@ -24,7 +24,7 @@ title() {
 }
 
 _bk() {
-  title "Backing up $1..."
+  title "Backing up $1…"
   dest_dir="$DEST/$2"
   mkdir -p "$dest_dir"
 

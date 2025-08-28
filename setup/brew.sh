@@ -16,7 +16,7 @@ indent() {
 
 # Check for Homebrew and install it if required
 if ! command -v brew &> /dev/null; then
-  title "Installing Homebrew..."
+  title "Installing Homebrew…"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
@@ -27,7 +27,7 @@ brew update
 brew upgrade
 
 # Install fonts, tools, apps & vscode extensions
-title "Installing software..."
+title "Installing software…"
 brew bundle --file=./setup/Brewfile | indent
 
 # Extra apps

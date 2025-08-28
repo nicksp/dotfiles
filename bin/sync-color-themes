@@ -131,7 +131,7 @@ echo
 # Ghostty: https://github.com/sapegin/squirrelsong/tree/master/themes/Ghostty
 #
 
-header "Installing Ghostty theme..."
+header "Installing Ghostty theme…"
 
 local_install "themes/Ghostty/Squirrelsong%20Dark" "tilde/.config/ghostty/themes"
 echo "🌈 A new color theme has been installed and ready to use"
@@ -141,7 +141,7 @@ echo "🌈 A new color theme has been installed and ready to use"
 # Theme: https://github.com/sapegin/squirrelsong/tree/master/themes/Sublime%20Text
 #
 
-header "Installing Bat theme..."
+header "Installing Bat theme…"
 
 local_install "themes/Sublime%20Text/Squirrelsong%20Dark/Squirrelsong%20Dark.tmTheme" "tilde/.config/bat/themes"
 # Update the binary cache
@@ -152,7 +152,7 @@ echo "🌈 A new color theme has been installed and ready to use"
 # Bear: https://github.com/sapegin/squirrelsong/tree/master/themes/Bear
 #
 
-header "Installing Bear theme..."
+header "Installing Bear theme…"
 
 bear_themes_dir="/Applications/Bear.app/Contents/Frameworks/BearCore.framework/Resources"
 sudo command rm -f "$bear_themes_dir/Red Graphite.theme"
@@ -163,7 +163,7 @@ echo "🌈 Now choose ${HIGHLIGHT}Red Graphite${RESET} theme in Bear settings"
 # Marta: https://github.com/sapegin/squirrelsong/tree/master/themes/Marta
 #
 
-header "Installing Marta theme..."
+header "Installing Marta theme…"
 
 marta_app_themes_dir="$HOME/Library/Application Support/org.yanex.marta/Themes"
 marta_terminal_themes_dir="/Applications/Marta.app/Contents/Resources/Themes"
@@ -177,7 +177,7 @@ echo "🌈 Point to new themes in Marta preferences and restart the app for the 
 # Syntax Highlight: https://github.com/sapegin/squirrelsong/tree/master/themes/Highlight
 #
 
-header "Installing Syntax Highlight theme..."
+header "Installing Syntax Highlight theme…"
 
 local_install "themes/Highlight/Squirrelsong%20Light.theme" "syntax-highlight/themes"
 echo "🌈 Import ${HIGHLIGHT}Squirrelsong Light.theme${RESET} in ${BOLD}Syntax Highlight − Settings${RESET} and then select the theme under ${BOLD}General − Color scheme${RESET} for ${BOLD}Light${RESET} and ${BOLD}Dark${RESET} modes"
@@ -186,7 +186,7 @@ echo "🌈 Import ${HIGHLIGHT}Squirrelsong Light.theme${RESET} in ${BOLD}Syntax 
 # CotEditor: https://github.com/sapegin/squirrelsong/tree/master/themes/CotEditor
 #
 
-header "Installing CotEditor theme..."
+header "Installing CotEditor theme…"
 
 my_data_install "themes/CotEditor/Squirrelsong%20Light.cottheme" "squirrelsong-master/themes/CotEditor"
 echo ""

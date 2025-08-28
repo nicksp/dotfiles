@@ -52,7 +52,7 @@ echo -e "${light_red}This script will delete all your configuration files!"
 echo -e "${light_red}Use it at your own risk."
 
 if [ $# -ne 1 ] || [ "$1" != "-y" ]; then
-  echo -e "${yellow}Press Enter key to continue...${reset}\n"
+  echo -e "${yellow}Press Enter key to continue…${reset}\n"
   read key
 fi
 
@@ -63,7 +63,7 @@ fi
 
 # Use Touch ID to authorize sudo
 if [ ! -f /etc/pam.d/sudo_local ]; then
-  title "🔒 Enabling Touch ID to authorize sudo commands..."
+  title "🔒 Enabling Touch ID to authorize sudo commands…"
   echo "auth       sufficient     pam_tid.so" | sudo tee /etc/pam.d/sudo_local
 fi
 
@@ -73,22 +73,22 @@ sudo echo "Sudo activated!"
 echo
 
 # Setup Zsh and register it as a default shell
-title "🐚 Setting up Zsh..."
+title "🐚 Setting up Zsh…"
 $HOME/dotfiles/setup/zsh.sh
 echo
 
 # Install Homebrew and packages/apps
-title "🫖 Setting up Homebrew..."
+title "🫖 Setting up Homebrew…"
 $HOME/dotfiles/setup/brew.sh
 echo
 
 # Install Xcode, GitHub CLI & Node.js packages etc.
-title "🚀 Setting up extra tools..."
+title "🚀 Setting up extra tools…"
 $HOME/dotfiles/setup/misc.sh
 echo
 
 # Install dotfiles symlinks
-title "🍤 Setting up symlinks..."
+title "🍤 Setting up symlinks…"
 $HOME/dotfiles/setup/symlinks.sh
 
 echo

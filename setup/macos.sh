@@ -3,7 +3,7 @@
 # ~/.macos — https://mths.be/macos
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
-  echo "Configuring macOS with sane defaults..."
+  echo "Configuring macOS with sane defaults…"
   echo
 else
   exit 0
