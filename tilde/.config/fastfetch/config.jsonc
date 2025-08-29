@@ -39,10 +39,14 @@
       "format": "{1} v{4} ({7})",
     },
     "terminal",
-    "uptime",
+    {
+      "type": "uptime",
+      "keyColor": "magenta",
+    },
     {
       "type": "weather",
       "location": "Europe",
+      "keyColor": "magenta",
     },
     "break",
     "colors",
