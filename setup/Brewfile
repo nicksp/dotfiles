@@ -8,6 +8,7 @@ tap "oven-sh/bun"
 brew "aws-cdk" # AWS Cloud Development Kit
 brew "awscli" # Official Amazon AWS command-line interface
 brew "bat" # Output highlighting (better `cat`)
+brew "btop" # Performance and resource monitoring tool (better `top`)
 brew "eza" # Listing files with info (better `ls`)
 brew "fastfetch" # Show pretty system info
 brew "fd" # Find entries in your filesystem (better `find`)
@@ -17,7 +18,6 @@ brew "gh" # GitHub CLI: interact with GitHub PRs, issues, repos
 brew "git" # Version control
 brew "git-delta" # Diff pager for `git` and `grep` output (better `diff`)
 brew "gnupg" # Encryption and signing capabilities for data verification
-brew "htop" # Performance and resource monitoring tool (better `top`)
 brew "mpv" # Media player
 brew "node" # Fallback Node.js version
 brew "pinentry-mac" # Securely enter your GPG passphrase

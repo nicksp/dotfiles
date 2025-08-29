@@ -114,8 +114,8 @@ command_exists eza && alias lta="lt -a"
 # Safer reversible file removal: https://github.com/sindresorhus/trash-cli
 command_exists trash && alias rm="trash"
 
-# Htop: https://htop.dev/
-command_exists htop && alias top="htop"
+# Btop: https://github.com/aristocratos/btop
+command_exists btop && alias top="btop"
 
 # Tlrc: https://github.com/tldr-pages/tlrc
 command_exists tldr && alias man="tldr --config ~/.tlrc.toml"
