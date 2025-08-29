@@ -1,16 +1,14 @@
-# TIP: for a full list of active aliases, run `alias
+# TIP: for a full list of active aliases, run `alias`
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
 
 # Easier navigation
-alias .='pwd'
-alias ..='cd ..'
-alias 2..='cd ../..'
-alias 3..='cd ../../..'
-alias 4..='cd ../../../..'
-alias 5..='cd ../../../../..'
-alias cd..='cd ..'
+alias .="printf '\U000F17A9 ' && pwd"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias cd..="cd .."
 alias -- -="cd -" # previous working directory
 
 # Hot-access directories
@@ -39,8 +37,6 @@ alias mdkir="mkdir"
 alias brwe="brew"
 
 # Shortcuts
-alias ls="ls --color"
-alias l="ls -l"
 alias -- +x="chmod +x"
 alias o="open"
 alias oo="open ."
@@ -79,7 +75,7 @@ alias re="nr release"
 
 # Apps
 
-# Git client
+# GitHub Desktop
 alias t="github ."
 
 # Lazydocker
@@ -106,12 +102,14 @@ command_exists bat && alias cat="bat --style=plain"
 command_exists fd && alias find="fd"
 
 # Eza: https://eza.rocks/
-# Display all clickable entries (incl. hidden files) as a grid with icons
-command_exists eza && alias ls="eza -a --hyperlink --icons=auto --group-directories-first --color-scale=age"
-# Display a detailed list of clickable entries (incl. hidden files) with a Git status
-command_exists eza && alias ll="ls --long --no-user --header -g --git"
-# Display clickable directory tree
-command_exists eza && alias llt="ls --tree --git-ignore"
+# Display all clickable entries as a grid with icons
+command_exists eza && alias ls="eza --no-user --hyperlink --icons=auto --group-directories-first --color-scale=age"
+# ...(incl. hidden files)
+command_exists eza && alias lsa="ls -a"
+# Display a detailed clickable directory tree with a Git status
+command_exists eza && alias lt="ls --tree --level=2 --long --header --git --git-ignore"
+# ...(incl. hidden files)
+command_exists eza && alias lta="lt -a"
 
 # Safer reversible file removal: https://github.com/sindresorhus/trash-cli
 command_exists trash && alias rm="trash"
@@ -136,8 +134,9 @@ alias get="curl -O -L"
 # Most used Git shortcuts
 alias gs="git rev-parse --git-dir > /dev/null 2>&1 && git status || ls"
 alias gss="git rev-parse --git-dir > /dev/null 2>&1 && git status -sb || ls"
-alias gc="git commit"
+alias gcm="git commit -m"
 alias gcb="git switch"
+alias gnb="git switch -c"
 alias gaa="git add -A"
 alias gd="git diff"
 alias gdc="git diff --cached"
@@ -147,7 +146,7 @@ alias gpu="push"
 alias gpuf="push --force-with-lease"
 
 # Preview and open files in the current dir
-command_exists fzf && command_exists bat && alias preview="fzf --preview 'bat --color \"always\" {}'"
+command_exists fzf && command_exists bat && alias preview="fzf --preview 'bat --style=numbers --color=always {}'"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
