@@ -11,13 +11,11 @@ export TERM="xterm-256color"
 export DOTFILES="$HOME/dotfiles"
 export WORKSPACE="$HOME/dev"
 
-# Preferred editor
-if command -v cot &> /dev/null; then
-  export EDITOR='cot'
-elif command -v code &> /dev/null; then
-  export EDITOR='code'
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR="nano"
 else
-  export EDITOR='nano'
+  export EDITOR="cot"
 fi
 export VISUAL="$EDITOR"
 
@@ -107,7 +105,7 @@ EZA_COLORS+="tm=38;5;242:cm=38;5;242:.*=38;5;242:" # Hidden and temporary files
 export EZA_COLORS
 
 # Bat: https://github.com/sharkdp/bat
-# highlighting theme: https://github.com/sharkdp/bat?tab=readme-ov-file#adding-new-themes
+# Syntax highlighting theme: https://github.com/sharkdp/bat#adding-new-themes
 export BAT_THEME="Squirrelsong Dark"
 
 # Privacy
@@ -130,7 +128,7 @@ CDK_DISABLE_CLI_TELEMETRY=1
 export NPM_CONFIG_INIT_AUTHOR_NAME="Nick Plekhanov"
 export NPM_CONFIG_INIT_AUTHOR_URL="https://plekhanov.me"
 export NPM_CONFIG_INIT_LICENSE="MIT"
-export NPM_CONFIG_INIT_VERSION="0.0.0"
+export NPM_CONFIG_INIT_VERSION="0.1.0"
 export NPM_CONFIG_PROGRESS="true"
 export NPM_CONFIG_SAVE="true"
 export NPM_CONFIG_UPDATE_NOTIFIER="false"
