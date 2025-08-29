@@ -251,7 +251,6 @@
   "typos.diagnosticSeverity": "Information",
   "window.commandCenter": false,
   "workbench.navigationControl.enabled": false,
-  "chat.commandCenter.enabled": false,
 
   /*
   |--------------------------------------------------------------------------
@@ -741,6 +740,7 @@
   "tailwindCSS.classAttributes": ["class", "className", "ngClass", "variants"],
 
   // Tweak AI tools
+  "chat.commandCenter.enabled": false,
   "github.copilot.editor.enableCodeActions": false,
   "github.copilot.enable": {
     "*": false,
