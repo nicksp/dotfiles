@@ -27,11 +27,18 @@ set page-completions off
 # If there are more than 200 possible completions for a word, ask to show them all
 set completion-query-items 200
 
+# Display only the last 2 characters of long path prefixes in completions to save space
+set completion-prefix-display-length 2
+
 # Immediately show all possible completions (use instead of TAB-cycling)
 set show-all-if-ambiguous on
+set show-all-if-unmodified on
 
 # Show extra file information when completing, like `ls -F` does
 set visible-stats on
+
+# Coloring for Bash 4 tab completions
+set colored-stats on
 
 # Be more intelligent when autocompleting by also looking at the text after
 # the cursor. For example, when the current line is "cd ~/src/mozil", and
@@ -49,6 +56,10 @@ set skip-completed-text on
 "\e[1;5C": forward-word
 "\e[1;5D": backward-word
 
+# right and left arrow keys to move cursor forward one character or backward
+"\e[C": forward-char
+"\e[D": backward-char
+
 # Try to stay at the same position when moving through the history
 set history-preserve-point on
 
@@ -57,6 +68,7 @@ set history-preserve-point on
 #
 
 # Allow UTF-8 input and output, instead of showing them like $'\0123\0456'
+set meta-flag on
 set input-meta on
 set output-meta on
 set convert-meta off
