@@ -10,40 +10,64 @@
 
 # fd
 
-- Find file by name (or regexp):
+- Find file by name (or regexp) within the current tree:
 
 `fd {{file}}`
 
-# z
+- Search the entire file system for a file:
+
+`fd {{file}} /`
+
+- Search the entire file system, including hidden directories:
+
+`fd {{file}} / -H`
+
+# eza
+
+- Get a clickable directory listing with more information, color, and icons:
+
+`ls`
+
+- Get two-deep level listing:
+
+`lt`
+
+- Get a listing including hidden files:
+
+`lsa`
+
+- Get a nested listing with hidden files:
+
+`lta`
+
+# zoxide
 
 > Magic opener for directories based on the Zsh command history via `zoxide`.
 > More information: <https://github.com/ajeetdsouza/zoxide>.
 
-`z {{part_of_dir_path}}`
+`cd {{part_of_dir_path}}`
 
 # Ctrl+R
 
-> Find in Zsh command history.
+> Fuzzy find in your command history.
 
 > --- 8< -- 8< ---
 
-# .
+# `.`
 
 - Print the current directory path:
 
 `.`
 
-# .. 2.. 3.. 4.. 5..
+# `..` `...` `....`
 
-- Navigate to N parent directories up:
+- Navigate to 1/2/3 parent directories up:
 
 `..`
-`2..`
-`3..`
-`4..`
-`5..`
+`...`
+`....`
 
-# -
+# `-`
 
 - Navigate to a previous working directory:
 
@@ -57,13 +81,20 @@
 
 `zshrc`
 
-# reload
+# reload / s
 
 - Reload Zsh config from `~/.zshrc`:
 
 `reload`
+`s`
 
 > --- 8< -- 8< ---
+
+# +x
+
+- Make a file executable:
+
+`+x {{file}}`
 
 # o
 
@@ -115,6 +146,12 @@
 
 `ld`
 
+# gpgkeys
+
+- List all secret GPG keys with long key ID format:
+
+`gpgkeys`
+
 > --- 8< -- 8< ---
 
 # get
@@ -149,7 +186,7 @@
 
 > --- 8< -- 8< ---
 
-# gitroot and gr
+# gitroot / gr
 
 - Navigate to the root directory of a Git repository:
 
@@ -176,11 +213,41 @@
 
 `gss`
 
+# gaa
+
+- Stage all changes in the working directory:
+
+`gaa`
+
+# gcm
+
+- Create a commit with the specified message:
+
+`gcm`
+
+# gcb
+
+- Switch to an existing branch:
+
+`gcb`
+
+# gnb
+
+- Create and switch to a new branch:
+
+`gnb`
+
 # gd
 
 - Show the differences (`diff`) between the current state of files in the working directory and the last committed state:
 
 `gd`
+
+# gdc
+
+- Show the differences (`diff`) between staged changes and the last commit:
+
+`gdc`
 
 # gp
 
