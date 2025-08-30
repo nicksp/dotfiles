@@ -45,3 +45,4 @@ os:
   copyToClipboardCmd: "pbcopy < {{text}}"
   editPreset: "vscode"
   open: "open {{filename}}"
+  shellFunctionsFile: ~/dotfiles/zsh/aliases.zsh
