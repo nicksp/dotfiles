@@ -5,10 +5,8 @@
 
 GIT_SIMPLE_CLEAN_SYMBOL="" # Nerd Fonts nf-oct-sun \uf522
 GIT_SIMPLE_DIRTY_SYMBOL="" # Nerd Fonts nf-fa-umbrella \uf0e9
-
 GIT_SIMPLE_CLEAN_COLOR="\033[32;1m" # Bold green
 GIT_SIMPLE_DIRTY_COLOR="\033[31;1m" # Bold red
-GIT_SIMPLE_TEXT_COLOR="\033[1;37m"  # Bold white
 GIT_SIMPLE_RESET_COLOR="\033[0m"
 
 git_simple() {
@@ -20,14 +18,13 @@ git_simple() {
   local is_dirty=$(git status -s --ignore-submodules=dirty 2> /dev/null)
 
   local color="$GIT_SIMPLE_CLEAN_COLOR"
-  local text_color="$GIT_SIMPLE_TEXT_COLOR"
   local symbol="$GIT_SIMPLE_CLEAN_SYMBOL"
   if [[ -n "$is_dirty" ]]; then
     color="$GIT_SIMPLE_DIRTY_COLOR"
     symbol="$GIT_SIMPLE_DIRTY_SYMBOL"
   fi
 
-  echo -e "${text_color}on $color$symbol $git_current_branch$GIT_SIMPLE_RESET_COLOR"
+  echo -e "$color$symbol $git_current_branch$GIT_SIMPLE_RESET_COLOR"
 }
 
 git_simple

@@ -1,38 +1,29 @@
 # https://starship.rs/config/
 # Run `starship explain` to help dissect the current prompt
 
-# Specify custom format
+# Allow longer-running commands to keep executing without failing with a warning
+command_timeout = 1000
+
 # Nerd Fonts nf-seti-coffee \ue61b
 format = """\
    $directory\
   $custom\
   $git_state\
   $git_status\
-  $nodejs\
-  $bun\
   $line_break\
   $character\
   """
-
-# Allow longer-running commands commands to keep executing without failing with a warning
-command_timeout = 1000
 
 [directory]
 style = "bold white"
 repo_root_style = "bold"
 read_only = "" # Nerd Fonts nf-fa-lock \uf023
 
-[nodejs]
-style = "bold cyan"
-format = "[via](bold white) [$symbol($version)]($style)"
-
-[bun]
-symbol = "🍔 "
-format = '[via](bold white) [$symbol($version)]($style)'
-
 [git_status]
-format = '([\[$conflicted$modified$staged$untracked$ahead_behind\]]($style) )'
-style = "white"
+format = '[$ahead_behind]($style)'
+ahead      = "⇡${count} "
+diverged   = "⇕⇡${ahead_count}⇣${behind_count} "
+behind     = "⇣${count} "
 
 [character]
 # Nerd Fonts nf-fa-angle_right \f105
