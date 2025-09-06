@@ -70,6 +70,7 @@ ALWAYS read project documentation before making suggestions or writing any code:
 - @CONTRIBUTING.md
 - @docs/
 - @.cursor/rules/ or @.cursorrules
+- @AGENTS.md
 - @CLAUDE.md
 - @.github/copilot-instructions.md
 - @.kilocode/rules/

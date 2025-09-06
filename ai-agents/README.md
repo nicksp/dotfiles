@@ -19,7 +19,8 @@ A collection of specialized system prompts and slash commands for AI agents to a
 3. Automates\* [agents](./claude-code/agents/).
 4. Automates\* [MCP servers](./mcp.json).
 
-> **Note:** Some tools don't have an appropriate global configuration and require installation into a project folder.
+> [!NOTE]
+> Some tools don't have an appropriate global configuration and require installation into a project's folder.
 
 ## Installation
 
@@ -90,3 +91,4 @@ Specialized [subagents](https://docs.anthropic.com/en/docs/claude-code/sub-agent
 
 1. **Cursor**: [Background agents](https://docs.cursor.com/en/background-agent) have their own format and require MAX Mode models to use.
 2. **Kilo Code**: Achieves similar results via using the built-in [Orchestrator mode](https://kilocode.ai/docs/basic-usage/orchestrator-mode).
+3. **Amp**: Invocates agents itself and doesn't provide a way to configure them with a custom prompt or model.
