@@ -136,7 +136,7 @@
     "*.jsx": "${capture}.js",
     "*.tsx": "${capture}.ts",
     "tsconfig.json": "tsconfig.*.json",
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml"
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lock"
   },
   // Improve Explorer tree readability
   "workbench.tree.indent": 20,
@@ -410,6 +410,7 @@
     "**/pnpm-lock.yaml": true,
     "**/yarn.lock": true,
     "**/node_modules": true,
+    "**/bun.lock": true,
     "**/coverage": true,
     "**/dist": true,
     "**/build": true,
@@ -571,7 +572,7 @@
     // If you want a hard line-break (<br>) in the output,
     // we need to put two or more spaces at the end of a line.
     // It is a part of CommonMark, so we don’t want to prevent it.
-    "files.trimTrailingWhitespace": false
+    "files.trimTrailingWhitespace": false,
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
