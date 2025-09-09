@@ -57,8 +57,6 @@
 
   // Privacy
   "telemetry.telemetryLevel": "off",
-  "sonarlint.disableTelemetry": true,
-  "cody.telemetry.level": "off",
   "redhat.telemetry.enabled": false,
   "workbench.enableExperiments": false,
   // Don't use online search in the settings editor
@@ -658,50 +656,6 @@
   "git.inputValidationSubjectLength": 50,
   "git.openRepositoryInParentFolders": "always",
 
-  // Sonarlint
-  "sonarlint.rules": {
-    "javascript:S6478": {
-      "level": "off"
-    },
-    "typescript:S6478": {
-      "level": "off"
-    },
-    "typescript:S6544": {
-      "level": "off"
-    },
-    "typescript:S4123": {
-      "level": "off"
-    },
-    "typescript:S6582": {
-      "level": "off"
-    },
-    "typescript:S3776": {
-      "level": "off"
-    },
-    "javascript:S4138": {
-      "level": "off"
-    },
-    "typescript:S3735": {
-      "level": "off"
-    },
-    "typescript:S1135": {
-      "level": "off"
-    },
-    "typescript:S6598": {
-      "level": "off"
-    },
-    "typescript:S6564": {
-      "level": "off"
-    },
-    "typescript:S6509": {
-      "level": "off"
-    },
-    "Web:S1135": {
-      "level": "off"
-    },
-    "css:S4662": {
-      "level": "off"
-    }
   },
 
   "yaml.customTags": [
