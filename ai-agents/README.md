@@ -92,3 +92,8 @@ Specialized [subagents](https://docs.anthropic.com/en/docs/claude-code/sub-agent
 1. **Cursor**: [Background agents](https://docs.cursor.com/en/background-agent) have their own format and require MAX Mode models to use.
 2. **Kilo Code**: Achieves similar results via using the built-in [Orchestrator mode](https://kilocode.ai/docs/basic-usage/orchestrator-mode).
 3. **Amp**: Invocates agents itself and doesn't provide a way to configure them with a custom prompt or model.
+
+## References
+
+- [AGENTS.md](https://agents.md/)
+- [AI coding workflow](https://github.com/nicksp/ai-coding-worflow): my custom prompts for AI agents

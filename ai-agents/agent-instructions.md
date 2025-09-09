@@ -102,6 +102,8 @@ IMPORTANT: DO NOT ADD ***ANY*** COMMENTS unless asked or the code is complex and
 Comments MUST explain *why* something is done a certain way.
 Document APIs, complex algorithms, and non-obvious side effects.
 Suggest tests for new functionality.
+Prefer `??` over `||`.
+Prefer explicit checks `value === false` or `value === undefined` instead of `!value`.
 </coding_standards>
 
 <nodejs_style_guide>
