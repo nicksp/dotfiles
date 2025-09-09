@@ -4,15 +4,15 @@
   "description": "My personal dotfiles for configuring macOS with Zsh and Homebrew.",
   "private": "true",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "author": "Nick Plekhanov",
   "license": "MIT",
   "devDependencies": {
-    "prettier": "3.3.0"
+    "prettier": "^3.6.2"
   },
   "dependencies": {
-    "glob": "11.0.0",
-    "tmp": "0.2.3"
+    "glob": "^11.0.3",
+    "tmp": "^0.2.5"
   }
 }
