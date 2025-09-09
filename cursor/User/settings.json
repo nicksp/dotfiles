@@ -24,7 +24,6 @@
   "window.newWindowDimensions": "inherit",
   "telemetry.feedback.enabled": false,
   "telemetry.telemetryLevel": "off",
-  "sonarlint.disableTelemetry": true,
   "redhat.telemetry.enabled": false,
   "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
