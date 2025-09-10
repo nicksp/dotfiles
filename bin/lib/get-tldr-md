@@ -13,7 +13,6 @@
 const path = require('node:path')
 const fs = require('node:fs')
 const os = require('node:os')
-const tmp = require('tmp')
 
 const homeDirectory = os.homedir() ?? process.env.HOME
 const DOTFILES_DIR = `${homeDirectory}/dotfiles`
@@ -60,15 +59,16 @@ function main() {
     const docs = getDocs(source, query)
 
     if (docs) {
-      tmp.file((err, tempMdFile) => {
-        if (err) {
-          process.exit(1)
-        }
+      try {
+        const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'tldr-'))
+        const tempMdFile = path.join(tempDir, `${query}.md`)
 
         fs.writeFileSync(tempMdFile, docs)
         console.log(tempMdFile)
         process.exit(0)
-      })
+      } catch (err) {
+        process.exit(1)
+      }
     } else {
       process.exit(0)
     }
