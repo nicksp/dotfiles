@@ -715,13 +715,14 @@
     "git log",
     "git diff",
     "git show",
-    "pnpm install",
+    "npm run lint",
     "npm run typecheck",
     "npm run format",
-    "npm run lint",
     "npm test",
-    "npm install",
-    "tsc"
+    "tsc",
+    "git status",
+    "npm run build",
+    "npm init -y"
   ],
   "kilo-code.deniedCommands": [],
   "amp.tab.enabled": false,
