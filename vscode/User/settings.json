@@ -699,6 +699,8 @@
 
   // Tweak AI tools
   "chat.commandCenter.enabled": false,
+  "chat.fontSize": 15,
+  "chat.editor.fontSize": 15,
   "github.copilot.editor.enableCodeActions": false,
   "github.copilot.enable": {
     "*": false,
