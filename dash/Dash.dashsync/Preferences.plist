@@ -410,7 +410,7 @@ $("h1").each(function() {
 		<dict/>
 	</dict>
 	<key>isPinned</key>
-	<true/>
+	<false/>
 	<key>placeholderDelimiter</key>
 	<string>__</string>
 	<key>profiles</key>
@@ -434,6 +434,13 @@ $("h1").each(function() {
 			<true/>
 		</dict>
 	</array>
+	<key>searchAndFocusKey</key>
+	<dict>
+		<key>keyCode</key>
+		<integer>49</integer>
+		<key>modifiers</key>
+		<integer>2048</integer>
+	</dict>
 	<key>shouldRestoreTabs</key>
 	<false/>
 	<key>shouldShowStatusIcon</key>
