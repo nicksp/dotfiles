@@ -104,6 +104,7 @@ Document APIs, complex algorithms, and non-obvious side effects.
 Suggest tests for new functionality.
 Prefer `??` over `||`.
 Prefer explicit checks `value === false` or `value === undefined` instead of `!value`.
+Place `//` comments on a separate line, not after the code.
 </coding_standards>
 
 <nodejs_style_guide>
