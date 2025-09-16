@@ -251,11 +251,7 @@ install_extras() {
 
   # Claude
   CLAUDE_DIR="$HOME/.claude"
-  CLAUDE_COMMANDS_DIR="$CLAUDE_DIR/commands"
-  CLAUDE_AGENTS_DIR="$CLAUDE_DIR/agents"
   symlink_file "$LLMS_INSTRUCTIONS" "$CLAUDE_DIR/CLAUDE.md"
-  rm -rf "$CLAUDE_COMMANDS_DIR" && ln -sfn "$LLMS_COMMANDS_DIR" "$CLAUDE_COMMANDS_DIR"
-  rm -rf "$CLAUDE_AGENTS_DIR" && ln -sfn "$LLMS_AGENTS_DIR" "$CLAUDE_AGENTS_DIR"
 
   # Kilo Code
   KILO_CODE_DIR="$HOME/.kilocode"
