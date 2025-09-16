@@ -267,6 +267,8 @@ install_extras() {
 
   # Cursor
   CURSOR_DIR="$HOME/.cursor"
+  CURSOR_COMMANDS_DIR="$CURSOR_DIR/commands"
+  rm -rf "$CURSOR_COMMANDS_DIR" && ln -sfn "$LLMS_COMMANDS_DIR" "$CURSOR_COMMANDS_DIR"
   symlink_file "$MCP_FILE" "$CURSOR_DIR/mcp.json"
 }
 
