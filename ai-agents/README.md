@@ -53,7 +53,6 @@ Helps LLM powered tools like Cursor and Claude Code understand how to interact w
 
 - [Playwright MCP Server](https://github.com/microsoft/playwright-mcp)
 - [Context7 MCP Server](https://github.com/upstash/context7)
-- [Neon MCP Server](https://github.com/neondatabase-labs/mcp-server-neon)
 
 ### Add slash commands
 
