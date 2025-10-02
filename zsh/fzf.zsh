@@ -27,16 +27,16 @@ export FZF_COMPLETION_OPTS='--border --info=inline'
 FZF_COLORS="bg:-1,\
 bg+:-1,\
 fg:-1,\
-fg+:#ad9c8b,\
+fg+:#ae95c7,\
 hl:#d8a851,\
 hl+:#ceb250,\
-header:#ad9c8b,\
+header:#ae95c7,\
 border:#6B503C,\
-info:#6b503c,\
-prompt:#6b503c,\
-pointer:#6b503c,\
+info:#6b5196,\
+prompt:#6b5196,\
+pointer:#6b5196,\
 marker:#7f61b3,\
-spinner:#6b503c"
+spinner:#6b5196"
 
 # https://vitormv.github.io/fzf-themes/
 export FZF_DEFAULT_OPTS="--height 60% \
