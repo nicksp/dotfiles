@@ -106,7 +106,7 @@ export EZA_COLORS
 
 # Bat: https://github.com/sharkdp/bat
 # Syntax highlighting theme: https://github.com/sharkdp/bat#adding-new-themes
-export BAT_THEME="Squirrelsong Dark"
+export BAT_THEME="Squirrelsong Dark Deep Purple"
 
 # Privacy
 # https://nextjs.org/telemetry

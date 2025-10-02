@@ -144,7 +144,7 @@ echo "🌈 A new color theme has been installed and ready to use"
 
 header "Installing Bat theme…"
 
-local_install "themes/Sublime%20Text/Squirrelsong%20Dark/Squirrelsong%20Dark.tmTheme" "tilde/.config/bat/themes"
+local_install "themes/Sublime%20Text/Squirrelsong%20Dark%20Deep%20Purple/Squirrelsong%20Dark%20Deep%20Purple.tmTheme" "tilde/.config/bat/themes"
 # Update the binary cache
 bat cache --build
 echo "🌈 A new color theme has been installed and ready to use"

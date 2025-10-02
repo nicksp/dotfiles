@@ -7,24 +7,24 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Squirrelsong Dark</string>
+	<string>Squirrelsong Dark Deep Purple</string>
 	<key>settings</key>
 	<array>
 		<dict>
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#292019</string>
+				<string>#271e38</string>
 				<key>caret</key>
-				<string>#ad9c8b</string>
+				<string>#ae95c7</string>
 				<key>foreground</key>
-				<string>#ad9c8b</string>
+				<string>#ae95c7</string>
 				<key>invisibles</key>
-				<string>#453327</string>
+				<string>#453461</string>
 				<key>lineHighlight</key>
-				<string>#453327</string>
+				<string>#453461</string>
 				<key>selection</key>
-				<string>#574538</string>
+				<string>#4c3c6b</string>
 			</dict>
 		</dict>
 		<dict>
@@ -35,7 +35,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#6b503c</string>
+				<string>#6b5196</string>
 			</dict>
 		</dict>
 		<dict>
@@ -280,7 +280,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#dec8b1</string>
+				<string>#d5beed</string>
 			</dict>
 		</dict>
 		<dict>
@@ -291,9 +291,9 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#755945</string>
+				<string>#7f61b3</string>
 				<key>foreground</key>
-				<string>#dec8b1</string>
+				<string>#d5beed</string>
 			</dict>
 		</dict>
 	</array>
