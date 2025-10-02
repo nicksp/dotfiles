@@ -151,6 +151,3 @@ export GIT_FRIENDLY_NO_COPY_URL_AFTER_PUSH=true
 
 # Ripgrep config file location
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
-
-# Security: ensure files and directories are created private by default - no one except the owner can access them
-umask 077
