@@ -134,6 +134,7 @@ echo
 header "Installing Ghostty theme…"
 
 local_install "themes/Ghostty/Squirrelsong%20Dark" "tilde/.config/ghostty/themes"
+local_install "themes/Ghostty/Squirrelsong%20Dark%20Deep%20Purple" "tilde/.config/ghostty/themes"
 echo "🌈 A new color theme has been installed and ready to use"
 
 #
