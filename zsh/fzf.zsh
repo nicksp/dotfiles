@@ -24,6 +24,7 @@ export FZF_CTRL_R_OPTS="
 export FZF_COMPLETION_TRIGGER='**'
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
+# Squirrelsong Dark Deep Purple theme colors
 FZF_COLORS="bg:-1,\
 bg+:-1,\
 fg:-1,\
@@ -32,11 +33,11 @@ hl:#d8a851,\
 hl+:#ceb250,\
 header:#ae95c7,\
 border:#6B503C,\
-info:#6b5196,\
-prompt:#6b5196,\
-pointer:#6b5196,\
+info:#6c5492,\
+prompt:#6c5492,\
+pointer:#6c5492,\
 marker:#7f61b3,\
-spinner:#6b5196"
+spinner:#6c5492"
 
 # https://vitormv.github.io/fzf-themes/
 export FZF_DEFAULT_OPTS="--height 60% \

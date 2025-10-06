@@ -309,7 +309,7 @@
   grep-line-number-style = normal dim
   grep-file-style = blue bold
   tabs = 2
-  grep-match-line-style = normal "#453327" # gray04
+  grep-match-line-style = normal "#453461" # Squirrelsong Dark purple04
   grep-match-word-style = black yellow
   grep-separator-symbol = " "
   hyperlinks = true
