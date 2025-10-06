@@ -193,11 +193,12 @@
 `gitroot`
 `gr`
 
-# clonecd
+# git clone / g clone
 
-- Clone Git repository and navigate to it:
+- Clone Git repository, install dependencies, and navigate to created directory:
 
-`clonecd {{repo_url}}`
+`git clone {{repo_url}}`
+`g clone {{repo_url}}`
 
 > --- 8< -- 8< ---
 

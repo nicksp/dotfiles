@@ -166,22 +166,29 @@ take() {
   \mkdir -p "$1" && cd "$1"
 }
 
-# git clone and cd to a repo directory
-clonecd() {
-  git clone "$@"
+function git() {
+  # Clone a GitHub repo and cd into the created directory
+  if [ $1 = "clone" ];
+  then
+    command git clone "${@:2}"
 
-  if [ "$2" ]; then
-    cd "$2"
+    if [ "$3" ]; then
+      cd "$3"
+    else
+      cd $(basename "$2" .git)
+    fi
+
+    if [[ -r "./yarn.lock" ]]; then
+      yarn
+    elif [[ -r "./pnpm-lock.yaml" ]]; then
+      pnpm install
+    elif [[ -r "./package-lock.json" ]]; then
+      npm install
+    elif [[ -r "./bun.lock" ]]; then
+      bun install
+    fi
   else
-    cd $(basename "$1" .git)
-  fi
-
-  if [[ -r "./yarn.lock" ]]; then
-    yarn
-  elif [[ -r "./pnpm-lock.yaml" ]]; then
-    pnpm install
-  elif [[ -r "./package-lock.json" ]]; then
-    npm install
+    command git $@
   fi
 }
 
