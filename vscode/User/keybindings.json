@@ -206,6 +206,11 @@
     "command": "-amp.agent.toggleVisibility",
     "when": "amp.primaryShortcuts"
   },
+  {
+    "key": "shift+cmd+i",
+    "command": "-workbench.action.chat.openagent",
+    "when": "config.chat.agent.enabled && !chatSetupDisabled && !chatSetupHidden"
+  },
 
   /**
    * Code Editing and Navigation
