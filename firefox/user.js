@@ -79,7 +79,9 @@ user_pref('media.block-play-until-visible', true);
 user_pref('browser.warnOnQuit', true);
 // Ask for confirmation when closing a window with multiple tabs
 user_pref('browser.tabs.warnOnClose', true);
-// Set monospace font
+// Set default fonts
+user_pref('font.name.default.x-western', 'system-ui');
+user_pref('font.name.serif.x-western', 'Charter');
 user_pref('font.name.monospace.x-western', 'MonoLisa');
 // Search highlight colors
 user_pref('ui.textSelectAttentionBackground', '#e87da4'); // Squirrelsong Light brightPink
