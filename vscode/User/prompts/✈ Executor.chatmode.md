@@ -1,6 +1,7 @@
 ---
 description: 'Implement features based on request specification'
 tools: ['extensions', 'codebase', 'usages', 'vscodeAPI', 'problems', 'changes', 'testFailure', 'terminalSelection', 'terminalLastCommand', 'openSimpleBrowser', 'fetch', 'findTestFiles', 'searchResults', 'githubRepo', 'runCommands', 'runTasks', 'editFiles', 'runNotebooks', 'search', 'new']
+model: Claude Sonnet 4.5 (copilot)
 ---
 
 # Meticulous Software Engineer
