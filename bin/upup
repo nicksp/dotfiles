@@ -11,9 +11,7 @@
 # License: MIT
 # https://github.com/nicksp/dotfiles
 
-set -e
-set -u
-set -o pipefail
+set -euo pipefail
 
 header() {
   echo "$(tput sgr 0 1)$(tput setaf 6)$1$(tput sgr0)"
@@ -40,38 +38,34 @@ sudo softwareupdate -ia --verbose
 echo
 
 # App Store
-# https://github.com/mas-cli/mas?tab=readme-ov-file#%EF%B8%8F-known-issues
-# header "Updating apps from App Store…"
-# sudo mas upgrade
-# echo
-
-# Homebrew formulae
-header "Updating Homebrew packages…"
-brew update
-
-outdated_packages=$(brew outdated)
-if [ -z "$outdated_packages" ]; then
-  echo "✨ All packages already up-to-date."
-else
-  echo "📦 Outdated packages:"
-  echo "$outdated_packages"
-
-  brew upgrade
-fi
-
-brew cleanup --prune=all
-brew missing
-brew doctor || true
+# https://github.com/mas-cli/mas#-%EF%B8%8F-known-issues
+header "Updating apps from App Store…"
+mas upgrade
 echo
 
-# Homebrew casks
-header "Updating Homebrew casks…"
-brew upgrade --cask $(brew list --cask)
+# Homebrew (formulae + casks without and with auto_updates)
+header "Updating Homebrew packages…"
+outdated_packages=$(brew outdated --greedy)
+if [ -n "$outdated_packages" ]; then
+  echo "📦 Outdated packages:"
+  echo "$outdated_packages"
+  brew upgrade --greedy
+else
+  echo "✨ All packages already up-to-date."
+fi
+echo
+
+# Cleanup
+header "Cleaning up Homebrew…"
+brew cleanup --prune=all
+brew doctor || true
+echo
 
 # Raycast
 header "Updating Raycast and its extensions…"
 open raycast://extensions/raycast/raycast/check-for-updates
 open raycast://extensions/raycast/raycast/check-for-extension-updates
+echo
 
 # npm
 header "Updating global npm modules…"
