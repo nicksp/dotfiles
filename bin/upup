@@ -72,6 +72,11 @@ header "Updating global (p)npm modules…"
 npx taze -g major -i
 echo
 
+# Coding agents
+header "Updating coding agent tools…"
+amp update && claude update
+echo
+
 # VS Code extensions
 header "Updating VS Code extensions…"
 for extension in $(code --list-extensions); do
