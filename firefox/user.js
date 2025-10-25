@@ -85,10 +85,10 @@ user_pref('font.name.serif.x-western', 'Charter');
 user_pref('font.name.monospace.x-western', 'MonoLisa');
 // Search highlight colors
 user_pref('ui.textSelectAttentionBackground', '#e87da4'); // Squirrelsong Light brightPink
-user_pref('ui.textSelectAttentionForeground', '#fdfdfe'); // Squirrelsong Light white
+user_pref('ui.textSelectAttentionForeground', '#fdfdfe'); // Squirrelsong Light gray180
 // Search highlight all colors
 user_pref('ui.textHighlightBackground', '#fae1ea'); // Squirrelsong Light brightPinkLighter
-user_pref('ui.textHighlightForeground', '#4c4b4e'); // Squirrelsong Light gray04
+user_pref('ui.textHighlightForeground', '#4c4b4e'); // Squirrelsong Light gray060
 
 // Enforce links targeting new windows to open in a new tab instead
 // 1=most recent window or tab, 2=new window, 3=new tab

@@ -25,31 +25,34 @@ export FZF_COMPLETION_TRIGGER='**'
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
 # Squirrelsong Dark Deep Purple theme colors
-FZF_COLORS="bg:-1,\
-bg+:-1,\
-fg:-1,\
-fg+:#ae95c7,\
-hl:#d8a851,\
-hl+:#ceb250,\
-header:#ae95c7,\
-border:#6B503C,\
-info:#6c5492,\
-prompt:#6c5492,\
-pointer:#6c5492,\
-marker:#7f61b3,\
-spinner:#6c5492"
+FZF_COLORS="fg:-1,\
+fg+:#bea3d9,\
+bg:-1,\
+bg+:#bea3d9,\
+hl:#ca5a83,\
+hl+:#97576f,\
+info:#7254a6,\
+marker:#ceb250,\
+prompt:#7254a6,\
+spinner:#bea3d9,\
+pointer:#bea3d9,\
+header:#e9d6fa,\
+border:#644e88,\
+label:#bea3d9,\
+query:#e9d6fa,\
+disabled:#7254a6"
 
 # https://vitormv.github.io/fzf-themes/
 export FZF_DEFAULT_OPTS="--height 60% \
---border sharp \
+--border rounded \
 --layout reverse \
 --color '$FZF_COLORS' \
---prompt '∷ ' \
---pointer ▶ \
+--prompt '▶ ' \
+--pointer ▪︎ \
 --marker '✔ ' \
 --bind='ctrl-o:execute(code {})+abort' \
 --bind 'ctrl-/:change-preview-window(hidden|)' \
---preview-window='border-sharp' \
+--preview-window='border-rounded' \
 --info right"
 
 # Use fd to respect .gitignore, include hidden files and exclude `.git` folders

@@ -45,16 +45,28 @@
   # outputting to the terminal. (This is the default since Git 1.8.4)
   ui = true
 
+[color "branch"]
+  current = cyan bold reverse
+  local = white
+  plain =
+  remote = cyan
+
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+  added = green
+  changed = blue
+  header =
+  localBranch =
+  nobranch =
+  remoteBranch = cyan bold
+  unmerged = yellow bold reverse
+  untracked = black
+  updated = blue
 
 [color "diff"]
-  meta = blue
-  frag = white
-  old = red bold
-  new = green bold
+  meta = black
+  frag = black
+  old = red
+  new = green
 
 [column]
   # Put any list output into columns
