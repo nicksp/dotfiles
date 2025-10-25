@@ -67,9 +67,9 @@ open raycast://extensions/raycast/raycast/check-for-updates
 open raycast://extensions/raycast/raycast/check-for-extension-updates
 echo
 
-# npm
-header "Updating global npm modules…"
-npm update -g
+# (p)npm
+header "Updating global (p)npm modules…"
+npx taze -g major -i
 echo
 
 # VS Code extensions
