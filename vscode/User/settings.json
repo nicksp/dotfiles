@@ -89,6 +89,8 @@
   "editor.acceptSuggestionOnEnter": "off",
   "editor.wordBasedSuggestions": "off",
   "editor.autoClosingComments": "never",
+  // Don't use words under cursor to seed find, only selection
+  "editor.find.seedSearchStringFromSelection": "selection",
   "editor.experimentalEditContextEnabled": true,
   "editor.pasteAs.preferences": ["text.updateImports"],
 
