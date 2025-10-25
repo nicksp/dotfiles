@@ -431,9 +431,9 @@
     "command": "-workbench.action.terminal.new"
   },
   {
-    "comment": "Switch to the first Terminal. Note: Code's default implementation of toggling the terminal is silly. If the editor has focus, you will have to first hide, then show the terminal to get it to focus. Below is a keybinding hack you can use to make it sensible again",
+    "comment": "Switch to the last used Terminal. Note: Code's default implementation of toggling the terminal is silly. If the editor has focus, you will have to first hide, then show the terminal to get it to focus. Below is a keybinding hack you can use to make it sensible again",
     "key": "cmd+t",
-    "command": "workbench.action.terminal.focusAtIndex1",
+    "command": "workbench.action.terminal.focus",
     "when": "!terminalFocus"
   },
   {
