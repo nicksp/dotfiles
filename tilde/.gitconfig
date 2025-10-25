@@ -314,16 +314,12 @@
   useBuiltin = false
 
 [delta]
+  features = squirrelsong-dark-dp
   navigate = true # Use n and N to move between diff sections
   side-by-side = true # Enables the side-by-side view
-  light = true
+  light = false
   true-color = always
-  grep-line-number-style = normal dim
-  grep-file-style = blue bold
   tabs = 2
-  grep-match-line-style = normal "#453461" # Squirrelsong Dark purple04
-  grep-match-word-style = black yellow
-  grep-separator-symbol = " "
   hyperlinks = true
   hyperlinks-file-link-format = "vscode://file/{path}:{line}"
 
@@ -344,4 +340,5 @@
 # include local/private config if relevant
 
 [include]
+  path = ~/dotfiles/colors/themes.gitconfig
   path = ~/.gitconfig.local
