@@ -207,6 +207,12 @@
     "when": "amp.primaryShortcuts"
   },
   {
+    // Activate Copilot inline chat instead
+    "key": "cmd+i",
+    "command": "-kilo-code.addToContextAndFocus",
+    "when": "editorTextFocus && kilocode.ghost.enableQuickInlineTaskKeybinding && !github.copilot.completions.enabled"
+  },
+  {
     "key": "shift+cmd+i",
     "command": "-workbench.action.chat.openagent",
     "when": "config.chat.agent.enabled && !chatSetupDisabled && !chatSetupHidden"
