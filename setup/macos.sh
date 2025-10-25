@@ -466,6 +466,9 @@ defaults write com.apple.Safari ShowFavoritesBar -bool false
 # Hide Safari’s sidebar in Top Sites
 defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 
+# Always show Safari's "URL display" tab in the lower left on mouseover
+defaults write com.apple.Safari ShowOverlayStatusBar -bool true
+
 # Disable Safari’s thumbnail cache for History and Top Sites
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
