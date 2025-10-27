@@ -238,8 +238,8 @@ install_extras() {
   symlink_file "$DOTFILES_DIR/firefox/user.js" "$ff_dev_profile_dir/user.js" true
   rm -rf "$ff_dev_profile_dir/chrome"
   mkdir -p "$ff_dev_profile_dir/chrome"
-  ln -f "$DOTFILES_DIR/firefox/chrome/userContent.css" "$ff_dev_profile_dir/chrome/userContent.css"
-  ln -f "$DOTFILES_DIR/firefox/chrome/userChrome.css" "$ff_dev_profile_dir/chrome/userChrome.css"
+  ln "$DOTFILES_DIR/firefox/chrome/userContent.css" "$ff_dev_profile_dir/chrome/userContent.css"
+  ln "$DOTFILES_DIR/firefox/chrome/userChrome.css" "$ff_dev_profile_dir/chrome/userChrome.css"
 
   #
   # AI agents
