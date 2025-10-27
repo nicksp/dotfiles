@@ -186,7 +186,7 @@
     "editorOverviewRuler.wordHighlightForeground": "#ffffff00",
     "editorOverviewRuler.wordHighlightTextForeground": "#ffffff00",
     "editorGroup.border": "#ffffff00",
-    "notebook.inactiveFocusedCellBorder": "#0000",
+    "notebook.inactiveFocusedCellBorder": "#ffffff00",
     "errorLens.errorForegroundLight": "#e5ada8",
     "errorLens.errorBackgroundLight": "#f3dcda40",
     "errorLens.warningForegroundLight": "#eeceac",
