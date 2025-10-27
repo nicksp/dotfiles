@@ -657,7 +657,12 @@
   "errorLens.fontSize": "14",
   // Hide info (like unknown words) messages from output to clean up a bit
   "errorLens.enabledDiagnosticLevels": ["error", "warning", "hint"],
-  "errorLens.exclude": ["never (read|used)", "Unknown word"],
+  "errorLens.excludeByMessage": [
+    "Unknown word",
+    {
+      "regex": "never (read|used)",
+    }
+  ],
   "errorLens.errorGutterIconColor": "#bc5248",
   "errorLens.warningGutterIconColor": "#de9e59",
   "errorLens.hintGutterIconColor": "#eeceac",
