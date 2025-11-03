@@ -18,6 +18,8 @@ brew "gh" # GitHub CLI: interact with GitHub PRs, issues, repos
 brew "git" # Version control
 brew "git-delta" # Diff pager for `git` and `grep` output (better `diff`)
 brew "gnupg" # Encryption and signing capabilities for data verification
+brew "lazygit" # Full Git management app
+brew "mas" # Mac App Store CLI
 brew "mpv" # Media player
 brew "node" # Fallback Node.js version
 brew "pinentry-mac" # Securely enter your GPG passphrase
@@ -36,7 +38,6 @@ brew "zsh-autosuggestions" # Fish-like autosuggestions for Zsh
 brew "zsh-syntax-highlighting" # Fish-like syntax highlighting for Zsh
 brew "git-friendly/git-friendly/git-friendly" # Improved Git commands for common tasks
 brew "jesseduffield/lazydocker/lazydocker" # Full Docker management app
-brew "jesseduffield/lazygit/lazygit" # Full Git management app
 brew "oven-sh/bun/bun" # Bun runtime
 
 # Temporarily required for some work projects
@@ -68,7 +69,6 @@ cask "keka" # File archiver and extractor
 cask "ledger-live" # Crypto hardware wallet manager
 cask "legcord" # Messaging / Community
 cask "marta" # File manager
-cask "mimestream" # Email client
 cask "notion" # Note-taking app
 cask "optimage" # Image optimization
 cask "orbstack" # Running containerized applications. Ships `docker-compose` as well
@@ -85,8 +85,16 @@ cask "telegram" # Messenger
 cask "visual-studio-code" # Code editor
 cask "whatsapp" # Messenger
 
+# Mac App Store apps
+mas "AdGuard for Safari", id: 1440147259
+mas "Bear", id: 1091189122
+mas "ColorSlurp", id: 1287239339
+mas "Klack", id: 6446206067
+mas "Pages", id: 409201541
+mas "Things", id: 904280696
+mas "Xcode", id: 497799835
+
 # VS Code extensions
-vscode "anthropic.claude-code"
 vscode "astro-build.astro-vscode"
 vscode "bierner.markdown-mermaid"
 vscode "bierner.markdown-preview-github-styles"
@@ -97,8 +105,6 @@ vscode "dbaeumer.vscode-eslint"
 vscode "deerawan.vscode-dash"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
-vscode "github.copilot" # Auto-installed when Copilot chat is used
-vscode "github.copilot-chat"
 vscode "github.vscode-pull-request-github"
 vscode "kilocode.kilo-code"
 vscode "kisstkondoros.vscode-gutter-preview"
