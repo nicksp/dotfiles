@@ -26,6 +26,7 @@ tilde/.claude/*
 # Cursor
 tilde/.cursor/mcp.json
 tilde/.cursor/chats/
+tilde/.cursor/projects/
 tilde/.cursor/extensions/
 tilde/.cursor/prompt_history.json
 tilde/.cursor/unified_repo_list.json
