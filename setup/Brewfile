@@ -19,7 +19,6 @@ brew "git" # Version control
 brew "git-delta" # Diff pager for `git` and `grep` output (better `diff`)
 brew "gnupg" # Encryption and signing capabilities for data verification
 brew "lazygit" # Full Git management app
-brew "mas" # Mac App Store CLI
 brew "mpv" # Media player
 brew "node" # Fallback Node.js version
 brew "pinentry-mac" # Securely enter your GPG passphrase
@@ -84,15 +83,6 @@ cask "tableplus" # Database management system
 cask "telegram" # Messenger
 cask "visual-studio-code" # Code editor
 cask "whatsapp" # Messenger
-
-# Mac App Store apps
-mas "AdGuard for Safari", id: 1440147259
-mas "Bear", id: 1091189122
-mas "ColorSlurp", id: 1287239339
-mas "Klack", id: 6446206067
-mas "Pages", id: 409201541
-mas "Things", id: 904280696
-mas "Xcode", id: 497799835
 
 # VS Code extensions
 vscode "astro-build.astro-vscode"

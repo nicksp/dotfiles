@@ -38,10 +38,10 @@ sudo softwareupdate -ia --verbose
 echo
 
 # App Store
-# https://github.com/mas-cli/mas#-%EF%B8%8F-known-issues
-header "Updating apps from App Store…"
-mas upgrade
-echo
+# https://github.com/mas-cli/mas#known-issues
+# header "Updating apps from App Store…"
+# mas upgrade
+# echo
 
 # Homebrew (formulae + casks without and with auto_updates)
 header "Updating Homebrew packages…"

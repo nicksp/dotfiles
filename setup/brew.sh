@@ -45,9 +45,11 @@ echo "${bold}Audirvāna Origin${reset} − https://audirvana.com/audirvana-origi
 echo ""
 title "🍏 Install additional apps from App Store:"
 echo "https://apps.apple.com/us/app/bear-markdown-notes/id1091189122?mt=12"
+echo "https://apps.apple.com/us/app/adguard-for-safari/id1440147259?mt=12"
 echo "https://apps.apple.com/us/app/colorslurp/id1287239339"
 echo "https://apps.apple.com/us/app/klack/id6446206067?mt=12"
 echo "https://apps.apple.com/us/app/things-3/id904280696?mt=12"
+echo "https://apps.apple.com/us/app/pages/id409201541?mt=12"
 
 # Remove outdated versions of formulae and casks from the cellar
 # Besides, this will run `brew autoremove` to remove all the hanging, no longer needed packages
