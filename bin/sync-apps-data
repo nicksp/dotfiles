@@ -13,8 +13,6 @@
 
 set -eu
 
-DEST="$HOME/Documents/MYDATA"
-
 CYAN="$(tput setaf 6)"
 UNDERLINE="$(tput sgr 0 1)"
 RESET="$(tput sgr0)"
@@ -25,15 +23,15 @@ title() {
 
 _bk() {
   title "Backing up $1…"
-  dest_dir="$DEST/$2"
+  dest_dir="$2"
   mkdir -p "$dest_dir"
 
   # Remove any files/directories in the destination that are not in the source
-  # for item in "$dest_dir"/*; do
-  #   if [ ! -e "$1/$(basename "$item")" ]; then
-  #     rm -rf "$item"
-  #   fi
-  # done
+  for item in "$dest_dir"/*; do
+    if [ ! -e "$1/$(basename "$item")" ]; then
+      rm -rf "$item"
+    fi
+  done
 
   # Copy files/directories from the source to the destination
   for item in "$1"/*; do
@@ -45,5 +43,8 @@ _bk() {
   done
 }
 
-# Bear notes/images synchronization
-_bk "$HOME/Library/Group Containers/9K33E3U3T4.net.shinyfrog.bear/" "Bear"
+# Obsidian settings synchronization
+_bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest/.obsidian" "$HOME/dotfiles/obsidian"
+
+# Obsidian notes/images synchronization
+_bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest" "$HOME/Documents/MYDATA/Obsidian"

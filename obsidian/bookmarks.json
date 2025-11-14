@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "type": "folder",
+      "ctime": 1763420173015,
+      "path": "⏳ Inbox",
+      "title": "⏳ Inbox"
+    },
+    {
+      "type": "folder",
+      "ctime": 1763420194350,
+      "path": "⚙️ Projects",
+      "title": "⚙️ Projects"
+    },
+    {
+      "type": "folder",
+      "ctime": 1763420202268,
+      "path": "🧵 Hobbies",
+      "title": "🧵 Hobbies"
+    },
+    {
+      "type": "folder",
+      "ctime": 1763420217984,
+      "path": "💼 Work",
+      "title": "💼 Work"
+    }
+  ]
+}

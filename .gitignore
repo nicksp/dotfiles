@@ -34,3 +34,7 @@ tilde/.cursor/ide_state.json
 
 # Kilo Code
 tilde/.kilocode/cli/
+
+# Obsidian
+obsidian/workspace.json
+obsidian/workspace-mobile.json
