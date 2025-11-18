@@ -5,7 +5,6 @@
 #
 # > This script syncs color themes for:
 # > [x] Bat
-# > [x] Bear
 # > [x] CotEditor
 # > [x] Marta
 # > [x] Syntax Highlight
@@ -148,17 +147,6 @@ local_install "themes/Sublime%20Text/Squirrelsong%20Dark%20Deep%20Purple/Squirre
 # Update the binary cache
 bat cache --build
 echo "🌈 A new color theme has been installed and ready to use"
-
-#
-# Bear: https://github.com/sapegin/squirrelsong/tree/master/themes/Bear
-#
-
-header "Installing Bear theme…"
-
-bear_themes_dir="/Applications/Bear.app/Contents/Frameworks/BearCore.framework/Resources"
-sudo command rm -f "$bear_themes_dir/Red Graphite.theme"
-system_install "themes/Bear/Squirrelsong%20Light.theme" "$bear_themes_dir/Red Graphite.theme"
-echo "🌈 Now choose ${HIGHLIGHT}Red Graphite${RESET} theme in Bear settings"
 
 #
 # Marta: https://github.com/sapegin/squirrelsong/tree/master/themes/Marta

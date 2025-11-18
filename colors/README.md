@@ -4,10 +4,10 @@ I use [Squirrelsong](https://sapegin.me/squirrelsong/) theme wherever exists.
 
 1. [Ice](https://github.com/sapegin/squirrelsong/tree/master/themes/Ice)
 1. [Bat](https://github.com/sapegin/squirrelsong/tree/master/themes/Sublime%20Text/Squirrelsong%20Dark)
-1. [Bear](https://github.com/sapegin/squirrelsong/tree/master/themes/Bear)
 1. [CotEditor](https://github.com/sapegin/squirrelsong/tree/master/themes/CotEditor)
 1. [Fzf](https://github.com/sapegin/squirrelsong/tree/master/themes/Fzf)
 1. [Marta](https://github.com/sapegin/squirrelsong/tree/master/themes/Marta)
+1. [Obsidian](https://github.com/nicksp/dotfiles/tree/main/obsidian/themes/Squirrelsong)
 1. [Slack](https://github.com/sapegin/squirrelsong/tree/master/themes/Slack)
 1. [Syntax Highlight](https://github.com/sapegin/squirrelsong/tree/master/themes/Highlight)
 1. [Pearcleaner](https://github.com/sapegin/squirrelsong/tree/master/themes/Pearcleaner)

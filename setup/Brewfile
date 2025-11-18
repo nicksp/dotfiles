@@ -69,6 +69,7 @@ cask "ledger-live" # Crypto hardware wallet manager
 cask "legcord" # Messaging / Community
 cask "marta" # File manager
 cask "notion" # Note-taking app
+cask "obsidian" # Main note taking app
 cask "optimage" # Image optimization
 cask "orbstack" # Running containerized applications. Ships `docker-compose` as well
 cask "pearcleaner" # Clean up macOS from junk and apps leftovers
