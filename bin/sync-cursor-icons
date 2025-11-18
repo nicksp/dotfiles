@@ -12,7 +12,6 @@
 
 const path = require('node:path')
 const fs = require('node:fs')
-const { globSync } = require('glob')
 const os = require('node:os')
 
 const PALETTE = {
@@ -40,7 +39,7 @@ const ALL_COLORS = [...Object.keys(PALETTE), ...Object.values(PALETTE)]
 
 const HOME = os.homedir() ?? process.env.HOME
 
-const [extensionRoot] = globSync(
+const [extensionRoot] = fs.globSync(
   `${HOME}/.cursor/extensions/catppuccin.catppuccin-vsc-icons-*`
 )
 if (extensionRoot === undefined) {
@@ -52,7 +51,7 @@ console.log()
 console.log('[CURSOR] Updating icons… 👾')
 console.log()
 
-const icons = globSync(`${extensionRoot}/dist/latte/icons/*.svg`)
+const icons = fs.globSync(`${extensionRoot}/dist/latte/icons/*.svg`)
 
 const invalidColors = {}
 
