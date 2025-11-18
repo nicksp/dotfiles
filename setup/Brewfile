@@ -59,16 +59,18 @@ cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
 cask "cursor" # AI Code editor
 cask "dash" # API documentation reader
-cask "firefox@developer-edition" # Browser with configurable privacy
+cask "firefox@developer-edition" # Main browser with configurable privacy
 cask "ghostty" # Better terminal emulator
 cask "github" # GitHub Desktop GUI
+cask "google-chrome" # Browser for testing
 cask "itsycal" # Tiny popup calendar in a menu bar
 cask "jordanbaird-ice" # Manage menu bar icons
 cask "keka" # File archiver and extractor
+cask "languagetool" # Grammar, spell, and style checker
 cask "ledger-live" # Crypto hardware wallet manager
 cask "legcord" # Messaging / Community
 cask "marta" # File manager
-cask "notion" # Note-taking app
+cask "notion" # Collaborative note taking app
 cask "obsidian" # Main note taking app
 cask "optimage" # Image optimization
 cask "orbstack" # Running containerized applications. Ships `docker-compose` as well
@@ -82,7 +84,7 @@ cask "superduper" # Data backup
 cask "syntax-highlight", args: { no_quarantine: true } # Preview many different source code files
 cask "tableplus" # Database management system
 cask "telegram" # Messenger
-cask "visual-studio-code" # Code editor
+cask "visual-studio-code" # Main code editor
 cask "whatsapp" # Messenger
 
 # VS Code extensions
