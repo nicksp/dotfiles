@@ -21,6 +21,7 @@ Is automated via `user.js` and `chrome/userChrome.css`. Copy them to your [Firef
 - Privacy Badger <https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/>. _Run in Private Windows_
   - Firefox now [includes tracker blocking](https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/), but I leave Privacy Badger enabled.
 - 1Password — <https://addons.mozilla.org/en-US/firefox/addon/1password-x-password-manager/>
+- WAVE Accessibility Extension — <https://addons.mozilla.org/en-US/firefox/addon/wave-accessibility-tool/>
 - React Developer Tools — <https://addons.mozilla.org/en-US/firefox/addon/react-devtools/>
 - Refined GitHub — <https://addons.mozilla.org/en-US/firefox/addon/refined-github-/>
 - EditThisCookie2 — <https://addons.mozilla.org/en-US/firefox/addon/etc2/>
@@ -29,3 +30,4 @@ Is automated via `user.js` and `chrome/userChrome.css`. Copy them to your [Firef
 - Blank Sky New Tab Page — <https://addons.mozilla.org/en-US/firefox/addon/blank-sky-new-tab-page/>. _Run in Private Windows_
 - Github Issue Reactions — <https://addons.mozilla.org/en-US/firefox/addon/github-issue-reactions/>
 - Video Speed Controller − <https://addons.mozilla.org/en-US/firefox/addon/videospeed/>
+- Obsidian Web Clipper − <https://addons.mozilla.org/en-US/firefox/addon/web-clipper-obsidian/>
