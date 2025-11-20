@@ -4,5 +4,7 @@
   "baseFontSize": 19,
   "monospaceFontFamily": "MonoLisa",
   "showRibbon": false,
-  "accentColor": "#806f9b"
+  "accentColor": "#806f9b",
+  "interfaceFontFamily": "FiraMono Nerd Font Mono",
+  "showViewHeader": true
 }
