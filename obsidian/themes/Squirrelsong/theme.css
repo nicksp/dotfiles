@@ -92,6 +92,7 @@ body {
     text-decoration 0.15s ease-in,
     color 0.15s ease-in,
     background-color 0.15s ease-in,
+    border-color 0.15s ease-in,
     opacity 0.15s ease-in,
     padding-block-start 0.14s cubic-bezier(0.68, -0.55, 0.27, 1.55),
     padding-block-end 0.14s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -248,9 +249,8 @@ body {
   --checklist-done-color: var(--sqrl-gray110);
   --checkbox-margin-inline-start: 0.4rem;
 
-  /* TODO: https://docs.obsidian.md/Reference/CSS+variables/Editor/Properties */
-
-  /* TODO: https://docs.obsidian.md/Reference/CSS+variables/Editor/Table */
+  --table-row-alt-background: var(--sqrl-gray170);
+  --table-row-alt-background-hover: var(--sqrl-gray170);
 
   --tag-color: var(--sqrl-gray080);
   --tag-background: var(--sqrl-gray160);
@@ -288,6 +288,8 @@ body {
   --metadata-input-background-active: transparent;
   --metadata-label-text-color: var(--sqrl-gray090);
   --metadata-label-background-active: transparent;
+  
+  --file-margins: .5rem 1rem;
 }
 
 /* Additional styles */
@@ -467,28 +469,57 @@ input.metadata-property-key-input, input.metadata-property-key-input:focus-visib
 
 /* Prompt modals (quick switcher, command palette) */
 
-input.prompt-input, input.prompt-input:hover, input.prompt-input:focus, input.prompt-input:focus-visible, .prompt-instructions {
+input.prompt-input, input.prompt-input:hover, input.prompt-input:focus, input.prompt-input:focus-visible {
   /* Revert theme input styles */
   padding: var(--size-4-6);
   box-shadow: none;
   /* Correct (darker) border color */
   border-color: var(--sqrl-gray160);
 }
+.prompt-instructions {
+  /* A bit more air */
+  padding-block: var(--size-4-3);
+}
+
+/* Search */
+
+@media (hover: hover) {
+  .search-result-file-match:hover {
+    /* Use correct hover colors instead of yellow background */
+    color: var(--text-accent);
+    background-color: var(--sqrl-gray160);
+  }
+}
 
 /* Editor */
 
-.HyperMD-header {
-  /* A bit of extra space after headings */
-  padding-block-end: 0.5rem !important;
+/* Consistent top/bottom paddings on heading in preview and source modes */
+.cm-s-obsidian .cm-line.HyperMD-header {
+  padding-top: 1rem;
+  padding-block-end: 0.5rem;
 }
+/*
+ * Remove top padding on the very first header on the page, and increase bottom
+ * padding
+ */
+.cm-s-obsidian .cm-line.HyperMD-header.HyperMD-header-1 {
+  padding-top: 0;
+  padding-block-end: 1rem;
+}
+
 .HyperMD-list-line {
   /* Hide indentation guides on nested Markdown lists */
   --indentation-guide-width: 0;
 }
+
+/* A bit of space between a link text and an external link icon */
 .external-link {
-  /* A bit of space between a link text and an external link icon */
-  padding-inline-start: 0.15rem;
+  padding-inline-end: 1rem;
 }
+.cm-formatting.external-link {
+  padding-inline-start: 0.1rem;
+}
+
 .markdown-source-view.mod-cm6 .cm-link .cm-underline, .markdown-source-view.mod-cm6 .cm-url .cm-underline {
   text-decoration: underline;
   text-decoration-line: none;
@@ -498,10 +529,31 @@ input.prompt-input, input.prompt-input:hover, input.prompt-input:focus, input.pr
 .markdown-source-view.mod-cm6 .cm-link .cm-underline:hover, .markdown-source-view.mod-cm6 .cm-url .cm-underline:hover {
   text-decoration-color: currentColor;
 }
+
 .cm-formatting-list {
   /* Extra space between a list marker and the text */
   padding-inline-end: 0.5rem;
 }
+
+/* Tables */
+
+.markdown-source-view.mod-cm6 .cm-table-widget th, .markdown-source-view.mod-cm6 .cm-table-widget td {
+  padding: .25rem .5rem;
+}
+.cm-html-embed td, .markdown-rendered td, .cm-html-embed th, .markdown-rendered th {
+  border: 0;
+}
+.cm-html-embed tbody tr > td:not(:first-child), .markdown-rendered tbody tr > td:not(:first-child), .cm-html-embed thead tr > th:not(:first-child), .markdown-rendered thead tr > th:not(:first-child) {
+  border-left: var(--table-border-width) solid var(--table-border-color);
+}
+.cm-html-embed table, .markdown-rendered table {
+  border-spacing: 0;
+  border-collapse: separate;
+  overflow: hidden;
+  border-radius: var(--radius-m);
+  border: var(--table-border-width) solid var(--table-border-color);
+}
+
 .is-selected {
   /* Darker highlight background for selected items as they have white text */
   --text-highlight-bg: var(--sqrl-brightPink);
@@ -519,6 +571,13 @@ mjx-merror {
   color: var(--sqrl-redContrast) !important;
   background-color: var(--sqrl-redDimer) !important;
 }
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before {
+  /*
+   * Show blockquote side line on the padding to avoid overlapping with the
+   * `>` character
+   */
+  inset-inline-start: -.3rem;
+}
 /* Show #s of headings on the side (like in Bear.app) to avoid shifting text */
 .is-live-preview .cm-formatting-header {
   z-index: 100;
@@ -528,18 +587,24 @@ mjx-merror {
   background-color: var(--background-primary);
 }
 /* Avoid shifting content when editing images */
-.is-live-preview .cm-line.cm-line:has(.cm-formatting-image) {
+
+.is-live-preview .cm-line.cm-line:has(.cm-formatting-image),
+.is-live-preview .cm-line.cm-line:has(.cm-formatting-embed) {
   z-index: 100;
   height: 0;
 }
-.is-live-preview .cm-line.cm-line:has(.cm-formatting-image) > * {
+.is-live-preview .cm-line.cm-line:has(.cm-formatting-image) > *,
+.is-live-preview .cm-line.cm-line:has(.cm-formatting-embed) > * {
   padding-block: 0.3rem;
   background-color: var(--sqrl-gray180);
 }
-.is-live-preview .cm-line.cm-line:has(.cm-formatting-image) > *:first-child {
+.is-live-preview .cm-line.cm-line:has(.cm-formatting-image) > *:first-child,
+.is-live-preview .cm-line.cm-line:has(.cm-formatting-embed) > *:first-child {
   padding-inline-start: 0.2rem;
 }
-.is-live-preview .cm-line.cm-line:has(.cm-formatting-image) > *:last-child {
+
+.is-live-preview .cm-line.cm-line:has(.cm-formatting-image) > *:last-child,
+.is-live-preview .cm-line.cm-line:has(.cm-formatting-embed) > *:last-child {
   padding-inline-end: 0.2rem;
 }
 .cm-s-obsidian span.obsidian-search-match-highlight {
