@@ -7,5 +7,6 @@
   "showInlineTitle": false,
   "defaultViewMode": "source",
   "strictLineBreaks": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "trashOption": "local"
 }
