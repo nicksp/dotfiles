@@ -2,5 +2,6 @@
   "calendar",
   "obsidian-hider",
   "obsidian-filename-heading-sync",
-  "fold-properties-by-default"
+  "fold-properties-by-default",
+  "obsifetch"
 ]

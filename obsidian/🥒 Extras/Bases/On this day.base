@@ -1,0 +1,24 @@
+formulas:
+  "": today().year - number(date(file.name).format("YYYY")) + ' ' + if(today().year - number(date(file.name).format("YYYY")) == 1, 'year', 'years') + ' ago' + ' / ' + date(file.name).format('YYYY — dddd')
+  on_this_day: if(date(file.name).format('MM') == today().month, if(date(file.name).format('DD') == today().day, if(date(file.name).format('YYYY') != today().year, "True", "False"), "False"), "False")
+properties:
+  formula.:
+    displayName: title
+views:
+  - type: cards
+    name: On this day
+    filters:
+      and:
+        - file.folder.startsWith("📆 Logbook")
+        - formula.on_this_day == "True"
+    order:
+      - formula.
+      - location
+      - tags
+      - excerpt
+    sort:
+      - property: file.ctime
+        direction: DESC
+    cardSize: 340
+    image: note.image
+    imageAspectRatio: 0.5

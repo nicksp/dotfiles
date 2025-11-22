@@ -22,7 +22,7 @@ title() {
 }
 
 _bk() {
-  title "Backing up $1…"
+  title "Backing up $3…"
   dest_dir="$2"
   mkdir -p "$dest_dir"
 
@@ -41,10 +41,14 @@ _bk() {
       cp "$item" "$dest_dir"
     fi
   done
+
+  title "Done 🦜"
 }
 
 # Obsidian settings synchronization
-_bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest/.obsidian" "$HOME/dotfiles/obsidian"
+_bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest/.obsidian" "$HOME/dotfiles/obsidian/.obsidian" "Obsidian configs"
+# Obsidian templates and bases synchronization
+_bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest/🥒 Extras" "$HOME/dotfiles/obsidian/🥒 Extras" "Obsidian templates and bases"
 
 # Obsidian notes/images synchronization
-_bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest" "$HOME/Documents/MYDATA/Obsidian"
+_bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest" "$HOME/Documents/MYDATA/Obsidian" "Obsidian vault content"

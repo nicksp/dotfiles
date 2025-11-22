@@ -1,0 +1,16 @@
+views:
+  - type: cards
+    name: Untagged logs
+    filters:
+      and:
+        - file.folder.startsWith("📆 Logbook")
+        - file.tags.isEmpty()
+    order:
+      - file.name
+      - excerpt
+    sort:
+      - property: file.ctime
+        direction: DESC
+    cardSize: 280
+    image: note.image
+    imageAspectRatio: 0.6

@@ -36,5 +36,5 @@ tilde/.cursor/ide_state.json
 tilde/.kilocode/cli/
 
 # Obsidian
-obsidian/workspace.json
-obsidian/workspace-mobile.json
+obsidian/**/workspace.json
+obsidian/**/workspace-mobile.json
