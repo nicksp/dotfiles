@@ -8,5 +8,6 @@
   "defaultViewMode": "source",
   "strictLineBreaks": true,
   "alwaysUpdateLinks": true,
-  "trashOption": "local"
+  "trashOption": "local",
+  "promptDelete": false
 }
