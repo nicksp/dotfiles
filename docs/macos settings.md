@@ -51,10 +51,14 @@
 
 ### Appearance
 
-- **Appearance** − `Auto`
-- **Accent color** − `Graphite`
+- **Appearance** − `Light`
+- **Liquid Glass** − `Tinted`
+- **Theme color** − `Graphite`
+- **Text highlight color** − `#ac9bc5`
+- **Icon & widget style** − `Dark` − `Always`
+- **Folder color** − `Automatic`
 - **Sidebar icon size** − `Large`
-- **Allow wallpaper tinting in windows** − `On`
+- **Tint window background with wallpaper color** − `Off`
 - **Show scroll bars** − `When scrolling`
 
 ### Accessibility
