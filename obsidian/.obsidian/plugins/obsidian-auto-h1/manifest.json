@@ -1,0 +1,10 @@
+{
+	"id": "auto-h1",
+	"name": "Auto h1 heading",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Automatically inserts h1 heading with filename",
+	"author": "Nick Plekhanov",
+	"authorUrl": "https://plekhanov.me",
+	"isDesktopOnly": false
+}
