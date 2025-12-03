@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Goodreads",
 	"behavior": "create",
-	"noteContentFormat": "{{selector:.BookPageMetadataSection__description}}",
+	"noteContentFormat": "# {{selector:.BookPageTitleSection__title h1}}\n",
 	"properties": [
 		{
 			"name": "author",
@@ -11,7 +11,7 @@
 		},
 		{
 			"name": "year",
-			"value": "{{selector:p[data-testid='publicationInfo']|split:\\\"First published \\\"|slice:1|date:\\\"YYYY\\\"}}",
+			"value": "{{selector:p[data-testid='publicationInfo']|split:\\\"First published|Published \\\"|slice:1|date:\\\"YYYY\\\"}}",
 			"type": "number"
 		},
 		{
@@ -39,5 +39,5 @@
 		"https://www.goodreads.com/book/"
 	],
 	"noteNameFormat": "{{selector:.BookPageTitleSection__title h1}}",
-	"path": "🧰 References"
+	"path": "🗂️ References/Books"
 }

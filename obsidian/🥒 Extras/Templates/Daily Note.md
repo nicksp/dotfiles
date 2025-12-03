@@ -5,7 +5,7 @@ location:
 image:
 excerpt:
 ---
-# Daily Note
+# {{date:dddd, MMMM DD, YYYY}}
 ## 💭 Scratch pad
 - [ ]  
 

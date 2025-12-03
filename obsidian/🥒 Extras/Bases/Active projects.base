@@ -1,0 +1,13 @@
+filters:
+  and:
+    - file.folder.contains("⚙️ Projects")
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.folder
+      - deadline
+    sort:
+      - property: deadline
+        direction: ASC
