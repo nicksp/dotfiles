@@ -54,38 +54,6 @@
     }
   ],
   "editor:toggle-comments": [],
-  "workspace:goto-tab-1": [],
-  "workspace:goto-tab-2": [],
-  "workspace:goto-tab-3": [],
-  "workspace:goto-tab-4": [],
-  "workspace:goto-tab-5": [],
-  "workspace:goto-tab-6": [],
-  "workspace:goto-tab-7": [],
-  "workspace:goto-tab-8": [],
-  "editor:toggle-fold-properties": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "3"
-    }
-  ],
-  "app:toggle-left-sidebar": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "1"
-    }
-  ],
-  "app:toggle-right-sidebar": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "2"
-    }
-  ],
   "file-explorer:move-file": [
     {
       "modifiers": [],
@@ -205,6 +173,31 @@
     {
       "modifiers": [],
       "key": "F4"
+    }
+  ],
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "/"
+    }
+  ],
+  "app:toggle-right-sidebar": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "/"
+    }
+  ],
+  "editor:toggle-fold-properties": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "\\"
     }
   ]
 }

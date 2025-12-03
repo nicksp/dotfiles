@@ -1,0 +1,34 @@
+.nav-folder-title[data-count]::after {
+    content: attr(data-count);
+    display: inline-block;
+    position: relative;
+    font-size: calc(100% * 0.8);
+    margin-right: 4px;
+    /* border-radius: 3px; */
+    padding: 2px 0;
+    /* background-color: var(--background-secondary-alt); */
+    transition: opacity 100ms ease-in-out;
+}
+
+.oz-explorer-root-nav-folder-title {
+    display: flex;
+}
+
+.oz-explorer-root-nav-folder-title[data-count]::after {
+    content: attr(data-count);
+    margin-right: 4px;
+    font-size: calc(100% * 0.8);
+    display: inline-block;
+}
+
+body:not(.oz-show-all-num) .nav-folder:not(.is-collapsed) > .nav-folder-title.oz-with-subfolder[data-count]:not([data-path='/'])::after {
+    opacity: 0;
+}
+
+.nav-folder-title-content {
+    flex-grow: 1;
+}
+
+.oz-explorer-root-folder {
+    margin-top: 15px;
+}

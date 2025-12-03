@@ -1,7 +1,6 @@
 [
   "calendar",
   "obsidian-hider",
-  "obsidian-filename-heading-sync",
-  "fold-properties-by-default",
-  "obsifetch"
+  "file-explorer-note-count",
+  "auto-h1"
 ]
