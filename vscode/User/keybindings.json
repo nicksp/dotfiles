@@ -20,8 +20,8 @@
     "command": "-workbench.action.toggleAuxiliaryBar"
   },
   {
-    "comment": "Maximize left secondary sidebar",
-    "key": "shift+cmd+1",
+    "comment": "Maximize/minimize the left secondary sidebar",
+    "key": "alt+enter",
     "command": "workbench.action.toggleMaximizedAuxiliaryBar",
     "when": "auxiliaryBarVisible"
   },
@@ -87,9 +87,9 @@
   },
   {
     "comment": "Maximize/minimize active panel",
-    "key": "cmd+alt+j",
+    "key": "alt+enter",
     "command": "workbench.action.toggleMaximizedPanel",
-    "when": "panelVisible"
+    "when": "panelFocus"
   },
     {
     "comment": "Close left sidebar when pressing Escape",
