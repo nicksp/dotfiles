@@ -1,0 +1,10 @@
+{
+  "id": "cm-typewriter-scroll-obsidian",
+  "name": "Typewriter Scroll",
+  "author": "death_au",
+  "authorUrl": "https://github.com/deathau",
+  "description": "Typewriter-style scrolling which keeps the view centered in the editor.",
+  "isDesktopOnly": false,
+  "version": "0.2.2",
+  "minAppVersion": "0.10.0"
+}

@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-simple-gallery",
+	"name": "Simple gallery",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "This is a gallery plugin for Obsidian. It displays a gallery of all the images in your vault.",
+	"author": "alexwlchan",
+	"authorUrl": "https://alexwlchan.net",
+	"isDesktopOnly": false
+}

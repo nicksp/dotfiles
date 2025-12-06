@@ -1,0 +1,10 @@
+.gallery {
+  background-color: rgb(18, 18, 18) !important;
+}
+
+.gallery img {
+  max-height: 200px;
+  display: inline-block;
+  margin: 10px;
+  background-color: white;
+}

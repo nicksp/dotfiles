@@ -199,5 +199,14 @@
       ],
       "key": "\\"
     }
+  ],
+  "random-note": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "R"
+    }
   ]
 }
