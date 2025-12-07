@@ -724,6 +724,17 @@ mjx-merror {
   margin-left: -3.9rem;
 }
 
+/* Better alignment of the left edge of headers with the text */
+.markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-header.HyperMD-header-1 {
+  margin-inline-start: -0.1rem !important;
+}
+.markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-header.HyperMD-header-2 {
+  margin-inline-start: -.05rem !important;
+}
+.markdown-source-view.mod-cm6 .cm-content > .cm-line.HyperMD-header.HyperMD-header-3 {
+  margin-inline-start: -.025rem !important;
+}
+
 /* Avoid shifting content when editing images */
 .is-live-preview .cm-line.cm-line:has(.cm-formatting-image),
 .is-live-preview .cm-line.cm-line:has(.cm-formatting-embed) {
