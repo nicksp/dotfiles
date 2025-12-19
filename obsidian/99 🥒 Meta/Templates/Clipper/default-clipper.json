@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Default",
 	"behavior": "create",
-	"noteContentFormat": "{{content}}",
+	"noteContentFormat": "# {{title}}\n{{content}}",
 	"properties": [
 		{
 			"name": "source",
@@ -37,5 +37,5 @@
 	],
 	"triggers": [],
 	"noteNameFormat": "{{title}}",
-	"path": "✂️ Clippings"
+	"path": "03 🗂️ Resources/✂️ Clippings"
 }

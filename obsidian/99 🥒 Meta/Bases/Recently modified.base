@@ -1,6 +1,9 @@
+filters:
+  and:
+    - file.ext == "md"
 views:
   - type: cards
-    name: Cards
+    name: Recently modified
     order:
       - file.name
       - excerpt
@@ -20,4 +23,4 @@ views:
     sort:
       - property: file.mtime
         direction: DESC
-    limit: 100
+    limit: 30

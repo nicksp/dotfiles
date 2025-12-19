@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Google Maps",
 	"behavior": "create",
-	"noteContentFormat": "",
+	"noteContentFormat": "# {{selector:h1}}\n",
 	"properties": [
 		{
 			"name": "address",
@@ -17,11 +17,6 @@
 		{
 			"name": "description",
 			"value": "{{selector:div[aria-label^=\\\"About \\\"] button .PYvSYb[jslog]}}",
-			"type": "text"
-		},
-		{
-			"name": "icon",
-			"value": "",
 			"type": "text"
 		},
 		{
@@ -43,6 +38,6 @@
 	"triggers": [
 		"https://www.google.com/maps/place/"
 	],
-	"noteNameFormat": "{{selector:div[role=\"main\"]:aria-label}}",
-	"path": "🧰 References"
+	"noteNameFormat": "# {{selector:h1}}",
+	"path": "03 🗂️ Resources/Places"
 }

@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "YouTube",
 	"behavior": "create",
-	"noteContentFormat": "![{{schema:name}}]({{url}})",
+	"noteContentFormat": "# {{schema:name}}\n",
 	"properties": [
 		{
 			"name": "title",
@@ -39,5 +39,5 @@
 		"https://www.youtube.com/watch?v="
 	],
 	"noteNameFormat": "{{schema:author}} – {{schema:name}}",
-	"path": "🧰 References"
+	"path": "03 🗂️ Resources/Videos"
 }

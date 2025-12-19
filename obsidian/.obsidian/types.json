@@ -4,6 +4,12 @@
     "cssclasses": "multitext",
     "tags": "tags",
     "created": "datetime",
-    "deadline": "date"
+    "deadline": "date",
+    "published": "date",
+    "updated": "date",
+    "start": "date",
+    "rating": "number",
+    "last": "date",
+    "end": "date"
   }
 }

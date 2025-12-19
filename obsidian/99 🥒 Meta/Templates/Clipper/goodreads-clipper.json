@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Goodreads",
 	"behavior": "create",
-	"noteContentFormat": "# {{selector:.BookPageTitleSection__title h1}}\n",
+	"noteContentFormat": "# {{selector:h1}}\n",
 	"properties": [
 		{
 			"name": "author",
@@ -38,6 +38,6 @@
 	"triggers": [
 		"https://www.goodreads.com/book/"
 	],
-	"noteNameFormat": "{{selector:.BookPageTitleSection__title h1}}",
-	"path": "🗂️ References/Books"
+	"noteNameFormat": "{{selector:h1}}",
+	"path": "03 🗂️ Resources/Books"
 }

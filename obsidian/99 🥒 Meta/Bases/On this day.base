@@ -9,7 +9,7 @@ views:
     name: On this day
     filters:
       and:
-        - file.folder.startsWith("📆 Logbook")
+        - file.folder.startsWith("06 📆 Logbook")
         - formula.on_this_day == "True"
     order:
       - formula.

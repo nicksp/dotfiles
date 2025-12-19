@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "IMDB",
 	"behavior": "create",
-	"noteContentFormat": "# {{selector:h1 .hero__primary-text}}",
+	"noteContentFormat": "# {{schema:name}}\n",
 	"properties": [
 		{
 			"name": "director",
@@ -49,5 +49,5 @@
 		"/^https:\\/\\/www\\.imdb\\.com\\/title\\/tt\\d+(?!\\/reference\\/)(\\/[^\\s]*)?$/"
 	],
 	"noteNameFormat": "{{schema:name}}",
-	"path": "🗂️ References/Movies"
+	"path": "03 🗂️ Resources/Movies"
 }
