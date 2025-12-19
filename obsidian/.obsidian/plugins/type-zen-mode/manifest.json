@@ -1,0 +1,10 @@
+{
+	"id": "type-zen-mode",
+	"name": "Typezen",
+	"version": "0.0.3",
+	"minAppVersion": "0.15.0",
+	"description": "Type and get in zen mode instanlty, no more distraction between you and your thoughts",
+	"author": "Ilgam Gabdullin",
+	"authorUrl": "https://github.com/IlgamGabdullin",
+	"isDesktopOnly": true
+}

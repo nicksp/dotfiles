@@ -1,0 +1,23 @@
+.typezen-hide,
+.workspace-ribbon.side-dock-ribbon.mod-left,
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split,
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split,
+.workspace-tab-header-container {
+    transition: opacity 0.15s ease-in-out;
+}
+
+.workspace-ribbon.side-dock-ribbon.mod-left.typezen-hide {
+    opacity: 0;
+}
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split.typezen-hide {
+    opacity: 0;
+}
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split.typezen-hide {
+    opacity: 0;
+}
+
+.workspace-tab-header-container.typezen-hide {
+    opacity: 0;
+}
