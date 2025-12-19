@@ -143,6 +143,7 @@
   // Improve Explorer tree readability
   "workbench.tree.indent": 20,
 
+  "workbench.editor.swipeToNavigate": true,
   "workbench.commandPalette.preserveInput": false,
   "workbench.editorAssociations": {
     // Don't open SVG files as preview
@@ -271,6 +272,7 @@
   "merge-conflict.autoNavigateNextConflict.enabled": true,
 
   "scm.repositories.selectionMode": "single",
+  "scm.repositories.explorer": true,
   "scm.graph.showIncomingChanges": false,
   "scm.inputFontFamily": "editor",
   "scm.inputFontSize": 16,
@@ -725,12 +727,14 @@
 
   // Tweak AI tools
   "chat.disableAIFeatures": true,
+  "chat.viewSessions.enabled": false,
   "chat.commandCenter.enabled": false,
-  "chat.fontSize": 15,
+  "chat.fontSize": 16,
   "chat.editor.fontSize": 15,
   "chat.agent.thinkingStyle": "collapsed",
   "chat.agentSessionsViewLocation": "disabled",
   "chat.checkpoints.enabled": false,
+  "github.copilot.nextEditSuggestions.enabled": false,
   "github.copilot.editor.enableCodeActions": false,
   "github.copilot.enable": {
     "*": false,
