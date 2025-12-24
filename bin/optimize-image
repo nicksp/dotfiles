@@ -1,44 +1,178 @@
 #!/bin/bash
 #
-# Convert JPEG/PNG images to WebP format.
-# > Note: Requires `webp`.
+# Convert images to modern formats (WebP, AVIF) and keep the smallest result.
+# > Automatically optimizes for best compression while maintaining quality.
+#
+# - Optimize all images in current folder:
+#
+# `optimize`
 #
 # - Optimize a specific image:
 #
-# `optimize-image {{file.jpg}}`
-#
-# ---
-# Author: Nick Plekhanov, https://plekhanov.me
-# License: MIT
-# https://github.com/nicksp/dotfiles
+# `optimize {{file.jpg}}`
 
 set -euo pipefail
 
+# Utils
 RED="$(tput setaf 1)"
+GREEN="$(tput setaf 2)"
+CYAN="$(tput setaf 6)"
+BOLD="$(tput bold)"
+YELLOW="$(tput setaf 3)"
 UNDERLINE="$(tput sgr 0 1)"
-RESET="$(tput sgr0)"
+NOCOLOR="$(tput sgr0)"
 
-error() {
-  echo -e "$UNDERLINE$RED$1$RESET\n"
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+bin="$root/node_modules/.bin"
+
+function error() {
+  echo -e "$UNDERLINE$RED$1$NOCOLOR\n"
 }
 
-# Check if arguments are provided
-if [ "$#" -eq 0 ] || [ "$1" = "-h" ]; then
-  echo "Usage: $(basename $0) <input_file>"
-  echo
-  echo "Convert all given images to webp using cwebp."
-  echo "The output will be stored in the same directory of input file(s)."
-  echo
-  echo "Run \"help $(basename $0)\" for more information on a command."
-  exit 1
-fi
-
+# Check required tools
 if ! command -v cwebp &> /dev/null; then
   error "Webp is not installed: brew install webp"
   exit 1
 fi
 
-for file in "$@"; do
-  filename=${file%\.*}
-  cwebp -q 75 -quiet $file -o $(basename ${filename}).webp
-done
+if [[ ! -x "$bin/avif" ]]; then
+  error "avif is not installed: npm install avif"
+  exit 1
+fi
+
+# Pretty print bytes
+pretty_bytes() {
+  local bytes=$1
+  if (( bytes >= 1073741824 )); then
+    # GB
+    local gb=$((bytes * 10 / 1073741824))
+    printf "%d.%dGB" $((gb / 10)) $((gb % 10))
+  elif (( bytes >= 1048576 )); then
+    # MB
+    local mb=$((bytes * 10 / 1048576))
+    printf "%d.%dMB" $((mb / 10)) $((mb % 10))
+  elif (( bytes >= 1024 )); then
+    # KB
+    local kb=$((bytes * 10 / 1024))
+    printf "%d.%dKB" $((kb / 10)) $((kb % 10))
+  else
+    printf "%dB" "$bytes"
+  fi
+}
+
+# Print conversion result
+print_result() {
+  local filename="$1"
+  local original_size=$2
+  local optimized_size=$3
+  local new_format="$4"
+
+  local difference=$((original_size - optimized_size))
+  local ratio=$((10000 * difference / original_size))
+
+  printf "${BOLD}%s${NOCOLOR}: %s → ${CYAN}%s${NOCOLOR} ${GREEN}(%d.%02d%% saved, %s smaller)${NOCOLOR}\n" \
+    "$filename" \
+    "$(pretty_bytes $original_size)" \
+    "$(pretty_bytes $optimized_size)" \
+    $((ratio / 100)) \
+    $((ratio % 100)) \
+    "$(pretty_bytes $difference)"
+}
+
+optimize_image() {
+  local input="$1"
+  local basename="${input%.*}"
+  local ext="${input##*.}"
+  local directory="$(dirname "$input")"
+
+  # Skip if not an image or already optimized
+  if [[ "$ext" =~ ^(avif|webp|AVIF|WEBP)$ ]]; then
+    echo "${YELLOW}$(basename "$input"): Already optimized, skipping${NOCOLOR}"
+    return
+  fi
+
+  # Skip if not a supported source format
+  if [[ ! "$ext" =~ ^(jpg|jpeg|png|gif|bmp|tiff|JPG|JPEG|PNG|GIF|BMP|TIFF)$ ]]; then
+    return
+  fi
+
+  # Check if optimized versions already exist
+  if [[ -f "${basename}.avif" ]] || [[ -f "${basename}.webp" ]]; then
+    echo "${YELLOW}$(basename "$input"): Already has optimized version, skipping${NOCOLOR}"
+    return
+  fi
+
+  local tempdir=$(mktemp -d)
+  trap "rm -rf '$tempdir'" RETURN
+
+  # Convert to different formats
+  local webp="$tempdir/output.webp"
+  local avif="$tempdir/output.avif"
+
+  # WebP conversion (quality 75, max compression)
+  cwebp -q 75 -m 6 "$input" -o "$webp" 2>/dev/null
+
+  # AVIF conversion (quality 50, effort 8)
+  $bin/avif --quality 50 --effort 8 --input="$input" --output="$tempdir" 2>/dev/null
+  # avif CLI outputs with same basename, different extension
+  mv "$tempdir/$(basename "$basename").avif" "$avif" 2>/dev/null || true
+
+  # Debug
+  # echo "  WebP: $(pretty_bytes $(stat -f%z "$webp" 2>/dev/null || stat -c%s "$webp" 2>/dev/null || echo 0))"
+  # echo "  AVIF: $(pretty_bytes $(stat -f%z "$avif" 2>/dev/null || stat -c%s "$avif" 2>/dev/null || echo 0))"
+
+  # Find smallest file
+  local candidates=("$input")
+  [[ -f "$webp" ]] && candidates+=("$webp")
+  [[ -f "$avif" ]] && candidates+=("$avif")
+
+  local smallest="$input"
+  local smallest_size=$(stat -f%z "$input" 2>/dev/null || stat -c%s "$input")
+
+  for file in "${candidates[@]}"; do
+    if [[ -f "$file" ]]; then
+      local size=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file")
+      if (( size < smallest_size )); then
+        smallest="$file"
+        smallest_size="$size"
+      fi
+    fi
+  done
+
+  # Only save converted files if they're smaller than original
+  if [[ "$smallest" == "$input" ]]; then
+    echo "${YELLOW}$(basename "$input"): Original was smallest ($(pretty_bytes $smallest_size)), no conversion needed${NOCOLOR}"
+  else
+    local original_size=$(stat -f%z "$input" 2>/dev/null || stat -c%s "$input")
+    local new_ext="${smallest##*.}"
+    local output="$directory/$(basename "$basename").${new_ext}"
+
+    # Copy converted file, keep original untouched
+    cp "$smallest" "$output"
+
+    print_result "$(basename "$input")" "$original_size" "$smallest_size" "$new_ext"
+    fi
+}
+
+if [[ $# -eq 0 ]]; then
+  # Optimize all images in current directory
+  echo "Optimizing all images in current directory..."
+  shopt -s nullglob
+  for img in *.{jpg,jpeg,png,gif,bmp,tiff,JPG,JPEG,PNG,GIF,BMP,TIFF}; do
+    [[ -f "$img" ]] && optimize_image "$img"
+  done
+elif [[ $# -eq 1 ]]; then
+  # Optimize specific file
+  if [[ ! -f "$1" ]]; then
+    error "File '$1' not found"
+    exit 1
+  fi
+  optimize_image "$1"
+else
+  echo "Usage: $0 [file]"
+  echo "  No arguments: optimize all images in current directory"
+  echo "  One argument: optimize specific image file"
+  exit 1
+fi
+
+echo "🐠 Done!"

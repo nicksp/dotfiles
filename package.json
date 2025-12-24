@@ -10,5 +10,8 @@
   "license": "MIT",
   "devDependencies": {
     "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "avif": "^0.5.3"
   }
 }
