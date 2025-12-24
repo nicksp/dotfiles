@@ -1,0 +1,78 @@
+#!/usr/bin/env swift
+//
+// Extract text from images (OCR) using Apple’s text recognition API.
+//
+// - Recognize text in an image(s):
+//
+// `ocr {{file1}} {{file2}}`
+//
+// ---
+// Source: https://evanhahn.com/mac-ocr-script/
+
+import Foundation
+import Vision
+
+struct ProcessResult {
+  let path: URL
+  let index: Int
+  let texts: [String]?
+}
+
+func die(_ msg: String) -> Never {
+  fputs("\(msg)\n", stderr)
+  exit(1)
+}
+
+func process(_ path: URL) async -> [String]? {
+  var recognizeTextRequest = RecognizeTextRequest()
+  recognizeTextRequest.automaticallyDetectsLanguage = true
+  recognizeTextRequest.usesLanguageCorrection = true
+  recognizeTextRequest.recognitionLevel = .accurate
+
+  guard let observations = try? await recognizeTextRequest.perform(on: path) else {
+    return nil
+  }
+
+  return observations.compactMap { $0.topCandidates(1).first?.string }
+}
+
+guard CommandLine.arguments.count > 1 else {
+  die("usage: ocr /path/to/image1.jpg [/path/to/image2.png ...]")
+}
+
+let paths = CommandLine.arguments.dropFirst().map { URL(fileURLWithPath: $0) }
+
+Task {
+  let results = await withTaskGroup(of: ProcessResult.self) { group in
+    for (index, path) in paths.enumerated() {
+      group.addTask {
+        .init(path: path, index: index, texts: await process(path))
+      }
+    }
+
+    var results = [ProcessResult]()
+    for await result in group {
+      results.append(result)
+    }
+    return results
+
+  }
+
+  var allSuccess = true
+  for result in results.sorted(by: { $0.index < $1.index }) {
+    if result.index != 0 {
+      print()
+    }
+
+    if let texts = result.texts {
+      for text in texts { print(text) }
+    } else {
+      fputs("Failed to process \(result.path)\n", stderr)
+      allSuccess = false
+    }
+  }
+
+  exit(allSuccess ? 0 : 1)
+}
+
+dispatchMain()
