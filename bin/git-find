@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# Search git history for all commits that modified a specific file across all branches.
+# > Shows the full history including deleted files by searching through all commits.
+#
+# - Search for a file anywhere in the repository:
+#
+# `git-find {{file}}`
+#
+# - Search for a file in a specific subdirectory:
+#
+# `git-find {{dir/file}}`
+#
+# ---
+# Author: Nick Plekhanov, https://plekhanov.me
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+set -euo pipefail
+
+git log --all --full-history --name-only -- "**/$1"
