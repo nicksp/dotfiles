@@ -269,6 +269,9 @@
   "git.enableSmartCommit": true,
   "git.mergeEditor": true,
 
+  "git.blame.ignoreWhitespace": true,
+  "git.blame.editorDecoration.disableHover": true,
+
   "merge-conflict.autoNavigateNextConflict.enabled": true,
 
   "scm.repositories.selectionMode": "single",
@@ -727,6 +730,7 @@
 
   // Tweak AI tools
   "chat.disableAIFeatures": true,
+  "chat.useAgentSkills": true,
   "chat.viewSessions.enabled": false,
   "chat.commandCenter.enabled": false,
   "chat.fontSize": 16,
