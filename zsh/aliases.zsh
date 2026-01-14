@@ -85,7 +85,7 @@ alias ld="lazydocker"
 alias lg="lazygit --use-config-dir $DOTFILES/lazygit"
 
 # File Manager
-alias ff="open -a 'Marta' ."
+alias ff="open -a 'Nimble Commander' ."
 
 #
 # Built-ins upgrades

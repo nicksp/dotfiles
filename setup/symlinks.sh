@@ -225,11 +225,6 @@ install_extras() {
   # GPG
   symlink_file "$DOTFILES_DIR/gpg/gpg-agent.conf" "$HOME/.gnupg/gpg-agent.conf"
 
-  # Marta
-  marta_app_data_dir="$HOME/Library/Application Support/org.yanex.marta"
-  symlink_file "$DOTFILES_DIR/marta/conf.marco" "$marta_app_data_dir/conf.marco"
-  symlink_file "$DOTFILES_DIR/marta/favorites.marco" "$marta_app_data_dir/favorites.marco"
-
   # Quick-Look plugins to enhance experience using file manager
   symlink_file "$DOTFILES_DIR/ql-plugins" "$HOME/Library/QuickLook"
 

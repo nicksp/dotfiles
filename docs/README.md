@@ -128,7 +128,7 @@
 
 # ff
 
-- Open current directory in Marta file manager:
+- Open current directory in Nimble Commander file manager:
 
 `ff`
 

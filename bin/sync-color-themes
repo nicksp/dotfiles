@@ -6,7 +6,7 @@
 # > This script syncs color themes for:
 # > [x] Bat
 # > [x] CotEditor
-# > [x] Marta
+# > [x] Nimble Commander
 # > [x] Syntax Highlight
 # > [x] Ghostty
 # > [/] Firefox
@@ -149,18 +149,13 @@ bat cache --build
 echo "🌈 A new color theme has been installed and ready to use"
 
 #
-# Marta: https://github.com/sapegin/squirrelsong/tree/master/themes/Marta
+# Nimble Commander: https://github.com/sapegin/squirrelsong/tree/master/themes/Nimble%20Commander
 #
 
-header "Installing Marta theme…"
+header "Installing Nimble Commander theme…"
 
-marta_app_themes_dir="$HOME/Library/Application Support/org.yanex.marta/Themes"
-marta_terminal_themes_dir="/Applications/Marta.app/Contents/Resources/Themes"
-
-sudo command rm -f "$marta_terminal_themes_dir/SquirrelsongLight.ettyTheme"
-system_install "themes/Marta/Squirrelsong%20Light.theme" "$marta_app_themes_dir/Squirrelsong Light.theme"
-system_install "themes/Marta/SquirrelsongLight.ettyTheme" "$marta_terminal_themes_dir/SquirrelsongLight.ettyTheme"
-echo "🌈 Point to new themes in Marta preferences and restart the app for the changes to take effect"
+local_install "themes/Nimble%20Commander/Squirrelsong%20Light.json" "nimble-commander/themes"
+echo "🌈 Import ${HIGHLIGHT}Squirrelsong Light.json${RESET} as a new theme in ${BOLD}Nimble Commander → Settings → Themes${RESET} and then select the theme in ${BOLD}Theme${RESET} list, and for ${BOLD}Light${RESET} and ${BOLD}Dark${RESET} themes under ${BOLD}Configure automatic switching…${RESET}"
 
 #
 # Syntax Highlight: https://github.com/sapegin/squirrelsong/tree/master/themes/Highlight

@@ -69,7 +69,7 @@ cask "keka" # File archiver and extractor
 cask "languagetool" # Grammar, spell, and style checker
 cask "ledger-live" # Crypto hardware wallet manager
 cask "legcord" # Messaging / Community
-cask "marta" # File manager
+cask "nimble-commander" # File manager
 cask "notion" # Collaborative note taking app
 cask "obsidian" # Main note taking app
 cask "optimage" # Image optimization

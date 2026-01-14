@@ -39,9 +39,9 @@ warning "Activate sudo"
 sudo echo "Sudo activated!"
 echo
 
-# Marta File Manager
+# Nimble Commander File Manager
 # https://icon-icons.com/icon/floppy-disk/30728
-update_icon "Marta" "/Applications/Marta.app" "/Applications/Marta.app/Contents/Resources/AppIcon.icns" "$ICONS_DIR/Floppy.icns"
+update_icon "Nimble Commander" "/Applications/Nimble Commander.app" "/Applications/Nimble Commander.app/Contents/Resources/icon.icns" "$ICONS_DIR/Floppy.png"
 
 # Visual Studio Code
 # https://dribbble.com/shots/15424559-VS-Code-replacement-icon

@@ -22,27 +22,27 @@
       "problemMatcher": []
     },
     {
-      "label": "Project: Reveal in Marta",
+      "label": "Project: Reveal in Nimble Commander",
       "type": "shell",
-      "command": "open -a 'Marta' '${workspaceFolder}'",
+      "command": "open -a 'Nimble Commander' '${workspaceFolder}'",
       "presentation": {
         "reveal": "never"
       },
       "problemMatcher": []
     },
     {
-      "label": "Folder: Reveal in Marta",
+      "label": "Folder: Reveal in Nimble Commander",
       "type": "shell",
-      "command": "open -a 'Marta' '${fileDirname}'",
+      "command": "open -a 'Nimble Commander' '${fileDirname}'",
       "presentation": {
         "reveal": "never"
       },
       "problemMatcher": []
     },
     {
-      "label": "File: Reveal in Marta",
+      "label": "File: Reveal in Nimble Commander",
       "type": "shell",
-      "command": "open -a 'Marta' '${file}'",
+      "command": "open -a 'Nimble Commander' '${file}'",
       "presentation": {
         "reveal": "never"
       },
