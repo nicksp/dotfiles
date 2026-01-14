@@ -91,7 +91,7 @@
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "panelFocus"
   },
-    {
+  {
     "comment": "Close left sidebar when pressing Escape",
     "key": "escape",
     "command": "workbench.action.closeAuxiliaryBar",
@@ -201,12 +201,6 @@
     "key": "cmd+i",
     "command": "-amp.agent.toggleVisibility",
     "when": "amp.primaryShortcuts"
-  },
-  {
-    // Activate Copilot inline chat instead
-    "key": "cmd+i",
-    "command": "-kilo-code.addToContextAndFocus",
-    "when": "editorTextFocus && kilocode.ghost.enableQuickInlineTaskKeybinding && !github.copilot.completions.enabled"
   },
   {
     "key": "shift+cmd+i",

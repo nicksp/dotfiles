@@ -242,19 +242,8 @@ install_extras() {
 
   LLMS_FILENAME="agent-instructions.md"
   LLMS_COMMANDS_DIR="$DOTFILES_DIR/ai-agents/commands"
-  LLMS_AGENTS_DIR="$DOTFILES_DIR/ai-agents/claude-code/agents"
   LLMS_INSTRUCTIONS="$DOTFILES_DIR/ai-agents/$LLMS_FILENAME"
   MCP_FILE="$DOTFILES_DIR/ai-agents/mcp.json"
-
-  # Claude
-  CLAUDE_DIR="$HOME/.claude"
-  symlink_file "$LLMS_INSTRUCTIONS" "$CLAUDE_DIR/CLAUDE.md"
-
-  # Kilo Code
-  KILO_CODE_DIR="$HOME/.kilocode"
-  KILO_CODE_COMMANDS_DIR="$KILO_CODE_DIR/workflows"
-  symlink_file "$LLMS_INSTRUCTIONS" "$KILO_CODE_DIR/rules/$LLMS_FILENAME"
-  rm -rf "$KILO_CODE_COMMANDS_DIR" && ln -sfn "$LLMS_COMMANDS_DIR" "$KILO_CODE_COMMANDS_DIR"
 
   # Amp
   AMP_DIR="$HOME/.config/amp"

@@ -74,8 +74,6 @@ ALWAYS read project documentation before making suggestions or writing any code:
 - @AGENTS.md
 - @CLAUDE.md
 - @.github/copilot-instructions.md
-- @.kilocode/rules/
-- @.kiro/steering/
 </project_context>
 
 <dex_constraints>

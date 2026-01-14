@@ -14,15 +14,6 @@ lazygit/state.yml
 private/
 tilde/.ssh/*
 
-# Claude
-tilde/.claude.json
-tilde/.claude/*
-!tilde/.claude/commands
-!tilde/.claude/agents
-!tilde/.claude/hooks/
-!tilde/.claude/CLAUDE.md
-!tilde/.claude/settings.json
-
 # Cursor
 tilde/.cursor/mcp.json
 tilde/.cursor/chats/
@@ -31,9 +22,6 @@ tilde/.cursor/extensions/
 tilde/.cursor/prompt_history.json
 tilde/.cursor/unified_repo_list.json
 tilde/.cursor/ide_state.json
-
-# Kilo Code
-tilde/.kilocode/cli/
 
 # Obsidian
 obsidian/**/workspace.json

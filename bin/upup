@@ -74,7 +74,7 @@ echo
 
 # Coding agents
 header "Updating coding agent tools…"
-amp update && claude update
+amp update
 echo
 
 # VS Code extensions

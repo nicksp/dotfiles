@@ -8,8 +8,6 @@ A collection of specialized system prompts and slash commands for AI agents to a
 ## Supported AI Agents
 
 - [x] Cursor
-- [x] Claude Code
-- [x] Kilo Code
 - [x] Amp
 
 ## What It Does
@@ -31,23 +29,19 @@ $HOME/dotfiles/setup/symlinks.sh
 
 ### Add LLM instructions
 
-Helps LLM powered tools like Cursor and Claude Code understand how to interact with our codebase. These add some base user-level instructions to define some essential standards that _should_ work no matter the project: LLM behavior, code style, essential best practices.
+Helps LLM powered tools like Cursor and Amp understand how to interact with our codebase. These add some base user-level instructions to define some essential standards that _should_ work no matter the project: LLM behavior, code style, essential best practices.
 
 #### How to use
 
 1. **Cursor**: Paste [file content](./agent-instructions.md) in `AGENTS.md` file at the project root
-2. **Claude Code**: Paste [file content](./agent-instructions.md) in `~/.claude/CLAUDE.md` (automated ✔️)
-3. **Kilo Code**: Paste [file content](./agent-instructions.md) in `~/.kilocode/rules/agent-instructions.md` (automated ✔️)
-4. **Amp**: Paste [file content](./agent-instructions.md) in `~/.config/AGENTS.md` (automated ✔️)
+2. **Amp**: Paste [file content](./agent-instructions.md) in `~/.config/AGENTS.md` (automated ✔️)
 
 ### Add MCP servers
 
 #### How to use
 
 1. **Cursor**: Paste [file content](./mcp.json) in `~/.cursor/mcp.json` (automated ✔️)
-2. **Claude Code**: Paste [file content](./mcp.json) in `~/.claude.json` or your project's `.mcp.json` file
-3. **Kilo Code**: Paste [file content](./mcp.json) in your project's `.kilocode/mcp.json` file
-4. **Amp**: Paste [file content](./mcp.json) in `~/.config/amp/settings.json` as `amp.mcpServers` and in VS Code settings as `amp.mcpServers` (automated ✔️)
+2. **Amp**: Paste [file content](./mcp.json) in `~/.config/amp/settings.json` as `amp.mcpServers` and in VS Code settings as `amp.mcpServers` (automated ✔️)
 
 #### Available servers
 
@@ -59,9 +53,7 @@ Helps LLM powered tools like Cursor and Claude Code understand how to interact w
 #### How to use
 
 1. **Cursor**: Copy the [command files](./commands/) to `~/.cursor/commands/` (automated ✔️)
-2. **Claude Code**: Has the majority of commands built-in
-3. **Kilo Code**: Copy the [command files](./commands/) to `~/.kilocode/workflows/` (automated ✔️)
-4. **Amp**: Copy the [command files](./commands/) to `~/.config/amp/commands/` (automated ✔️)
+2. **Amp**: Copy the [command files](./commands/) to `~/.config/amp/commands/` (automated ✔️)
 
 #### Available commands
 
@@ -75,5 +67,4 @@ Helps LLM powered tools like Cursor and Claude Code understand how to interact w
 
 - [AGENTS.md](https://agents.md/)
 - [AI coding workflow](https://github.com/nicksp/ai-coding-worflow): my custom prompts for AI agents
-- [Claude Code base action](https://github.com/anthropics/claude-code-action)
 - [Claude Code security review action](https://github.com/anthropics/claude-code-security-review)

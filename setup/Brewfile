@@ -99,7 +99,6 @@ vscode "deerawan.vscode-dash"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "github.vscode-pull-request-github"
-vscode "kilocode.kilo-code"
 vscode "kisstkondoros.vscode-gutter-preview"
 vscode "meganrogge.template-string-converter"
 vscode "ms-azuretools.vscode-containers" # Auto-installed by Docker extension

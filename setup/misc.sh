@@ -70,9 +70,7 @@ packages=(
   npm-upgrade
   aws-cdk
   serverless
-  @anthropic-ai/claude-code
   @sourcegraph/amp
-  @kilocode/cli
   @antfu/ni
 )
 npm install -g "${packages[@]}"
