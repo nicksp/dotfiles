@@ -150,6 +150,14 @@ body {
   --background-modifier-success-rgb: var(--color-green-rgb);
   --background-modifier-message: var(--sqrl-gray120);
   --background-modifier-form-field: var(--sqrl-gray180);
+  
+  /* Disable translucent blurred backgrounds */
+  --blur-background: var(--background-primary);
+  --blur-translucency-s: 100%;
+  --blur-translucency-m: 100%;
+  --blur-s: none;
+  --blur-m: none;
+  --blur-l: none;
 
   --interactive-normal: var(--sqrl-gray180);
   --interactive-hover: var(--sqrl-gray160);
@@ -185,6 +193,8 @@ body {
   --tab-divider-color: var(--sqrl-gray160);
   --tab-outline-color: var(--sqrl-gray150);
   --tab-curve: 0;
+  
+  --navbar-max-width: 100%;
 
   --blockquote-border-thickness: 4px;
   --blockquote-border-color: var(--sqrl-gray120);
@@ -268,6 +278,8 @@ body {
   --collapse-icon-color-collapsed: var(--icon-color);
 
   --input-shadow: var(--textfield-shadow);
+  
+  --raised-shadow: 0 1px 3px rgba(0, 0, 0, 0.015), 0 0 8px rgba(0, 0, 0, 0.065), var(--shadow-edges);
 
   --bases-cards-shadow: var(--card-shadow);
   --bases-cards-shadow-hover: var(--card-shadow-hover);
@@ -293,6 +305,12 @@ body {
 }
 .tappable, .is-clickable, .clickable-icon, .view-header-breadcrumb, button, input[type="checkbox"] {
   cursor: var(--cursor);
+}
+
+/* Reduce insanity of the new Liquid Glass style elements */
+.is-mobile .mod-raised {
+  background-clip: initial;
+  border: 1px solid var(--sqrl-gray160);
 }
 
 /* Button styles inspired by https://primary-theme.github.io */
@@ -427,6 +445,24 @@ input[type='range']:focus-visible::-webkit-slider-thumb {
   opacity: 1;
 }
 
+/* Menus */
+
+.is-phone .menu {
+  border-radius: var(--radius-xl);
+}
+.is-phone .menu-group .menu-item:only-child {
+  border-radius: var(--radius-m);
+}
+
+/* Suggestions */
+
+.is-mobile .suggestion-container {
+  border-radius: var(--radius-m);
+}
+.is-mobile .suggestion-item {
+  border-radius: var(--radius-s);
+}
+
 /* Vertical tabs (like in Settings) */
 
 .vertical-tab-nav-item {
@@ -438,6 +474,18 @@ input[type='range']:focus-visible::-webkit-slider-thumb {
   text-shadow: var(--active-text-shadow);
 }
 
+/* Navigation */
+
+.mobile-navbar.mod-raised {
+  width: 100vw;
+  margin-bottom: 0;
+  border-radius: 0;
+  border-width: 1px 0 0 0;
+}
+.mobile-navbar-action .clickable-icon, .mobile-navbar-action button {
+  border-radius: 0;
+}
+
 /* Metadata (properties) section */
 
 .metadata-container {
@@ -445,10 +493,11 @@ input[type='range']:focus-visible::-webkit-slider-thumb {
 }
 .is-phone .metadata-container {
   margin-inline: -1rem;
+  padding-inline: .5rem;
   border-radius: 0;
 }
 .is-phone .metadata-properties-heading {
-  padding: .5rem 1rem;
+  padding: .5rem;
 }
 .metadata-properties-heading {
   display: flex;
@@ -471,6 +520,9 @@ input[type='range']:focus-visible::-webkit-slider-thumb {
 }
 .metadata-content {
   margin-block-start: .5rem;
+}
+.is-mobile .metadata-content {
+  background-color: transparent;
 }
 .metadata-property:not(:focus-within) * {
   cursor: var(--cursor);
@@ -502,6 +554,13 @@ input.prompt-input, input.prompt-input:hover, input.prompt-input:focus, input.pr
 .prompt-instructions {
   /* A bit more air */
   padding-block: var(--size-4-3);
+}
+
+.is-phone .prompt {
+  border-radius: var(--radius-xl);
+}
+.is-phone .prompt-input-container {
+  margin-bottom: 0;
 }
 
 /* Search */
