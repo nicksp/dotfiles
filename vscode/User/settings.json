@@ -449,6 +449,7 @@
   "editor.largeFileOptimizations": false,
   "editor.semanticHighlighting.enabled": true,
 
+  "workbench.settings.alwaysShowAdvancedSettings": true,
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.editorLargeFileConfirmation": 150,
   // Open JSON editor for settings
@@ -749,29 +750,10 @@
   "inlineChat.enableV2": true,
   // Disable annoying hints "Cmd+I to continue with Copilot"
   "inlineChat.lineNaturalLanguageHint": false,
-  "kilo-code.allowedCommands": [
-    "git log",
-    "git diff",
-    "git show",
-    "npm run lint",
-    "npm run typecheck",
-    "npm run format",
-    "npm test",
-    "tsc",
-    "git status",
-    "npm run build",
-    "npm init -y"
-  ],
-  "kilo-code.deniedCommands": [],
-  "amp.tab.enabled": false,
   "amp.ui.zoomLevel": 1.15,
   "amp.git.commit.ampThread.enabled": false,
   "amp.git.commit.coauthor.enabled": false,
   "amp.mcpServers": {
-    "playwright": {
-      "command": "npx",
-      "args": ["-y", "@playwright/mcp@latest", "--headless", "--isolated"]
-    },
     "context7": {
       "url": "https://mcp.context7.com/mcp",
       "custom_instruction": {
