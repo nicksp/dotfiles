@@ -160,7 +160,7 @@
   "terminal.integrated.profiles.osx": {
     "zsh": {
       "path": "/opt/homebrew/bin/zsh",
-      "args": ["-l"]
+      "args": ["-i"]
     }
   },
   // Run tasks in interactive shell, otherwise some things (like pnpm installed
@@ -169,6 +169,7 @@
     "path": "/opt/homebrew/bin/zsh",
     "args": ["-i"]
   },
+  "terminal.external.osxExec": "Ghostty.app",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.lineHeight": 1.1,
