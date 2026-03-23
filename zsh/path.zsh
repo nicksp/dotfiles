@@ -16,6 +16,9 @@ prepend "/usr/local/bin"
 # Cursor CLI installs here
 prepend "$HOME/.local/bin"
 
+# Flutter
+prepend "$HOME/Projects/flutter/bin"
+
 # Homebrew binaries
 # > $(brew --prefix)
 homebrew_path="/opt/homebrew"
