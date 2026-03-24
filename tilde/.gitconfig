@@ -176,8 +176,6 @@
 
   # Branching
   br           = branch
-  # Better branch output
-  brb          = !git for-each-ref --color --sort=-committerdate --format=$'%(color:red)%(ahead-behind:HEAD)\t%(color:blue)%(refname:short)\t%(color:yellow)%(committerdate:relative)\t%(color:default)%(describe)' refs/heads/ --no-merged | sed 's/ /\t/' | column -s=$'\t' -t -c 'Ahead,Behind,Branch Name,Last Commit,Description'
   bra          = branch -a
   # Change current branch
   cb           = switch
@@ -273,11 +271,11 @@
   # How many lines of code I have written today
   today        = diff --shortstat \"@{0 day ago}\"
 
-  # count number of lines of code in the files of a git project
+  # Count number of lines of code in the files of a git project
   stats        = "!git ls-files | xargs wc -l"
 
-  # List of branches ordered by last change
-  branches     = for-each-ref --sort=-committerdate refs/heads/ --format='%(color:bold)%(refname:short)%(color:reset)\t%(committerdate:relative)'
+  # What branches I was working on ordered by last change
+  recent       = !git for-each-ref --color --sort=-committerdate --format=$'%(color:blue)%(refname:short)\t%(color:yellow)%(committerdate:relative)\t%(color:default)%(describe)' refs/heads/ --no-merged | sed 's/ /\t/' | column -s=$'\t' -t -c 'Branch Name,Last Commit,Description' | tail -10
 
   # List of files with merge conflicts
   wtf          = diff --name-only --diff-filter=U
