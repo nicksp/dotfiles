@@ -82,7 +82,6 @@ cask "rocket" # Handy emojis picker
 cask "slack" # Messaging social platform
 cask "superduper" # Data backup
 cask "syntax-highlight", args: { no_quarantine: true } # Preview many different source code files
-cask "tableplus" # Database management system
 cask "telegram" # Messenger
 cask "visual-studio-code" # Main code editor
 cask "whatsapp" # Messenger
