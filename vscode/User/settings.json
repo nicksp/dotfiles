@@ -32,21 +32,16 @@
   "workbench.panel.defaultLocation": "bottom",
 
   // Autocompletes
-  // https://stackoverflow.com/questions/49956963/markdown-not-using-emmet
   // https://css-tricks.com/can-vs-code-emmet/
-  "emmet.excludeLanguages": [],
   "emmet.includeLanguages": {
     "vue-html": "html",
     "javascript": "javascriptreact",
-    "jsx-sublime-babel-tags": "javascriptreact",
-    "markdown": "html",
     "typescript": "html"
   },
   "emmet.syntaxProfiles": {
     "javascript": "jsx"
   },
   "emmet.triggerExpansionOnTab": true,
-  "emmet.showExpandedAbbreviation": "always",
   "emmet.showAbbreviationSuggestions": false,
   "emmet.showSuggestionsAsSnippets": true,
 
