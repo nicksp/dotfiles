@@ -2,12 +2,24 @@
   "amp.terminal.theme": "squirrelsong-dark-dp",
   "amp.git.commit.ampThread.enabled": false,
   "amp.git.commit.coauthor.enabled": false,
-  // Disable annoying notification sound
+  // Disable startup animation
+  "amp.terminal.animation": false,
+  // Disable notification sound
   "amp.notifications.enabled": false,
   // Block all MCP servers
   "amp.mcpPermissions": [
-    { "matches": { "command": "*" }, "action": "reject" },
-    { "matches": { "url": "*" }, "action": "reject" }
+    {
+      "matches": {
+        "command": "*"
+      },
+      "action": "reject"
+    },
+    {
+      "matches": {
+        "url": "*"
+      },
+      "action": "reject"
+    }
   ],
   "amp.tools.disable": [],
   "amp.permissions": []
