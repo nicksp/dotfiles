@@ -17,6 +17,7 @@ brew "fzf" # Fuzzy file finder and filtering
 brew "gh" # GitHub CLI: interact with GitHub PRs, issues, repos
 brew "git" # Version control
 brew "git-delta" # Diff pager for `git` and `grep` output (better `diff`)
+brew "gitleaks" # Audit git repos for secrets
 brew "gnupg" # Encryption and signing capabilities for data verification
 brew "lazygit" # Full Git management app
 brew "mpv" # Media player
@@ -53,7 +54,6 @@ cask "font-symbols-only-nerd-font"
 
 # GUI apps
 cask "1password" # Password manager
-cask "adobe-creative-cloud" # Adobe Photoshop & Lightroom
 cask "bruno" # Local-first API client
 cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
@@ -63,11 +63,12 @@ cask "firefox@developer-edition" # Main browser with configurable privacy
 cask "ghostty" # Better terminal emulator
 cask "github" # GitHub Desktop GUI
 cask "google-chrome" # Browser for testing
+cask "iina" # Modern media player
 cask "itsycal" # Tiny popup calendar in a menu bar
 cask "jordanbaird-ice" # Manage menu bar icons
 cask "keka" # File archiver and extractor
-cask "languagetool" # Grammar, spell, and style checker
-cask "ledger-live" # Crypto hardware wallet manager
+cask "languagetool-desktop" # Grammar, spell, and style checker
+cask "ledger-wallet" # Crypto hardware wallet manager
 cask "legcord" # Messaging / Community
 cask "nimble-commander" # File manager
 cask "notion" # Collaborative note taking app
@@ -75,13 +76,12 @@ cask "obsidian" # Main note taking app
 cask "optimage" # Image optimization
 cask "orbstack" # Running containerized applications. Ships `docker-compose` as well
 cask "pearcleaner" # Clean up macOS from junk and apps leftovers
-cask "qobuz" # Hi-rez audio streaming platform
 cask "raycast" # All-in-one app / tasks launcher
 cask "rectangle" # Window manager
 cask "rocket" # Handy emojis picker
 cask "slack" # Messaging social platform
 cask "superduper" # Data backup
-cask "syntax-highlight", args: { no_quarantine: true } # Preview many different source code files
+cask "syntax-highlight" # Preview many different source code files
 cask "telegram" # Messenger
 cask "visual-studio-code" # Main code editor
 cask "whatsapp" # Messenger
@@ -92,11 +92,14 @@ vscode "bierner.markdown-mermaid"
 vscode "bierner.markdown-preview-github-styles"
 vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc-icons"
+vscode "dart-code.dart-code"
+vscode "dart-code.flutter"
 vscode "davidanson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
 vscode "deerawan.vscode-dash"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
+vscode "github.copilot-chat"
 vscode "github.vscode-pull-request-github"
 vscode "kisstkondoros.vscode-gutter-preview"
 vscode "meganrogge.template-string-converter"
@@ -116,7 +119,6 @@ vscode "sapegin.mini-markdown"
 vscode "sapegin.theme-squirrelsonglight"
 vscode "sapegin.todo-tomorrow"
 vscode "sleistner.vscode-fileutils"
-vscode "sourcegraph.amp"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "tekumara.typos-vscode"
 vscode "usernamehw.errorlens"

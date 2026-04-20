@@ -38,6 +38,9 @@ echo "brew install --cask dbngin"
 echo "brew install --cask figma"
 echo "brew install --cask ibkr"
 echo "brew install --cask zoom"
+echo "brew install --cask adobe-creative-cloud"
+echo "brew install --cask qobuz"
+
 echo "${bold}Contrast${reset} − https://github.com/soffes/contrast"
 echo "${bold}Audirvāna Origin${reset} − https://audirvana.com/audirvana-origin/"
 
