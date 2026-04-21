@@ -13,7 +13,6 @@ I use [Squirrelsong](https://sapegin.me/squirrelsong/) theme wherever exists.
 1. [Pearcleaner](https://github.com/sapegin/squirrelsong/tree/master/themes/Pearcleaner)
 1. [Telegram](https://github.com/sapegin/squirrelsong/tree/master/themes/Telegram)
 1. [Visual Studio Code](https://github.com/sapegin/squirrelsong/tree/master/themes/VSCode/SquirrelsongLight)
-1. [Cursor](https://github.com/sapegin/squirrelsong/tree/master/themes/Cursor)
 1. [Firefox](https://github.com/sapegin/squirrelsong/tree/master/themes/Firefox)
 1. [Ghostty](https://github.com/sapegin/squirrelsong/tree/master/themes/Ghostty)
 1. [macOS](https://github.com/sapegin/squirrelsong/tree/master/themes/macOS)

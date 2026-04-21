@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Synchronize apps data, color themes, apps icons, VS Code and Cursor icons color palette.
+# Synchronize apps data, color themes, apps icons and VS Code icons color palette.
 #
 # - Run the synchronization:
 #
@@ -29,9 +29,5 @@ echo "✅ ${BOLD}Done${RESET}"
 echo
 
 "$DOTFILES/bin/sync-vscode-icons"
-echo "✅ ${BOLD}Done${RESET}"
-echo
-
-"$DOTFILES/bin/sync-cursor-icons"
 echo "✅ ${BOLD}Done${RESET}"
 echo

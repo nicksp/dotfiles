@@ -57,7 +57,6 @@ cask "1password" # Password manager
 cask "bruno" # Local-first API client
 cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
-cask "cursor" # AI Code editor
 cask "dash" # API documentation reader
 cask "firefox@developer-edition" # Main browser with configurable privacy
 cask "ghostty" # Better terminal emulator

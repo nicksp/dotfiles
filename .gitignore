@@ -5,23 +5,10 @@ vscode/**/workspaceStorage/
 vscode/**/syncLocalSettings.json
 vscode/**/globalStorage/
 vscode/**/History/
-cursor/**/workspaceStorage/
-cursor/**/syncLocalSettings.json
-cursor/**/globalStorage/
-cursor/**/History/
 lazygit/state.yml
 .tlrc/
 private/
 tilde/.ssh/*
-
-# Cursor
-tilde/.cursor/mcp.json
-tilde/.cursor/chats/
-tilde/.cursor/projects/
-tilde/.cursor/extensions/
-tilde/.cursor/prompt_history.json
-tilde/.cursor/unified_repo_list.json
-tilde/.cursor/ide_state.json
 
 # Obsidian
 obsidian/**/workspace.json

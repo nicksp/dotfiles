@@ -40,7 +40,7 @@ Helps LLM powered tools like Cursor and Amp understand how to interact with our 
 
 #### How to use
 
-1. **Cursor**: Paste [file content](./mcp.json) in `~/.cursor/mcp.json` (automated ✔️)
+1. **Cursor**: Paste [file content](./mcp.json) in `~/.cursor/mcp.json`
 2. **Amp**: Paste [file content](./mcp.json) in `~/.config/amp/settings.json` as `amp.mcpServers` and in VS Code settings as `amp.mcpServers` (automated ✔️)
 
 #### Available servers
@@ -52,7 +52,7 @@ Helps LLM powered tools like Cursor and Amp understand how to interact with our 
 
 #### How to use
 
-1. **Cursor**: Copy the [command files](./commands/) to `~/.cursor/commands/` (automated ✔️)
+1. **Cursor**: Copy the [command files](./commands/) to `~/.cursor/commands/`
 2. **Amp**: Copy the [command files](./commands/) to `~/.config/amp/commands/` (automated ✔️)
 
 #### Available commands
