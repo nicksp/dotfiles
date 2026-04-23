@@ -181,7 +181,7 @@
   cb           = switch
   # Create and switch to a new branch
   nb           = switch -c
-  # Jump back to to your last branch
+  # Jump back to the previous branch
   prev         = switch -
 
   # Status
@@ -254,10 +254,10 @@
   aliases      = config --get-regexp 'alias.*'
 
   # Display the current branch name
-  branchname   = rev-parse --abbrev-ref HEAD
+  branchname   = branch --show-current
 
   # Copy the current branch name to the clipboard
-  cpbranchname = !git branchname | tr -d '\n' | tr -d ' ' | pbcopy
+  cpbranchname = !git branch --show-current | tr -d '\n' | tr -d ' ' | pbcopy
 
   # Display the date of the last commit of the active Git branch
   lastcommit   = !git log --pretty=format:'%ar' | head -n 1
@@ -298,7 +298,7 @@
   mmmn         = !git fetch origin main && git merge origin/main --no-edit
 
   # Push up the branch and set upstream for the current branch
-  publish      = "!git push --set-upstream origin $(git branch-name)"
+  publish      = "!git push --set-upstream origin $(git branch --show-current)"
   sha          = log -n 1 --pretty=format:'%H'
 
 # git-delta

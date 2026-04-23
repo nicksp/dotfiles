@@ -18,7 +18,7 @@ RESET="$(tput sgr0)"
 header() { echo -e "\n$UNDERLINE$CYAN$1$RESET\n"; }
 
 branches() {
-  git branch --no-color --merged | grep -v '^*' | grep -v 'master' | grep -v 'main'
+  git branch --merged | grep -vE '^\*|master|main'
 }
 
 # Remove unreachable objects (commits, trees, blobs, etc.) from the Git object database
