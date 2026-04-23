@@ -1,6 +1,9 @@
 {
   "bundleId" : "com.knollsoft.Rectangle",
   "defaults" : {
+    "SUEnableAutomaticChecks" : {
+      "bool" : true
+    },
     "allowAnyShortcut" : {
       "bool" : true
     },
@@ -10,11 +13,11 @@
     "almostMaximizeWidth" : {
       "float" : 0
     },
-    "alternateDefaultShortcuts" : {
-      "bool" : false
-    },
     "altThirdCycle" : {
       "int" : 0
+    },
+    "alternateDefaultShortcuts" : {
+      "bool" : false
     },
     "alwaysAccountForStage" : {
       "int" : 0
@@ -34,10 +37,10 @@
     "cascadeAllDeltaSize" : {
       "float" : 30
     },
-    "centeredDirectionalMove" : {
+    "centerHalfCycles" : {
       "int" : 0
     },
-    "centerHalfCycles" : {
+    "centeredDirectionalMove" : {
       "int" : 0
     },
     "cornerSnapAreaSize" : {
@@ -45,6 +48,9 @@
     },
     "curtainChangeSize" : {
       "int" : 0
+    },
+    "cycleSizesIsChanged" : {
+      "bool" : false
     },
     "disabledApps" : {
 
@@ -90,6 +96,9 @@
     },
     "hideMenubarIcon" : {
       "bool" : false
+    },
+    "horizontalSplitRatio" : {
+      "float" : 50
     },
     "ignoreDragSnapToo" : {
       "int" : 0
@@ -148,14 +157,26 @@
     "screenEdgeGapRight" : {
       "float" : 0
     },
-    "screenEdgeGapsOnMainScreenOnly" : {
-      "bool" : false
-    },
     "screenEdgeGapTop" : {
       "float" : 0
     },
+    "screenEdgeGapTopNotch" : {
+      "float" : 0
+    },
+    "screenEdgeGapsOnMainScreenOnly" : {
+      "bool" : false
+    },
+    "screensOrderedByX" : {
+      "int" : 0
+    },
+    "selectedCycleSizes" : {
+      "int" : 0
+    },
     "shortEdgeSnapAreaSize" : {
       "float" : 145
+    },
+    "showAdditionalSizesInMenu" : {
+      "int" : 0
     },
     "showAllActionsInMenu" : {
       "int" : 0
@@ -193,9 +214,6 @@
     "subsequentExecutionMode" : {
       "int" : 0
     },
-    "SUEnableAutomaticChecks" : {
-      "bool" : true
-    },
     "systemWideMouseDown" : {
       "int" : 0
     },
@@ -222,6 +240,12 @@
     },
     "unsnapRestore" : {
       "int" : 0
+    },
+    "verticalSplitRatio" : {
+      "float" : 50
+    },
+    "widthStepSize" : {
+      "float" : 30
     },
     "windowSnapping" : {
       "int" : 1
@@ -253,5 +277,5 @@
       "modifierFlags" : 786432
     }
   },
-  "version" : "85"
+  "version" : "101"
 }
