@@ -227,16 +227,10 @@ install_extras() {
   # AI agents
   #
 
-  LLMS_FILENAME="agent-instructions.md"
-  LLMS_COMMANDS_DIR="$DOTFILES_DIR/ai-agents/commands"
-  LLMS_INSTRUCTIONS="$DOTFILES_DIR/ai-agents/$LLMS_FILENAME"
-  MCP_FILE="$DOTFILES_DIR/ai-agents/mcp.json"
+  LLMS_INSTRUCTIONS="$DOTFILES_DIR/ai-agents/agent-instructions.md"
 
   # Amp
-  AMP_DIR="$HOME/.config/amp"
-  AMP_COMMANDS_DIR="$AMP_DIR/commands"
   symlink_file "$LLMS_INSTRUCTIONS" "$HOME/.config/AGENTS.md"
-  rm -rf "$AMP_COMMANDS_DIR" && ln -sfn "$LLMS_COMMANDS_DIR" "$AMP_COMMANDS_DIR"
 }
 
 install_dotfiles

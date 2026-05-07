@@ -20,7 +20,5 @@
       },
       "action": "reject"
     }
-  ],
-  "amp.tools.disable": [],
-  "amp.permissions": []
+  ]
 }
