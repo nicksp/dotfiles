@@ -62,8 +62,22 @@ if command_exists gh && ! gh auth status &> /dev/null; then
 fi
 
 # Node.js global config
+info "🚀 Installing Node.js dependencies…"
+# Less verbose output
 npm config set loglevel warn
+# Disable funding messages
 npm config set fund false
+# Install exact version of packages ("1.2.3" instead of "^1.2.3" or "~1.2.3"). Keeps pinning durable
+npm config set save-exact true
+# Do not allow installing packages from Git
+npm config set allow-git none
+# Do not allow installing packages from a file
+# npm config set allow-file none
+# Do not allow installing packages from remote dependencies (URLs instead of npm registry)
+# npm config set allow-remote none
+# Only install package versions published at least 1 day ago
+npm config set min-release-age 1
+
 
 # Npm packages
 packages=(
