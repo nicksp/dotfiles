@@ -12,8 +12,13 @@ font-feature = ss01
 theme = Squirrelsong Dark Deep Purple
 minimum-contrast = 1.1
 macos-icon = custom-style
+macos-icon-frame = beige
 macos-titlebar-style = tabs
 macos-window-shadow = false
+# Generate extended 256 color palette based on theme base palette
+palette-generate = true
+palette-harmonious = true
+faint-opacity = 0.75
 
 window-padding-x = 8
 window-padding-y = 12
