@@ -9,5 +9,6 @@
   "strictLineBreaks": true,
   "alwaysUpdateLinks": true,
   "trashOption": "local",
-  "promptDelete": false
+  "promptDelete": false,
+  "spellcheck": false
 }

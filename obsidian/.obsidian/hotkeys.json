@@ -54,6 +54,14 @@
     }
   ],
   "editor:toggle-comments": [],
+  "editor:toggle-fold-properties": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "\\"
+    }
+  ],
   "file-explorer:move-file": [
     {
       "modifiers": [],
@@ -190,14 +198,6 @@
         "Mod"
       ],
       "key": "/"
-    }
-  ],
-  "editor:toggle-fold-properties": [
-    {
-      "modifiers": [
-        "Mod"
-      ],
-      "key": "\\"
     }
   ],
   "random-note": [
