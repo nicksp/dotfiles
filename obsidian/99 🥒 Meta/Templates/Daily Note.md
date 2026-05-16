@@ -1,8 +1,5 @@
 ---
-tags:
 created: {{date:YYYY-MM-DD}}T{{time:HH:mm}}
-location:
-weather:
-excerpt:
+location: "[[Home]]"
 ---
 # {{date:dddd, MMMM DD, YYYY}}

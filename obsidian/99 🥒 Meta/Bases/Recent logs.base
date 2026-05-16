@@ -12,7 +12,7 @@ views:
     name: Recent logs
     order:
       - file.name
-      - excerpt
+      - description
     sort:
       - property: file.name
         direction: DESC
@@ -23,7 +23,7 @@ views:
     name: Table
     order:
       - file.name
-      - excerpt
+      - description
     sort:
       - property: file.name
         direction: DESC

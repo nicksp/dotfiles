@@ -6,7 +6,7 @@ views:
     name: Recently modified
     order:
       - file.name
-      - excerpt
+      - description
     sort:
       - property: file.mtime
         direction: DESC

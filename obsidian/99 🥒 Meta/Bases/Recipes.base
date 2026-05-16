@@ -1,0 +1,18 @@
+filters:
+  and:
+    - file.folder == "03 🗂️ Resources/🌮 Food"
+    - file.tags.contains("recipes")
+views:
+  - type: cards
+    name: Recipes
+    order:
+      - file.name
+      - cuisine
+      - url
+      - rating
+    sort:
+      - property: file.name
+        direction: ASC
+    image: note.image
+    imageAspectRatio: 0.45
+    cardSize: 230

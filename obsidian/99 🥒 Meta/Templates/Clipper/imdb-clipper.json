@@ -15,12 +15,12 @@
 			"type": "multitext"
 		},
 		{
-			"name": "cover",
+			"name": "image",
 			"value": "{{schema:image}}",
 			"type": "text"
 		},
 		{
-			"name": "plot",
+			"name": "description",
 			"value": "{{schema:description}}",
 			"type": "text"
 		},

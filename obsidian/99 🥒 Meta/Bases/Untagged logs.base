@@ -7,7 +7,7 @@ views:
         - file.tags.isEmpty()
     order:
       - file.name
-      - excerpt
+      - description
     sort:
       - property: file.ctime
         direction: DESC
