@@ -3,15 +3,15 @@
   |--------------------------------------------------------------------------
   | TOC:
   |
-  | 01. Must-have Settings
-  | 02. DX Improvements
-  | 03. Zen & Overall Cleanup
-  | 04. Git and Source Control Management
-  | 05. The Look & Typography
-  | 06. The Little Things
+  | 01. Must-have settings
+  | 02. DX improvements
+  | 03. Zen & overall cleanup
+  | 04. Git and source control management
+  | 05. The look & typography
+  | 06. The little things
   | 07. Accessibility
-  | 08. Code Validation & Formatting
-  | 09. 3rd Party Plugins
+  | 08. Code validation & formatting
+  | 09. 3rd [arty plugins
   |--------------------------------------------------------------------------
   */
 
@@ -144,6 +144,10 @@
     // Don't open SVG files as preview
     "*.svg": "default"
   },
+  "workbench.diffEditorAssociations": {
+    // Open diffs in the Markdown preview by default
+    "*.md": "vscode.markdown.preview.editor"
+  }
 
   /*
    * Terminal look
