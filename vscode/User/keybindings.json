@@ -107,13 +107,15 @@
     "comment": "Close bottom panel when pressing Escape",
     "key": "escape",
     "command": "workbench.action.closePanel",
-    "when": "panelFocus && !terminalFocus"
+    "when": "panelFocus"
   },
   {
-    // Escape is often used by CLI tools, so bind Shift+Escape for the terminal close
-    "comment": "Close bottom panel with active terminal when pressing Escape",
+    // Escape is bound to closing panels in the editor, so use Shift+Escape
+    // to send an actual Escape key to the terminal (for CLI tools)
+    "comment": "Send Escape to the terminal",
     "key": "shift+escape",
-    "command": "workbench.action.closePanel",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": { "text": "\u001b" },
     "when": "terminalFocus"
   },
   {
@@ -222,7 +224,7 @@
   {
     "comment": "If I'm in a sidebar or terminal, it's a small annoyance to have to click the editor to get back into editing mode. This shortcut (cmd+e+e) provides an easy way to focus the Editor from anywhere in VS Code.",
     "key": "cmd+e cmd+e",
-    "command": "workbench.action.focusActiveEditorGroup"
+    "command": "workbench.action.openPreviousRecentlyUsedEditor"
   },
   {
     "comment": "Format and Save (to make autosave save files without formatting)",
@@ -422,6 +424,12 @@
    * Terminal
    */
 
+  {
+    "comment": "Create a New terminal editor window",
+    "key": "shift+cmd+t",
+    "command": "workbench.action.createTerminalEditor",
+    "when": "terminalProcessSupported"
+  },
   {
     "comment": "Create a New terminal",
     "key": "cmd+n",
