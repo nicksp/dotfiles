@@ -6,11 +6,11 @@ Is automated via `user.js` and `chrome/userChrome.css`. Copy them to your [Firef
 
 ## Install theme
 
-- Squirrelsong Light — <https://addons.mozilla.org/en-US/firefox/addon/squirrelsong-light/>
+- [Squirrelsong Light](https://addons.mozilla.org/en-US/firefox/addon/squirrelsong-light/)
 
 ## Install extensions
 
-- uBlock Origin — <https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/>. _Run in Private Windows_
+- [uBlock Origin](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/) — _Run in Private Windows_
   - Setup your [blocking mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode)
   - Enable `AdGuard URL Tracking Protection`
   - Enable `EasyList – Cookie Notices`
@@ -18,16 +18,16 @@ Is automated via `user.js` and `chrome/userChrome.css`. Copy them to your [Firef
     - Check `Import…` under `Filter lists`
     - Paste in the linked URL above
     - Click `Apply changes`
-- Privacy Badger <https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/>. _Run in Private Windows_
+- [Privacy Badger](https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/) — _Run in Private Windows_
   - Firefox now [includes tracker blocking](https://blog.mozilla.org/security/2021/02/23/total-cookie-protection/), but I leave Privacy Badger enabled.
-- 1Password — <https://addons.mozilla.org/en-US/firefox/addon/1password-x-password-manager/>
-- WAVE Accessibility Extension — <https://addons.mozilla.org/en-US/firefox/addon/wave-accessibility-tool/>
-- React Developer Tools — <https://addons.mozilla.org/en-US/firefox/addon/react-devtools/>
-- Refined GitHub — <https://addons.mozilla.org/en-US/firefox/addon/refined-github-/>
-- EditThisCookie2 — <https://addons.mozilla.org/en-US/firefox/addon/etc2/>
-- Catppuccin for Web File Explorer Icons — <https://addons.mozilla.org/en-US/firefox/addon/catppuccin-web-file-icons/>
-- Grammar and Spell Checker - LanguageTool — <https://addons.mozilla.org/en-US/firefox/addon/languagetool/>
-- Blank Sky New Tab Page — <https://addons.mozilla.org/en-US/firefox/addon/blank-sky-new-tab-page/>. _Run in Private Windows_
-- Github Issue Reactions — <https://addons.mozilla.org/en-US/firefox/addon/github-issue-reactions/>
-- Video Speed Controller − <https://addons.mozilla.org/en-US/firefox/addon/videospeed/>
-- Obsidian Web Clipper − <https://addons.mozilla.org/en-US/firefox/addon/web-clipper-obsidian/>
+- [Bitwarden Password Manager](https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/)
+- [UnTrap for YouTube](https://addons.mozilla.org/en-US/firefox/addon/untrap-for-youtube/)
+  - [Settings](./settings/untrap.txt)
+- [Instapaper](https://addons.mozilla.org/en-US/firefox/addon/instapaper-official/)
+- [EditThisCookie2](https://addons.mozilla.org/en-US/firefox/addon/etc2/)
+- [Refined GitHub](https://addons.mozilla.org/en-US/firefox/addon/refined-github-/)
+- [Catppuccin for Web File Explorer Icons](https://addons.mozilla.org/en-US/firefox/addon/catppuccin-web-file-icons/)
+- [LanguageTool](https://addons.mozilla.org/en-US/firefox/addon/languagetool/)
+- [Blank Sky New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/blank-sky-new-tab-page/) — _Run in Private Windows_
+- [Video Speed Controller](https://addons.mozilla.org/en-US/firefox/addon/videospeed/)
+- [Obsidian Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/web-clipper-obsidian/)
