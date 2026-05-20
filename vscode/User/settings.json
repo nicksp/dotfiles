@@ -149,6 +149,8 @@
     "*.md": "vscode.markdown.preview.editor"
   },
 
+  "markdown.preview.frontMatter": "codeBlock",
+
   /*
    * Terminal look
    *

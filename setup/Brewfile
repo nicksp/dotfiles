@@ -87,8 +87,6 @@ cask "whatsapp" # Messenger
 
 # VS Code extensions
 vscode "astro-build.astro-vscode"
-vscode "bierner.markdown-mermaid"
-vscode "bierner.markdown-preview-github-styles"
 vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc-icons"
 vscode "dart-code.dart-code"
