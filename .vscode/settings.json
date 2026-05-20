@@ -4,11 +4,5 @@
     ".gitconfig.*": "properties"
   },
   "git.ignoreLimitWarning": true,
-  "cSpell.words": [
-    "brewfile",
-    "Catppuccin",
-    "dotfiles",
-    "Ghostty",
-    "gitignore"
-  ]
+  "cSpell.words": ["brewfile", "Catppuccin", "dotfiles", "Ghostty", "gitignore"]
 }
