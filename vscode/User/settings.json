@@ -86,7 +86,6 @@
   "editor.autoClosingComments": "never",
   // Don't use words under cursor to seed find, only selection
   "editor.find.seedSearchStringFromSelection": "selection",
-  "editor.experimentalEditContextEnabled": true,
   "editor.pasteAs.preferences": ["text.updateImports"],
 
   // Peek-less Go to navigation
@@ -602,6 +601,8 @@
   "cSpell.spellCheckDelayMs": 500,
   "cSpell.enabledFileTypes": {
     "*": true,
+    "markdown": true,
+    "shellscript": true,
     "mdx": true
   },
   "cSpell.numSuggestions": 5,
@@ -685,11 +686,9 @@
   "chat.disableAIFeatures": true,
   "chat.useAgentSkills": true,
   "chat.viewSessions.enabled": false,
-  "chat.commandCenter.enabled": false,
   "chat.fontSize": 16,
   "chat.editor.fontSize": 15,
   "chat.agent.thinkingStyle": "collapsed",
-  "chat.agentSessionsViewLocation": "disabled",
   "chat.checkpoints.enabled": false,
   "inlineChat.enableV2": true,
   // Disable annoying hints "Cmd+I to continue with Copilot"
