@@ -147,7 +147,7 @@
   "workbench.diffEditorAssociations": {
     // Open diffs in the Markdown preview by default
     "*.md": "vscode.markdown.preview.editor"
-  }
+  },
 
   /*
    * Terminal look
@@ -315,7 +315,7 @@
     "notebook.inactiveFocusedCellBorder": "#ffffff00",
 
     // The foreground color of a chat edited file in the edited file list
-    "chat.editedFileForeground": "#f0f"
+    "chat.editedFileForeground": "#f0f",
 
     // ErrorLens
     "errorLens.errorForegroundLight": "#e5ada8",
@@ -522,77 +522,26 @@
     "source.organizeImports": "never"
   },
 
-  // JS
-  "javascript.format.enable": false,
-  "javascript.autoClosingTags": true,
-  "javascript.preferences.importModuleSpecifier": "relative",
-  "javascript.preferGoToSourceDefinition": true,
-  "javascript.preferences.quoteStyle": "single",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.validate.enable": false,
-  // Auto import modules
-  // Replaces: https://marketplace.visualstudio.com/items?itemName=steoates.autoimport
-  "javascript.suggest.autoImports": true,
-  // Path Intellisense
-  // Replaces: https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense
-  "javascript.suggest.paths": true,
-
-  // TS
-  "typescript.format.enable": false,
-  "typescript.autoClosingTags": true,
-  "typescript.preferences.quoteStyle": "single",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.preferences.preferTypeOnlyAutoImports": true,
-  "typescript.workspaceSymbols.scope": "currentProject",
-  "typescript.preferGoToSourceDefinition": true,
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  // Auto import modules
-  // Replaces: https://marketplace.visualstudio.com/items?itemName=steoates.autoimport
-  "typescript.suggest.autoImports": true,
-  // Path Intellisense
-  // Replaces: https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense
-  "typescript.suggest.paths": true,
-
-  // HTML
+  // File types
+  "js/ts.format.enabled": false,
+  "js/ts.validate.enabled": false,
+  "js/ts.preferences.importModuleSpecifier": "relative",
+  "js/ts.preferences.jsxAttributeCompletionStyle": "none",
+  "js/ts.preferGoToSourceDefinition": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
+  "js/ts.workspaceSymbols.scope": "currentProject",
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
   "html.format.enable": false,
   "html.format.wrapLineLength": 0,
-  // Auto closing HTML tags
-  // Replaces: https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag
-  "html.autoClosingTags": true,
-
-  // JSON
   "json.format.enable": false,
-
-  // Markdown
   "markdown.validate.enabled": true,
-
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
     // If you want a hard line-break (<br>) in the output,
     // we need to put two or more spaces at the end of a line.
     // It is a part of CommonMark, so we don’t want to prevent it.
     "files.trimTrailingWhitespace": false
-  },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
@@ -672,7 +621,7 @@
   "errorLens.excludeByMessage": [
     "Unknown word",
     {
-      "regex": "never (read|used)",
+      "regex": "never (read|used)"
     }
   ],
   "errorLens.errorGutterIconColor": "#bc5248",
@@ -740,15 +689,7 @@
   "chat.agent.thinkingStyle": "collapsed",
   "chat.agentSessionsViewLocation": "disabled",
   "chat.checkpoints.enabled": false,
-  "github.copilot.nextEditSuggestions.enabled": false,
-  "github.copilot.editor.enableCodeActions": false,
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
   "inlineChat.enableV2": true,
   // Disable annoying hints "Cmd+I to continue with Copilot"
-  "inlineChat.lineNaturalLanguageHint": false,
+  "inlineChat.lineNaturalLanguageHint": false
 }
