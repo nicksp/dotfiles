@@ -6,6 +6,7 @@ const config = {
   singleQuote: true,
   semi: false,
   trailingComma: 'es5',
+  plugins: ['prettier-plugin-sh'],
   overrides: [
     {
       files: '*.md',

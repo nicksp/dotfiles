@@ -144,16 +144,17 @@ Assuming your work repositories are inside the `~/Projects/Acme` folder.
 
 1. First, create a separate Git config:
 
-    ```
-    git config -f ~/Projects/Acme/.gitconfig user.email "john.doe@acme.org"
-    git config -f ~/Projects/Acme/.gitconfig user.name "John Doe"
+   ```
+   git config -f ~/Projects/Acme/.gitconfig user.email "john.doe@acme.org"
+   git config -f ~/Projects/Acme/.gitconfig user.name "John Doe"
+   ```
 
 1. Then, create `~/.gitconfig.local`:
 
-    ```
-    [includeIf "gitdir:~/Projects/Acme/"]
-      path = ~/Projects/Acme/.gitconfig
-    ```
+   ```
+   [includeIf "gitdir:~/Projects/Acme/"]
+     path = ~/Projects/Acme/.gitconfig
+   ```
 
 ## Per repository Git identity
 

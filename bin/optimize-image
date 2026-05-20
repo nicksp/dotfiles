@@ -43,15 +43,15 @@ fi
 # Pretty print bytes
 pretty_bytes() {
   local bytes=$1
-  if (( bytes >= 1073741824 )); then
+  if ((bytes >= 1073741824)); then
     # GB
     local gb=$((bytes * 10 / 1073741824))
     printf "%d.%dGB" $((gb / 10)) $((gb % 10))
-  elif (( bytes >= 1048576 )); then
+  elif ((bytes >= 1048576)); then
     # MB
     local mb=$((bytes * 10 / 1048576))
     printf "%d.%dMB" $((mb / 10)) $((mb % 10))
-  elif (( bytes >= 1024 )); then
+  elif ((bytes >= 1024)); then
     # KB
     local kb=$((bytes * 10 / 1024))
     printf "%d.%dKB" $((kb / 10)) $((kb % 10))
@@ -110,12 +110,12 @@ optimize_image() {
   local avif="$tempdir/output.avif"
 
   # WebP conversion (quality 75, max compression)
-  cwebp -q 75 -m 6 "$input" -o "$webp" 2>/dev/null
+  cwebp -q 75 -m 6 "$input" -o "$webp" 2> /dev/null
 
   # AVIF conversion (quality 50, effort 8)
-  $bin/avif --quality 50 --effort 8 --input="$input" --output="$tempdir" 2>/dev/null
+  $bin/avif --quality 50 --effort 8 --input="$input" --output="$tempdir" 2> /dev/null
   # avif CLI outputs with same basename, different extension
-  mv "$tempdir/$(basename "$basename").avif" "$avif" 2>/dev/null || true
+  mv "$tempdir/$(basename "$basename").avif" "$avif" 2> /dev/null || true
 
   # Debug
   # echo "  WebP: $(pretty_bytes $(stat -f%z "$webp" 2>/dev/null || stat -c%s "$webp" 2>/dev/null || echo 0))"
@@ -127,12 +127,12 @@ optimize_image() {
   [[ -f "$avif" ]] && candidates+=("$avif")
 
   local smallest="$input"
-  local smallest_size=$(stat -f%z "$input" 2>/dev/null || stat -c%s "$input")
+  local smallest_size=$(stat -f%z "$input" 2> /dev/null || stat -c%s "$input")
 
   for file in "${candidates[@]}"; do
     if [[ -f "$file" ]]; then
-      local size=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file")
-      if (( size < smallest_size )); then
+      local size=$(stat -f%z "$file" 2> /dev/null || stat -c%s "$file")
+      if ((size < smallest_size)); then
         smallest="$file"
         smallest_size="$size"
       fi
@@ -143,7 +143,7 @@ optimize_image() {
   if [[ "$smallest" == "$input" ]]; then
     echo "${YELLOW}$(basename "$input"): Original was smallest ($(pretty_bytes $smallest_size)), no conversion needed${NOCOLOR}"
   else
-    local original_size=$(stat -f%z "$input" 2>/dev/null || stat -c%s "$input")
+    local original_size=$(stat -f%z "$input" 2> /dev/null || stat -c%s "$input")
     local new_ext="${smallest##*.}"
     local output="$directory/$(basename "$basename").${new_ext}"
 
@@ -151,7 +151,7 @@ optimize_image() {
     cp "$smallest" "$output"
 
     print_result "$(basename "$input")" "$original_size" "$smallest_size" "$new_ext"
-    fi
+  fi
 }
 
 if [[ $# -eq 0 ]]; then
