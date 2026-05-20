@@ -4,7 +4,7 @@
   "description": "My personal dotfiles for configuring macOS with Zsh and Homebrew.",
   "private": "true",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "author": "Nick Plekhanov",
   "license": "MIT",
