@@ -75,9 +75,8 @@ npm config set allow-git none
 # npm config set allow-file none
 # Do not allow installing packages from remote dependencies (URLs instead of npm registry)
 # npm config set allow-remote none
-# Only install package versions published at least 1 day ago
-npm config set min-release-age 1
-
+# Only install package versions published at least 7 days ago
+npm config set min-release-age 7
 
 # Npm packages
 packages=(
