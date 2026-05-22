@@ -1,0 +1,6 @@
+# Wait one week before installing a new version
+minimumReleaseAge: 10080
+# Prevent exotic transitive dependencies
+blockExoticSubdeps: true
+# Prevent installation of a package if its trust level has decreased compared to previous releases
+trustPolicy: no-downgrade
