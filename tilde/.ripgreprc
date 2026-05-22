@@ -8,6 +8,9 @@
 --max-columns=150
 --max-columns-preview
 
+# (optional) still skip really huge binary blobs
+--max-filesize=5M
+
 # Ignore npm/pnpm/Yarn lock files, etc.
 --glob=!package-lock.json
 --glob=!pnpm-lock.yaml
