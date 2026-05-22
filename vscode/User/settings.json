@@ -394,7 +394,7 @@
   */
 
   // Don't update disabled extensions
-  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.autoUpdate": false,
   "extensions.ignoreRecommendations": true,
 
   // Enabling highlighting of the indent guide for the current scope
