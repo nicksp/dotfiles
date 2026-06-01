@@ -24,10 +24,6 @@ echo
 echo "✅ ${BOLD}Done${RESET}"
 echo
 
-"$DOTFILES/bin/sync-apps-icons"
-echo "✅ ${BOLD}Done${RESET}"
-echo
-
 "$DOTFILES/bin/sync-vscode-icons"
 echo "✅ ${BOLD}Done${RESET}"
 echo

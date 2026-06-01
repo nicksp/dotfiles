@@ -88,9 +88,7 @@ set-defaults
 
 ### Use alternative apps icons
 
-```shell
-sync-apps-icons
-```
+Refer to the [icons documentation](icons/README.md) for available icon variants.
 
 ### Install colors themes
 

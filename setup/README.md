@@ -4,10 +4,6 @@
 
 Installs Homebrew, packages, applications and VSCode extensions using [Brewfile](./Brewfile).
 
-## icons
-
-Updates default icons to alternative ones for some of the applications.
-
 ## macos
 
 Sane macOS defaults. Based on [~/.macos](https://mths.be/macos) by @mathiasbynens.

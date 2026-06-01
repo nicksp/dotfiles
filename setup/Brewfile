@@ -62,6 +62,7 @@ cask "firefox@developer-edition" # Main browser with configurable privacy
 cask "ghostty" # Better terminal emulator
 cask "github" # GitHub Desktop GUI
 cask "google-chrome" # Browser for testing
+cask "iconchanger" # Custom app icons
 cask "iina" # Modern media player
 cask "itsycal" # Tiny popup calendar in a menu bar
 cask "jordanbaird-ice" # Manage menu bar icons
