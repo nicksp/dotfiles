@@ -26,7 +26,8 @@ prepend "$homebrew_path/bin"
 prepend "$homebrew_path/sbin"
 
 # fnm, Node version manager: https://github.com/Schniz/fnm
-eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
+# Tell fnm explicitly that we're using zsh to avoid brittle autodetection
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive --shell zsh)"
 
 # Custom dotfiles binaries
 prepend "$HOME/dotfiles/bin/lib"
