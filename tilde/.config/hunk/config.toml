@@ -1,0 +1,74 @@
+mode = "split"
+vcs = "git"
+watch = false
+exclude_untracked = false
+line_numbers = true
+wrap_lines = true
+agent_notes = false
+theme = "custom"
+
+# Squirrelsong Dark Deep Purple theme
+# https://sapegin.me/squirrelsong/
+[custom_theme]
+base = "graphite"
+label = "Squirrelsong Dark Deep Purple"
+
+# Surfaces
+background = "#271e38" # purple180 — editor background
+panel = "#36294d" # purple170 — line highlight
+panelAlt = "#453461" # purple160
+border = "#644e88" # purple140 — Squirrelsong ui border
+accent = "#5993c2" # blue — Squirrelsong link / interactive
+accentMuted = "#425e79" # blueDim
+text = "#9a7eb4" # purple090 — Squirrelsong textForeground
+muted = "#866db0" # purple100 — Squirrelsong secondaryTextForeground
+
+# Diff gutters (whole-line backgrounds)
+addedBg = "#37442c" # greenDimer — `plus-style`
+removedBg = "#552f25" # redDimer — `minus-style`
+contextBg = "#36294d" # purple170
+
+# Diff inline emphasis (changed words within a hunk)
+addedContentBg = "#44603b" # greenDim — `plus-emph-style`
+removedContentBg = "#703a2f" # redDim — `minus-emph-style`
+contextContentBg = "#453461" # purple160
+
+# Diff sign column (`+` / `−`)
+addedSignColor = "#709855" # greenContrast
+removedSignColor = "#ce574a" # redContrast
+
+# Line numbers
+lineNumberBg = "#271e38" # purple180
+lineNumberFg = "#7254a6" # purple120
+
+# Selection / focused hunk
+selectedHunk = "#4c3c6b" # brightYellowDimPurple
+
+# Status badges
+badgeAdded = "#709855" # greenContrast
+badgeRemoved = "#ce574a" # redContrast
+badgeNeutral = "#bea3d9" # purple060
+
+# File status indicators
+fileNew = "#709855" # greenContrast
+fileDeleted = "#ce574a" # redContrast
+fileRenamed = "#d8a851" # orangeContrast
+fileModified = "#9672d4" # magentaContrast
+fileUntracked = "#63a2d6" # blueContrast
+
+# Notes / banners
+noteBorder = "#9672d4" # magentaContrast
+noteBackground = "#36294d" # purple170
+noteTitleBackground = "#453461" # purple160 (== magentaDimer)
+noteTitleText = "#f3e9fb" # purple010
+
+[custom_theme.syntax]
+default = "#9a7eb4" # purple090 — DP foreground
+keyword = "#7f61b3" # magenta — keyword / storage / tag
+string = "#558240" # green — string / inserted / escape
+comment = "#7254a6" # purple120 — DP comment (rendered italic by Hunk)
+number = "#b18433" # orange — numeric / value constants
+function = "#5993c2" # blue — function names
+property = "#5993c2" # blue — property / attribute
+type = "#4f9593" # teal — class / type / at-rule
+punctuation = "#bea3d9" # purple060 — Squirrelsong punctuation (gray060→purple060)

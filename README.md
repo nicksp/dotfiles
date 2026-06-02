@@ -26,7 +26,7 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 - [Shell aliases](zsh/aliases.zsh).
 - [Obsidian](obsidian/) as a second brain.
 - zsh / [fzf](zsh/fzf.zsh).
-- git / delta syntax-highlighting diff tool.
+- git / hunk terminal diff viewer.
 - Sensible [macOS defaults](setup/macos.sh).
 - [Visual Studio Code](./vscode/) settings synchronization.
 - Config for other apps and utils.

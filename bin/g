@@ -40,7 +40,7 @@
 
 if command -v rg &> /dev/null; then
   # See tilde/.ripgreprc for default options
-  rg --json -C 2 "$@" | delta
+  rg -C 2 "$@"
 elif command -v ack &> /dev/null; then
   ack -ri "$@"
 else

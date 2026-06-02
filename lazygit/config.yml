@@ -38,9 +38,8 @@ git:
   commit:
     autoWrapCommitMessage: true
     autoWrapWidth: 72
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never
+  pagers:
+    - pager: hunk pager
 os:
   copyToClipboardCmd: "pbcopy < {{text}}"
   editPreset: "vscode"

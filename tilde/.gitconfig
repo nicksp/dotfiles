@@ -27,7 +27,7 @@
 
 [core]
   editor = cot --wait
-  pager = delta
+  pager = hunk pager
   autocrlf = input
   safecrlf = false
   excludesFile = ~/.gitignore
@@ -301,26 +301,6 @@
   publish      = "!git push --set-upstream origin $(git branch --show-current)"
   sha          = log -n 1 --pretty=format:'%H'
 
-# git-delta
-
-[interactive]
-  # Syntax highlight code when you run `git add -p`
-  # to interactively stage hunks (portions) of changes from modified files
-  diffFilter = delta --color-only
-
-[add.interactive]
-  useBuiltin = false
-
-[delta]
-  features = squirrelsong-dark-dp
-  navigate = true # Use n and N to move between diff sections
-  side-by-side = true # Enables the side-by-side view
-  light = false
-  true-color = always
-  tabs = 2
-  hyperlinks = true
-  hyperlinks-file-link-format = "vscode://file/{path}:{line}"
-
 [merge]
   # See more: https://www.ductile.systems/zdiff3/
   conflictStyle = zdiff3
@@ -335,8 +315,7 @@
   # Ignore indentation changes
   colorMovedWS = allow-indentation-change
 
-# include local/private config if relevant
+# Include local/private config if relevant (credential helper, SSH, user identity)
 
 [include]
-  path = ~/dotfiles/colors/themes.gitconfig
   path = ~/.gitconfig.local
