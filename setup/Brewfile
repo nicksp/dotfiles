@@ -53,7 +53,7 @@ brew "pkgconf"
 cask "font-symbols-only-nerd-font"
 
 # GUI apps
-cask "1password" # Password manager
+cask "bitwarden" # Password manager
 cask "bruno" # Local-first API client
 cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
