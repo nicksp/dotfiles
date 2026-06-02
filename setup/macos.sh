@@ -319,7 +319,10 @@ defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 # defaults write com.apple.finder FinderSounds -boolean false
 
 # Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+# First set the attribute if it doesn't exist, then show folder
+xattr -w com.apple.FinderInfo "" ~/Library 2> /dev/null || true
+chflags nohidden ~/Library
+xattr -d com.apple.FinderInfo ~/Library 2> /dev/null || true
 
 # Show the /Volumes folder
 sudo chflags nohidden /Volumes
@@ -386,6 +389,7 @@ defaults write com.apple.dock showhidden -bool true
 defaults write com.apple.dock show-recents -bool false
 
 # Reset Launchpad, but keep the desktop wallpaper intact
+mkdir -p "$HOME/Library/Application Support/Dock"
 find "$HOME/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
 # Add iOS & Watch Simulator to Launchpad
@@ -604,7 +608,7 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 # Disable local Time Machine backups
-hash tmutil &> /dev/null && sudo tmutil disablelocal
+hash tmutil &> /dev/null && sudo tmutil disable
 
 ###############################################################################
 # Activity Monitor                                                            #

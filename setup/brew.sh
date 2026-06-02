@@ -1,6 +1,8 @@
 #!/bin/bash
 
-set -euo pipefail
+set -uo pipefail
+
+cd "$(dirname "$0")/.."
 
 bold=$(tput bold)
 reset=$(tput sgr0)
@@ -18,6 +20,7 @@ indent() {
 if ! command -v brew &> /dev/null; then
   title "Installing Homebrew…"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Make sure we’re working with the latest version of Homebrew and its formulae

@@ -2,9 +2,7 @@
 
 set -euo pipefail
 
-cd "$(dirname "$0")/.."
-
-DOTFILES_DIR="$(pwd)"
+DOTFILES_DIR="${DOTFILES_DIR:-$(cd "$(dirname "$0")/.." && pwd)}"
 TILDE_DIR="$DOTFILES_DIR/tilde"
 
 EXCLUDE_FILES=(".DS_Store" "Brewfile.lock.json" "README.md")
@@ -73,12 +71,17 @@ symlink_file() {
 
   # "false" or empty
   if [ "$skip" != "true" ]; then
+    local ln_cmd="ln"
+    if [ ! -w "$(dirname "$2")" ]; then
+      ln_cmd="sudo ln"
+    fi
+
     if [ "$isHardLink" = true ]; then
-        ln -f "$1" "$2"
-        success "hard linked $1 to $2"
+      $ln_cmd -f "$1" "$2"
+      success "hard linked $1 to $2"
     else
-        ln -sf "$1" "$2"
-        success "symlinked $1 to $2"
+      $ln_cmd -sf "$1" "$2"
+      success "symlinked $1 to $2"
     fi
   else
     success "skipped $src"
@@ -184,6 +187,13 @@ install_extras() {
   local overwrite_all=false
   local backup_all=false
   local skip_all=false
+
+  # Request sudo for /usr/local/bin operations
+  echo "Administrator password required for /usr/local/bin operations:"
+  sudo -v
+
+  # Ensure /usr/local/bin exists
+  sudo mkdir -p "/usr/local/bin"
 
   # CotEditor: Install `cot` command-line tool
   command -v cot &> /dev/null || {

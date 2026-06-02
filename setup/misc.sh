@@ -4,6 +4,8 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 DOTFILES_DIR="$(pwd)"
 
 BLUE=$(tput setaf 4)

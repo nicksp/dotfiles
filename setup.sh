@@ -72,14 +72,14 @@ warning "Activate sudo"
 sudo echo "Sudo activated!"
 echo
 
-# Setup Zsh and register it as a default shell
-title "🐚 Setting up Zsh…"
-$HOME/dotfiles/setup/zsh.sh
-echo
-
 # Install Homebrew and packages/apps
 title "🫖 Setting up Homebrew…"
 $HOME/dotfiles/setup/brew.sh
+echo
+
+# Setup Zsh and register it as a default shell
+title "🐚 Setting up Zsh…"
+$HOME/dotfiles/setup/zsh.sh
 echo
 
 # Install Xcode, GitHub CLI & Node.js packages etc.
@@ -89,9 +89,9 @@ echo
 
 # Install dotfiles symlinks
 title "🍤 Setting up symlinks…"
-$HOME/dotfiles/setup/symlinks.sh
+DOTFILES_DIR="$HOME/dotfiles" $HOME/dotfiles/setup/symlinks.sh
 
 echo
-echo "🦏 ${green}All done! Open a new terminal for the changes to take effect.${reset}"
+echo "🦏 ${green}All done! Open a new terminal for the changes to take effect or run: source ~/.zshrc.${reset}"
 
 $HOME/dotfiles/bin/nyan

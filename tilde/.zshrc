@@ -23,7 +23,7 @@ precmd_functions+=(_set_terminal_title)
 
 source $HOME/dotfiles/zsh/init.zsh
 
-# Allow local (private) customizations (not checked in to version control)
+# Allow local (private) overrides if present (PATH additions, work-specific aliases, etc.)
 [ -f ~/.zsh.local ] && source ~/.zsh.local
 
 # pnpm
