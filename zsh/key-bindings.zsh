@@ -32,8 +32,11 @@ bindkey "${keys[Ctrl+K]}" kill-whole-line
 
 # History search with Up/Down keys. It uses the whole line to search
 # Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
+# Use `+X` to load the function bodies immediately at shell startup instead of
+# deferring the file read until the first keypress. This keeps the bindings
+# working even if zsh is upgraded (and the old Cellar path deleted) mid-session.
+autoload -Uz +X up-line-or-beginning-search
+autoload -Uz +X down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey -- "${keys[Up]}" up-line-or-beginning-search
