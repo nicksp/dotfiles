@@ -88,6 +88,7 @@ cask "whatsapp" # Messenger
 
 # VS Code extensions
 vscode "astro-build.astro-vscode"
+vscode "bierner.markdown-preview-github-styles"
 vscode "bradlc.vscode-tailwindcss"
 vscode "dart-code.dart-code"
 vscode "dart-code.flutter"
@@ -99,6 +100,7 @@ vscode "github.vscode-pull-request-github"
 vscode "ms-azuretools.vscode-containers" # Auto-installed by Docker extension
 vscode "ms-azuretools.vscode-docker"
 vscode "naumovs.color-highlight"
+vscode "oxc.oxc-vscode"
 vscode "redhat.vscode-yaml"
 vscode "sapegin.icons-squirrelppuccinlight"
 vscode "sapegin.just-blame"
