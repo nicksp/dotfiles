@@ -291,7 +291,7 @@
   */
 
   "workbench.colorTheme": "Squirrelsong Light (Dark Deep Purple Terminal)",
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "squirrelppuccin-icons-light",
 
   // Typography
   "workbench.fontAliasing": "auto",

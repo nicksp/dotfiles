@@ -23,7 +23,3 @@ echo
 "$DOTFILES/bin/sync-color-themes"
 echo "✅ ${BOLD}Done${RESET}"
 echo
-
-"$DOTFILES/bin/sync-vscode-icons"
-echo "✅ ${BOLD}Done${RESET}"
-echo
