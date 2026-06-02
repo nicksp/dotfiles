@@ -58,6 +58,7 @@ cask "bruno" # Local-first API client
 cask "cleanshot" # Annotated screenshots & quick videos
 cask "coteditor" # Simple code/text editor
 cask "dash" # API documentation reader
+cask "discord" # Messaging / Community
 cask "firefox@developer-edition" # Main browser with configurable privacy
 cask "ghostty" # Better terminal emulator
 cask "github" # GitHub Desktop GUI
@@ -69,7 +70,6 @@ cask "jordanbaird-ice" # Manage menu bar icons
 cask "keka" # File archiver and extractor
 cask "languagetool-desktop" # Grammar, spell, and style checker
 cask "ledger-wallet" # Crypto hardware wallet manager
-cask "legcord" # Messaging / Community
 cask "nimble-commander" # File manager
 cask "notion" # Collaborative note taking app
 cask "obsidian" # Main note taking app
