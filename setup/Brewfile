@@ -2,6 +2,7 @@
 tap "git-friendly/git-friendly"
 tap "jesseduffield/lazydocker"
 tap "jesseduffield/lazygit"
+tap "modem-dev/tap"
 tap "oven-sh/bun"
 
 # CLI tools
@@ -16,7 +17,6 @@ brew "fnm" # Node.js version manager
 brew "fzf" # Fuzzy file finder and filtering
 brew "gh" # GitHub CLI: interact with GitHub PRs, issues, repos
 brew "git" # Version control
-brew "git-delta" # Diff pager for `git` and `grep` output (better `diff`)
 brew "gitleaks" # Audit git repos for secrets
 brew "gnupg" # Encryption and signing capabilities for data verification
 brew "lazygit" # Full Git management app
@@ -38,6 +38,7 @@ brew "zsh-autosuggestions" # Fish-like autosuggestions for Zsh
 brew "zsh-syntax-highlighting" # Fish-like syntax highlighting for Zsh
 brew "git-friendly/git-friendly/git-friendly" # Improved Git commands for common tasks
 brew "jesseduffield/lazydocker/lazydocker" # Full Docker management app
+brew "modem-dev/tap/hunk" # Review-first terminal diff viewer (better `diff`)
 brew "oven-sh/bun/bun" # Bun runtime
 
 # Temporarily required for some work projects
