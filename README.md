@@ -118,6 +118,10 @@ its content to overwrite or add to the existing `git` configurations.
 > Use `~/.gitconfig.local` to store sensitive information such
 as the `git` user credentials for individual repositories.
 
+### `~/.ssh/config.local`
+
+If this file exists, it will be automatically included after the public SSH hosts to specify any additional SSH hosts.
+
 ## Updating
 
 To update an existing install:

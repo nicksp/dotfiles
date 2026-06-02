@@ -9,6 +9,7 @@ lazygit/state.yml
 .tlrc/
 private/
 tilde/.ssh/*
+!tilde/.ssh/config
 
 # Obsidian
 obsidian/**/workspace.json
