@@ -6,7 +6,7 @@
 
 ## Install command line helper
 
-> [!NOTE]
+> [!NOTE]  
 > This is already included with the setup script.
 
 Run “Install 'code' command in PATH” from the command palette (View → Command Palette) to make Code available from the command line.

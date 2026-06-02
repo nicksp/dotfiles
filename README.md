@@ -4,10 +4,10 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 
 ![nicksp terminal](screenshot.png)
 
-> [!IMPORTANT]
+> [!IMPORTANT]  
 > Please only open pull requests that fix bugs or add improvements without any breaking changes.
 
-> [!WARNING]
+> [!WARNING]  
 > I recommend forking this repository to create your own set of dotfiles.
 
 ## Requirements
@@ -18,17 +18,18 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 
 ## What's in there?
 
-- Handy [binary scripts](bin/).
+- Custom color scheme: [Squirrelsong](colors/).
+- Handy [CLI scripts](bin/).
 - AI agents [config automation](ai-agents/).
-- [Custom color scheme](colors/).
 - [Custom zsh theme](tilde/.starship.toml) with Git status, etc. using [Starship](https://starship.rs/).
 - [Git aliases](tilde/.gitconfig).
-- [Shell aliases](zsh/aliases.zsh).
+- [Zsh aliases](zsh/aliases.zsh).
 - [Obsidian](obsidian/) as a second brain.
 - zsh / [fzf](zsh/fzf.zsh).
 - git / hunk terminal diff viewer.
 - Sensible [macOS defaults](setup/macos.sh).
-- [Visual Studio Code](./vscode/) settings synchronization.
+- [Visual Studio Code settings synchronization](vscode/).
+- [Firefox custom styles](firefox/).
 - Config for other apps and utils.
 - [macOS apps and VSCode extensions](setup/Brewfile) I use.
 - [macOS tips & tricks](/docs/macos%20tips%20&%20tricks.md).
@@ -68,7 +69,7 @@ cd ~/dotfiles
 
 To automate the setup of your dotfiles on a new machine, use the [setup](./setup.sh) script.
 
-> [!CAUTION]
+> [!CAUTION]  
 > Use at your own risk!
 
 ```shell
@@ -101,30 +102,25 @@ sync-color-themes
 The dotfiles can be extended to suit additional local
 requirements by using the following files:
 
-#### `~/.zsh.local`
+### `~/.zsh.local`
 
 If this file exists, it will be automatically sourced
 after all the other shell related files allowing its
 content to add to or overwrite the existing aliases, settings, PATH,
 etc.
 
-#### `~/.gitconfig.local`
-
-If this file exists, it will be automatically
-included after the configurations from `~/.gitconfig` allowing
-its content to overwrite or add to the existing `git` configurations.
-
-> [!TIP]
-> Use `~/.gitconfig.local` to store sensitive information such
-as the `git` user credentials for individual repositories.
-
 ### `~/.ssh/config.local`
 
 If this file exists, it will be automatically included after the public SSH hosts to specify any additional SSH hosts.
 
-## Updating
+### `~/.gitconfig.local`
 
-To update an existing install:
+If this file exists, it will be automatically included after the configurations from `~/.gitconfig` allowing its content to overwrite or add to the existing `git` configurations.
+
+> [!TIP]  
+> Use `~/.gitconfig.local` to store sensitive information such as the `git` user credentials for individual repositories.
+
+## Updating
 
 ```shell
 cd ~/dotfiles

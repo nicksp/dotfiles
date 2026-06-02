@@ -150,7 +150,7 @@ Clean up `node_modules`.
 
 1. Above is showing you all of the `node_modules` inside the directory you moved into. You can delete these manually if you wanted but if you want to delete all of the ones displayed run the following command.
 
-> [!CAUTION]
+> [!CAUTION]  
 > This process is irreversible!
 
   ```sh

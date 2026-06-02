@@ -7,7 +7,7 @@ I use [Squirrelsong](https://sapegin.me/squirrelsong/) theme wherever exists.
 1. [CotEditor](https://github.com/sapegin/squirrelsong/tree/master/themes/CotEditor)
 1. [Fzf](https://github.com/sapegin/squirrelsong/tree/master/themes/Fzf)
 1. [Nimble Commander](https://github.com/sapegin/squirrelsong/tree/master/themes/Nimble%20Commander)
-1. [Obsidian](https://github.com/nicksp/dotfiles/tree/main/obsidian/themes/Squirrelsong)
+1. [Obsidian](https://github.com/sapegin/squirrelsong/tree/master/themes/Obsidian)
 1. [Slack](https://github.com/sapegin/squirrelsong/tree/master/themes/Slack)
 1. [Syntax Highlight](https://github.com/sapegin/squirrelsong/tree/master/themes/Highlight)
 1. [Pearcleaner](https://github.com/sapegin/squirrelsong/tree/master/themes/Pearcleaner)
@@ -17,5 +17,5 @@ I use [Squirrelsong](https://sapegin.me/squirrelsong/) theme wherever exists.
 1. [Ghostty](https://github.com/sapegin/squirrelsong/tree/master/themes/Ghostty)
 1. [macOS](https://github.com/sapegin/squirrelsong/tree/master/themes/macOS)
 
-> [!TIP]
+> [!TIP]  
 > Run `sync-color-themes` script periodically to download and update latest versions of themes for the majority of the apps above.
