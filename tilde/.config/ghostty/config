@@ -1,3 +1,5 @@
+# https://ghostty.org/docs/config/reference
+
 font-family = MonoLisa
 font-style = MonoLisa
 font-size = 17
@@ -14,7 +16,6 @@ minimum-contrast = 1.1
 macos-icon = custom-style
 macos-icon-frame = beige
 macos-titlebar-style = tabs
-macos-window-shadow = false
 # Generate extended 256 color palette based on theme base palette
 palette-generate = true
 palette-harmonious = true
