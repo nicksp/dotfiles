@@ -45,8 +45,14 @@ symlink_file() {
   # First, check if the destination file or folder exists
   if [ -e "$dst" ]; then
 
+    # Check if the destination is a hard link to the same inode as the source
+    # (only meaningful when `isHardLink=true`, but `-ef` is harmless otherwise)
+    if [ "$isHardLink" = true ] && [ "$dst" -ef "$src" ]; then
+      # Already hard linked to the dotfiles source, skip overwriting
+      skip=true
+
     # Check if the destination is a symlink
-    if [ -L "$dst" ]; then
+    elif [ -L "$dst" ]; then
 
       # Check if the destination is already a symlink to the dotfiles
       readlink_out=$(readlink "$dst")
