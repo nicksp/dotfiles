@@ -201,17 +201,6 @@
     "command": "workbench.action.switchWindow"
   },
   {
-    // Activate Copilot inline chat instead
-    "key": "cmd+i",
-    "command": "-kilo-code.ghost.promptCodeSuggestion"
-  },
-  {
-    // Activate Copilot inline chat instead
-    "key": "cmd+i",
-    "command": "-amp.agent.toggleVisibility",
-    "when": "amp.primaryShortcuts"
-  },
-  {
     "key": "shift+cmd+i",
     "command": "-workbench.action.chat.openagent",
     "when": "config.chat.agent.enabled && !chatSetupDisabled && !chatSetupHidden"
@@ -880,24 +869,6 @@
     "key": "cmd+g cmd+b",
     "command": "justBlame.toggleBlame",
     "when": "editorTextFocus"
-  },
-
-  // Jest Runner
-  // {
-  // TODO: Find a suitable shortcut not to interfere with the others
-  // "comment": "Run a test Method",
-  // "key": "cmd+k cmd+m",
-  // "command": "extension.runJest"
-  // },
-  {
-    "comment": "Run a test File",
-    "key": "cmd+k cmd+f",
-    "command": "extension.runJestFile"
-  },
-  {
-    "comment": "Run the Previous test",
-    "key": "cmd+k cmd+p",
-    "command": "extension.runPrevJest"
   },
 
   /**
