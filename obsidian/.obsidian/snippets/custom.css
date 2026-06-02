@@ -1,0 +1,63 @@
+/* Custom overrides for the Squirrelsong theme */
+
+/*
+Docs:
+https://docs.obsidian.md/Reference/CSS+variables/CSS+variables
+*/
+
+body,
+.is-mobile {
+  --cursor: pointer;
+  --cursor-link: pointer;
+}
+
+.theme-light,
+.theme-dark {
+  --button-shadow-active: inset 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 0 0 calc(1px + 2px) rgba(0, 0, 0, 0.09), inset 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.6);
+  --button-text-shadow: 0 1px 1px rgba(255, 255, 255, .85);
+  --toggle-thumb-shadow: inset 0px 1px 0px 1px rgba(255, 255, 255, 1), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.2);
+  --slider-track-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05), 0px 0px 0px 1px rgba(255, 255, 255, 0.05);
+  --slider-thumb-shadow: inset 0px 1px 0px 1px rgba(255, 255, 255, 1), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.25);
+  --slider-thumb-shadow-hover: inset 0px 1px 0px 1px rgba(255, 255, 255, 1), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.3);
+  --transition: text-shadow 0.15s ease-in,
+    box-shadow 0.15s ease-in,
+    text-decoration 0.15s ease-in,
+    color 0.15s ease-in,
+    background-color 0.15s ease-in,
+    border-color 0.15s ease-in,
+    opacity 0.15s ease-in,
+    padding-block-start 0.14s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    padding-block-end 0.14s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.theme-dark {
+  --dropdown-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15), inset 0 -2px 0 2px rgba(255, 255, 255, .03), 0 2px 1px -1px rgba(0, 0, 0, .1), 0 4px 5px -2px rgba(0, 0, 0, .08);
+  --dropdown-shadow-focus: 0 0 0 var(--input-border-width-focus) var(--background-modifier-border-focus), inset 0 0 0 1px rgba(0, 0, 0, .15), inset 0 -2px 0 2px rgba(255, 255, 255, .03), 0 2px 1px -1px rgba(0, 0, 0, .1), 0 4px 5px -2px rgba(0, 0, 0, .08);
+}
+
+button:not(.clickable-icon):active {
+  padding-block-start: 8px;
+}
+
+.dropdown {
+  cursor: var(--cursor);
+}
+
+.dropdown:hover, .dropdown:focus, select:focus {
+  background-color: var(--dropdown-background-hover);
+  box-shadow: var(--dropdown-shadow);
+}
+
+.dropdown:active, select:active {
+  box-shadow: var(--button-shadow-active);
+}
+
+.markdown-source-view.mod-cm6 .cm-scroller {
+  letter-spacing: .01em;
+}
+
+.cm-hashtag.cm-hashtag-begin,
+.cm-hashtag.cm-hashtag-end {
+  opacity: 0.5;
+  font-size: var(--font-ui-small);
+}

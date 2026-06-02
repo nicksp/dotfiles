@@ -6,5 +6,9 @@
   "showRibbon": false,
   "accentColor": "#806f9b",
   "interfaceFontFamily": "SF Pro",
-  "showViewHeader": true
+  "showViewHeader": true,
+  "enabledCssSnippets": [
+    "custom"
+  ],
+  "theme": "system"
 }

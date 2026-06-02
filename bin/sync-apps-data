@@ -22,19 +22,48 @@ title() {
 }
 
 _bk() {
-  title "Backing up $3…"
+  source_dir="$1"
   dest_dir="$2"
+  backup_name="$3"
+  shift 3
+  exclude_names=("$@")
+
+  title "Backing up ${backup_name}…"
   mkdir -p "$dest_dir"
+
+  should_exclude() {
+    item_name="$1"
+
+    for exclude_name in ${exclude_names[@]+"${exclude_names[@]}"}; do
+      if [ "$item_name" = "$exclude_name" ]; then
+        return 0
+      fi
+    done
+
+    return 1
+  }
 
   # Remove any files/directories in the destination that are not in the source
   for item in "$dest_dir"/*; do
-    if [ ! -e "$1/$(basename "$item")" ]; then
+    item_name="$(basename "$item")"
+
+    if should_exclude "$item_name"; then
+      continue
+    fi
+
+    if [ ! -e "$source_dir/$item_name" ]; then
       rm -rf "$item"
     fi
   done
 
   # Copy files/directories from the source to the destination
-  for item in "$1"/*; do
+  for item in "$source_dir"/*; do
+    item_name="$(basename "$item")"
+
+    if should_exclude "$item_name"; then
+      continue
+    fi
+
     if [ -d "$item" ]; then
       cp -R "$item" "$dest_dir"
     else
@@ -46,7 +75,7 @@ _bk() {
 }
 
 # Obsidian settings synchronization
-_bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest/.obsidian" "$HOME/dotfiles/obsidian/.obsidian" "Obsidian configs"
+_bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest/.obsidian" "$HOME/dotfiles/obsidian/.obsidian" "Obsidian configs" "themes"
 # Obsidian templates and bases synchronization
 _bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest/99 🥒 Meta" "$HOME/dotfiles/obsidian/99 🥒 Meta" "Obsidian templates and bases"
 

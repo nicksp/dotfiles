@@ -9,6 +9,7 @@
 # > [x] Nimble Commander
 # > [x] Syntax Highlight
 # > [x] Ghostty
+# > [x] Obsidian
 # > [/] Firefox
 # > [/] Ice
 # > [/] Slack
@@ -74,7 +75,7 @@ system_install() {
   local from="$1"
   local to="$2"
 
-  sudo curl "$REPO_ROOT/$from" -o "$to"
+  curl -L "$REPO_ROOT/$from" -o "$to"
 }
 
 # Download to a local data directory
@@ -127,16 +128,6 @@ sudo echo "Sudo activated!"
 echo
 
 #
-# Ghostty: https://github.com/sapegin/squirrelsong/tree/master/themes/Ghostty
-#
-
-header "Installing Ghostty theme…"
-
-local_install "themes/Ghostty/Squirrelsong%20Dark" "tilde/.config/ghostty/themes"
-local_install "themes/Ghostty/Squirrelsong%20Dark%20Deep%20Purple" "tilde/.config/ghostty/themes"
-echo "🌈 A new color theme has been installed and ready to use"
-
-#
 # Bat: https://github.com/sharkdp/bat?tab=readme-ov-file#adding-new-themes
 # Theme: https://github.com/sapegin/squirrelsong/tree/master/themes/Sublime%20Text
 #
@@ -147,6 +138,20 @@ local_install "themes/Sublime%20Text/Squirrelsong%20Dark%20Deep%20Purple/Squirre
 # Update the binary cache
 bat cache --build
 echo "🌈 A new color theme has been installed and ready to use"
+
+#
+# CotEditor: https://github.com/sapegin/squirrelsong/tree/master/themes/CotEditor
+#
+
+header "Installing CotEditor theme…"
+
+my_data_install "themes/CotEditor/Squirrelsong%20Light.cottheme" "squirrelsong-master/themes/CotEditor"
+echo ""
+echo "🌈 Follow these steps to install the theme:"
+echo ""
+echo "− Open ${BOLD}Settings${RESET}, then ${BOLD}Appearance${RESET}."
+echo "− Import ${HIGHLIGHT}Squirrelsong Light.cottheme${RESET}"
+echo "− Select ${BOLD}Squirrelsong Light${RESET} in ${BOLD}Theme${RESET} list."
 
 #
 # Nimble Commander: https://github.com/sapegin/squirrelsong/tree/master/themes/Nimble%20Commander
@@ -164,21 +169,35 @@ echo "🌈 Import ${HIGHLIGHT}Squirrelsong Light.json${RESET} as a new theme in 
 header "Installing Syntax Highlight theme…"
 
 local_install "themes/Highlight/Squirrelsong%20Light.theme" "syntax-highlight/themes"
-echo "🌈 Import ${HIGHLIGHT}Squirrelsong Light.theme${RESET} in ${BOLD}Syntax Highlight − Settings${RESET} and then select the theme under ${BOLD}General − Color scheme${RESET} for ${BOLD}Light${RESET} and ${BOLD}Dark${RESET} modes"
+echo "🌈 Import ${HIGHLIGHT}Squirrelsong Light.theme${RESET} in ${BOLD}Syntax Highlight − Settings → Colors${RESET} and then select the theme under ${BOLD}General → Color scheme${RESET} for ${BOLD}Light${RESET} and ${BOLD}Dark${RESET} modes"
 
 #
-# CotEditor: https://github.com/sapegin/squirrelsong/tree/master/themes/CotEditor
+# Ghostty: https://github.com/sapegin/squirrelsong/tree/master/themes/Ghostty
 #
 
-header "Installing CotEditor theme…"
+header "Installing Ghostty theme…"
 
-my_data_install "themes/CotEditor/Squirrelsong%20Light.cottheme" "squirrelsong-master/themes/CotEditor"
-echo ""
-echo "🌈 Follow these steps to install the theme:"
-echo ""
-echo "− Open ${BOLD}Settings${RESET}, then ${BOLD}Appearance${RESET}."
-echo "− Import ${HIGHLIGHT}Squirrelsong Light.cottheme${RESET}"
-echo "− Select ${BOLD}Squirrelsong Light${RESET} in ${BOLD}Theme${RESET} list."
+local_install "themes/Ghostty/Squirrelsong%20Dark" "tilde/.config/ghostty/themes"
+local_install "themes/Ghostty/Squirrelsong%20Dark%20Deep%20Purple" "tilde/.config/ghostty/themes"
+echo "🌈 A new color theme has been installed and ready to use"
+
+#
+# Obsidian: https://github.com/sapegin/squirrelsong/tree/master/themes/Obsidian
+#
+
+header "Installing Obsidian theme…"
+
+OBSIDIAN_VAULT_DIR="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest/.obsidian"
+OBSIDIAN_THEMES_DIR="$OBSIDIAN_VAULT_DIR/themes/Squirrelsong"
+
+if [ -d "$(dirname "$OBSIDIAN_VAULT_DIR")" ]; then
+  mkdir -p "$OBSIDIAN_THEMES_DIR"
+  system_install "themes/Obsidian/Squirrelsong/manifest.json" "$OBSIDIAN_THEMES_DIR/manifest.json"
+  system_install "themes/Obsidian/Squirrelsong/theme.css" "$OBSIDIAN_THEMES_DIR/theme.css"
+  echo "🌈 Select ${HIGHLIGHT}Squirrelsong${RESET} in the dropdown on the ${BOLD}Themes${RESET} section in Obsidian ${BOLD}Appearance${RESET} settings"
+else
+  warning "Obsidian vault not found at $(dirname "$OBSIDIAN_VAULT_DIR"), skipping"
+fi
 
 # --- 8< -- 8< ---
 
