@@ -246,8 +246,9 @@ install_extras() {
   AGENTS_SETUP_DIR="$DOTFILES_DIR/ai-agents"
   AGENTS_INSTRUCTIONS="$AGENTS_SETUP_DIR/agent-instructions.md"
 
-  # Amp
-  symlink_file "$LLMS_INSTRUCTIONS" "$HOME/.config/AGENTS.md"
+  # Amp base prompt
+  symlink_file "$AGENTS_INSTRUCTIONS" "$HOME/.config/AGENTS.md"
+
   # Codex
   symlink_file "$AGENTS_INSTRUCTIONS" "$HOME/.codex/AGENTS.md"
   symlink_file "$DOTFILES_DIR/tilde/.codex/config.toml" "$HOME/.codex/config.toml"

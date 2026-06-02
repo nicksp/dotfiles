@@ -1,11 +1,15 @@
 {
   "amp.terminal.theme": "squirrelsong-dark-dp",
+  // Disable adding Amp-Thread trailer in git commits
   "amp.git.commit.ampThread.enabled": false,
+  // Disable adding Amp as co-author in git commits
   "amp.git.commit.coauthor.enabled": false,
-  // Disable startup animation
-  "amp.terminal.animation": false,
   // Disable notification sound
   "amp.notifications.enabled": false,
+  // Disable loading skills from Claude Code directories
+  "amp.skills.disableClaudeCodeSkills": true,
+  // Turn off checking for updates
+  "amp.updates.mode": "disabled",
   // Block all MCP servers
   "amp.mcpPermissions": [
     {
@@ -20,5 +24,6 @@
       },
       "action": "reject"
     }
-  ]
+  ],
+  "amp.gauge": "cost"
 }

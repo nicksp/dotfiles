@@ -85,7 +85,6 @@ packages=(
   npm-upgrade
   aws-cdk
   serverless
-  @sourcegraph/amp
   @antfu/ni
 )
 npm install -g "${packages[@]}"

@@ -12,6 +12,12 @@ Add with `$HOME/dotfiles/setup/symlinks.sh`
 
 Follow the [skills repo](https://github.com/nicksp/skills) instructions.
 
+## Install plugins
+
+Run `plugins: reload`.
+
+- `block-destructive-git-operations` — This plugin asks the user before running potentially destructive git commands (push, reset --hard, clean, etc.)
+
 ## References
 
 - [Agent of choice](https://ampcode.com/)
