@@ -13,7 +13,7 @@
   {
     "comment": "Toggle the left secondary sidebar",
     "key": "cmd+1",
-    "command": "tidySpace.toggleAuxiliaryBar"
+    "command": "workbench.action.toggleAuxiliaryBar"
   },
   {
     "key": "alt+cmd+b",
@@ -28,7 +28,7 @@
   {
     "comment": "Toggle the right primary sidebar",
     "key": "cmd+2",
-    "command": "tidySpace.toggleSidebarVisibility"
+    "command": "workbench.action.toggleSidebarVisibility"
   },
   {
     "key": "cmd+b",
