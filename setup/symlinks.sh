@@ -5,7 +5,7 @@ set -euo pipefail
 DOTFILES_DIR="${DOTFILES_DIR:-$(cd "$(dirname "$0")/.." && pwd)}"
 TILDE_DIR="$DOTFILES_DIR/tilde"
 
-EXCLUDE_FILES=(".DS_Store" "Brewfile.lock.json" "README.md")
+EXCLUDE_FILES=(".DS_Store" "Brewfile.lock.json" "README.md" ".codex")
 
 indent() {
   sed 's/^/  /'
@@ -237,10 +237,14 @@ install_extras() {
   # AI agents
   #
 
-  LLMS_INSTRUCTIONS="$DOTFILES_DIR/ai-agents/agent-instructions.md"
+  AGENTS_SETUP_DIR="$DOTFILES_DIR/ai-agents"
+  AGENTS_INSTRUCTIONS="$AGENTS_SETUP_DIR/agent-instructions.md"
 
   # Amp
   symlink_file "$LLMS_INSTRUCTIONS" "$HOME/.config/AGENTS.md"
+  # Codex
+  symlink_file "$AGENTS_INSTRUCTIONS" "$HOME/.codex/AGENTS.md"
+  symlink_file "$DOTFILES_DIR/tilde/.codex/config.toml" "$HOME/.codex/config.toml"
 }
 
 install_dotfiles

@@ -1,0 +1,6 @@
+personality = "pragmatic"
+model = "gpt-5.5"
+model_reasoning_effort = "medium"
+approval_policy = "never"
+approvals_reviewer = "user"
+sandbox_mode = "workspace-write"
