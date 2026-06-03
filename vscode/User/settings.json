@@ -519,11 +519,12 @@
 
   // Common settings
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "afterDelay",
   // Don’t autosave files with syntax errors
   "files.autoSaveWhenNoErrors": true,
+  "files.autoSaveWorkspaceFilesOnly": true,
 
   // Let ESLint fix any issues it can
   "editor.codeActionsOnSave": {

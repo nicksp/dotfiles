@@ -216,18 +216,6 @@
     "command": "workbench.action.focusActiveEditorGroup"
   },
   {
-    "comment": "Format and Save (to make autosave save files without formatting)",
-    "key": "cmd+s",
-    "command": "runCommands",
-    "args": {
-      "commands": ["editor.action.format", "workbench.action.files.save"]
-    }
-  },
-  {
-    "key": "cmd+s",
-    "command": "-workbench.action.files.save"
-  },
-  {
     "comment": "Erase (delete) current or selected lines",
     "key": "cmd+e",
     "command": "editor.action.deleteLines",
