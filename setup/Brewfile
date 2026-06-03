@@ -1,6 +1,7 @@
 # Taps
 tap "bengerthelorf/tap"
 tap "git-friendly/git-friendly"
+tap "manaflow-ai/cmux"
 tap "modem-dev/tap"
 tap "oven-sh/bun"
 
@@ -56,11 +57,12 @@ cask "font-symbols-only-nerd-font"
 cask "bitwarden" # Password manager
 cask "bruno" # Local-first API client
 cask "cleanshot" # Annotated screenshots & quick videos
+cask "cmux" # Multitasking terminal to orchestrate agents
 cask "coteditor" # Simple code/text editor
 cask "dash" # API documentation reader
 cask "discord" # Messaging / Community
 cask "firefox@developer-edition" # Main browser with configurable privacy
-cask "ghostty" # Better terminal emulator
+cask "ghostty" # Better terminal emulator for regular operating
 cask "github" # GitHub Desktop GUI
 cask "helium-browser" # Privacy-first browser for testing
 cask "bengerthelorf/tap/iconchanger" # Custom app icons
