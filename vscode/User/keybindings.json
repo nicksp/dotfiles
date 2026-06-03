@@ -213,7 +213,7 @@
   {
     "comment": "If I'm in a sidebar or terminal, it's a small annoyance to have to click the editor to get back into editing mode. This shortcut (cmd+e+e) provides an easy way to focus the Editor from anywhere in VS Code.",
     "key": "cmd+e cmd+e",
-    "command": "workbench.action.openPreviousRecentlyUsedEditor"
+    "command": "workbench.action.focusActiveEditorGroup"
   },
   {
     "comment": "Format and Save (to make autosave save files without formatting)",
