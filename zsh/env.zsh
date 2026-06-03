@@ -134,6 +134,7 @@ export NPM_CONFIG_SAVE="true"
 export NPM_CONFIG_UPDATE_NOTIFIER="false"
 
 # Homebrew: https://docs.brew.sh/Manpage#environment
+export HOMEBREW_REQUIRE_TAP_TRUST=1
 export HOMEBREW_INSTALL_BADGE='☕'
 export HOMEBREW_NO_GITHUB_API=1
 export HOMEBREW_NO_ANALYTICS=1
