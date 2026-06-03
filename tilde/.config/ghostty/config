@@ -41,7 +41,10 @@ copy-on-select = clipboard
 # It interferes with some accessibility features like Touch ID
 macos-auto-secure-input = false
 
+#
 # Hot keys
+#
+
 # Toggle the "quick" terminal globally from the top
 keybind = global:cmd+escape=toggle_quick_terminal
 
@@ -49,8 +52,5 @@ keybind = global:cmd+escape=toggle_quick_terminal
 keybind = super+shift+left=goto_split:previous
 keybind = super+shift+right=goto_split:next
 
-# Delete the whole line
-keybind = super+backspace=text:\x15
-
-# Insert newline
-keybind = shift+enter=text:\n
+# Make cmd+enter to submit the prompt. By default, Ghostty toggles full screen
+keybind = cmd+enter=text:\n
