@@ -1,4 +1,5 @@
 # Taps
+tap "bengerthelorf/tap"
 tap "git-friendly/git-friendly"
 tap "jesseduffield/lazydocker"
 tap "jesseduffield/lazygit"
@@ -63,8 +64,8 @@ cask "discord" # Messaging / Community
 cask "firefox@developer-edition" # Main browser with configurable privacy
 cask "ghostty" # Better terminal emulator
 cask "github" # GitHub Desktop GUI
-cask "iconchanger" # Custom app icons
 cask "helium-browser" # Privacy-first browser for testing
+cask "bengerthelorf/tap/iconchanger" # Custom app icons
 cask "iina" # Modern media player
 cask "itsycal" # Tiny popup calendar in a menu bar
 cask "jordanbaird-ice" # Manage menu bar icons
