@@ -76,4 +76,12 @@ setopt_if_exists correct_all # all arguments
 # Allow comments in interactive shells (like Bash does)
 setopt_if_exists interactive_comments
 
+#
+# Prompting
+#
+
+# Hide the inverse "%" partial-line marker that cmux leaves above the prompt
+# on session switch (standalone Ghostty doesn't show it).
+setopt_if_exists no_prompt_sp
+
 unset setopt_if_exists
