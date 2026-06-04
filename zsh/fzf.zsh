@@ -24,25 +24,9 @@ export FZF_CTRL_R_OPTS="
 export FZF_COMPLETION_TRIGGER='**'
 export FZF_COMPLETION_OPTS='--border --info=inline'
 
-# Squirrelsong Dark Deep Purple theme colors
-FZF_COLORS="fg:-1,\
-fg+:#bea3d9,\
-bg:-1,\
-bg+:#bea3d9,\
-hl:#ca5a83,\
-hl+:#97576f,\
-info:#7254a6,\
-marker:#ceb250,\
-prompt:#7254a6,\
-spinner:#bea3d9,\
-pointer:#bea3d9,\
-header:#e9d6fa,\
-border:#644e88,\
-label:#bea3d9,\
-query:#e9d6fa,\
-disabled:#7254a6"
-
 # https://vitormv.github.io/fzf-themes/
+# Load theme
+source ~/dotfiles/colors/fzf-squirrelsong-dark-dp.sh
 export FZF_DEFAULT_OPTS="--height 60% \
 --border rounded \
 --layout reverse \
@@ -75,11 +59,11 @@ _fzf_comprun() {
 
   case "$command" in
     # cd **<TAB>
-    cd)      fzf --preview 'eza --tree --color=always {} | head -200'                        "$@" ;;
+    cd) fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
     # llt **<TAB>
-    llt)     fd --type d --hidden | fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    llt) fd --type d --hidden | fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
     # any_other_command **<TAB>
-    *)       fzf --preview 'bat -n --color=always {}'                                        "$@" ;;
+    *) fzf --preview 'bat -n --color=always {}' "$@" ;;
   esac
 }
 
