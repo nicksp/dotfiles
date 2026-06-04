@@ -174,26 +174,9 @@
   # Add all modified files to the latest commit
   append       = commit -a --amend --no-edit
 
-  # Branching
-  br           = branch
-  bra          = branch -a
-  # Change current branch
-  cb           = switch
-  # Create and switch to a new branch
-  nb           = switch -c
-  # Jump back to the previous branch
-  prev         = switch -
-
   # Status
   s            = status
   ss           = status -sb
-
-  # Put all uncommitted changes in tracked files in a temporary storage
-  st           = stash
-  # Stash all ignored and untracked files and then clean up with `git clean`
-  sta          = stash --all
-  # Retrieve the last stored changes again
-  stp          = stash pop
 
   # Unstaged changes (working directory vs. staging area)
   d            = diff
@@ -255,9 +238,6 @@
 
   # Display the current branch name
   branchname   = branch --show-current
-
-  # Copy the current branch name to the clipboard
-  cpbranchname = !git branch --show-current | tr -d '\n' | tr -d ' ' | pbcopy
 
   # Display the date of the last commit of the active Git branch
   lastcommit   = !git log --pretty=format:'%ar' | head -n 1

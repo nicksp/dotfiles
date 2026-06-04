@@ -1,0 +1,162 @@
+#!/bin/bash
+#
+# Switch to an existing branch, create a new local-only branch or delete a local branch.
+# > Adds remote tracking if a remote branch with the same name exists.
+#
+# - List local branches:
+#
+# `br`
+#
+# - List remote branches:
+#
+# `br -r`
+#
+# - Switch to or create a branch:
+#
+# `br {{branch}}`
+#
+# - Switch to a previous branch:
+#
+# `br -`
+#
+# - Delete one or more local branches (merged branches only):
+#
+# `br -d {{branch}}`
+#
+# - Force delete one or more local branches (unmerged branches allowed):
+#
+# `br -D {{branch}}`
+#
+# ---
+# Based on git-friendly: https://github.com/git-friendly/git-friendly
+#
+# Author: Nick Plekhanov, https://plekhanov.me
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+# Abort if this isn't a git repository
+git rev-parse --is-inside-work-tree > /dev/null || exit $?
+
+remote="origin"
+branch="$1"
+delete=
+branches=()
+
+# Colors
+color_bold="$(tput bold)"
+color_dim="$(tput dim)"
+color_reset="$(tput sgr0)"
+
+# Check whether a local branch exists
+function has_local_branch() {
+  if git show-ref --verify --quiet "refs/heads/$branch"; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+# Check whether a remote branch exists
+function has_remote_branch() {
+  if git show-ref --verify --quiet "refs/remotes/$remote/$branch"; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+# Pull if has remote
+function try_pull() {
+  if has_remote_branch "$branch"; then
+    echo "Pull"
+    pull
+  fi
+}
+
+# If no branch specified (or -r), list branches
+if [[ -z "$branch" || "$branch" == "-r" ]]; then
+  if [[ "$branch" == "-r" ]]; then
+    echo "  ${color_dim}Recent remote branches:${color_reset}"
+    ref=refs/remotes
+    fmt="%(refname:short) %(objectname:short) (%(committerdate:relative))"
+  else
+    echo "  ${color_dim}Recent local branches:${color_reset}"
+    ref=refs/heads
+    fmt="%(if)%(HEAD)%(then)* %(else)  %(end)%(refname:short) %(objectname:short) (%(committerdate:relative))"
+  fi
+
+  git for-each-ref \
+    --sort=-committerdate \
+    --count=12 \
+    --format="$fmt" \
+    "$ref" \
+    | pr -2 -t -w "$(tput cols)"
+
+  echo
+  exit 0
+fi
+
+# If deleting, stash the flag and collect all remaining args as branches to delete
+if [ "$1" == "-d" ] || [ "$1" == "-D" ]; then
+  delete="$1"
+  shift
+  branches=("$@")
+  branch=$1
+fi
+
+# Switch to the previous branch
+if [ "$branch" == "-" ]; then
+  git switch -
+  # TODO: Only pull if remote changes exist
+  branch=$(git branch --show-current)
+  try_pull
+  exit 0
+fi
+
+# Delete branch(es)
+if [ "$delete" ]; then
+  if [ ${#branches[@]} -eq 0 ]; then
+    echo "Usage: $(basename $0) $delete <name>…" >&2
+    exit 1
+  fi
+  if [ ${#branches[@]} -gt 1 ]; then
+    echo "💀 Removing local branches…"
+  else
+    echo "💀 Removing local branch '${branch}'…"
+  fi
+  git branch "$delete" "${branches[@]}" || exit $?
+  exit 0
+fi
+
+# Otherwise we're either switching to an existing branch or creating a branch
+if has_local_branch "$branch"; then
+  # Local branch exists already, just switch to it
+  echo "👓 Switching to existing local branch '${branch}'…"
+  git switch "$branch"
+
+  # Track remote branch if not already
+  if has_remote_branch "$branch"; then
+    tracking=$(git rev-parse --abbrev-ref --symbolic-full-name "$branch@{upstream}" 2> /dev/null)
+    if [[ "$tracking" != "$remote"/* ]]; then
+      echo "⚒️ Your local branch is not tracking the corresponding remote branch, fixing…"
+      git branch --set-upstream-to="$remote/$branch" "$branch"
+    fi
+
+    # Pull
+    pull
+  fi
+
+# If remote exists, create a local branch that tracks the remote
+elif has_remote_branch "$branch"; then
+  echo "🛸 Fetching remote branch '${branch}'…"
+  git fetch "$remote" "$branch"
+  echo
+  git switch -c "$branch" --track "$remote/$branch"
+
+# Otherwise create a new local branch
+else
+  echo "🪴 Creating new local branch '${branch}'…"
+  git switch -c "$branch" --no-track
+fi
+
+exit 0

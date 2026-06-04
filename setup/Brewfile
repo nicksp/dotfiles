@@ -1,6 +1,5 @@
 # Taps
 tap "bengerthelorf/tap"
-tap "git-friendly/git-friendly"
 tap "manaflow-ai/cmux"
 tap "modem-dev/tap"
 tap "oven-sh/bun"
@@ -36,7 +35,6 @@ brew "zoxide" # Convenient and magical navigation (better `cd`)
 brew "zsh" # A shell of choice
 brew "zsh-autosuggestions" # Fish-like autosuggestions for Zsh
 brew "zsh-fast-syntax-highlighting" # Feature-rich syntax highlighting for Zsh
-brew "git-friendly/git-friendly/git-friendly" # Improved Git commands for common tasks
 brew "jesseduffield/lazydocker/lazydocker" # Full Docker management app
 brew "modem-dev/tap/hunk" # Review-first terminal diff viewer (better `diff`)
 brew "oven-sh/bun/bun" # Bun runtime

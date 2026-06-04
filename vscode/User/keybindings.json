@@ -577,7 +577,7 @@
     "when": "workbench.scm.active"
   },
   {
-    // Custom pull workflow (using git-friendly)
+    // Custom pull workflow (using custom pull script)
     "comment": "Git Pull",
     "key": "cmd+g cmd+p",
     "command": "runCommands",
@@ -594,7 +594,7 @@
     }
   },
   {
-    // Custom push workflow (using git-friendly)
+    // Custom push workflow (using custom push script)
     "comment": "Git pUsh",
     "key": "cmd+g cmd+u",
     "command": "runCommands",

@@ -1,0 +1,106 @@
+#!/bin/bash
+#
+# Send your local branch changes to the remote branch. Any extra args to this command will be passed through to `git push`, e.g. for doing `push -f`.
+#
+# - Push local changes:
+#
+# `push`
+#
+# ---
+# Based on git-friendly: https://github.com/git-friendly/git-friendly
+#
+# Author: Nick Plekhanov, https://plekhanov.me
+# License: MIT
+# https://github.com/nicksp/dotfiles
+
+# Abort if this isn't a git repository
+git rev-parse --is-inside-work-tree > /dev/null || exit $?
+
+# Colors
+color_error="$(tput sgr 0 1)$(tput setaf 1)"
+color_reset="$(tput sgr0)"
+
+branch=$(git branch --show-current) || exit $?
+if [ -z "$branch" ]; then
+  echo "${color_error}❌ You're not on a branch (detached HEAD). Check out a branch first.${color_reset}" >&2
+  exit 1
+fi
+
+default_remote="origin"
+remote=$(git config "branch.${branch}.remote" || echo "$default_remote")
+remote_branch=$( (git config "branch.${branch}.merge" || echo "refs/heads/$branch") | cut -d/ -f3-)
+
+# Push & save output
+if [ $# -eq 0 ]; then
+  args=("$remote" "$remote_branch")
+else
+  args=("$@")
+fi
+
+echo "🚀 Pushing…"
+echo
+push=$(git push --set-upstream "${args[@]}" 2>&1)
+exit_code=$?
+
+if [ $exit_code != 0 ]; then
+  # Push failed
+  echo -e "${color_error}Whoa, radical fail! The push didn't catch the wave!${color_reset}\n\n$push"
+  exit $exit_code
+elif echo $push | grep "Everything up-to-date" >/dev/null; then
+  # Nothing to push
+  echo "✌️ Git says everything is up-to-date!"
+  exit 0
+fi
+
+# Extract commit hash range and display what we pushed
+commit_range=$(echo "$push" | grep -oE '[a-f0-9]{7,}\.\.[a-f0-9]{7,}' | head -1)
+
+if echo $push | grep "\[new branch\]" >/dev/null; then
+  echo "🚀 Pushed a new branch '$branch' remotely"
+else
+  echo "🚀 Pushed:"
+  if [ ! -z "$commit_range" ]; then
+    echo "$push" | grep -E '[a-f0-9]{7,}\.\.[a-f0-9]{7,}' | head -1 | sed 's/^[ \t]*/   /'
+  else
+    echo "$push" | grep -v '^remote:' | grep -v '^To ' | head -5
+  fi
+fi
+
+# Build compare refs: commit hashes for main/master, branch names for feature branches
+if [ ! -z "$commit_range" ] && { [ "$branch" = "main" ] || [ "$branch" = "master" ]; }; then
+  refs="$commit_range"
+else
+  parent=$(get_parent)
+  refs="${parent:-main}...$branch"
+fi
+
+# Build GitHub URL: prefer PR URL > compare URL
+remote_url=$(git remote get-url --push $remote)
+
+if [[ "$remote_url" =~ github\.com ]]; then
+
+  if [[ ${remote_url:0:4} == "git@" ]]; then
+    regEx='s/.*\:\(.*\)\.git/\1/'
+    url='https://github.com/'
+  else
+    regEx='s/\(.*\)\.git/\1/'
+  fi
+
+  repo_name=$(echo $remote_url | sed $regEx)
+
+  # Check for PR URL from GitHub's push output, then from gh CLI
+  github_url=$(echo "$push" | grep -o 'https://github\.com/[^/]*/[^/]*/pull/new/[^[:space:]]*' | head -1)
+
+  if [ -z "$github_url" ] && [ "$branch" != "main" ] && [ "$branch" != "master" ] && command -v gh >/dev/null 2>&1; then
+    pr_number=$(gh pr list --head "$branch" --json number --jq '.[0].number' 2>/dev/null)
+    if [ ! -z "$pr_number" ] && [ "$pr_number" != "null" ]; then
+      github_url="$url$repo_name/pull/$pr_number"
+    fi
+  fi
+
+  github_url="${github_url:-$url$repo_name/compare/$refs}"
+
+  echo $github_url
+fi
+
+exit 0

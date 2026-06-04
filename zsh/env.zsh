@@ -144,11 +144,5 @@ export HOMEBREW_NO_UPDATE_REPORT_NEW=1
 export HOMEBREW_BUNDLE_FILE="$DOTFILES/setup/Brewfile"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-# git-friendly: disable bundle after pull
-export GIT_FRIENDLY_NO_BUNDLE=true
-
-# git-friendly: disable URL copying after push
-export GIT_FRIENDLY_NO_COPY_URL_AFTER_PUSH=true
-
 # Ripgrep config file location
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
