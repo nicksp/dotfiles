@@ -10,6 +10,7 @@ lazygit/state.yml
 private/
 tilde/.ssh/*
 !tilde/.ssh/config
+tilde/.config/amp/settings.json.amp-write-meta
 
 # Obsidian
 obsidian/**/workspace.json
