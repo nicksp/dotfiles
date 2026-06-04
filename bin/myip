@@ -19,9 +19,8 @@
 // License: MIT
 // https://github.com/nicksp/dotfiles
 
-const { execSync } = require('node:child_process')
-const https = require('node:https')
-const os = require('node:os')
+import https from 'node:https'
+import os from 'node:os'
 
 function getLocalIP() {
   return Object.values(os.networkInterfaces())
