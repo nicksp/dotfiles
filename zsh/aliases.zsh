@@ -164,8 +164,7 @@ take() {
 
 function git() {
   # Clone a GitHub repo and cd into the created directory
-  if [ $1 = "clone" ];
-  then
+  if [ $1 = "clone" ]; then
     command git clone "${@:2}"
 
     if [ "$3" ]; then

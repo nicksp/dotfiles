@@ -71,7 +71,7 @@ setopt_if_exists share_history
 # You can still override this with `>|`.
 setopt_if_exists no_clobber
 # Autocorrect commands with typos and ask to run the correct command instead
-setopt_if_exists correct # commands
+setopt_if_exists correct     # commands
 setopt_if_exists correct_all # all arguments
 # Allow comments in interactive shells (like Bash does)
 setopt_if_exists interactive_comments
