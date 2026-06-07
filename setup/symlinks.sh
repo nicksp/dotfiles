@@ -194,12 +194,10 @@ install_extras() {
   local backup_all=false
   local skip_all=false
 
-  # Request sudo for /usr/local/bin operations
-  echo "Administrator password required for /usr/local/bin operations:"
-  sudo -v
-
-  # Ensure /usr/local/bin exists
-  sudo mkdir -p "/usr/local/bin"
+  if [ ! -d "/usr/local/bin" ]; then
+    echo "Administrator password required to create /usr/local/bin:"
+    sudo mkdir -p "/usr/local/bin"
+  fi
 
   # CotEditor: Install `cot` command-line tool
   command -v cot &> /dev/null || {
