@@ -54,14 +54,12 @@ setopt_if_exists hist_reduce_blanks
 setopt_if_exists hist_ignore_space
 # When using history expansion (!!, !$, etc.), present for user confirmation/editing
 setopt_if_exists hist_verify
-# Do not append history entries to the history file
-# NOTE: This has to be turned off for shared history to work.
-setopt_if_exists no_inc_append_history
-# Disable writing out the history entry to the file after the command is finished.
-# NOTE: This has to be turned off for shared history to work.
-setopt_if_exists no_inc_append_history_time
-# Share history between different instances of the shell
-setopt_if_exists share_history
+# Append each command to $HISTFILE immediately after execution
+# NOTE: Must be disabled for share_history to work
+setopt_if_exists inc_append_history
+# Do not share history between shell sessions — each terminal is isolated
+# NOTE: Enable share_history instead to sync history across open sessions
+setopt_if_exists no_share_history
 
 #
 # "Input/Output"
