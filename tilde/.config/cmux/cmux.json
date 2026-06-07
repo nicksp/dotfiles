@@ -1,6 +1,5 @@
 {
   "$schema": "https://raw.githubusercontent.com/manaflow-ai/cmux/main/web/data/cmux.schema.json",
-  "schemaVersion": 1,
   "app": {
     "appearance": "system",
     "appIcon": "dark",
@@ -16,7 +15,7 @@
     "minimalMode": true,
     "newWorkspacePlacement": "end",
     "openMarkdownInCmuxViewer": true,
-    "openSupportedFilesInCmux": true,
+    "openSupportedFilesInCmux": false,
     "preferredEditor": "code",
     "renameSelectsExistingName": true,
     "reorderOnNotification": false,
@@ -40,7 +39,7 @@
   },
   "browser": {
     "customSearchEngineName": "",
-    "customSearchEngineURLTemplate": "https:\/\/www.google.com\/search?q={query}",
+    "customSearchEngineURLTemplate": "https://www.google.com/search?q={query}",
     "defaultSearchEngine": "ecosia",
     "discardHiddenWebViews": true,
     "hiddenWebViewDiscardDelaySeconds": 300,
@@ -79,6 +78,7 @@
     "sound": "none",
     "unreadPaneRing": false
   },
+  "schemaVersion": 1,
   "shortcuts": {
     "bindings": {
       "attachTextBoxFile": "cmd+shift+opt+a",
