@@ -17,7 +17,7 @@
 
   /*
   |--------------------------------------------------------------------------
-  | Must-have Settings
+  | Must-have settings
   |--------------------------------------------------------------------------
   */
 
@@ -73,7 +73,7 @@
 
   /*
   |--------------------------------------------------------------------------
-  | DX Improvements
+  | DX improvements
   |--------------------------------------------------------------------------
   */
 
@@ -121,6 +121,7 @@
   "window.openFilesInNewWindow": "off",
 
   // Explorer improvements
+  "explorer.confirmPasteNative": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "explorer.compactFolders": false,
@@ -199,7 +200,7 @@
 
   /*
   |--------------------------------------------------------------------------
-  | Zen & Overall Cleanup
+  | Zen & overall cleanup
   |--------------------------------------------------------------------------
   */
 
@@ -257,7 +258,7 @@
 
   /*
   |--------------------------------------------------------------------------
-  | Git and Source Control Management
+  | Git and source control management
   |--------------------------------------------------------------------------
   */
 
@@ -286,7 +287,7 @@
 
   /*
   |--------------------------------------------------------------------------
-  | The Look & Typography
+  | The look & typography
   |--------------------------------------------------------------------------
   */
 
@@ -389,7 +390,7 @@
 
   /*
   |--------------------------------------------------------------------------
-  | The Little Things
+  | The little things
   |--------------------------------------------------------------------------
   */
 
@@ -512,7 +513,7 @@
 
   /*
   |--------------------------------------------------------------------------
-  | Code Validation & Formatting
+  | Code validation & formatting
   | (ESLint, Prettier, Stylelint & friends..)
   |--------------------------------------------------------------------------
   */
@@ -582,7 +583,7 @@
 
   /*
   |--------------------------------------------------------------------------
-  | 3rd Party Plugins
+  | 3rd party plugins
   |--------------------------------------------------------------------------
   */
 
@@ -689,6 +690,7 @@
 
   "githubPullRequests.defaultMergeMethod": "squash",
   "githubPullRequests.pullPullRequestBranchBeforeCheckout": "pullAndMergeBase",
+  "githubPullRequests.pushBranch": "always",
 
   "tailwindCSS.classAttributes": ["class", "className", "ngClass", "variants"],
 
