@@ -26,6 +26,7 @@ brew "pnpm" # Efficient Node.js package manager
 brew "prettyping" # Prettier and compact `ping`
 brew "python@3.11" # Required by awscli
 brew "ripgrep" # Searching within files (better `grep`)
+brew "shellcheck" # Shell scripts linting
 brew "sops" # Secrets manager
 brew "starship" # Prompt manager
 brew "tlrc" # Community-maintained docs (better `man`)

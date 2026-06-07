@@ -40,7 +40,7 @@ rollback() {
 # Test whether a command exists
 # $1 - cmd to test
 cmd_exists() {
-  command -v "$1" >/dev/null 2>&1
+  command -v "$1" > /dev/null 2>&1
 }
 
 # Test whether a file exists
@@ -72,7 +72,7 @@ reset_dir() {
 # $1 - filename
 has_changed() {
   # ORIG_HEAD is the value of HEAD before the pull.
-  changed_files="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD 2>/dev/null)"
+  changed_files="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD 2> /dev/null)"
   echo "$changed_files" | grep --quiet "$1"
 }
 
@@ -116,7 +116,7 @@ has_js_lockfile() {
 }
 
 if cmd_exists 'yarn' \
-   && file_exists 'yarn.lock' && (has_changed 'yarn.lock' || has_changed 'package.json'); then
+  && file_exists 'yarn.lock' && (has_changed 'yarn.lock' || has_changed 'package.json'); then
   change_dir 'yarn.lock' || change_dir 'package.json'
   echo
   echo '⚔ Installing packages with yarn…'
@@ -125,7 +125,7 @@ if cmd_exists 'yarn' \
 fi
 
 if cmd_exists 'pnpm' \
-   && file_exists 'pnpm-lock.yaml' && (has_changed 'pnpm-lock.yaml' || has_changed 'package.json'); then
+  && file_exists 'pnpm-lock.yaml' && (has_changed 'pnpm-lock.yaml' || has_changed 'package.json'); then
   change_dir 'pnpm-lock.yaml' || change_dir 'package.json'
   echo
   echo '⚔ Installing packages with pnpm…'
@@ -134,8 +134,8 @@ if cmd_exists 'pnpm' \
 fi
 
 if cmd_exists 'bun' \
-   && (file_exists 'bun.lock' || file_exists 'bun.lockb') \
-   && (has_changed 'bun.lock' || has_changed 'bun.lockb' || has_changed 'package.json'); then
+  && (file_exists 'bun.lock' || file_exists 'bun.lockb') \
+  && (has_changed 'bun.lock' || has_changed 'bun.lockb' || has_changed 'package.json'); then
   change_dir 'bun.lock' || change_dir 'bun.lockb' || change_dir 'package.json'
   echo
   echo '⚔ Installing packages with bun…'
@@ -144,7 +144,7 @@ if cmd_exists 'bun' \
 fi
 
 if cmd_exists 'npm' \
-   && has_changed 'package.json' && ! has_js_lockfile; then
+  && has_changed 'package.json' && ! has_js_lockfile; then
   change_dir 'package.json'
   echo
   echo '⚔ Installing packages with npm…'

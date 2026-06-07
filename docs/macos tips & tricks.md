@@ -48,7 +48,7 @@ brew uninstall x
 If you don't know what something is:
 
 ```sh
-[npm|yarn|brew] info x
+[pnpm | npm | yarn | brew] info x
 ```
 
 ## Tip #5
@@ -153,9 +153,9 @@ Clean up `node_modules`.
 > [!CAUTION]  
 > This process is irreversible!
 
-  ```sh
-  find . -name "node_modules" -type d -prune -print -exec rm -rf '{}' \;
-  ```
+```sh
+find . -name "node_modules" -type d -prune -print -exec rm -rf '{}' \;
+```
 
 ## Tip #22
 

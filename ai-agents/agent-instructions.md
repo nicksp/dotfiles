@@ -9,7 +9,6 @@ In all interactions and commit messages, be extremely concise and sacrifice gram
 ## Git
 
 - When I ask for a Git commit message and a description:
-
   1. Follow the [conventional commit message](https://www.conventionalcommits.org/en/v1.0.0/) format.
   2. Capitalize the first word of the description.
   3. Prefer explaining WHY over HOW.

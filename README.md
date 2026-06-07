@@ -37,18 +37,18 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 ## Installation
 
 1. Point the DNS Servers to [Cloudflare DNS](https://one.one.one.one/dns/)
-    - `1.1.1.1`
-    - `1.0.0.1`
-    - `2606:4700:4700::1111`
-    - `2606:4700:4700::1001`
+   - `1.1.1.1`
+   - `1.0.0.1`
+   - `2606:4700:4700::1111`
+   - `2606:4700:4700::1001`
 1. Configure Git and GitHub SSH
-    1. [Generate SSH key and add it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-    1. [Add your public SSH key to GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-    1. Test your authentication with:
+   1. [Generate SSH key and add it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+   1. [Add your public SSH key to GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+   1. Test your authentication with:
 
-        ```
-        ssh -T git@github.com
-        ```
+      ```
+      ssh -T git@github.com
+      ```
 
 1. Configure [GPG commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification#gpg-commit-signature-verification)
 1. Install [MonoLisa font](https://www.monolisa.dev/)
@@ -99,15 +99,11 @@ sync-color-themes
 
 ## Local customizations
 
-The dotfiles can be extended to suit additional local
-requirements by using the following files:
+The dotfiles can be extended to suit additional local requirements by using the following files:
 
 ### `~/.zsh.local`
 
-If this file exists, it will be automatically sourced
-after all the other shell related files allowing its
-content to add to or overwrite the existing aliases, settings, PATH,
-etc.
+If this file exists, it will be automatically sourced after all the other shell related files allowing its content to add to or overwrite the existing aliases, settings, PATH, etc.
 
 ### `~/.ssh/config.local`
 
