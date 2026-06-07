@@ -11,8 +11,12 @@ indent() {
   sed 's/^/  /'
 }
 
+tildify() {
+  printf '%s' "${1/#$HOME/~}"
+}
+
 info() {
-  printf "[ \033[00;34m..\033[0m ] $1" | indent
+  printf "$1" | indent
   echo
 }
 
@@ -21,7 +25,11 @@ user() {
 }
 
 success() {
-  printf "\r\033[2K  [ \033[00;32m✔\033[0m ] $1\n"
+  printf "\r\033[2K   $1\n"
+}
+
+skipped() {
+  printf "\r\033[2K  [skipped]  $1\n"
 }
 
 fail() {
@@ -84,13 +92,13 @@ symlink_file() {
 
     if [ "$isHardLink" = true ]; then
       $ln_cmd -f "$1" "$2"
-      success "hard linked $1 to $2"
+      success "$(tildify "$2")"
     else
       $ln_cmd -sf "$1" "$2"
-      success "symlinked $1 to $2"
+      success "$(tildify "$2")"
     fi
   else
-    success "skipped $src"
+    skipped "$(tildify "$dst")"
   fi
 }
 
@@ -140,7 +148,7 @@ handle_existing_file() {
 }
 
 install_dotfiles() {
-  info 'Installing dotfiles…'
+  info 'Syncing dotfiles…'
 
   local overwrite_all=false
   local backup_all=false
