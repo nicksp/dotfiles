@@ -19,3 +19,4 @@ aliases:
   prl: >
     pr list --json number,title,headRefName,author,createdAt --template '{{tablerow (color "white" "ID") (color "white" "TITLE") (color "white" "BRANCH") (color "white" "AUTHOR") (color "white" "CREATED AT")}}{{range .}}{{tablerow (printf "#%v" .number | autocolor "green") .title (.headRefName | color "cyan") (.author.login | color "yellow") (timeago .createdAt | autocolor "blue") }}{{end}}'
 version: "1"
+telemetry: disabled

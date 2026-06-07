@@ -120,9 +120,11 @@ export ASTRO_TELEMETRY_DISABLED=1
 # https://storybook.js.org/docs/configure/telemetry
 export STORYBOOK_DISABLE_TELEMETRY=1
 # https://vercel.com/docs/cli/about-telemetry#telemetry
-VERCEL_TELEMETRY_DISABLED=1
+export VERCEL_TELEMETRY_DISABLED=1
 # https://github.com/aws/aws-cdk/issues/34892
-CDK_DISABLE_CLI_TELEMETRY=1
+export CDK_DISABLE_CLI_TELEMETRY=1
+# https://docs.github.com/en/github-cli/github-cli/github-cli-telemetry#how-to-opt-out
+export GH_TELEMETRY=false
 
 # Node & NPM
 export NPM_CONFIG_INIT_AUTHOR_NAME="Nick Plekhanov"
