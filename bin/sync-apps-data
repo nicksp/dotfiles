@@ -75,9 +75,9 @@ _bk() {
 }
 
 # Obsidian settings synchronization
-_bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest/.obsidian" "$HOME/dotfiles/obsidian/.obsidian" "Obsidian configs" "themes"
+OBSIDIAN_VAULT="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest"
+_bk "$OBSIDIAN_VAULT/.obsidian" "$HOME/dotfiles/obsidian/.obsidian" "Obsidian configs" "themes"
 # Obsidian templates and bases synchronization
-_bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest/99 🥒 Meta" "$HOME/dotfiles/obsidian/99 🥒 Meta" "Obsidian templates and bases"
-
+_bk "$OBSIDIAN_VAULT/99 🥒 Meta" "$HOME/dotfiles/obsidian/99 🥒 Meta" "Obsidian templates and bases"
 # Obsidian notes/images synchronization
-_bk "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Chest" "$HOME/Documents/MYDATA/Obsidian" "Obsidian vault content"
+_bk "$OBSIDIAN_VAULT" "$HOME/Documents/MYDATA/Obsidian" "Obsidian vault content"
