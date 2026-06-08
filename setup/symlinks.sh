@@ -249,14 +249,24 @@ install_extras() {
   # AI agents
   #
 
-  AGENTS_SETUP_DIR="$DOTFILES_DIR/ai-agents"
-  AGENTS_INSTRUCTIONS="$AGENTS_SETUP_DIR/agent-instructions.md"
+  AGENTS_DIR="$HOME/.agents"
+  AGENTS_SETUP_DIR="$DOTFILES_DIR/agents"
+  AGENTS_INSTRUCTIONS="$AGENTS_SETUP_DIR/instructions.md"
 
-  # Amp base prompt
-  symlink_file "$AGENTS_INSTRUCTIONS" "$HOME/.config/AGENTS.md"
+  #
+  # Amp
+  #
 
+  # Base instructions
+  symlink_file "$AGENTS_INSTRUCTIONS" "$HOME/.config/amp/AGENTS.md"
+
+  #
   # Codex
+  #
+
+  # Base instructions
   symlink_file "$AGENTS_INSTRUCTIONS" "$HOME/.codex/AGENTS.md"
+  # Configuration
   symlink_file "$DOTFILES_DIR/tilde/.codex/config.toml" "$HOME/.codex/config.toml"
 }
 

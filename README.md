@@ -20,7 +20,7 @@ My personal dotfiles for configuring macOS with Zsh and Homebrew.
 
 - Custom color scheme: [Squirrelsong](colors/).
 - Handy [CLI scripts](bin/).
-- AI agents [config automation](ai-agents/).
+- Coding agents [config automation](agents/).
 - [Custom zsh theme](tilde/.starship.toml) with Git status, etc. using [Starship](https://starship.rs/).
 - [Git aliases](tilde/.gitconfig).
 - [Zsh aliases](zsh/aliases.zsh).
