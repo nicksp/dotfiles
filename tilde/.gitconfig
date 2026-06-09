@@ -35,6 +35,10 @@
   # Make `git rebase` safer on macOS
   # More info: https://www.git-tower.com/blog/make-git-rebase-safe-on-osx/
   trustctime = false
+  # Uses a background process to watch for file changes, making commands like 'git status' nearly instantaneous
+  fsmonitor = true
+  # Speeds up how Git finds new, untracked files
+  untrackedCache = true
 
 [help]
   # Correct typos
@@ -71,6 +75,10 @@
 [column]
   # Put any list output into columns
   ui = auto
+
+[feature]
+  # Enable optimizations for repos with many files
+  manyFiles = true
 
 [filter "lfs"]
   clean = git-lfs clean -- %f
