@@ -43,7 +43,7 @@
 [color]
   # Use colors in Git commands that are capable of colored output when
   # outputting to the terminal. (This is the default since Git 1.8.4)
-  ui = true
+  ui = auto
 
 [color "branch"]
   current = cyan bold reverse
