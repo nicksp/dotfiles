@@ -1,0 +1,102 @@
+# Squirrelsong Dark Deep Purple Theme for btop
+# https://sapegin.me/squirrelsong/
+
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#271e38"
+
+# Main text color
+theme[main_fg]="#bea3d9"
+
+# Title color for boxes
+theme[title]="#bea3d9"
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#5993c2"
+
+# Background color of selected item in processes box
+theme[selected_bg]="#4c3c6b"
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#cbb5e3"
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#8067ad"
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#9a7eb4"
+
+# Background color of the percentage meters
+theme[meter_bg]="#453461"
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#9672d4"
+
+# Cpu box outline color
+theme[cpu_box]="#63a2d6"
+
+# Memory/disks box outline color
+theme[mem_box]="#709855"
+
+# Net up/down box outline color
+theme[net_box]="#72aaa8"
+
+# Processes box outline color
+theme[proc_box]="#9672d4"
+
+# Box divider line and small boxes line color
+theme[div_line]="#644e88"
+
+# Temperature graph colors
+theme[temp_start]="#5993c2"
+theme[temp_mid]="#ceb250"
+theme[temp_end]="#ce574a"
+
+# CPU graph colors
+theme[cpu_start]="#5993c2"
+theme[cpu_mid]="#7f61b3"
+theme[cpu_end]="#9672d4"
+
+# Mem/Disk free meter
+theme[free_start]="#44603b"
+theme[free_mid]="#558240"
+theme[free_end]="#709855"
+
+# Mem/Disk cached meter
+theme[cached_start]="#41635f"
+theme[cached_mid]="#4f9593"
+theme[cached_end]="#72aaa8"
+
+# Mem/Disk available meter
+theme[available_start]="#425e79"
+theme[available_mid]="#5993c2"
+theme[available_end]="#63a2d6"
+
+# Mem/Disk used meter
+theme[used_start]="#87753d"
+theme[used_mid]="#b18433"
+theme[used_end]="#d8a851"
+
+# Download graph colors
+theme[download_start]="#41635f"
+theme[download_mid]="#4f9593"
+theme[download_end]="#72aaa8"
+
+# Upload graph colors
+theme[upload_start]="#425e79"
+theme[upload_mid]="#5993c2"
+theme[upload_end]="#63a2d6"
+
+# Process box color gradient for threads, mem and cpu usage
+theme[process_start]="#87753d"
+theme[process_mid]="#ceb250"
+theme[process_end]="#e2c358"
+
+# Process list pausing and process following banner colors
+theme[proc_pause_bg]="#503d20"
+theme[proc_follow_bg]="#36294d"
+theme[proc_banner_bg]="#4c3c6b"
+theme[proc_banner_fg]="#bea3d9"
+
+# Followed process row colors
+theme[followed_bg]="#36294d"
+theme[followed_fg]="#bea3d9"

@@ -5,6 +5,7 @@
 #
 # > This script syncs color themes for:
 # > [x] Bat
+# > [x] Btop
 # > [x] CotEditor
 # > [x] Nimble Commander
 # > [x] Syntax Highlight
@@ -137,6 +138,16 @@ header "Installing Bat theme…"
 local_install "themes/Sublime%20Text/Squirrelsong%20Dark%20Deep%20Purple/Squirrelsong%20Dark%20Deep%20Purple.tmTheme" "tilde/.config/bat/themes"
 # Update the binary cache
 bat cache --build
+echo "🌈 A new color theme has been installed and ready to use"
+
+#
+# Btop: https://github.com/aristocratos/btop#themes
+# Theme: https://github.com/sapegin/squirrelsong/tree/master/themes/Btop
+#
+
+header "Installing Btop theme…"
+
+local_install "themes/Btop/squirrelsong-dark-deep-purple.theme" "tilde/.config/btop/themes"
 echo "🌈 A new color theme has been installed and ready to use"
 
 #

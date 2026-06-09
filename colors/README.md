@@ -3,7 +3,8 @@
 I use [Squirrelsong](https://sapegin.me/squirrelsong/) theme wherever exists.
 
 1. [Ice](https://github.com/sapegin/squirrelsong/tree/master/themes/Ice)
-1. [Bat](https://github.com/sapegin/squirrelsong/tree/master/themes/Sublime%20Text/Squirrelsong%20Dark)
+1. [Bat](https://github.com/sapegin/squirrelsong/tree/master/themes/Sublime%20Text/Squirrelsong%20Dark%20Deep%20Purple)
+1. [Btop](https://github.com/sapegin/squirrelsong/tree/master/themes/Btop)
 1. [CotEditor](https://github.com/sapegin/squirrelsong/tree/master/themes/CotEditor)
 1. [Fzf](https://github.com/sapegin/squirrelsong/tree/master/themes/Fzf)
 1. [Nimble Commander](https://github.com/sapegin/squirrelsong/tree/master/themes/Nimble%20Commander)
