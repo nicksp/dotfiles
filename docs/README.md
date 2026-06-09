@@ -88,16 +88,13 @@
 | --- | --- |
 | `gitroot` `gr` | Navigate to the root directory of a Git repository |
 | `git clone {{repo_url}}` `g clone {{repo_url}}` | Clone Git repository, install dependencies, and navigate to created directory |
-| `gs` | Show the state of the working directory and staging area of a Git repository OR list directory contents in case of a non Git repo |
-| `gss` | Show the brief summary of the current state of a Git repository OR list directory contents in case of a non Git repo |
+| `gs` | Show the state of the working directory and staging area of a Git repository, or list directory contents outside a Git repo |
 | `gaa` | Stage all changes in the working directory |
 | `gcm` | Create a commit with the specified message |
 | `gd` | Show the differences (`diff`) between the current state of files in the working directory and the last committed state |
 | `gdc` | Show the differences (`diff`) between staged changes and the last commit |
-| `gp` | Fetch changes from the remote repository and also update any nested Git submodules within the repository |
-| `gpu` | Upload local commits to a remote repository |
-| `gpuf` | Make the force push if the remote branch hasn't been updated by someone else since your last pull |
 | `gl` | Display compact and readable log |
+| `gpuf` | Push with `--force-with-lease` |
 | `br` | Switch branches, create a new local branch if it doesn’t exist, or delete local branches. Automatically sets up and maintains remote branch tracking so you can just type `git pull` instead of `git pull origin newbranch`. If no argument is specified, will list recent local branches; use -r to list recent remote branches. |
 | `pull` | Pull remote changes using rebase while safely stashing and restoring local changes. Automatically updates submodules and reinstalls dependencies when lockfiles or package manifests change |
 | `push` | Push local changes to the tracked remote branch. Intelligently maintains upstream tracking so you can push without specifying a remote or branch. Any extra arguments will be passed through to `git push`, for example `push -f` |

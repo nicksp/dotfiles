@@ -130,15 +130,12 @@ alias get="curl -O -L"
 #
 
 # Most used Git shortcuts
-alias gs="git rev-parse --git-dir > /dev/null 2>&1 && git status || ls"
-alias gss="git rev-parse --git-dir > /dev/null 2>&1 && git status -sb || ls"
+alias gs="git rev-parse --git-dir > /dev/null 2>&1 && git status -sb || ls"
 alias gcm="git commit -m"
 alias gaa="git add -A"
-alias gd="git diff"
-alias gdc="git diff --cached"
-alias gp="pull --recurse-submodules"
-alias gl="git log --graph --pretty=format:'%C(magenta)%h%Creset%C(auto)%d%Creset %s %C(blue bold)— %cr ~ %an%Creset' -30"
-alias gpu="push"
+alias gd="git d"
+alias gdc="git dc"
+alias gl="git l"
 alias gpuf="push --force-with-lease"
 
 # Preview and open files in the current dir

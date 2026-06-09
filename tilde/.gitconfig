@@ -156,6 +156,22 @@
   autoSquash = true
   # Auto-update dependent branches during rebase
   updateRefs = true
+  # Automatically stash uncommitted changes before rebasing and re-apply them after — no more 'cannot rebase with dirty tree' errors
+  autoStash = true
+
+[merge]
+  # See more: https://www.ductile.systems/zdiff3/
+  conflictStyle = zdiff3
+
+[diff]
+  # Clearer diff output
+  # See more (1): https://luppeng.wordpress.com/2020/10/10/when-to-use-each-of-the-git-diff-algorithms/
+  # See more (2): https://link.springer.com/article/10.1007/s10664-019-09772-z
+  algorithm = histogram
+  # Use different colors to highlight lines in diffs that have been “moved”
+  colorMoved = default
+  # Ignore indentation changes
+  colorMovedWS = allow-indentation-change
 
 # aliases
 
@@ -172,34 +188,25 @@
   aa           = add -A
 
   # Commit
-  c            = commit
-  # ... by adding all unstaged changes
-  ca           = commit -a
   cm           = commit -m
   empty        = commit --allow-empty -m
-  # Add new staged files to the latest commit by preserving its commit message
+  # Add new staged changes to the last commit without changing its message
   amend        = commit --amend --no-edit
-  # Add all modified files to the latest commit
+  # Add all modified files to the last commit
   append       = commit -a --amend --no-edit
 
   # Status
-  s            = status
-  ss           = status -sb
+  s            = status -sb
 
   # Unstaged changes (working directory vs. staging area)
   d            = diff
   # Staged changes (staging area vs. last commit)
   dc           = diff --cached
   cp           = cherry-pick
-  fp           = fetch --prune --all
 
   # Push
-  pu           = push
   puf          = push --force-with-lease
   put          = push --tags
-
-  # Pull in remote changes for the current repository and all its submodules
-  p            = pull --recurse-submodules
 
   # Worktree
   wta          = worktree add
@@ -214,25 +221,27 @@
   cont         = !git add . && git rebase --continue
 
   # Compact and readable log
-  l            = log --graph --pretty=tformat:'%C(magenta)%h%Creset%C(auto)%d%Creset %s %C(blue bold)— %cr, %an%Creset' -30
-  la           = log --graph --pretty=tformat:'%C(magenta)%h%Creset%C(auto)%d%Creset %s %C(blue bold)— %cr, %an%Creset'
+  #   git l        # 30 commits
+  #   git l -100   # 100 commits
+  #   git l --all  # all commits
+  l            = "!f() { git log --graph --pretty=format:'%C(magenta)%h%C(auto)%d%Creset %s %C(blue bold)— %cr <%an>%Creset' ${1:--30}; }; f"
   # Log with list of changed files per each commit
-  ls           = log --stat --abbrev-commit
+  ll           = log --stat --abbrev-commit
+  # List of my own commits across all branches
+  my           = !git log --all --no-merges --pretty=format:'%C(reset)%C(bold)%cd %C(reset)%C(white)%s  %C(reset)%h' --date=short --author=\"$(git config user.name)\"
 
   #
   # First-aid
   #
 
-  # Undo a `git push`
-  undopush     = push -f origin HEAD^:master
-  # Unstage all staged changes but leave them in the working tree (mixed reset)
+  # Undo last commit but don't throw away the changes so they are ready to recommit (affects HEAD only)
+  undo         = reset --soft HEAD~1
+  # Remove files from staging area without discarding changes (mixed reset)
   unstage      = restore --staged .
   # Discard all unstaged changes in the working tree and revert them to their state in the HEAD commit
   discard      = restore .
-  # Undo last commit but don't throw away the changes (affects HEAD only)
-  undo         = reset --soft HEAD~1
-  # Remove last commit (from HEAD, Index and Working tree)
-  reset        = reset --hard HEAD~1
+  # Discard ALL local modifications including untracked files and restore repository to last committed state (HEAD)
+  nuke         = !git reset --hard && git clean -fd
 
   #
   # Helpers
@@ -241,20 +250,14 @@
   # Show the user email for the current repository
   whoami       = config user.email
 
-  # List available aliases
-  aliases      = config --get-regexp 'alias.*'
+  # Print all configured aliases
+  aliases      = config --get-regexp ^alias\\.
 
   # Display the current branch name
   branchname   = branch --show-current
 
-  # Display the date of the last commit of the active Git branch
-  lastcommit   = !git log --pretty=format:'%ar' | head -n 1
-
-  # List contributors with a number of their commits
-  contribs     = shortlog -sn
-
-  # List of my own commits across all branches
-  my           = !git log --all --no-merges --pretty=format:'%C(reset)%C(bold)%cd %C(reset)%C(white)%s  %C(reset)%h' --date=short --author=\"$(git config user.name)\"
+  # List all contributors sorted by number of commits
+  contribs     = shortlog -sn --all --no-merges --
 
   # How many lines of code I have written today
   today        = diff --shortstat \"@{0 day ago}\"
@@ -262,46 +265,20 @@
   # Count number of lines of code in the files of a git project
   stats        = "!git ls-files | xargs wc -l"
 
+  # Show the most recent commit
+  last         = log -1 HEAD
+
   # What branches I was working on ordered by last change
   recent       = !git for-each-ref --color --sort=-committerdate --format=$'%(color:blue)%(refname:short)\t%(color:yellow)%(committerdate:relative)\t%(color:default)%(describe)' refs/heads/ --no-merged | sed 's/ /\t/' | column -s=$'\t' -t -c 'Branch Name,Last Commit,Description' | tail -10
 
   # List of files with merge conflicts
   wtf          = diff --name-only --diff-filter=U
 
-  # Cancel local commits in the branch: git fuck master
-  fuck         = "!f() { git reset --hard origin/$1; }; f"
-
-  # Delete all untracked files and folders
-  cfd          = clean -fd
-
-  # Delete all changes, including untracked files and folders
-  nuke         = !git reset --hard && git clean -fd
-
   # Sharable diff with disabled syntax highlighting and +/- marks
   patch        = !git --no-pager diff --no-color
 
-  # Merge fresh master into the current branch
-  mmmr         = !git fetch origin master && git merge origin/master --no-edit
-  # Merge fresh main into the current branch
-  mmmn         = !git fetch origin main && git merge origin/main --no-edit
-
   # Push up the branch and set upstream for the current branch
   publish      = "!git push --set-upstream origin $(git branch --show-current)"
-  sha          = log -n 1 --pretty=format:'%H'
-
-[merge]
-  # See more: https://www.ductile.systems/zdiff3/
-  conflictStyle = zdiff3
-
-[diff]
-  # Clearer diff output
-  # See more (1): https://luppeng.wordpress.com/2020/10/10/when-to-use-each-of-the-git-diff-algorithms/
-  # See more (2): https://link.springer.com/article/10.1007/s10664-019-09772-z
-  algorithm = histogram
-  # Use different colors to highlight lines in diffs that have been “moved”
-  colorMoved = default
-  # Ignore indentation changes
-  colorMovedWS = allow-indentation-change
 
 # Include local/private config if relevant (credential helper, SSH, user identity)
 
